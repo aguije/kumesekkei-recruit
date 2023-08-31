@@ -1,0 +1,49 @@
+# Ignore OS generated files #
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Ignore packages #
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Files that might appear on external disk
+.Trashes
+
+# Ruby #
+*.gem
+*.rbc
+.bundle
+.config
+
+# YARD artifacts #
+.yardoc
+_yardoc
+/doc
+
+# FTP Settings #
+.remote-sync.json
+.ftpconfig
+.ftpignore
+sftp.json
+
+composer.lock
+package-lock.json
+yarn.lock
+
+node_modules
+bower_components
+
+htdocs/assets/php/library/vendor
+
+.vscode
+.quarantine
+.tmb
+package.json

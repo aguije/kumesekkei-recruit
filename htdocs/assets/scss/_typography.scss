@@ -1,0 +1,174 @@
+/* ==================================================================
+ *
+ * TYPOGRAPHY
+ *
+ * ------------------------------------------------------------------
+ *
+ *
+ *
+ * --------------------------------------------------------------- */
+
+/* ==================================================================
+ *
+ * @font-face
+ *
+ * --------------------------------------------------------------- */
+
+/* ==================================================================
+ * MyHiragino
+ * --------------------------------------------------------------- */
+
+@font-face {
+	font-family: 'MyHiragino';
+	font-weight: normal;
+
+	src: local('Hiragino Sans'),
+		 local('ヒラギノ角ゴ ProN W3'),
+		 local('Hiragino Kaku Gothic ProN');
+}
+@font-face {
+	font-family: 'MyHiragino';
+	font-weight: bold;
+
+	src: local('Hiragino Sans'),
+		 local('ヒラギノ角ゴ ProN W6'),
+		 local('Hiragino Kaku Gothic ProN W6');
+}
+@font-face {
+	font-family: 'MyHiragino';
+	font-weight: 800;
+
+	src: local('Hiragino Sans'),
+		 local('ヒラギノ角ゴ StdN'),
+		 local('Hiragino Kaku Gothic StdN');
+}
+
+
+/* ==================================================================
+ * System Serif
+ * --------------------------------------------------------------- */
+
+@font-face {
+	font-family: 'SystemSerif';
+
+	src: local('-apple-system'),
+		 local('BlinkMacSystemFont'),
+		 local('.SFNSDisplay-Regular'),
+		 local('Segoe UI'),
+		 local('Helvetica'),
+		 local('Arial');
+}
+
+
+/* ==================================================================
+ * ICOMOON
+ * ------------------------------------------------------------------ */
+
+@font-face {
+	font-family: 'icomoon';
+	font-weight: normal;
+	font-style: normal;
+
+	font-display: block;
+	src: local('☺︎'),
+		 url('../fonts/icomoon/icomoon.ttf?rx540h') format('truetype'),
+		 url('../fonts/icomoon/icomoon.woff?rx540h') format('woff'),
+		 url('../fonts/icomoon/icomoon.svg?rx540h#icomoon') format('svg');
+}
+
+%c-icon {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	font-weight: normal;
+	font-style: normal !important;
+	font-variant: normal;
+	-webkit-font-feature-settings: 'liga';
+	-moz-font-feature-settings: 'liga=1';
+	-moz-font-feature-settings: 'liga';
+		-ms-font-feature-settings: 'liga' 1;
+			font-feature-settings: 'liga';
+	line-height: 1;
+	display: inline-block;
+	/* Enable Ligatures ================ */
+	letter-spacing: 0;
+	text-transform: none;
+
+	-webkit-font-variant-ligatures: discretionary-ligatures;
+			font-variant-ligatures: discretionary-ligatures;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.c-icon {
+	@extend %c-icon;
+}
+
+.c-icon--arrow_d::before {
+	content: "\e900";
+}
+.c-icon--arrow_l::before {
+	content: "\e901";
+}
+.c-icon--arrow_r::before {
+	content: "\e902";
+}
+.c-icon--arrow_u::before {
+	content: "\e903";
+}
+.c-icon--circle::before {
+	content: "\e904";
+}
+.c-icon--close::before {
+	content: "\e905";
+}
+.c-icon--external::before {
+	content: "\e906";
+}
+.c-icon--logo::before {
+	content: "\e907";
+}
+.c-icon--play::before {
+	content: "\e908";
+}
+
+
+/* ==================================================================
+ * Font Variables
+ * --------------------------------------------------------------- */
+
+// デフォルト Font Family
+$ff--default: 'Inter', 'heisei-kaku-gothic-std', sans-serif;
+$ff--gothic: $ff--default;
+
+%ff--gothic {
+	font-family: $ff--gothic;
+	font-weight: 400;
+}
+
+
+/* ==================================================================
+ *
+ * Elements
+ *
+ * --------------------------------------------------------------- */
+
+html {
+	@include pc ((
+		font-size: $fs
+	)) {}
+	@include sp ((
+		font-size: $fs
+	)) {}
+}
+
+body {
+	font-feature-settings: 'palt';
+	line-height: $lh;
+	color: var(--color-textblack);
+	background-color: var(--color-base);
+
+	@extend %ff--gothic;
+	text-rendering: optimizeLegibility;
+	@include font-smoothing();
+}

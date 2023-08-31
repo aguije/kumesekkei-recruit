@@ -1,0 +1,537 @@
+/* ==================================================================
+ *
+ * MIXIN
+ *
+ * ------------------------------------------------------------------
+ *
+ *
+ *
+ * --------------------------------------------------------------- */
+
+/* ==================================================================
+ * FONT SMOOTHING
+ * --------------------------------------------------------------- */
+
+ @mixin font-smoothing ($_mode: true) {
+	@if $_mode == true {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	@else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: unset;
+	}
+}
+
+
+/* ==================================================================
+ * FONT FEATURE SETTINGS
+ * --------------------------------------------------------------- */
+
+@mixin font-feature-settings ($_mode: 'kern') {
+	-webkit-font-feature-settings: '#{$_mode}';
+	   -moz-font-feature-settings: '#{$_mode}=1';
+	   -moz-font-feature-settings: '#{$_mode}';
+	    -ms-font-feature-settings: '#{$_mode}' 1;
+	        font-feature-settings: '#{$_mode}';
+}
+
+
+/* ==================================================================
+ * RESPONSIVE LAYOUT
+ * --------------------------------------------------------------- */
+
+// PC のみ
+@mixin mq--pc {
+	@media only screen and (min-width: #{$breakpoint--mb-to-pc}px) {
+		@content;
+	}
+}
+
+// PC のみ (LARGE)
+@mixin mq--pc-l {
+    @media only screen and (min-width: #{$breakpoint--pc-max}px) {
+		@content;
+    }
+}
+
+// SMARTPHONE
+@mixin mq--sp {
+    @media only screen and (min-device-width: 320px) and (max-width: #{$breakpoint--mb-to-pc - 1}px) {
+        @content;
+    }
+}
+
+// MOBILE
+@mixin mq--mb {
+	@media only screen and (min-device-width: #{$breakpoint--mb-to-pc}px) {
+        @content;
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-width: #{$breakpoint--mb-to-pc - 1}px) {
+        @content;
+    }
+}
+
+/* 圧縮時に意図したとおりに @media のカスケードが機能するよう CSS 最前で出力 */
+body {
+	@include mq--pc {
+		width: 100%;
+	}
+	@include mq--pc-l {
+		width: 100%;
+	}
+	@include mq--sp {
+		width: 100%;
+	}
+}
+
+
+/* ==================================================================
+ * PC
+ * --------------------------------------------------------------- */
+
+@mixin pc ($_map: ()) {
+	@include mq--pc {
+		@if type-of($_map) == 'map' {
+			@each $property, $value in $_map {
+				#{$property}: cal--pc($value);
+			}
+		}
+		@content;
+	}
+
+	@if type-of($_map) == 'map' {
+		@include mq--pc-l {
+			@each $property, $value in $_map {
+				#{$property}: cal--pc-max($value);
+			}
+		}
+	}
+}
+
+
+/* ==================================================================
+ * SMARTPHONE
+ * --------------------------------------------------------------- */
+
+@mixin sp ($_map: ()) {
+	@include mq--sp {
+		@if type-of($_map) == 'map' {
+			@each $property, $value in $_map {
+				#{$property}: cal--sp($value);
+			}
+		}
+		@content;
+	}
+}
+
+
+/* ==================================================================
+ * HOVER
+ * --------------------------------------------------------------- */
+
+@mixin taphover () {
+	@at-root .no-touch &:hover {
+		@content;
+	}
+
+	@at-root .touch &.hover {
+		@content;
+	}
+}
+
+
+/* ==================================================================
+ *
+ * TRANSITION
+ *
+ * --------------------------------------------------------------- */
+
+@mixin transition ($_property, $_duration: $time--transition, $_easing: $easing) {
+	transition-timing-function: unquote($_easing);
+	transition-duration: $_duration;
+	transition-property: unquote($_property);
+	will-change: unquote($_property);
+}
+
+
+/* ==================================================================
+ * A
+ * --------------------------------------------------------------- */
+
+@mixin color_a ($_color, $_hover_color: null) {
+	color: $_color;
+
+	@if type-of($_hover_color) == null {
+		@at-root .no-touch &:hover {
+			color: rgba($_color, .65);
+		}
+
+		@at-root .touch &.hover {
+			color: rgba($_color, .65);
+		}
+	}
+	@else {
+		@at-root .no-touch &:hover {
+			color: $_hover_color;
+		}
+
+		@at-root .touch &.hover {
+			color: $_hover_color;
+		}
+	}
+
+	&.is-disabled {
+		pointer-events: none;
+		color: rgba($_color, .2);
+	}
+
+	&.is-active {
+		pointer-events: none;
+	}
+}
+
+
+/* ==================================================================
+ * SCROLL
+ * --------------------------------------------------------------- */
+
+@mixin scrolling ($_mode: 'xy', $_behavior: 'contain') {
+	will-change: scroll-position;
+
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: none;
+	-ms-scroll-chaining: none;
+	overscroll-behavior: #{$_behavior};
+
+	@if $_mode == 'xy' {
+		overflow: scroll;
+	}
+	@else if $_mode == 'x' {
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+	@else if $_mode == 'y' {
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+}
+
+@mixin overflow-hidden ($_mode: 'xy') {
+	-webkit-overflow-scrolling: unset;
+	-ms-overflow-style: none;
+	-ms-scroll-chaining: none;
+	overscroll-behavior: none;
+	scrollbar-width: none;
+
+	@if $_mode == 'xy' {
+		overflow: hidden;
+	}
+	@else if $_mode == 'x' {
+		overflow-x: hidden;
+		overflow-y: visible;
+	}
+	@else if $_mode == 'y' {
+		overflow-x: visible;
+		overflow-y: hidden;
+	}
+}
+
+
+/* ==================================================================
+ * CLOTHOID GRADIENT
+ * --------------------------------------------------------------- */
+
+@function clothoid-gradient ($_dir: 'to bottom', $_color: #000000, $_alpha_from: 1, $_alpha_to: 0) {
+	$diff: $_alpha_from - $_alpha_to;
+
+	@if type-of($_dir) == string {
+		$_dir: unquote($_dir);
+	}
+
+	@return linear-gradient(
+		$_dir,
+		rgba($_color, $_alpha_from) 0%,
+		rgba($_color, $_alpha_from - $diff * .7) 50%,
+		rgba($_color, $_alpha_from - $diff * .85) 65%,
+		rgba($_color, $_alpha_from - $diff * .925) 75.5%,
+		rgba($_color, $_alpha_from - $diff * .963) 82.85%,
+		rgba($_color, $_alpha_from - $diff * .981) 88%,
+		rgba($_color, $_alpha_to) 100%
+	);
+}
+
+@mixin clothoid-gradient ($_dir: 'to bottom', $_color: #000000, $_alpha_from: 1, $_alpha_to: 0) {
+	background-image: clothoid-gradient($_dir,  $_color, $_alpha_from, $_alpha_to);
+}
+
+@function clothoid-mix-gradient ($_dir: 'to bottom', $_color_from: #000000, $_color_to: #ffffff) {
+	@if type-of($_dir) == string {
+		$_dir: unquote($_dir);
+	}
+
+	@return linear-gradient(
+		$_dir,
+		mix($_color_to, $_color_from, 0%) 0%,
+		mix($_color_to, $_color_from, 70%) 50%,
+		mix($_color_to, $_color_from, 85%) 65%,
+		mix($_color_to, $_color_from, 92.5%) 75.5%,
+		mix($_color_to, $_color_from, 96.3%) 82.85%,
+		mix($_color_to, $_color_from, 98.1%) 88%,
+		mix($_color_to, $_color_from, 100%) 100%
+	);
+}
+
+@mixin clothoid-mix-gradient ($_dir: 'to bottom', $_color_from: #000000, $_color_to: #ffffff) {
+	background-image: clothoid-mix-gradient($_dir, $_color_from, $_color_to);
+}
+
+
+/* ==================================================================
+ *
+ * HIDE TEXT (origin: Compass)
+ *
+ * --------------------------------------------------------------- */
+
+@mixin hide-text ($direction: left) {
+	$approximate-em-value: 12px / 1em;
+	$wider-than-any-screen: -9999em;
+
+	@if $direction == left {
+		overflow: hidden;
+		text-align: left;
+		text-indent: $wider-than-any-screen * $approximate-em-value;
+	}
+	@else {
+		overflow: hidden;
+		white-space: nowrap;
+		text-indent: 110%;
+	}
+}
+
+
+/* ==================================================================
+ *
+ * PIE CLEARFIX (origin: Compass)
+ *
+ * --------------------------------------------------------------- */
+
+@mixin pie-clearfix {
+	&:after {
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+
+/* ==================================================================
+ *
+ * MULTIPLE BACKGROUND LINE
+ *
+ * --------------------------------------------------------------- */
+
+@mixin multiple-bg-line ($_background: null, $_duration: .15s) {
+	position: relative;
+	-webkit-box-decoration-break: clone;
+	        box-decoration-break: clone;
+	transition-duration: $_duration;
+	transition-property: background-size;
+	will-change: background-size;
+	background-repeat: no-repeat;
+
+	@if type-of($_background) == color {
+		background-color: $_background;
+	}
+	@else {
+		background-image: $_background;
+	}
+
+	background-position: 0% 100%;
+	background-size: 0% 100%;
+
+	@include taphover {
+		background-size: 100% 100%;
+	}
+
+	@at-root .ua-ie & {
+		transition-duration: 0;
+	}
+	@at-root .ua-edge & {
+		transition-duration: 0;
+	}
+}
+
+
+/* ==================================================================
+ *
+ * PSEUDO BLOCK
+ *
+ * --------------------------------------------------------------- */
+
+@mixin pseudo-block ($_map: ()) {
+	@if type-of($_map) == 'map' {
+		$defaults: (
+			content: '',
+			position: absolute,
+			display: block,
+			width: 100%,
+			height: 100%,
+			pointer-events: none,
+		);
+		$new-map: map-merge($defaults, $_map);
+
+		@each $property, $value in $new-map {
+			#{$property}: $value;
+		}
+	}
+	@content;
+}
+
+
+/* ==================================================================
+ *
+ * LINE CLAMP
+ *
+ * --------------------------------------------------------------- */
+
+@mixin line-clamp ($_lines: 2) {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $_lines;
+	text-overflow: ellipsis;
+}
+
+
+/* ==================================================================
+ *
+ * FUNCTIONS
+ *
+ * --------------------------------------------------------------- */
+
+/* ==================================================================
+ * CALCULATE vw / vh
+ * --------------------------------------------------------------- */
+
+@function cal--pc ($_val, $_prop: 'vw', $_ratio: $ratio--pc) {
+	@if type-of($ratio--pc) == null {
+		$_ratio: 1;
+	}
+
+	@if $_prop == 'vw' {
+		@return 1vw * $_ratio * ($_val / $base-width--pc) * 100;
+	}
+}
+
+@function cal--pc-max ($_val, $_ratio: $ratio--pc) {
+	@if type-of($ratio--pc) == null {
+		$_ratio: 1;
+	}
+
+	@return 1px * $_ratio * ($_val * ($breakpoint--pc-max / $base-width--pc));
+}
+
+@function cal--sp ($_val, $_prop: 'vw', $_ratio: $ratio--sp) {
+	@if type-of($ratio--pc) == null {
+		$_ratio: 1;
+	}
+
+	@if $_prop == 'vw' {
+		@return 1vw * ($_val / $base-width--sp) * 100;
+	}
+	@else if $_prop == 'vh' {
+		@return 1vh * ($_val / 667) * 100;
+	}
+}
+
+
+/* ==================================================================
+ * POW
+ * --------------------------------------------------------------- */
+
+@function pow ($base, $exponents) {
+	$raised: 1;
+
+	@for $i from 1 through $exponents {
+		$raised: $raised * $base;
+	}
+
+	@return $raised;
+}
+
+
+/* ==================================================================
+ * str-replace
+ * --------------------------------------------------------------- */
+
+@function str-replace($substr, $newsubstr, $str, $all: false) {
+    $pos : str-index($str, $substr);
+
+    @while $pos != null {
+        $strlen : str-length($substr);
+        $start : str-slice($str, 0, $pos - 1);
+        $end : str-slice($str, $pos + $strlen);
+        $str : $start + $newsubstr + $end;
+
+        @if $all == true {
+            $pos : str-index($str, $substr);
+        } @else {
+            $pos : null;
+        }
+    }
+    @return $str;
+}
+
+/* ==================================================================
+ *
+ * Extender
+ *
+ * --------------------------------------------------------------- */
+
+%u-cover {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+%u-hotarea {
+	display: inline-block;
+	margin: -1em;
+	padding: 1em;
+}
+
+%pswp_veil {
+	position: absolute;
+	z-index: $zi--level1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	pointer-events: none;
+	opacity: 0;
+	background-color: var(--color-white);
+	mix-blend-mode: overlay;
+
+	@include transition('opacity', .3s);
+}
+
+%pseudo_layer {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: '';
+}
+
+%u-inner {
+	@include pc ((
+		padding-right: 10,
+		padding-left: 10,
+	)) {}
+}

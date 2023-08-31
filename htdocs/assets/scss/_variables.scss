@@ -1,0 +1,145 @@
+/* ==================================================================
+ *
+ * VARIABLES
+ *
+ * ------------------------------------------------------------------
+ *
+ *
+ *
+ * --------------------------------------------------------------- */
+
+/** --------------------------------
+ *   Break Points   */
+
+$breakpoint--mb-to-pc: 768;
+$breakpoint--pc-max: 1440;
+$base-width--pc: 1280;
+$base-width--sp: 375;
+
+
+/** --------------------------------
+ *   Color   */
+
+$color--base: #ffffff;
+$color--textblack: #000000;
+
+$color--richblack: #000000;
+$color--white: #ffffff;
+
+$color--light-gray: #f2f2f2;
+$color--gray: #919191;
+$color--deep-gray: #7f7f7f;
+$color--dark-gray: #4c4c4c;
+
+$color--facebook: #3a5898;
+$color--twitter: #6caddf;
+$color--instagram: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+
+:root {
+	--color-base: #{$color--base};
+	--color-textblack: #{$color--textblack};
+	--color-richblack: #{$color--richblack};
+	--color-white: #{$color--white};
+	--color-light-gray: #{$color--light-gray};
+	--color-gray: #{$color--gray};
+	--color-deep-gray: #{$color--deep-gray};
+	--color-dark-gray: #{$color--dark-gray};
+	--color-facebook: #{$color--facebook};
+	--color-twitter: #{$color--twitter};
+	--color-instagram: #{$color--instagram};
+}
+
+
+/** --------------------------------
+ *   Font Size   */
+
+$fs: 16;
+$fs--sp: 32;
+
+
+/** --------------------------------
+ *   Size   */
+
+
+/** --------------------------------
+ *   Line Height   */
+
+$lh--wide: 1.8;
+$lh--h: 1;
+$lh: 1.25;
+
+
+/** --------------------------------
+ *   Ratio   */
+
+$ratio--pc: 1;
+$ratio--sp: 1;
+
+
+/** --------------------------------
+ *   z-index   */
+
+$zi--mask: 100;
+$zi--level5: 50;
+$zi--level4: 40;
+$zi--level3: 30;
+$zi--level2: 20;
+$zi--level1: 10;
+$zi--level0: 0;
+
+$zi--gh: 1000;
+
+:root {
+	--zi-5: #{$zi--level5};
+	--zi-4: #{$zi--level4};
+	--zi-3: #{$zi--level3};
+	--zi-2: #{$zi--level2};
+	--zi-1: #{$zi--level1};
+	--zi-0: #{$zi--level0};
+}
+
+
+/** --------------------------------
+ *   SIZE   */
+
+$size--gh--sp: 70;
+$size--side--sp: 47/2;
+
+
+/** --------------------------------
+ *   easing   */
+
+$easing--linear: cubic-bezier(.250, .250, .750, .750);
+
+$easing--ease: cubic-bezier(.250, .100, .250, 1.000);
+$easing--easeIn: cubic-bezier(.420, .000, 1.000, 1.000);
+$easing--easeOut: cubic-bezier(.000, .000, .580, 1.000);
+$easing--easeInOut: cubic-bezier(.420, .000, .580, 1.000);
+$easing--easeInQuad: cubic-bezier(.550, .085, .680, .530);
+$easing--easeInCubic: cubic-bezier(.550, .055, .675, .190);
+$easing--easeInQuart: cubic-bezier(.895, .030, .685, .220);
+$easing--easeInQuint: cubic-bezier(.755, .050, .855, .060);
+$easing--easeInSine: cubic-bezier(.470, .000, .745, .715);
+$easing--easeInExpo: cubic-bezier(.950, .050, .795, .035);
+$easing--easeInCirc: cubic-bezier(.600, .040, .980, .335);
+$easing--easeInBack: cubic-bezier(.600, -.280, .735, .045);
+
+$easing--easeOutQuad: cubic-bezier(.250, .460, .450, .940);
+$easing--easeOutCubic: cubic-bezier(.215, .610, .355, 1.000);
+$easing--easeOutQuart: cubic-bezier(.165, .840, .440, 1.000);
+$easing--easeOutQuint: cubic-bezier(.230, 1.000, .320, 1.000);
+$easing--easeOutSine: cubic-bezier(.390, .575, .565, 1.000);
+$easing--easeOutExpo: cubic-bezier(.190, 1.000, .220, 1.000);
+$easing--easeOutCirc: cubic-bezier(.075, .820, .165, 1.000);
+$easing--easeOutBack: cubic-bezier(.175, .885, .320, 1.275);
+
+$easing--easeInOutQuad: cubic-bezier(.455, .030, .515, .955);
+$easing--easeInOutCubic: cubic-bezier(.645, .045, .355, 1.000);
+$easing--easeInOutQuart: cubic-bezier(.770, .000, .175, 1.000);
+$easing--easeInOutQuint: cubic-bezier(.860, .000, .070, 1.000);
+$easing--easeInOutSine: cubic-bezier(.445, .050, .550, .950);
+$easing--easeInOutExpo: cubic-bezier(1.000, .000, .000, 1.000);
+$easing--easeInOutCirc: cubic-bezier(.785, .135, .150, .860);
+$easing--easeInOutBack: cubic-bezier(.680, -.550, .265, 1.550);
+
+$easing: $easing--ease;

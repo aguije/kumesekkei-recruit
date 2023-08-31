@@ -1,0 +1,61 @@
+/* ==================================================================
+ *
+ * UTILITY
+ *
+ * ------------------------------------------------------------------
+ *
+ *
+ *
+ * --------------------------------------------------------------- */
+
+@include pc () {
+	.u-br {
+	    font-size: 1px;
+	    line-height: 100%;
+		height: 0;
+		text-align: left;
+
+		@include hide-text;
+
+	    &::before {
+	        font-size: 1px;
+	        line-height: 100%;
+	        content: '\A';
+	        white-space: pre;
+		}
+    }
+}
+
+@include sp () {
+	.u-br--sp {
+	    font-size: 1px;
+	    line-height: 100%;
+		height: 0;
+		text-align: left;
+
+		@include hide-text;
+
+	    &::before {
+	        font-size: 1px;
+	        line-height: 100%;
+	        content: '\A';
+	        white-space: pre;
+	    }
+	}
+}
+
+.is-pc {
+	@include sp () {
+		display: none !important;
+	}
+}
+
+.is-sp {
+	@include pc () {
+		display: none !important;
+	}
+}
+
+.is-hidden {
+	display: none;
+}
