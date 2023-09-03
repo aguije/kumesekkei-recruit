@@ -13,7 +13,7 @@
 
 $breakpoint--mb-to-pc: 768;
 $breakpoint--pc-max: 1440;
-$base-width--pc: 1280;
+$base-width--pc: 1120;
 $base-width--sp: 375;
 
 
@@ -23,13 +23,15 @@ $base-width--sp: 375;
 $color--base: #ffffff;
 $color--textblack: #000000;
 
-$color--richblack: #000000;
+$color--black: #000000;
 $color--white: #ffffff;
 
-$color--light-gray: #f2f2f2;
-$color--gray: #919191;
-$color--deep-gray: #7f7f7f;
-$color--dark-gray: #4c4c4c;
+$color--brown: #726866;
+$color--green: #34ff66;
+$color--salmon: #ff6600;
+$color--gray: #a3a3a3;
+$color--bluegray: #b8bdc1;
+$color--border: rgba($color--black, .2);
 
 $color--facebook: #3a5898;
 $color--twitter: #6caddf;
@@ -38,12 +40,16 @@ $color--instagram: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc
 :root {
 	--color-base: #{$color--base};
 	--color-textblack: #{$color--textblack};
-	--color-richblack: #{$color--richblack};
+	--color-black: #{$color--black};
+
+	--color-brown: #{$color--brown};
+	--color-green: #{$color--green};
+	--color-salmon: #{$color--salmon};
 	--color-white: #{$color--white};
-	--color-light-gray: #{$color--light-gray};
 	--color-gray: #{$color--gray};
-	--color-deep-gray: #{$color--deep-gray};
-	--color-dark-gray: #{$color--dark-gray};
+	--color-bluegray: #{$color--bluegray};
+	--color-border: #{$color--border};
+
 	--color-facebook: #{$color--facebook};
 	--color-twitter: #{$color--twitter};
 	--color-instagram: #{$color--instagram};
@@ -66,7 +72,7 @@ $fs--sp: 32;
 
 $lh--wide: 1.8;
 $lh--h: 1;
-$lh: 1.25;
+$lh: 1.5;
 
 
 /** --------------------------------
@@ -79,7 +85,6 @@ $ratio--sp: 1;
 /** --------------------------------
  *   z-index   */
 
-$zi--mask: 100;
 $zi--level5: 50;
 $zi--level4: 40;
 $zi--level3: 30;
@@ -90,6 +95,8 @@ $zi--level0: 0;
 $zi--gh: 1000;
 
 :root {
+	--zi-gh: #{$zi--gh};
+
 	--zi-5: #{$zi--level5};
 	--zi-4: #{$zi--level4};
 	--zi-3: #{$zi--level3};
@@ -102,8 +109,7 @@ $zi--gh: 1000;
 /** --------------------------------
  *   SIZE   */
 
-$size--gh--sp: 70;
-$size--side--sp: 47/2;
+$size--pad: 60;
 
 
 /** --------------------------------

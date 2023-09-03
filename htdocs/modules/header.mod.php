@@ -66,7 +66,7 @@
 
 	<link rel="stylesheet" href="<?php echo KUME_Util::style_path('core.css', true); ?>">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/3.12.0/modernizr.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 
 <body>

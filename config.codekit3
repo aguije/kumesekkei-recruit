@@ -39,6 +39,18 @@
       "oAP" : "\/config.rb",
       "oF" : 1
     },
+    "\/htdocs\/assets\/css\/core.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/css\/core-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/htdocs\/assets\/fonts\/icomoon\/icomoon.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -65,12 +77,12 @@
       "oAP" : "\/htdocs\/assets\/fonts\/icomoon\/icomoon.woff",
       "oF" : 0
     },
-    "\/htdocs\/assets\/images\/top\/about_csr1.jpg" : {
+    "\/htdocs\/assets\/images\/top\/about_csr1_1.jpg" : {
       "ft" : 16384,
       "iS" : 218733,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/top\/about_csr1.jpg",
+      "oAP" : "\/htdocs\/assets\/images\/top\/about_csr1_1.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -78,12 +90,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/htdocs\/assets\/images\/top\/about_csr2.jpg" : {
+    "\/htdocs\/assets\/images\/top\/about_csr1_2.jpg" : {
       "ft" : 16384,
       "iS" : 822323,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/top\/about_csr2.jpg",
+      "oAP" : "\/htdocs\/assets\/images\/top\/about_csr1_2.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -91,12 +103,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/htdocs\/assets\/images\/top\/about_top.jpg" : {
+    "\/htdocs\/assets\/images\/top\/about_message.jpg" : {
       "ft" : 16384,
       "iS" : 114006,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/top\/about_top.jpg",
+      "oAP" : "\/htdocs\/assets\/images\/top\/about_message.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -104,12 +116,32 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/htdocs\/assets\/images\/top\/hero1.jpg" : {
+    "\/htdocs\/assets\/images\/top\/hero_maincopy_ja.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/htdocs\/assets\/images\/top\/hero_maincopy_ja.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/htdocs\/assets\/images\/top\/hero_subcopy_ja.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/htdocs\/assets\/images\/top\/hero_subcopy_ja.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/htdocs\/assets\/images\/top\/hero_visual1.jpg" : {
       "ft" : 16384,
       "iS" : 1931428,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/top\/hero1.jpg",
+      "oAP" : "\/htdocs\/assets\/images\/top\/hero_visual1.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -117,12 +149,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/htdocs\/assets\/images\/top\/hero2.jpg" : {
+    "\/htdocs\/assets\/images\/top\/hero_visual2.jpg" : {
       "ft" : 16384,
       "iS" : 1908910,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/top\/hero2.jpg",
+      "oAP" : "\/htdocs\/assets\/images\/top\/hero_visual2.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -130,12 +162,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/htdocs\/assets\/images\/top\/hero3.jpg" : {
+    "\/htdocs\/assets\/images\/top\/hero_visual3.jpg" : {
       "ft" : 16384,
       "iS" : 378806,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/top\/hero3.jpg",
+      "oAP" : "\/htdocs\/assets\/images\/top\/hero_visual3.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -143,12 +175,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/htdocs\/assets\/images\/top\/hero4.jpg" : {
+    "\/htdocs\/assets\/images\/top\/hero_visual4.jpg" : {
       "ft" : 16384,
       "iS" : 399709,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/top\/hero4.jpg",
+      "oAP" : "\/htdocs\/assets\/images\/top\/hero_visual4.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -299,12 +331,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/htdocs\/assets\/images\/top\/work_human_thumb.jpg" : {
+    "\/htdocs\/assets\/images\/top\/work_hrd_thumb.jpg" : {
       "ft" : 16384,
-      "iS" : 26600,
+      "iS" : 28736,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/top\/work_human_thumb.jpg",
+      "oAP" : "\/htdocs\/assets\/images\/top\/work_hrd_thumb.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -327,7 +359,7 @@
     },
     "\/htdocs\/assets\/images\/top\/work_welfare_thumb.jpg" : {
       "ft" : 16384,
-      "iS" : 28736,
+      "iS" : 26600,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/top\/work_welfare_thumb.jpg",
@@ -566,6 +598,21 @@
       "pg" : 0,
       "sct" : 1
     },
+    "\/htdocs\/assets\/scss\/_top.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/htdocs\/assets\/scss\/_top.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
     "\/htdocs\/assets\/scss\/_typography.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -611,18 +658,6 @@
       "pg" : 0,
       "sct" : 1
     },
-    "\/htdocs\/assets\/scss\/core.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/scss\/core-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/htdocs\/assets\/scss\/core.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -632,7 +667,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/scss\/core.css",
+      "oAP" : "\/htdocs\/assets\/css\/core.css",
       "oF" : 2,
       "oS" : 0,
       "pg" : 0,

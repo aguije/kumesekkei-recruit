@@ -83,10 +83,10 @@
 	font-style: normal !important;
 	font-variant: normal;
 	-webkit-font-feature-settings: 'liga';
-	-moz-font-feature-settings: 'liga=1';
-	-moz-font-feature-settings: 'liga';
-		-ms-font-feature-settings: 'liga' 1;
-			font-feature-settings: 'liga';
+	   -moz-font-feature-settings: 'liga=1';
+	   -moz-font-feature-settings: 'liga';
+		    -ms-font-feature-settings: 'liga' 1;
+			        font-feature-settings: 'liga';
 	line-height: 1;
 	display: inline-block;
 	/* Enable Ligatures ================ */
@@ -94,7 +94,7 @@
 	text-transform: none;
 
 	-webkit-font-variant-ligatures: discretionary-ligatures;
-			font-variant-ligatures: discretionary-ligatures;
+			        font-variant-ligatures: discretionary-ligatures;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -104,32 +104,37 @@
 	@extend %c-icon;
 }
 
+$icon--content-arrow_d: '\e900';
+$icon--content-arrow_r: '\e902';
+$icon--content-external: '\e906';
+$icon--content-circle: '\e904';
+
 .c-icon--arrow_d::before {
-	content: "\e900";
+	content: $icon--content-arrow_d;
 }
 .c-icon--arrow_l::before {
-	content: "\e901";
+	content: '\e901';
 }
 .c-icon--arrow_r::before {
-	content: "\e902";
+	content: $icon--content-arrow_r;
 }
 .c-icon--arrow_u::before {
-	content: "\e903";
+	content: '\e903';
 }
 .c-icon--circle::before {
-	content: "\e904";
+	content: $icon--content-circle;
 }
 .c-icon--close::before {
-	content: "\e905";
+	content: '\e905';
 }
 .c-icon--external::before {
-	content: "\e906";
+	content: $icon--content-external;
 }
 .c-icon--logo::before {
-	content: "\e907";
+	content: '\e907';
 }
 .c-icon--play::before {
-	content: "\e908";
+	content: '\e908';
 }
 
 
@@ -138,12 +143,15 @@
  * --------------------------------------------------------------- */
 
 // デフォルト Font Family
-$ff--default: 'Inter', 'heisei-kaku-gothic-std', sans-serif;
+$ff--default: 'Zen Kaku Gothic New', 'SystemSerif', 'MyHiragino', 'メイリオ', Meiryo, Osaka, 'MS UI Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 $ff--gothic: $ff--default;
 
 %ff--gothic {
 	font-family: $ff--gothic;
 	font-weight: 400;
+}
+%ff--sen {
+	font-family: 'Sen', sans-serif;
 }
 
 
@@ -171,4 +179,8 @@ body {
 	@extend %ff--gothic;
 	text-rendering: optimizeLegibility;
 	@include font-smoothing();
+}
+
+[lang='en'] {
+	@extend %ff--sen;
 }

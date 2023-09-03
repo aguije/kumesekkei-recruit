@@ -44,13 +44,13 @@
 	}
 }
 
-.is-pc {
+.is--pc {
 	@include sp () {
 		display: none !important;
 	}
 }
 
-.is-sp {
+.is--sp {
 	@include pc () {
 		display: none !important;
 	}

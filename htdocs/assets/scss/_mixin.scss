@@ -287,6 +287,23 @@ body {
 	background-image: clothoid-mix-gradient($_dir, $_color_from, $_color_to);
 }
 
+@function pc-clamp ($_size: 1, $_min: null) {
+	@if type-of($_min) == number {
+		@return clamp(#{$_min}px, #{cal--pc($_size)}, #{cal--pc-max($_size)});
+	}
+	@else {
+		@return clamp(#{$_size}px, #{cal--pc($_size)}, #{cal--pc-max($_size)});
+	}
+}
+
+@function pc-rem ($_size: 1) {
+	@return 1rem * $_size / $fs;
+}
+
+@function sp-rem ($_size: 1) {
+	@return 1rem * $_size / $fs--sp;
+}
+
 
 /* ==================================================================
  *

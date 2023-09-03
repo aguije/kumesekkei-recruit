@@ -8,3 +8,18 @@
  *
  * --------------------------------------------------------------- */
 
+.l-wrapper {
+	@include pc ((
+		width: 1120,
+	)) {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+.l-container {
+	@include pc ((
+		padding-right: $size--pad,
+		padding-left: $size--pad,
+	)) {}
+}
