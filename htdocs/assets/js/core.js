@@ -23,7 +23,8 @@ var GLOBAL = {
 		util         : {}
 	},
 
-	observers        : []
+	observers        : [],
+	swipers          : []
 };
 
 

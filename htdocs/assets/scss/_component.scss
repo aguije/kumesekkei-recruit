@@ -223,14 +223,13 @@
  *
  * --------------------------------------------------------------- */
 
+$pie_r: 31.8309886184;
+
 .c-circle-picture {
 	overflow: hidden;
 	aspect-ratio: 1 / 1;
 	border-radius: 50%;
 }
-
-
-$pie_r: 31.8309886184;
 
 .c-chart {
 	position: relative;

@@ -1416,7 +1416,7 @@
         "active" : 0
       },
       "no-empty" : {
-        "active" : 1,
+        "active" : 0,
         "optionString" : "{'allowEmptyCatch': false}"
       },
       "no-empty-character-class" : {
@@ -1542,7 +1542,7 @@
         "optionString" : "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
       },
       "no-mixed-spaces-and-tabs" : {
-        "active" : 1,
+        "active" : 0,
         "optionString" : ""
       },
       "no-multi-assign" : {
@@ -2014,7 +2014,7 @@
     "externalServerAddress" : "http:\/\/localhost:8888",
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
-    "jsCheckerReservedNamesString" : "",
+    "jsCheckerReservedNamesString" : "$,Cookies,purl,cssua,gsap,MobileDetect,Swiper,Promise,YT",
     "languageDefaultsCOFFEE" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.js",

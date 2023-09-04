@@ -36,6 +36,7 @@
 			z-index: var(--zi-0);
 			top: 0;
 			left: 0;
+			width: 100%;
 			height: 100%;
 
 			.swiper-slide {
@@ -78,6 +79,7 @@
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
+			cursor: pointer;
 			transform: translateX(-50%);
 			border-radius: 50%;
 			background-color: var(--color-black);
@@ -283,7 +285,7 @@
 
 		.p-about__list {
 			width: 50%;
-			margin-top: pc-rem(68);
+			margin-top: pc-rem(60);
 		}
 
 
@@ -311,7 +313,7 @@
 
 		.p-about__csr {
 			position: relative;
-			margin-top: pc-rem(68);
+			margin-top: pc-rem(60);
 
 			.p-about__item__main {
 				text-align: right;
@@ -334,6 +336,8 @@
 			}
 
 			.swiper {
+				width: 100%;
+
 				.swiper-slide {
 					picture {
 						overflow: hidden;
@@ -344,28 +348,32 @@
 				}
 			}
 
-			.swiper.is--upper {
+			.swiper-parent.is--upper {
 				position: absolute;
 				z-index: var(--zi-1);
 				top: 50%;
 				right: 0;
+				width: pc-rem(420);
 				transform: translateX(calc(100% + #{pc-rem(80)})) translateY(-50%);
 
+
 				.swiper-slide {
-					width: pc-rem(420);
+					width: 100%;
 					aspect-ratio: 420 / 280;
 				}
 			}
 
-			.swiper.is--lower {
+			.swiper-parent.is--lower {
 				position: absolute;
 				z-index: var(--zi-0);
 				top: 50%;
 				right: 0;
+				width: pc-rem(480);
 				transform: translateX(calc(100% + #{pc-rem(260)})) translateY(calc(-50% - #{pc-rem(260)}));
 
+
 				.swiper-slide {
-					width: pc-rem(480);
+					width: 100%;
 					aspect-ratio: 480 / 700;
 				}
 			}
@@ -377,7 +385,7 @@
 		 * --------------------------------------------------------------- */
 
 		.p-about__statistics {
-			margin-top: pc-rem(68);
+			margin-top: pc-rem(60 * 2);
 
 			h3 {
 				text-align: right;
@@ -394,10 +402,10 @@
 				.p-about__statistics__figs__wrap {
 					display: flex;
 					box-sizing: border-box;
+					width: pc-rem((213 + 14) * 5);
 					padding-top: pc-rem(60);
 					padding-bottom: pc-rem(60);
-					column-gap: pc-rem(14);
-					animation-name: 'belt';
+					animation-name: belt;
 					animation-duration: 30s;
 					animation-timing-function: linear;
 					animation-iteration-count: infinite;
@@ -405,7 +413,7 @@
 					&:nth-child(2) {
 						position: absolute;
 						top: 0;
-						left: calc(100% + #{pc-rem(14)});
+						left: pc-rem((213 + 14) * 5);
 					}
 
 					@keyframes belt {
@@ -421,6 +429,7 @@
 
 			.p-about__statistics__fig {
 				width: pc-rem(213);
+				padding: 0 pc-rem(7);
 
 				.p-about__statistics__description {
 					line-height: 1;
@@ -674,13 +683,14 @@
 			.p-people__crosstalk__main {
 				height: 100%;
 
-				.swiper {
+				.swiper-parent,
+				.swiper,
+				.swiper-slide {
 					height: 100%;
 				}
 
 				.swiper-slide {
 					position: relative;
-					height: 100%;
 
 					.p-people__crosstalk__title {
 						position: absolute;
@@ -868,6 +878,7 @@
 				background-color: #ebebeb;
 
 				a {
+					position: relative;
 					display: flex;
 					flex-direction: column;
 					box-sizing: border-box;
@@ -907,6 +918,14 @@
 						height: 2em * 1 * 22.5/14;
 						padding: pc-rem(15);
 					}
+				}
+
+				.c-icon {
+					font-size: pc-clamp(10);
+					position: absolute;
+					top: pc-clamp(24);
+					right: 50%;
+					transform: translateX(50%);
 				}
 			}
 		}
