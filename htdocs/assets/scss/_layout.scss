@@ -22,4 +22,8 @@
 		padding-right: $size--pad,
 		padding-left: $size--pad,
 	)) {}
+	@include sp ((
+		padding-right: $size--pad--sp,
+		padding-left: $size--pad--sp,
+	)) {}
 }

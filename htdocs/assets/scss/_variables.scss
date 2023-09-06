@@ -14,7 +14,7 @@
 $breakpoint--mb-to-pc: 768;
 $breakpoint--pc-max: 1440;
 $base-width--pc: 1120;
-$base-width--sp: 375;
+$base-width--sp: 750;
 
 
 /** --------------------------------
@@ -92,6 +92,7 @@ $zi--level2: 20;
 $zi--level1: 10;
 $zi--level0: 0;
 
+$zi--gf: 1100;
 $zi--gh: 1000;
 
 :root {
@@ -110,6 +111,7 @@ $zi--gh: 1000;
  *   SIZE   */
 
 $size--pad: 60;
+$size--pad--sp: 75;
 
 
 /** --------------------------------
@@ -149,3 +151,10 @@ $easing--easeInOutCirc: cubic-bezier(.785, .135, .150, .860);
 $easing--easeInOutBack: cubic-bezier(.680, -.550, .265, 1.550);
 
 $easing: $easing--ease;
+
+
+/** --------------------------------
+ *   STATISTICS   */
+
+$statistics_w: (213 + 14) * 5;
+$statistics_ratio_sp: 560 / 400;

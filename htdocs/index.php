@@ -39,13 +39,16 @@
 			data-barba-namespace="top"
 		>
 			<div class="p-hero">
-				<div class="swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"><picture><img class="is--cover" src="<?php echo KUME_Util::image_path('top/hero_visual1.jpg', true); ?>" alt=""></picture></div>
-						<div class="swiper-slide"><picture><img class="is--cover" src="<?php echo KUME_Util::image_path('top/hero_visual2.jpg', true); ?>" alt=""></picture></div>
-						<div class="swiper-slide"><picture><img class="is--cover" src="<?php echo KUME_Util::image_path('top/hero_visual3.jpg', true); ?>" alt=""></picture></div>
-						<div class="swiper-slide"><picture><img class="is--cover" src="<?php echo KUME_Util::image_path('top/hero_visual4.jpg', true); ?>" alt=""></picture></div>
+				<div class="swiper-parent">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><picture><img class="is--cover" src="<?php echo KUME_Util::image_path('top/hero_visual1.jpg', true); ?>" alt=""></picture></div>
+							<div class="swiper-slide"><picture><img class="is--cover" src="<?php echo KUME_Util::image_path('top/hero_visual2.jpg', true); ?>" alt=""></picture></div>
+							<div class="swiper-slide"><picture><img class="is--cover" src="<?php echo KUME_Util::image_path('top/hero_visual3.jpg', true); ?>" alt=""></picture></div>
+							<div class="swiper-slide"><picture><img class="is--cover" src="<?php echo KUME_Util::image_path('top/hero_visual4.jpg', true); ?>" alt=""></picture></div>
+						</div>
 					</div>
+					<div class="swiper-pagination"></div>
 				</div>
 
 				<div class="p-hero__body">
@@ -157,24 +160,31 @@
 						</div>
 					</div>
 
-					<footer class="l-container">
+					<footer class="p-news__footer l-container">
+						<h5>募集職種 / 募集概要 / 採用プロセス</h5>
 						<ul>
-							<li>
+							<li class="p-news__footer__item is--new">
 								<a href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener">
-									<h5>
-										<span lang="en">New Graduate</span>
-										<span lang="ja">新卒採用</span>
-									</h5>
-									<p>募集職種 / 募集概要 / 採用プロセス</p>
+									<div>
+										<h6>
+											<span lang="en">New Graduate</span>
+											<span lang="ja">新卒採用</span>
+											<span class="p-news__footer__item__arrow"><span class="c-icon c-icon--arrow_r"></span></span>
+										</h6>
+										<p class="p-news__footer__item__process">募集職種 / 募集概要 / 採用プロセス</p>
+									</div>
 								</a>
 							</li>
-							<li>
+							<li class="p-news__footer__item is--career">
 								<a href="https://www.kumesekkei.co.jp/recruit/entry_career.html" target="_blank" rel="noopener">
-									<h5>
-										<span lang="en">Career</span>
-										<span lang="ja">キャリア採用</span>
-									</h5>
-									<p>募集職種 / 募集概要 / 採用プロセス</p>
+									<div>
+										<h6>
+											<span lang="en">Career</span>
+											<span lang="ja">キャリア採用</span>
+											<span class="p-news__footer__item__arrow"><span class="c-icon c-icon--arrow_r"></span></span>
+										</h6>
+										<p class="p-news__footer__item__process">募集職種 / 募集概要 / 採用プロセス</p>
+									</div>
 								</a>
 							</li>
 						</ul>
@@ -412,6 +422,12 @@
 									</ul>
 								</nav>
 
+								<figure class="p-work__illustration">
+									<div>
+										<img src="<?php echo KUME_Util::image_path('top/work_visual.png', true); ?>" alt="">
+									</div>
+								</figure>
+
 								<p class="c-header-set__description">久米設計本社ビルは、久米設計社員により設計された自社ビルです。本社ビルは運河沿いに立地しており、東京でありながら風や緑が感じられる環境で業務に取組んでいます。社内には様々な設備や環境が整っています。</p>
 							</header>
 
@@ -441,12 +457,6 @@
 								</li>
 							</ul>
 						</div>
-
-						<figure class="p-work__illustration">
-							<div>
-								<img src="<?php echo KUME_Util::image_path('top/work_visual.png', true); ?>" alt="">
-							</div>
-						</figure>
 					</div>
 				</div>
 			</section>
@@ -488,38 +498,40 @@
 									</a>
 								</header>
 
-								<div class="p-people__employee__main">
-									<article class="p-people__employee__article">
-										<a href="#" rel="bookmark">
-											<picture class="c-circle-picture">
-												<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_employees_thumb1.jpg', true); ?>" alt="">
-											</picture>
-											<header>
-												<h4>三浦 淑美</h4>
-												<p>意匠設計</p>
-											</header>
-											<p class="p-people__employee__article__description">互いの意思を尊重し、最適な答えを探していくことのできる職場です。</p>
-											<footer>
-												<span class="c-career-tag" data-category="new">新卒採用</span>
-											</footer>
-										</a>
-									</article>
+								<div class="p-people__employee__main c-pane-scroller">
+									<div class="c-pane-scroller__container">
+										<article class="p-people__employee__article">
+											<a href="#" rel="bookmark">
+												<picture class="c-circle-picture">
+													<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_employees_thumb1.jpg', true); ?>" alt="">
+												</picture>
+												<header>
+													<h4>三浦 淑美</h4>
+													<p>意匠設計</p>
+												</header>
+												<p class="p-people__employee__article__description">互いの意思を尊重し、最適な答えを探していくことのできる職場です。</p>
+												<footer>
+													<span class="c-career-tag" data-category="new">新卒採用</span>
+												</footer>
+											</a>
+										</article>
 
-									<article class="p-people__employee__article">
-										<a href="#" rel="bookmark">
-											<picture class="c-circle-picture">
-												<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_employees_thumb2.jpg', true); ?>" alt="">
-											</picture>
-											<header>
-												<h4>水谷 絢子</h4>
-												<p>意匠設計</p>
-											</header>
-											<p class="p-people__employee__article__description">同世代設計者から刺激を受ける機会が多いことは魅力のひとつです。</p>
-											<footer>
-												<span class="c-career-tag" data-category="career">キャリア採用</span>
-											</footer>
-										</a>
-									</article>
+										<article class="p-people__employee__article">
+											<a href="#" rel="bookmark">
+												<picture class="c-circle-picture">
+													<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_employees_thumb2.jpg', true); ?>" alt="">
+												</picture>
+												<header>
+													<h4>水谷 絢子</h4>
+													<p>意匠設計</p>
+												</header>
+												<p class="p-people__employee__article__description">同世代設計者から刺激を受ける機会が多いことは魅力のひとつです。</p>
+												<footer>
+													<span class="c-career-tag" data-category="career">キャリア採用</span>
+												</footer>
+											</a>
+										</article>
+									</div>
 								</div>
 							</section>
 
@@ -541,29 +553,35 @@
 												<div class="swiper-slide">
 													<div class="p-people__crosstalk__title">
 														<h4>BIM座談会</h4>
-														<p>BIMを取り入れた設計ワークフローの構築とは？</p>
 													</div>
 													<picture>
 														<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_crosstalk1.jpg', true); ?>" alt="">
 													</picture>
+													<div class="p-people__crosstalk__description">
+														<p>BIMを取り入れた設計ワークフローの構築とは？</p>
+													</div>
 												</div>
 												<div class="swiper-slide">
 													<div class="p-people__crosstalk__title">
 														<h4>ABC座談会</h4>
-														<p>ABCを取り入れた設計ワークフローの構築とは？</p>
 													</div>
 													<picture>
 														<img class="is--cover" src="https://picsum.photos/600/400" alt="">
 													</picture>
+													<div class="p-people__crosstalk__description">
+														<p>ABCを取り入れた設計ワークフローの構築とは？</p>
+													</div>
 												</div>
 												<div class="swiper-slide">
 													<div class="p-people__crosstalk__title">
 														<h4>DEF座談会</h4>
-														<p>DEFを取り入れた設計ワークフローの構築とは？</p>
 													</div>
 													<picture>
 														<img class="is--cover" src="https://picsum.photos/600/400" alt="">
 													</picture>
+													<div class="p-people__crosstalk__description">
+														<p>DEFを取り入れた設計ワークフローの構築とは？</p>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -580,54 +598,56 @@
 									</h3>
 								</header>
 
-								<div class="p-people__interview__main">
-									<article class="p-people__interview__article">
-										<a href="#" rel="bookmark" data-video-id="u-8R5n54toE">
-											<picture>
-												<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_interview1.jpg', true); ?>" alt="">
-											</picture>
-											<div>
-												<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
-												<p lang="en">10:32</p>
-											</div>
-										</a>
-										<header>
-											<h4>電気設備について聞いてみた</h4>
-										</header>
-										<p>技術的な電気設備の設計を、デザイン性高く建築に融合させる、若手電気設備設計者の健闘を公開しています。</p>
-									</article>
+								<div class="p-people__interview__main c-pane-scroller">
+									<div class="c-pane-scroller__container">
+										<article class="p-people__interview__article">
+											<a href="#" rel="bookmark" data-video-id="u-8R5n54toE">
+												<picture>
+													<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_interview1.jpg', true); ?>" alt="">
+												</picture>
+												<div>
+													<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
+													<p lang="en">10:32</p>
+												</div>
+											</a>
+											<header>
+												<h4>電気設備について聞いてみた</h4>
+											</header>
+											<p>技術的な電気設備の設計を、デザイン性高く建築に融合させる、若手電気設備設計者の健闘を公開しています。</p>
+										</article>
 
-									<article class="p-people__interview__article">
-										<a href="#" rel="bookmark" data-video-id="0Uhh62MUEic">
-											<picture>
-												<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_interview2.jpg', true); ?>" alt="">
-											</picture>
-											<div>
-												<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
-												<p lang="en">7:41</p>
-											</div>
-										</a>
-										<header>
-											<h4>監理とはどんな仕事ですか？</h4>
-										</header>
-										<p>久米設計で働く若手社員のインタビュー動画。建築の最終防衛線として第一線で働く社員のリアルな声を公開しています。</p>
-									</article>
+										<article class="p-people__interview__article">
+											<a href="#" rel="bookmark" data-video-id="0Uhh62MUEic">
+												<picture>
+													<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_interview2.jpg', true); ?>" alt="">
+												</picture>
+												<div>
+													<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
+													<p lang="en">7:41</p>
+												</div>
+											</a>
+											<header>
+												<h4>監理とはどんな仕事ですか？</h4>
+											</header>
+											<p>久米設計で働く若手社員のインタビュー動画。建築の最終防衛線として第一線で働く社員のリアルな声を公開しています。</p>
+										</article>
 
-									<article class="p-people__interview__article">
-										<a href="#" rel="bookmark" data-video-id="VJGCeAWIfEA">
-											<picture>
-												<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_interview3.jpg', true); ?>" alt="">
-											</picture>
-											<div>
-												<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
-												<p lang="en">13:16</p>
-											</div>
-										</a>
-										<header>
-											<h4>先輩社員にリレーインタビュー</h4>
-										</header>
-										<p>話しかけやすい先輩にアポをとって、久米設計がどんなところか、聞いてみました。回答者が次の人を呼んでくるのがルールです。</p>
-									</article>
+										<article class="p-people__interview__article">
+											<a href="#" rel="bookmark" data-video-id="VJGCeAWIfEA">
+												<picture>
+													<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_interview3.jpg', true); ?>" alt="">
+												</picture>
+												<div>
+													<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
+													<p lang="en">13:16</p>
+												</div>
+											</a>
+											<header>
+												<h4>先輩社員にリレーインタビュー</h4>
+											</header>
+											<p>話しかけやすい先輩にアポをとって、久米設計がどんなところか、聞いてみました。回答者が次の人を呼んでくるのがルールです。</p>
+										</article>
+									</div>
 								</div>
 							</section>
 						</div>
@@ -665,66 +685,68 @@
 							</div>
 						</div>
 
-						<div class="p-story__main">
-							<article>
-								<a href="#" target="_blank" rel="bookmark noopener">
-									<h3>始まりの場所</h3>
-									<p>ここから<br>アイヌの歴史や文化<br>を伝える</p>
-									<figure>
-										<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual1.jpg', true); ?>" alt=""></div>
-										<figcaption>国立アイヌ民族博物館</figcaption>
-									</figure>
-									<span class="c-icon c-icon--external"></span>
-								</a>
-							</article>
+						<div class="p-story__main c-pane-scroller">
+							<div class="c-pane-scroller__container">
+								<article>
+									<a href="#" target="_blank" rel="bookmark noopener">
+										<h3>始まりの場所</h3>
+										<p>ここから<br>アイヌの歴史や文化<br>を伝える</p>
+										<figure>
+											<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual1.jpg', true); ?>" alt=""></div>
+											<figcaption>国立アイヌ民族博物館</figcaption>
+										</figure>
+										<span class="c-icon c-icon--external"></span>
+									</a>
+								</article>
 
-							<article>
-								<a href="#" target="_blank" rel="bookmark noopener">
-									<h3>風との共生</h3>
-									<p>“環境”を<br>“カタチ”にした<br>環境共生スタジアム</p>
-									<figure>
-										<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual2.jpg', true); ?>" alt=""></div>
-										<figcaption>栃木県総合<br>運動公園陸上競技場</figcaption>
-									</figure>
-									<span class="c-icon c-icon--external"></span>
-								</a>
-							</article>
+								<article>
+									<a href="#" target="_blank" rel="bookmark noopener">
+										<h3>風との共生</h3>
+										<p>“環境”を<br>“カタチ”にした<br>環境共生スタジアム</p>
+										<figure>
+											<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual2.jpg', true); ?>" alt=""></div>
+											<figcaption>栃木県総合<br>運動公園陸上競技場</figcaption>
+										</figure>
+										<span class="c-icon c-icon--external"></span>
+									</a>
+								</article>
 
-							<article>
-								<a href="#" target="_blank" rel="bookmark noopener">
-									<h3>地域との連携</h3>
-									<p>原風景をたどり、<br>建築として<br>かたちにする</p>
-									<figure>
-										<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual3.jpg', true); ?>" alt=""></div>
-										<figcaption>瀬戸市立にじの丘学園</figcaption>
-									</figure>
-									<span class="c-icon c-icon--external"></span>
-								</a>
-							</article>
+								<article>
+									<a href="#" target="_blank" rel="bookmark noopener">
+										<h3>地域との連携</h3>
+										<p>原風景をたどり、<br>建築として<br>かたちにする</p>
+										<figure>
+											<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual3.jpg', true); ?>" alt=""></div>
+											<figcaption>瀬戸市立にじの丘学園</figcaption>
+										</figure>
+										<span class="c-icon c-icon--external"></span>
+									</a>
+								</article>
 
-							<article>
-								<a href="#" target="_blank" rel="bookmark noopener">
-									<h3>大規模木造</h3>
-									<p>新しく懐かしい<br>木造校舎が<br>出来上がった</p>
-									<figure>
-										<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual4.jpg', true); ?>" alt=""></div>
-										<figcaption>牛久市立<br>ひたち野うしく中学校</figcaption>
-									</figure>
-									<span class="c-icon c-icon--external"></span>
-								</a>
-							</article>
+								<article>
+									<a href="#" target="_blank" rel="bookmark noopener">
+										<h3>大規模木造</h3>
+										<p>新しく懐かしい<br>木造校舎が<br>出来上がった</p>
+										<figure>
+											<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual4.jpg', true); ?>" alt=""></div>
+											<figcaption>牛久市立<br>ひたち野うしく中学校</figcaption>
+										</figure>
+										<span class="c-icon c-icon--external"></span>
+									</a>
+								</article>
 
-							<article>
-								<a href="#" target="_blank" rel="bookmark noopener">
-									<h3>構造への挑戦</h3>
-									<p>不安から熱狂へ、<br>そして信頼と協働で<br>作る鉄骨</p>
-									<figure>
-										<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual5.jpg', true); ?>" alt=""></div>
-										<figcaption>山梨県立図書館</figcaption>
-									</figure>
-									<span class="c-icon c-icon--external"></span>
-								</a>
-							</article>
+								<article>
+									<a href="#" target="_blank" rel="bookmark noopener">
+										<h3>構造への挑戦</h3>
+										<p>不安から熱狂へ、<br>そして信頼と協働で<br>作る鉄骨</p>
+										<figure>
+											<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual5.jpg', true); ?>" alt=""></div>
+											<figcaption>山梨県立図書館</figcaption>
+										</figure>
+										<span class="c-icon c-icon--external"></span>
+									</a>
+								</article>
+							</div>
 						</div>
 					</div>
 				</div>

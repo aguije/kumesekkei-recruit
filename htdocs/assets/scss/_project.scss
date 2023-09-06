@@ -8,6 +8,12 @@
  *
  * --------------------------------------------------------------- */
 
+/** =================================================================
+ *
+ * SWIPER PAGINATION
+ *
+ * --------------------------------------------------------------- */
+
 .swiper-parent {
 	position: relative;
 }
@@ -16,6 +22,10 @@
 	display: flex;
 	justify-content: center;
 	column-gap: pc-clamp(17);
+
+	@include sp () {
+		column-gap: sp-rem(24);
+	}
 
 	.swiper-pagination-bullet {
 		position: relative;
@@ -26,21 +36,30 @@
 		border: 1px solid #858585;
 		background-color: transparent;
 
+		@include sp () {
+			width: sp-rem(13);
+			height: sp-rem(13);
+		}
+
 		&.swiper-pagination-bullet-active {
 			border: none;
 			background-color: var(--color-black);
 
 			&::before {
+				box-sizing: border-box;
+				transform: translate(-50%) translateY(-50%);
+				border: 1px solid #858585;
+				border-radius: 50%;
+
 				@include pseudo-block((
 					width: pc-clamp(18),
 					height: pc-clamp(18),
 					top: 50%,
 					left: 50%,
-				)) {
-					box-sizing: border-box;
-					transform: translate(-50%) translateY(-50%);
-					border: 1px solid #858585;
-					border-radius: 50%;
+				)) {}
+				@include sp () {
+					width: sp-rem(28);
+					height: sp-rem(28);
 				}
 			}
 		}
@@ -52,6 +71,10 @@
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
 	bottom: pc-clamp(-8 - 22);
+
+	@include sp () {
+		bottom: sp-rem(-13 - 28);
+	}
 }
 
 .swiper-pagination-horizontal.swiper-pagination-bullets {
@@ -84,6 +107,19 @@
 	left: 0;
 	width: 100%;
 
+	@include sp () {
+		&::before {
+			@include pseudo-block((
+				width: 100%,
+				height: sp-rem(140),
+				top: 0,
+				left: 0,
+				z-index: 0,
+				background-color: #ffffff,
+			)) {}
+		}
+	}
+
 	.p-sh {
 		&::before {
 			@include pseudo-block((
@@ -98,24 +134,47 @@
 		}
 	}
 
-	.p-gm {
+	.p-gh__menu {
 		position: absolute;
 		top: 0;
 		left: 0;
-		overflow-x: hidden;
 		width: 100%;
 		pointer-events: none;
 
-		.p-gm__container {
+		.p-gm {
+			overflow-y: scroll;
+			width: 100%;
+			height: 100vh;
+			height: 100svh;
 			transform: translateX(100%);
 			pointer-events: all;
+
+			overscroll-behavior: none;
+			-ms-overflow-style: none;  // Edge
+			scrollbar-width: none;  // Firefox
+
+			&::-webkit-scrollbar {
+				display: none;  // Safari • Chrome
+			}
 		}
 	}
 }
 
+
+/** =================================================================
+ *
+ * GLOBAL FOOTER
+ *
+ * --------------------------------------------------------------- */
+
 #gf {
 	position: relative;
+	z-index: $zi--gf;
 	margin-top: pc-rem(200);
+
+	@include sp () {
+		margin-top: sp-rem(400);
+	}
 }
 
 
@@ -137,6 +196,11 @@
 		display: flex;
 		justify-content: space-between;
 
+		@include sp ((
+			padding-left: 40,
+			padding-right: 40 - 18
+		)) {}
+
 		.p-sh__buttons {
 			display: flex;
 		}
@@ -154,6 +218,10 @@
 			top: pc-clamp(102);
 			right: calc(#{1rem * $size--pad/$fs} + #{pc-clamp(18)});
 		}
+		@include sp ((
+			top: 190,
+			right: 40,
+		)) {}
 
 		.is--body {
 			font-weight: bold;
@@ -161,6 +229,9 @@
 			@include pc () {
 				font-size: pc-clamp(10);
 			}
+			@include sp ((
+				font-size: 20,
+			)) {}
 
 			span + span {
 				margin-top: 1em;
@@ -175,6 +246,9 @@
 		@include pc ((
 			column-gap: 80,
 		)) {}
+		@include sp ((
+			column-gap: 40,
+		)) {}
 
 		.p-sh__logo {
 			@include pc () {
@@ -182,6 +256,11 @@
 				width: pc-clamp(80);
 				margin-top: pc-clamp(20);
 			}
+			@include sp ((
+				font-size: 71,
+				width: 159,
+				margin-top: 35
+			)) {}
 		}
 
 		.p-sh__logoset__text {
@@ -189,16 +268,28 @@
 				font-size: pc-clamp(12);
 				margin-top: pc-clamp(24 - 1.5);
 			}
+			@include sp ((
+				font-size: 20,
+				margin-top: 46
+			)) {}
 
 			p + p {
 				margin-top: 1em * 12/16;
 				text-transform: uppercase;
+
+				@include sp () {
+					margin-top: sp-rem(19);
+				}
 			}
 		}
 	}
 
 	.p-sh__nav {
 		line-height: 1;
+
+		@include sp () {
+			display: none;
+		}
 
 		ul {
 			display: flex;
@@ -250,6 +341,9 @@
 			width: pc-clamp(100);
 			height: pc-clamp(60);
 		}
+		@include sp () {
+			width: sp-rem(160);
+		}
 
 		span[lang='en'] {
 			font-weight: 800;
@@ -259,6 +353,10 @@
 				font-size: pc-clamp(12);
 				margin-top: pc-clamp(24 - 1.5);
 				padding-left: pc-clamp(20);
+			}
+			@include sp () {
+				font-size: sp-rem(24);
+				margin-top: sp-rem(48 - 6);
 			}
 		}
 
@@ -277,10 +375,17 @@
 				top: pc-clamp(20);
 				width: pc-clamp(36);
 			}
+			@include sp () {
+				top: sp-rem(34);
+				width: sp-rem(72);
+			}
 
 			div {
 				@include pc () {
 					width: pc-clamp(18);
+				}
+				@include sp () {
+					width: sp-rem(36);
 				}
 
 				span {
@@ -288,6 +393,11 @@
 					height: 2px;
 					border-radius: 1px;
 					background-color: var(--color-white);
+
+					@include sp () {
+						height: 2px;
+						border-radius: 1px;
+					}
 				}
 
 				span:nth-child(1) {
@@ -300,6 +410,9 @@
 
 				span + span {
 					@include pc () {
+						margin-top: 4px;
+					}
+					@include sp () {
 						margin-top: 4px;
 					}
 				}
@@ -331,16 +444,21 @@
 			width: 100%;
 			padding-top: pc-clamp(150);
 		}
+		@include sp () {
+			padding-top: sp-rem(190);
+			padding-right: sp-rem(120);
+			padding-left: 0;
+		}
 
 		.p-gm__list.is--main {
 			display: flex;
 			flex-direction: column;
 			margin-left: auto;
 			writing-mode: vertical-rl;
-			border-left: 1px solid var(--color-border);
 
 			@include pc () {
 				padding-right: pc-clamp(100);
+				border-left: 1px solid var(--color-border);
 			}
 
 			> li {
@@ -354,6 +472,15 @@
 					padding-top: pc-clamp(40);
 					padding-bottom: pc-clamp(40);
 				}
+				@include sp ((
+					padding-top: 120,
+					padding-right: 20,
+					padding-bottom: 40,
+					padding-left: 20,
+				)) {
+					align-items: end;
+					column-gap: sp-rem(120);
+				}
 			}
 
 			h4 {
@@ -361,6 +488,9 @@
 
 				@include pc () {
 					height: pc-clamp(276);
+				}
+				@include sp () {
+					height: sp-rem(342);
 				}
 
 				a {
@@ -374,6 +504,10 @@
 						right: pc-clamp(6);
 						transform: translateX(50%) translateY(-50%);
 
+						@include sp () {
+							top: sp-rem(-34);
+							right: sp-rem(58);
+						}
 						@extend %c-icon;
 					}
 
@@ -381,29 +515,46 @@
 						&::before {
 							font-size: pc-clamp(10);
 							content: $icon--content-external;
+
+							@include sp () {
+								font-size: sp-rem(20);
+							}
 						}
 					}
 					&:not([target='_blank']) {
 						&::before {
 							font-size: pc-clamp(15);
 							content: $icon--content-arrow_d;
+
+							@include sp () {
+								font-size: sp-rem(30);
+							}
 						}
 					}
 
 					span[lang='en'] {
 						font-weight: bold;
+						white-space: nowrap;
 
 						@include pc () {
 							font-size: pc-clamp(12);
+						}
+						@include sp () {
+							font-size: sp-rem(24);
 						}
 					}
 
 					span[lang='ja'] {
 						font-weight: 500;
+						white-space: nowrap;
 
 						@include pc () {
 							font-size: pc-clamp(24);
 							margin-right: pc-clamp(7);
+						}
+						@include sp () {
+							font-size: sp-rem(38);
+							margin-right: sp-rem(14);
 						}
 					}
 				}
@@ -422,58 +573,78 @@
 			font-size: pc-clamp(12);
 			padding-right: pc-clamp(26 - 9);
 		}
+		@include sp () {
+			font-size: sp-rem(26);
+			display: flex;
+			column-gap: sp-rem(120);
+		}
 
 		a {
 			position: relative;
 			display: inline-block;
+			margin: -.5em;
+			padding: .5em;
 			white-space: nowrap;
 
 			&::before {
 				font-size: pc-clamp(15);
 				position: absolute;
-				top: pc-clamp(-17);
-				right: pc-clamp(8);
+				top: calc(.5em + #{pc-clamp(-17)});
+				right: calc(.5em + #{pc-clamp(7)});
 				content: $icon--content-arrow_d;
 				transform: translateX(50%) translateY(-50%);
 
+				@include sp () {
+					top: calc(.5em + #{sp-rem(-32)});
+					right: calc(.5em + #{sp-rem(17)});
+				}
 				@extend %c-icon;
 			}
 		}
 
 		li + li {
-			margin-right: 1em * 20/17;
+			@include pc () {
+				margin-right: 1em * 20/17;
+			}
 		}
 	}
 
 	.p-gm__footer {
-		margin-top: pc-clamp(30);
-		border-top: 1px solid var(--color-border);
+		@include pc () {
+			margin-top: pc-clamp(30);
+			border-top: 1px solid var(--color-border);
 
-		.p-gm__footer__container {
-			display: flex;
-			align-items: center;
+			.p-gm__footer__container {
+				display: flex;
+				align-items: center;
 
-			.p-gm__footer__copyright {
-				order: 1;
+				.p-gm__footer__copyright {
+					order: 1;
+				}
+				.p-gm__footer__links {
+					flex-grow: 1;
+					order: 2;
+				}
+				.p-gm__footer__languages {
+					order: 3;
+				}
 			}
-			.p-gm__footer__links {
-				flex-grow: 1;
-				order: 2;
-			}
-			.p-gm__footer__languages {
-				order: 3;
-			}
+		}
+		@include sp () {
+			padding-top: sp-rem(80);
+			padding-bottom: sp-rem(80);
 		}
 
 		.p-gm__footer__links,
 		.p-gm__footer__languages {
 			display: flex;
-			align-items: center;
 
 			@include pc ((
 				padding-top: 20,
 				padding-bottom: 20,
-			)) {}
+			)) {
+				align-items: center;
+			}
 		}
 
 		.p-gm__footer__links {
@@ -484,6 +655,11 @@
 			)) {
 				font-size: pc-clamp(10);
 			}
+			@include sp () {
+				font-size: sp-rem(20);
+				flex-direction: column;
+				row-gap: sp-rem(30);
+			}
 
 			li {
 				white-space: nowrap;
@@ -493,35 +669,66 @@
 					margin-right: 1em * 8/10;
 					content: $icon--content-external;
 
+					@include sp () {
+						font-size: sp-rem(20);
+					}
 					@extend %c-icon;
+				}
+
+				a {
+					display: inline-block;
+					margin: -.5em;
+					padding: .5em;
 				}
 			}
 		}
 
 		.p-gm__footer__languages {
 			@include pc ((
-				column-gap: 20,
+				column-gap: 0,
 			)) {
 				font-size: pc-clamp(10);
+			}
+			@include sp ((
+				column-gap: 30,
+			)) {
+				font-size: sp-rem(22);
+				position: absolute;
+				top: sp-rem(450);
+				right: sp-rem(20);
+				writing-mode: vertical-lr;
 			}
 
 			a {
 				display: inline-block;
 				white-space: nowrap;
-				border-radius: pc-clamp(3);
 
 				@include pc ((
 					padding-top: 5,
+					padding-right: 20,
 					padding-bottom: 5,
-				)) {}
+					padding-left: 20,
+				)) {
+					border-radius: pc-clamp(3);
+				}
+				@include sp ((
+					padding-top: 20,
+					padding-right: 3,
+					padding-bottom: 20,
+					padding-left: 3,
+				)) {
+					box-sizing: border-box;
+					border: 1px solid #2a1f1d;
+					border-radius: sp-rem(6);
+					background-color: #ffffff;
+				}
 
 				&.is--active {
 					background-color: #ccd2d3;
 
-					@include pc ((
-						padding-right: 20,
-						padding-left: 20,
-					)) {}
+					@include sp () {
+						border-color: #888e91;
+					}
 				}
 			}
 		}
@@ -532,6 +739,11 @@
 
 			@include pc () {
 				font-size: pc-clamp(12, 10);
+			}
+			@include sp ((
+				padding-top: 40,
+			)) {
+				font-size: sp-rem(24);
 			}
 		}
 	}

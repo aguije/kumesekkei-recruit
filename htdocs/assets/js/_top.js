@@ -34,7 +34,9 @@ $(function () {
 				fadeEffect: {
 					crossFade: true
 				},
-				pagination: 0,
+				pagination: {
+					el: '.p-hero .swiper-pagination'
+				},
 				navigation: 0,
 				scrollbar: 0
 			});

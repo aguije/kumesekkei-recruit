@@ -16,14 +16,18 @@
 
 .c-news-tag {
 	line-height: 1;
+	position: relative;
+	top: 1em * -1/11;
 	display: inline-block;
-	vertical-align: bottom;
+	padding: (1em * 2/11) (1em * 15/11) (1em * 4/11) (1em * 15/11);
+	border: 1px solid #999999;
+	border-radius: 1em * 4/11;
 
 	@include pc () {
 		font-size: pc-clamp(11);
-		padding: (1em * 4/11) (1em * 15/11);
-		border: 1px solid #999999;
-		border-radius: pc-clamp(4);
+	}
+	@include sp () {
+		font-size: sp-rem(22);
 	}
 }
 
@@ -42,6 +46,9 @@
 
 	@include pc () {
 		font-size: pc-clamp(11);
+	}
+	@include sp () {
+		font-size: sp-rem(22);
 	}
 
 	&::before {
@@ -74,6 +81,10 @@
 	position: relative;
 	padding-top: pc-rem(22);
 
+	@include sp ((
+		padding-top: 58,
+	)) {}
+
 	&::before {
 		@include pseudo-block((
 			top: 0,
@@ -99,6 +110,10 @@
 			[lang='ja'] {
 				font-size: pc-rem(40);
 				font-weight: 500;
+
+				@include sp ((
+					font-size: 46,
+				)) {}
 			}
 
 			[lang='en'] {
@@ -107,6 +122,10 @@
 
 				@include pc ((
 					margin-top: 32 - 2,
+				)) {}
+				@include sp ((
+					font-size: 24,
+					margin-top: 58,
 				)) {}
 			}
 		}
@@ -117,16 +136,30 @@
 		line-height: 1;
 		margin-top: 1em * -17/$fs;
 
+		@include sp ((
+			font-size: 22,
+		)) {
+			margin-top: 1em * 43/22;
+		}
+
 		ul {
 			display: flex;
-			justify-content: end;
 			column-gap: 2em;
+
+			@include pc () {
+				justify-content: end;
+			}
 		}
 	}
 
 	.c-header-set__description {
 		font-size: pc-rem(17);
 		margin-top: pc-rem(30);
+
+		@include sp () {
+			font-size: sp-rem(30);
+			line-height: 1 * 52/30;
+		}
 	}
 }
 
@@ -143,24 +176,39 @@
 	display: inline-flex;
 	align-items: end;
 	flex-direction: column;
-	height: pc-rem(22);
 
 	@include pc ((
 		padding-right: 36 + 20,
-	)) {}
+	)) {
+		height: pc-rem(22);
+	}
+	@include sp ((
+		padding-right: 45 + 18,
+	)) {
+		height: sp-rem(40);
+	}
 
 	span[lang='ja'] {
 		font-size: pc-rem(22);
 		white-space: nowrap;
+
+		@include sp ((
+			font-size: 40,
+		)) {}
 	}
+
 	span[lang='en'] {
-		font-size: pc-clamp(12, 9);
 		padding-top: 1em;
 		white-space: nowrap;
 		text-transform: uppercase;
 
 		@include pc ((
 			right: 36 + 20,
+		)) {
+			font-size: pc-clamp(12, 9);
+		}
+		@include sp ((
+			font-size: 24,
 		)) {}
 	}
 
@@ -182,11 +230,21 @@
 .c-arrow-link {
 	display: flex;
 	align-items: center;
-	margin-top: pc-rem(2);
 	column-gap: 1em;
+
+	@include pc () {
+		margin-top: pc-rem(2);
+	}
+	@include sp () {
+		margin-top: sp-rem(-2);
+	}
 
 	> span {
 		font-size: pc-clamp(12);
+
+		@include sp () {
+			font-size: sp-rem(22);
+		}
 	}
 }
 
@@ -198,6 +256,7 @@
  * --------------------------------------------------------------- */
 
 .c-circle-arrow {
+	line-height: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -207,8 +266,17 @@
 	border: 1px solid rgba($color--black, .3);
 	border-radius: 50%;
 
+	@include sp () {
+		width: sp-rem(45);
+	}
+
 	.c-icon {
 		font-size: pc-rem(11);
+
+		@include sp () {
+			font-size: sp-rem(28);
+			transform: scale(.5);
+		}
 	}
 
 	@at-root [data-theme='dark'] & {
@@ -241,6 +309,10 @@ $pie_r: 31.8309886184;
 		margin: auto;
 		border-radius: 50%;
 		background-color: var(--color-white);
+
+		@include sp () {
+			width: sp-rem(213 * $statistics_ratio_sp);
+		}
 	}
 
 	.c-chart__view {
@@ -280,5 +352,53 @@ $pie_r: 31.8309886184;
 		left: 50%;
 		transform: translateX(-50%) translateY(-50%);
 		text-align: center;
+
+		@include sp () {
+			font-size: sp-rem(16 * $statistics_ratio_sp);
+		}
+	}
+}
+
+
+/** =================================================================
+ *
+ * PANE SCROLLER
+ *
+ * --------------------------------------------------------------- */
+
+.c-pane-scroller {
+	@include sp ((
+		margin-right: -1 * $size--pad--sp,
+		margin-left: -1 * $size--pad--sp,
+	)) {
+		overflow-x: scroll;
+		overscroll-behavior-x: none;
+
+		width: 100vw;
+		scroll-snap-type: x mandatory;
+
+		-ms-overflow-style: none;  // Edge
+		scrollbar-width: none;  // Firefox
+
+		&::-webkit-scrollbar {
+			display: none;  // Safari • Chrome
+		}
+	}
+
+	.c-pane-scroller__container {
+		display: flex;
+
+		@include pc () {
+			column-gap: pc-rem(20);
+		}
+		@include sp ((
+			padding-right: 40,
+		)) {
+			box-sizing: border-box;
+		}
+
+		> * {
+			scroll-snap-align: start;
+		}
 	}
 }

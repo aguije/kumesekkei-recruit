@@ -41,9 +41,11 @@
 		</div>
 	</div>
 
-	<?php
+	<div class="p-gh__menu">
+		<?php
 
-		include($_SERVER['DOCUMENT_ROOT'] . '/modules/gm.mod.php');
+			include($_SERVER['DOCUMENT_ROOT'] . '/modules/gm.mod.php');
 
-	?>
+		?>
+	</div>
 </header>

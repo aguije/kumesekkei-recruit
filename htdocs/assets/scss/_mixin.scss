@@ -301,7 +301,7 @@ body {
 }
 
 @function sp-rem ($_size: 1) {
-	@return 1rem * $_size / $fs--sp;
+	@return 1rem * $_size * 2 / $fs--sp;
 }
 
 
