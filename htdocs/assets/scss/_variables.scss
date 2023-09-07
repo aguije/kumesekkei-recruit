@@ -92,8 +92,8 @@ $zi--level2: 20;
 $zi--level1: 10;
 $zi--level0: 0;
 
-$zi--gf: 1100;
 $zi--gh: 1000;
+$zi--gf: 900;
 
 :root {
 	--zi-gh: #{$zi--gh};
@@ -110,6 +110,8 @@ $zi--gh: 1000;
 /** --------------------------------
  *   SIZE   */
 
+$size--gh: 76;
+$size--gh--sp: 140;
 $size--pad: 60;
 $size--pad--sp: 75;
 

@@ -1,4 +1,6 @@
 <header id="gh" class="p-gh">
+	<div class="p-gh__bar"></div>
+
 	<div class="p-sh">
 		<div class="l-wrapper">
 			<div class="p-sh__container l-container">

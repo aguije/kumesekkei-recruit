@@ -101,27 +101,65 @@
  * --------------------------------------------------------------- */
 
 #gh {
-	position: sticky;
-	position: -webkit-sticky;
+	position: fixed;
 	z-index: var(--zi-gh);
 	top: 0;
 	left: 0;
 	width: 100%;
 
-	@include sp () {
-		&::before {
-			@include pseudo-block((
-				width: 100%,
-				height: sp-rem(140),
-				top: 0,
-				left: 0,
-				z-index: 0,
-				background-color: #ffffff,
-			)) {}
+	&.is--scrolled {
+		.p-gh__bar {
+			opacity: 1;
+		}
+
+		.p-sh__title {
+			opacity: 0;
 		}
 	}
 
+	&.is--opened {
+		.p-gh__menu {
+			.p-gm {
+				transform: translateX(0%);
+				pointer-events: all;
+			}
+
+			&::before {
+				transform: translateX(0%);
+			}
+		}
+	}
+
+	&.is--scrolled.is--opened {
+		.p-sh__title {
+			opacity: 1;
+		}
+	}
+
+	.p-gh__bar {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: pc-clamp($size--gh);
+		background-color: #ffffff;
+		filter: drop-shadow(0 0 #{pc-clamp(20)} rgba(0,0,0,.2));
+
+		@include pc () {
+			opacity: 0;
+		}
+		@include sp () {
+			height: sp-rem($size--gh--sp);
+			filter: drop-shadow(0 0 #{sp-rem(40)} rgba(0,0,0,.2));
+		}
+		@include transition('opacity', .3s);
+	}
+
 	.p-sh {
+		position: relative;
+		z-index: var(--zi-2);
+
 		&::before {
 			@include pseudo-block((
 				top: 0,
@@ -142,20 +180,42 @@
 		width: 100%;
 		pointer-events: none;
 
+		&::before {
+			@include pseudo-block((
+				width: 100%,
+				height: pc-clamp($size--gh),
+				top: 0,
+				left: 0,
+				z-index: var(--zi-1),
+				background-color: var(--color-bluegray),
+				transform: translateX(100%),
+			)) {}
+			@include sp () {
+				height: sp-rem($size--gh--sp);
+			}
+			@include transition('transform', .6s);
+		}
+
 		.p-gm {
 			overflow-y: scroll;
 			width: 100%;
 			height: 100vh;
 			height: 100svh;
 			transform: translateX(100%);
-			pointer-events: all;
 
 			overscroll-behavior: none;
 			-ms-overflow-style: none;  // Edge
 			scrollbar-width: none;  // Firefox
+			@include transition('transform', .6s);
 
 			&::-webkit-scrollbar {
 				display: none;  // Safari • Chrome
+			}
+
+			.p-gm__container {
+				@include pc () {
+					filter: drop-shadow(0 0 #{pc-clamp(20)} rgba(0,0,0,.2));
+				}
 			}
 		}
 	}
@@ -214,7 +274,9 @@
 		white-space: nowrap;
 		writing-mode: vertical-rl;
 		pointer-events: none;
+		opacity: 1;
 
+		@include transition('opacity', .3s);
 		@include pc () {
 			top: pc-clamp(102);
 			right: calc(#{1rem * $size--pad/$fs} + #{pc-clamp(18)});
@@ -297,6 +359,10 @@
 			border-right: 1px solid var(--color-border);
 			border-left: 1px solid var(--color-border);
 
+			@include pc () {
+				height: pc-clamp($size--gh - 16);
+			}
+
 			li {
 				a {
 					display: flex;
@@ -306,7 +372,7 @@
 					@include pc ((
 						width: 189,
 					)) {
-						height: pc-clamp(60);
+						height: pc-clamp($size--gh);
 						padding-top: pc-clamp(24 - 1.5);
 						padding-left: pc-clamp(20);
 					}
@@ -340,7 +406,7 @@
 
 		@include pc () {
 			width: pc-clamp(100);
-			height: pc-clamp(60);
+			height: pc-clamp($size--gh - 16);
 		}
 		@include sp () {
 			width: sp-rem(160);
@@ -368,9 +434,12 @@
 			align-items: center;
 			flex-direction: column;
 			justify-content: center;
+			box-sizing: border-box;
 			aspect-ratio: 1 / 1;
+			will-change: background-color, transform;
+			border: 1px solid #000000;
 			border-radius: 50%;
-			background-color: var(--color-black);
+			background-color: #000000;
 
 			@include pc () {
 				top: pc-clamp(20);
@@ -381,6 +450,10 @@
 				width: sp-rem(72);
 			}
 
+			&.is--disabled {
+				pointer-events: none;
+			}
+
 			div {
 				@include pc () {
 					width: pc-clamp(18);
@@ -389,11 +462,12 @@
 					width: sp-rem(36);
 				}
 
-				span {
+				> span {
 					display: block;
 					height: 2px;
+					will-change: background-color, transform;
 					border-radius: 1px;
-					background-color: var(--color-white);
+					background-color: #ffffff;
 
 					@include sp () {
 						height: 2px;
@@ -401,15 +475,15 @@
 					}
 				}
 
-				span:nth-child(1) {
+				> span:nth-child(1) {
 					width: 100%;
 				}
 
-				span:nth-child(2) {
-					width: 100% * 15/18;
+				> span:nth-child(2) {
+					width: 84%;
 				}
 
-				span + span {
+				> span + span {
 					@include pc () {
 						margin-top: 4px;
 					}
@@ -463,9 +537,20 @@
 			}
 
 			> li {
+				position: relative;
 				display: flex;
+				cursor: pointer;
 				border-right: 1px solid var(--color-border);
 
+				@include transition('border-right-color, background-color', .3s);
+				@include taphover {
+					border-right-color: #515252;
+					background-color: #dfe0e3;
+
+					&::before {
+						opacity: 1;
+					}
+				}
 				@include pc ((
 					padding-right: 24 - 2,
 					padding-left: 48 - 2,
@@ -482,6 +567,18 @@
 				)) {
 					align-items: end;
 					column-gap: sp-rem(120);
+				}
+
+				&::before {
+					@include pseudo-block((
+						top: 0,
+						right: 0,
+						width: 3px,
+						height: 100%,
+						background-color: #a2a3a3,
+						opacity: 0,
+					)) {}
+					@include transition('opacity', .3s);
 				}
 			}
 
@@ -589,6 +686,12 @@
 			margin: -.5em;
 			padding: .5em;
 			white-space: nowrap;
+
+			text-decoration-color: #686666;
+			text-underline-offset: .3em;
+			@include taphover {
+				text-decoration: underline;
+			}
 
 			&::before {
 				font-size: pc-clamp(15);

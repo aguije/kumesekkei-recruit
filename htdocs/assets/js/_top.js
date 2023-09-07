@@ -49,7 +49,7 @@ $(function () {
 			$('.p-hero__arrow').on('click', function () {
 				gsap.to(window, {
 					duration: .6,
-					scrollTo: { y: '.p-news', offsetY: $('#gh .p-sh').height() }
+					scrollTo: { y: '.p-news', offsetY: $('#gh .p-gh__bar').height() }
 				});
 			});
 		}
@@ -89,8 +89,7 @@ $(function () {
 				loop: 1,
 				pagination: 0,
 				navigation: 0,
-				scrollbar: 0,
-				allowTouchMove: 0
+				scrollbar: 0
 			});
 
 			swiperUpper.init();
