@@ -837,15 +837,18 @@
 					display: inline-block;
 					margin: -.5em;
 					padding: .5em;
+
+					@include taphover {
+						text-decoration: underline;
+					}
 				}
 			}
 		}
 
 		.p-gm__footer__languages {
-			@include pc ((
-				column-gap: 0,
-			)) {
+			@include pc () {
 				font-size: pc-clamp(10);
+				column-gap: pc-clamp(2);
 			}
 			@include sp ((
 				column-gap: 30,
@@ -858,14 +861,14 @@
 			}
 
 			a {
-				display: inline-block;
+				display: block;
 				white-space: nowrap;
 
 				@include pc ((
 					padding-top: 5,
-					padding-right: 20,
+					padding-right: 16,
 					padding-bottom: 5,
-					padding-left: 20,
+					padding-left: 16,
 				)) {
 					border-radius: pc-clamp(3);
 				}
@@ -880,9 +883,23 @@
 					border-radius: sp-rem(6);
 					background-color: #ffffff;
 				}
+				@include taphover {
+					background-color: #ffffff;
 
-				&.is--active {
-					background-color: #ccd2d3;
+					@include sp () {
+						background-color: rgba(#ffffff, .8);
+					}
+				}
+				@include transition('background-color', $dur--hover);
+
+				> span {
+					display: inline-block;
+				}
+
+				&.is--active,
+				&[data-stt-active] {
+					pointer-events: none;
+					background-color: #cdd1d4;
 
 					@include sp () {
 						border-color: #888e91;
@@ -933,13 +950,13 @@
 		transform: translateY(50%);
 		opacity: 0;
 
+		@include taphover {
+			transform: translateY(50%) scale(1.5);
+		}
+
 		&.is--active {
 			pointer-events: all;
 			opacity: 1;
-		}
-
-		@include taphover {
-			transform: translateY(50%) scale(1.5);
 		}
 	}
 }
