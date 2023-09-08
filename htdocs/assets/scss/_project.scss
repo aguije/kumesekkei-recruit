@@ -231,7 +231,6 @@
 #gf {
 	position: relative;
 	z-index: $zi--gf;
-	margin-top: pc-rem(200);
 
 	@include sp () {
 		margin-top: sp-rem(400);
@@ -911,6 +910,43 @@
 
 /** =================================================================
  *
+ * SCROLL TO TOP
+ *
+ * --------------------------------------------------------------- */
+
+.p-scroll-to-top {
+	position:         sticky;
+	position: -webkit-sticky;
+	z-index: var(--zi-1);
+	bottom: 0;
+	height: pc-rem(200);
+	pointer-events: none;
+
+	@include sp () {
+		display: none;
+	}
+
+	a.c-circle-arrow {
+		position: absolute;
+		right: pc-rem($size--pad);
+		bottom: 50%;
+		transform: translateY(50%);
+		opacity: 0;
+
+		&.is--active {
+			pointer-events: all;
+			opacity: 1;
+		}
+
+		@include taphover {
+			transform: translateY(50%) scale(1.5);
+		}
+	}
+}
+
+
+/** =================================================================
+ *
  * MODAL
  *
  * --------------------------------------------------------------- */
@@ -957,12 +993,13 @@ $modal-content-aspect: $modal-content-w/$modal-content-h;
 			height: 100vh;
 			padding: pc-rem($size--pad);
 
+			@include sp () {
+				padding: sp-rem(40);
+			}
+
 			@media (max-aspect-ratio: #{$modal-content-w}/#{$modal-content-h}) {
 				width: 100vw;
 				height: 100vw* (1 / $modal-content-aspect);
-			}
-			@include sp () {
-				padding: sp-rem(40);
 			}
 
 			.p-modal__video {

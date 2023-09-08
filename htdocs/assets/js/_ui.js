@@ -150,10 +150,21 @@ $(function () {
 
 							$gh.addClass('is--opened');
 
+							$(document).on('click.menu', function (_event) {
+								if (!$.contains($('#gh .p-gm__container')[0], _event.target)) {
+									_event.preventDefault();
+									_event.stopPropagation();
+
+									$button.trigger('click');
+								}
+							});
+
 						}
 					});
 				}
 				else {
+					$(document).off('click.menu');
+
 					gsap.to($button, {
 						backgroundColor: '#000000',
 						rotate: '0deg',
@@ -224,7 +235,7 @@ $(function () {
 				}
 			});
 
-			$(window).on('scrollend', 90, function () {
+			$(window).on('scrollend.gh', 90, function () {
 				if (!ticking) {
 					window.requestAnimationFrame(function () {
 						scroll();
@@ -244,6 +255,52 @@ $(function () {
 
 	/* ==================================================================
 	 *
+	 * SCROLL TO TOP
+	 *
+	 * --------------------------------------------------------------- */
+
+	function initScrollToTop () {
+		let ticking = false;
+
+		const $button = $('.p-scroll-to-top').find('a');
+
+		$button.on('click.stt', function (_event) {
+			_event.preventDefault();
+
+			gsap.to(window, {
+				duration: .6,
+				scrollTo: { y: 0 }
+			});
+		});
+
+		const scroll = () => {
+			if (window.pageYOffset > GLOBAL.wH) {
+				if (!$button.hasClass('is--active')) {
+					$button.addClass('is--active');
+				}
+			}
+			else {
+				if ($button.hasClass('is--active')) {
+					$button.removeClass('is--active');
+				}
+			}
+		};
+
+		$(window).on('scroll.stt', function () {
+			if (!ticking) {
+				window.requestAnimationFrame(function () {
+					scroll();
+					ticking = false;
+				});
+
+				ticking = true;
+			}
+		});
+	}
+
+
+	/* ==================================================================
+	 *
 	 *
 	 * INITIALIZE
 	 *
@@ -252,6 +309,7 @@ $(function () {
 
 	function init () {
 		initMenu();
+		initScrollToTop();
 	}
 
 

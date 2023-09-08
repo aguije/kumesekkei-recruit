@@ -64,7 +64,7 @@
 					</p>
 				</div>
 
-				<div class="p-hero__arrow"><span class="c-icon c-icon--arrow_d"></span></div>
+				<div class="p-hero__arrow c-circle-arrow c-circle-arrow--page"><span class="c-icon c-icon--arrow_d"></span></div>
 			</div>
 
 			<?php
@@ -754,6 +754,10 @@
 				</div>
 			</section>
 		</main>
+
+		<div class="p-scroll-to-top l-wrapper">
+			<a class="c-circle-arrow c-circle-arrow--page" href="javascript:void(0);"><span class="c-icon c-icon--arrow_u"></span></a>
+		</div>
 
 		<div class="p-modal">
 			<div class="p-modal__wrapper">

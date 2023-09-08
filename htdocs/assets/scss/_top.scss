@@ -20,6 +20,8 @@
 
 	.p-hero {
 		position: relative;
+		z-index: var(--zi-5);
+		background-color: var(--color-white);
 
 		@include pc () {
 			display: flex;
@@ -105,25 +107,21 @@
 			z-index: var(--zi-2);
 			bottom: 100vh * 36/796;
 			left: 50%;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
 			cursor: pointer;
 			transform: translateX(-50%);
-			border-radius: 50%;
-			background-color: var(--color-black);
 
 			@include pc () {
-				width: pc-rem(50);
-				height: pc-rem(50);
+				font-size: pc-rem(50);
 			}
 			@include sp () {
 				display: none;
 			}
+			@include taphover {
+				transform: translateX(-50%) scale(1.5);
+			}
 
 			.c-icon {
-				font-size: pc-rem(26);
-				color: var(--color-white);
+				font-size: 1em * 26/50;
 			}
 		}
 	}
@@ -539,13 +537,16 @@
 
 			.p-about__item__main {
 				a.c-list-link {
+					position: relative;
+					z-index: var(--zi-1);
+
 					@include taphover {
 						picture {
 							@include pc () {
-								transform: translateX(calc(100% + #{pc-rem(20)})) translateY(-50%) scale(1.05);
+								transform: translateX(calc(100% + #{pc-rem(20)})) translateY(-50%) scale($scale--hover);
 							}
 							@include sp () {
-								transform: translateX(calc(100% + #{sp-rem(40)})) translateY(-50%) scale(1.05);
+								transform: translateX(calc(100% + #{sp-rem(40)})) translateY(-50%) scale($scale--hover);
 							}
 						}
 					}
@@ -559,6 +560,7 @@
 
 				picture {
 					position: absolute;
+					z-index: var(--zi-0);
 					top: 50%;
 					right: 0;
 					width: pc-rem(280);
@@ -891,7 +893,7 @@
 			.c-list-link {
 				@include taphover {
 					picture {
-						transform: translateX(-100%) translateY(-50%) scale(1.05);
+						transform: translateX(-100%) translateY(-50%) scale($scale--hover);
 					}
 				}
 
@@ -968,6 +970,10 @@
 		@include sp () {
 			margin-top: sp-rem(400);
 			padding: sp-rem(90) 0;
+		}
+
+		.c-circle-arrow--border {
+			border-color: var(--color-theme-border);
 		}
 
 		header.c-header-set {
@@ -1120,7 +1126,7 @@
 						}
 
 						picture {
-							transform: scale(1.05);
+							transform: scale($scale--hover);
 						}
 
 						h4 {
@@ -1242,7 +1248,7 @@
 
 						@include taphover {
 							picture {
-								transform: scale(1.05);
+								transform: scale($scale--hover);
 							}
 						}
 					}
