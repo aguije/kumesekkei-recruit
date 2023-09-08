@@ -55,7 +55,7 @@ $(function () {
 			});
 		}
 		else {
-
+			$('.p-hero__arrow').off('click');
 		}
 	}
 
@@ -226,7 +226,7 @@ $(function () {
 
 		}
 		else {
-
+			$('.p-people__interview__article a').off('click');
 		}
 	}
 
@@ -260,15 +260,13 @@ $(function () {
 
 			//
 
-			$('.p-story article').each(function () {
-				$(this).on('mouseenter', function () {
-					const index = $(this).index();
-					swiper.slideTo(index);
-				});
+			$('.p-story article').on('mouseenter', function () {
+				const index = $(this).index();
+				swiper.slideTo(index);
 			});
 		}
 		else {
-
+			$('.p-story article').off('mouseenter');
 		}
 	}
 
@@ -286,6 +284,16 @@ $(function () {
 		initAbout({ mode: true });
 		initPeople({ mode: true });
 		initStory({ mode: true });
+	}
+
+	function unload () {
+		GLOBAL.methods.util.destroyObservers();
+		GLOBAL.methods.util.destroySwipers();
+
+		initHero({ mode: false });
+		initAbout({ mode: false });
+		initPeople({ mode: false });
+		initStory({ mode: false });
 	}
 
 
@@ -308,6 +316,7 @@ $(function () {
 		console.log(' ');
 		console.log('EVENT: unloadTop');
 
+		unload();
 	});
 
 });

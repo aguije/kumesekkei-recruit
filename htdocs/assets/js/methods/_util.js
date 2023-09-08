@@ -10,6 +10,46 @@
 
 /** =================================================================
  *
+ * DESTROY OBSERVERS
+ *
+ * --------------------------------------------------------------- */
+
+GLOBAL.methods.util.destroyObservers = function () {
+	console.log(`destroyObservers: ${GLOBAL.observers.length} observers.`);
+
+	GLOBAL.observers.forEach(function (_mIO, _index) {
+		if (typeof _mIO === 'object' && _mIO.destroy) {
+			_mIO.destroy();
+
+			delete GLOBAL.observers[_index];
+		}
+	});
+
+	GLOBAL.observers = [];
+};
+
+
+/** =================================================================
+ *
+ * DESTROY SWIPERS
+ *
+ * --------------------------------------------------------------- */
+
+GLOBAL.methods.util.destroySwipers = function () {
+	console.log(`destroySwipers: ${GLOBAL.swipers.length} swipers.`);
+
+	GLOBAL.swipers.forEach(function (_swiper, _index) {
+		_swiper.destroy();
+
+		delete GLOBAL.swipers[_index];
+	});
+
+	GLOBAL.swipers = [];
+};
+
+
+/** =================================================================
+ *
  * MODAL
  *
  * --------------------------------------------------------------- */
