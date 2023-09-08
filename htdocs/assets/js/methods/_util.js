@@ -64,7 +64,7 @@ GLOBAL.methods.util.display_modal = (_option) => {
 		$('.p-modal').show();
 
 		gsap.to('.p-modal__veil', {
-			opacity: .5,
+			opacity: .8,
 			duration: .6
 		});
 
