@@ -133,7 +133,7 @@ $(function () {
 
 			let mIO = new MultipleIO('.p-top .p-people', {
 				config: {
-					threshold: [.25, .75]
+					rootMargin: '-50% 0 -50% 0'
 				},
 				onEnter: (_element) => {
 					_element.setAttribute('data-theme', 'dark');
