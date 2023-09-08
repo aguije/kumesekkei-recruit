@@ -38,7 +38,8 @@ $(function () {
 					el: '.p-hero .swiper-pagination'
 				},
 				navigation: 0,
-				scrollbar: 0
+				scrollbar: 0,
+				allowTouchMove: 0
 			});
 
 			swiper.init();
@@ -75,12 +76,16 @@ $(function () {
 			const swiperUpper = new Swiper('.p-about__item__sub .swiper-parent.is--upper .swiper', {
 				init: 0,
 				autoHeight: 0,
+				autoplay: {
+					delay: 4500
+				},
 				loop: 1,
 				pagination: {
 					el: '.p-about__item__sub .swiper-parent.is--upper .swiper-pagination'
 				},
 				navigation: 0,
-				scrollbar: 0
+				scrollbar: 0,
+				allowTouchMove: 0
 			});
 
 			const swiperLower = new Swiper('.p-about__item__sub .swiper-parent.is--lower .swiper', {
@@ -89,7 +94,8 @@ $(function () {
 				loop: 1,
 				pagination: 0,
 				navigation: 0,
-				scrollbar: 0
+				scrollbar: 0,
+				allowTouchMove: 0
 			});
 
 			swiperUpper.init();
@@ -99,7 +105,7 @@ $(function () {
 			GLOBAL.swipers.push(swiperLower);
 
 			swiperUpper.controller.control = [swiperLower];
-			swiperLower.controller.control = [swiperUpper];
+			//swiperLower.controller.control = [swiperUpper];
 		}
 		else {
 
@@ -122,12 +128,35 @@ $(function () {
 		if (_option.mode === true) {
 
 			/** =================================================================
+			 * THEME COLOR
+			 * --------------------------------------------------------------- */
+
+			let mIO = new MultipleIO('.p-top .p-people', {
+				config: {
+					threshold: [.25, .75]
+				},
+				onEnter: (_element) => {
+					_element.setAttribute('data-theme', 'dark');
+				},
+				onLeave: (_element) => {
+					_element.setAttribute('data-theme', 'light');
+				},
+				triggerOnce: false
+			});
+
+			GLOBAL.observers.push(mIO);
+
+
+			/** =================================================================
 			 * CROSSTALK
 			 * --------------------------------------------------------------- */
 
 			const swiper = new Swiper('.p-people__crosstalk .swiper', {
 				init: 0,
 				autoHeight: 0,
+				autoplay: {
+					delay: 4500
+				},
 				loop: 1,
 				pagination: {
 					el: '.p-people__crosstalk .swiper-pagination'

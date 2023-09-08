@@ -104,7 +104,7 @@
 								<span lang="ja">新着情報</span>
 								<span lang="en">Recruit News</span>
 							</h3>
-							<p><a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span><span>一覧へ</span></a></p>
+							<p><a class="c-link-external" href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span><span>一覧へ</span></a></p>
 						</header>
 
 						<div class="p-news__list">
@@ -169,7 +169,7 @@
 										<h6>
 											<span lang="en">New Graduate</span>
 											<span lang="ja">新卒採用</span>
-											<span class="p-news__footer__item__arrow"><span class="c-icon c-icon--arrow_r"></span></span>
+											<span class="c-circle-arrow c-circle-arrow--new"><span class="c-icon c-icon--arrow_r"></span></span>
 										</h6>
 										<p class="p-news__footer__item__process">募集職種 / 募集概要 / 採用プロセス</p>
 									</div>
@@ -181,7 +181,7 @@
 										<h6>
 											<span lang="en">Career</span>
 											<span lang="ja">キャリア採用</span>
-											<span class="p-news__footer__item__arrow"><span class="c-icon c-icon--arrow_r"></span></span>
+											<span class="c-circle-arrow c-circle-arrow--career"><span class="c-icon c-icon--arrow_r"></span></span>
 										</h6>
 										<p class="p-news__footer__item__process">募集職種 / 募集概要 / 採用プロセス</p>
 									</div>
@@ -203,13 +203,13 @@
 								</h2>
 							</div>
 
-							<nav>
+							<div class="c-header-set__nav">
 								<ul>
 									<li>メッセージ</li>
 									<li>社会課題への取組み</li>
 									<li>数字で見る久米設計</li>
 								</ul>
-							</nav>
+							</div>
 						</header>
 
 						<ul class="p-about__list">
@@ -219,15 +219,14 @@
 										<a class="c-list-link" href="#">
 											<span lang="ja">メッセージ</span>
 											<span lang="en">Top Message</span>
-											<div class="c-circle-arrow"><span class="c-icon c-icon--arrow_r"></span></div>
+											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
+											<picture class="c-circle-picture">
+												<img class="is--cover" src="<?php echo KUME_Util::image_path('top/about_message.jpg', true); ?>" alt="">
+											</picture>
 										</a>
 									</h3>
 								</div>
-								<div class="p-about__item__sub">
-									<picture class="c-circle-picture">
-										<img class="is--cover" src="<?php echo KUME_Util::image_path('top/about_message.jpg', true); ?>" alt="">
-									</picture>
-								</div>
+								<div class="p-about__item__sub"></div>
 							</li>
 
 							<li class="p-about__item p-about__csr">
@@ -236,7 +235,7 @@
 										<a class="c-list-link" href="#">
 											<span lang="ja">社会課題への取組み</span>
 											<span lang="en">Corporate Social Resposibility</span>
-											<div class="c-circle-arrow"><span class="c-icon c-icon--arrow_r"></span></div>
+											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										</a>
 									</h3>
 									<div class="p-about__csr__tags">
@@ -291,7 +290,7 @@
 										<a class="c-list-link" href="#">
 											<span lang="ja">数字で見る久米設計</span>
 											<span lang="en">Statistics &amp; Facts</span>
-											<div class="c-circle-arrow"><span class="c-icon c-icon--arrow_r"></span></div>
+											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										</a>
 									</h3>
 								</div>
@@ -414,13 +413,13 @@
 									</h2>
 								</div>
 
-								<nav>
+								<div class="c-header-set__nav">
 									<ul>
 										<li>ワークプレイス</li>
 										<li>福利厚生</li>
 										<li>人材育成プログラム</li>
 									</ul>
-								</nav>
+								</div>
 
 								<figure class="p-work__illustration">
 									<div>
@@ -436,14 +435,14 @@
 									<a class="c-list-link" href="#">
 										<span lang="ja">ワークプレイス</span>
 										<span lang="en">Workplace</span>
-										<div class="c-circle-arrow"><span class="c-icon c-icon--arrow_r"></span></div>
+										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 									</a>
 								</li>
 								<li class="is--welfare">
 									<a class="c-list-link" href="#">
 										<span lang="ja">福利厚生</span>
 										<span lang="en">Welfare</span>
-										<div class="c-circle-arrow"><span class="c-icon c-icon--arrow_r"></span></div>
+										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										<picture class="c-circle-picture"><img class="is--cover" src="<?php echo KUME_Util::image_path('top/work_welfare_thumb.jpg', true); ?>" alt=""></picture>
 									</a>
 								</li>
@@ -451,7 +450,7 @@
 									<a class="c-list-link" href="#">
 										<span lang="ja">人材育成プログラム</span>
 										<span lang="en">Human Resource Development</span>
-										<div class="c-circle-arrow"><span class="c-icon c-icon--arrow_r"></span></div>
+										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										<picture class="c-circle-picture"><img class="is--cover" src="<?php echo KUME_Util::image_path('top/work_hrd_thumb.jpg', true); ?>" alt=""></picture>
 									</a>
 								</li>
@@ -461,7 +460,7 @@
 				</div>
 			</section>
 
-			<section class="p-people" data-theme="dark">
+			<section class="p-people" data-theme="light">
 				<div class="l-wrapper">
 					<div class="p-people__container l-container">
 						<header class="c-header-set">
@@ -472,17 +471,17 @@
 								</h2>
 								<a class="c-arrow-link" href="#">
 									<span>一覧へ</span>
-									<div class="c-circle-arrow"><span class="c-icon c-icon--arrow_r"></span></div>
+									<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 								</a>
 							</div>
 
-							<nav>
+							<div class="c-header-set__nav">
 								<ul>
 									<li>社員紹介</li>
 									<li>クロストーク</li>
 									<li>動画</li>
 								</ul>
-							</nav>
+							</div>
 						</header>
 
 						<div class="p-people__main">
@@ -494,7 +493,7 @@
 									</h3>
 									<a class="c-arrow-link" href="#">
 										<span>一覧へ</span>
-										<div class="c-circle-arrow"><span class="c-icon c-icon--arrow_r"></span></div>
+										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 									</a>
 								</header>
 
@@ -543,7 +542,7 @@
 									</h3>
 									<a class="c-arrow-link" href="#">
 										<span>一覧へ</span>
-										<div class="c-circle-arrow"><span class="c-icon c-icon--arrow_r"></span></div>
+										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 									</a>
 								</header>
 								<div class="p-people__crosstalk__main">
@@ -551,37 +550,43 @@
 										<div class="swiper">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
-													<div class="p-people__crosstalk__title">
-														<h4>BIM座談会</h4>
-													</div>
-													<picture>
-														<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_crosstalk1.jpg', true); ?>" alt="">
-													</picture>
-													<div class="p-people__crosstalk__description">
-														<p>BIMを取り入れた設計ワークフローの構築とは？</p>
-													</div>
+													<a href="#">
+														<div class="p-people__crosstalk__title">
+															<h4>BIM座談会</h4>
+														</div>
+														<picture>
+															<img class="is--cover" src="<?php echo KUME_Util::image_path('top/people_crosstalk1.jpg', true); ?>" alt="">
+														</picture>
+														<div class="p-people__crosstalk__description">
+															<p>BIMを取り入れた設計ワークフローの構築とは？</p>
+														</div>
+													</a>
 												</div>
 												<div class="swiper-slide">
-													<div class="p-people__crosstalk__title">
-														<h4>ABC座談会</h4>
-													</div>
-													<picture>
-														<img class="is--cover" src="https://picsum.photos/600/400" alt="">
-													</picture>
-													<div class="p-people__crosstalk__description">
-														<p>ABCを取り入れた設計ワークフローの構築とは？</p>
-													</div>
+													<a href="#">
+														<div class="p-people__crosstalk__title">
+															<h4>ABC座談会</h4>
+														</div>
+														<picture>
+															<img class="is--cover" src="https://picsum.photos/600/400" alt="">
+														</picture>
+														<div class="p-people__crosstalk__description">
+															<p>ABCを取り入れた設計ワークフローの構築とは？</p>
+														</div>
+													</a>
 												</div>
 												<div class="swiper-slide">
-													<div class="p-people__crosstalk__title">
-														<h4>DEF座談会</h4>
-													</div>
-													<picture>
-														<img class="is--cover" src="https://picsum.photos/600/400" alt="">
-													</picture>
-													<div class="p-people__crosstalk__description">
-														<p>DEFを取り入れた設計ワークフローの構築とは？</p>
-													</div>
+													<a href="#">
+														<div class="p-people__crosstalk__title">
+															<h4>DEF座談会</h4>
+														</div>
+														<picture>
+															<img class="is--cover" src="https://picsum.photos/600/400?v=2" alt="">
+														</picture>
+														<div class="p-people__crosstalk__description">
+															<p>DEFを取り入れた設計ワークフローの構築とは？</p>
+														</div>
+													</a>
 												</div>
 											</div>
 										</div>
@@ -664,10 +669,12 @@
 									<span lang="ja">デザインストーリー</span>
 									<span lang="en">Design Story</span>
 								</h2>
-								<a class="c-arrow-link" href="#">
-									<span>一覧へ</span>
-									<div class="c-circle-arrow"><span class="c-icon c-icon--arrow_r"></span></div>
-								</a>
+							</div>
+
+							<div class="c-header-set__nav">
+								<ul>
+									<li><a class="c-link-external" href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span><span>一覧へ</span></a></li>
+								</ul>
 							</div>
 
 							<p class="c-header-set__description">それぞれのプロジェクトには、関わった方々の強い想いとデザインで紡いだストーリーがあります。</p>
@@ -689,61 +696,56 @@
 							<div class="c-pane-scroller__container">
 								<article>
 									<a href="#" target="_blank" rel="bookmark noopener">
-										<h3>始まりの場所</h3>
+										<h3>始まりの場所<span class="c-icon c-icon--external"></span></h3>
 										<p>ここから<br>アイヌの歴史や文化<br>を伝える</p>
 										<figure>
 											<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual1.jpg', true); ?>" alt=""></div>
 											<figcaption>国立アイヌ民族博物館</figcaption>
 										</figure>
-										<span class="c-icon c-icon--external"></span>
 									</a>
 								</article>
 
 								<article>
 									<a href="#" target="_blank" rel="bookmark noopener">
-										<h3>風との共生</h3>
+										<h3>風との共生<span class="c-icon c-icon--external"></span></h3>
 										<p>“環境”を<br>“カタチ”にした<br>環境共生スタジアム</p>
 										<figure>
 											<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual2.jpg', true); ?>" alt=""></div>
 											<figcaption>栃木県総合<br>運動公園陸上競技場</figcaption>
 										</figure>
-										<span class="c-icon c-icon--external"></span>
 									</a>
 								</article>
 
 								<article>
 									<a href="#" target="_blank" rel="bookmark noopener">
-										<h3>地域との連携</h3>
+										<h3>地域との連携<span class="c-icon c-icon--external"></span></h3>
 										<p>原風景をたどり、<br>建築として<br>かたちにする</p>
 										<figure>
 											<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual3.jpg', true); ?>" alt=""></div>
 											<figcaption>瀬戸市立にじの丘学園</figcaption>
 										</figure>
-										<span class="c-icon c-icon--external"></span>
 									</a>
 								</article>
 
 								<article>
 									<a href="#" target="_blank" rel="bookmark noopener">
-										<h3>大規模木造</h3>
+										<h3>大規模木造<span class="c-icon c-icon--external"></span></h3>
 										<p>新しく懐かしい<br>木造校舎が<br>出来上がった</p>
 										<figure>
 											<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual4.jpg', true); ?>" alt=""></div>
 											<figcaption>牛久市立<br>ひたち野うしく中学校</figcaption>
 										</figure>
-										<span class="c-icon c-icon--external"></span>
 									</a>
 								</article>
 
 								<article>
 									<a href="#" target="_blank" rel="bookmark noopener">
-										<h3>構造への挑戦</h3>
+										<h3>構造への挑戦<span class="c-icon c-icon--external"></span></h3>
 										<p>不安から熱狂へ、<br>そして信頼と協働で<br>作る鉄骨</p>
 										<figure>
 											<div><img class="is--cover" src="<?php echo KUME_Util::image_path('top/story_visual5.jpg', true); ?>" alt=""></div>
 											<figcaption>山梨県立図書館</figcaption>
 										</figure>
-										<span class="c-icon c-icon--external"></span>
 									</a>
 								</article>
 							</div>

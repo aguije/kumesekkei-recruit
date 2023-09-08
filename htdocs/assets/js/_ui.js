@@ -224,7 +224,7 @@ $(function () {
 				}
 			});
 
-			$(window).on('scrollend.gh', 90, function () {
+			$(window).on('scrollend', 90, function () {
 				if (!ticking) {
 					window.requestAnimationFrame(function () {
 						scroll();

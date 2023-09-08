@@ -276,7 +276,7 @@
 		pointer-events: none;
 		opacity: 1;
 
-		@include transition('opacity', .3s);
+		@include transition('opacity', $dur--hover);
 		@include pc () {
 			top: pc-clamp(102);
 			right: calc(#{1rem * $size--pad/$fs} + #{pc-clamp(18)});
@@ -324,6 +324,16 @@
 				width: 159,
 				margin-top: 35
 			)) {}
+
+			a {
+				display: inline-block;
+				width: 100%;
+
+				@include transition('opacity', $dur--hover);
+				@include taphover {
+					opacity: .5;
+				}
+			}
 		}
 
 		.p-sh__logoset__text {
@@ -365,6 +375,7 @@
 
 			li {
 				a {
+					position: relative;
 					display: flex;
 					flex-direction: column;
 					box-sizing: border-box;
@@ -375,6 +386,37 @@
 						height: pc-clamp($size--gh);
 						padding-top: pc-clamp(24 - 1.5);
 						padding-left: pc-clamp(20);
+					}
+					@include taphover {
+						&::before {
+							opacity: 1;
+						}
+
+						.c-circle-arrow {
+							opacity: 1;
+						}
+					}
+
+					&::before {
+						@include pseudo-block((
+							width: 100%,
+							height: 5px,
+							top: 0,
+							left: 0,
+							opacity: 0,
+						)) {}
+						@include transition('opacity', $dur--hover);
+					}
+
+					&.is--new {
+						&::before {
+							background-color: var(--color-green);
+						}
+					}
+					&.is--career {
+						&::before {
+							background-color: var(--color-salmon);
+						}
 					}
 
 					span[lang='en'] {
@@ -390,6 +432,16 @@
 							font-size: pc-clamp(15);
 							margin-top: pc-clamp(5);
 						}
+					}
+
+					.c-circle-arrow {
+						font-size: pc-clamp(18);
+						position: absolute;
+						right: pc-clamp(10);
+						bottom: pc-clamp(19);
+						opacity: 0;
+
+						@include transition('opacity', $dur--hover);
 					}
 				}
 			}
@@ -542,7 +594,7 @@
 				cursor: pointer;
 				border-right: 1px solid var(--color-border);
 
-				@include transition('border-right-color, background-color', .3s);
+				@include transition('border-right-color, background-color', $dur--hover);
 				@include taphover {
 					border-right-color: #515252;
 					background-color: #dfe0e3;
@@ -578,7 +630,7 @@
 						background-color: #a2a3a3,
 						opacity: 0,
 					)) {}
-					@include transition('opacity', .3s);
+					@include transition('opacity', $dur--hover);
 				}
 			}
 
@@ -867,8 +919,6 @@ $modal-content-w: 16;
 $modal-content-h: 9;
 $modal-content-aspect: $modal-content-w/$modal-content-h;
 
-$modal-content-padding: pc-rem(60);
-
 .p-modal {
 	position: fixed;
 	z-index: 1000;
@@ -884,7 +934,7 @@ $modal-content-padding: pc-rem(60);
 		left: 0;
 		width: 100%;
 		height: 100%;
-		opacity: .5;
+		opacity: 0;
 		background-color: var(--color-black);
 	}
 
@@ -905,17 +955,21 @@ $modal-content-padding: pc-rem(60);
 			box-sizing: border-box;
 			width: calc(100vh * #{$modal-content-aspect});
 			height: 100vh;
-			padding: $modal-content-padding;
+			padding: pc-rem($size--pad);
 
 			@media (max-aspect-ratio: #{$modal-content-w}/#{$modal-content-h}) {
 				width: 100vw;
 				height: 100vw* (1 / $modal-content-aspect);
+			}
+			@include sp () {
+				padding: sp-rem(40);
 			}
 
 			.p-modal__video {
 				position: relative;
 				width: 100%;
 				aspect-ratio: 16/9;
+				opacity: 0;
 				background-color: var(--color-black);
 
 				#player {
@@ -944,6 +998,12 @@ $modal-content-padding: pc-rem(60);
 					color: var(--color-black);
 					border-radius: 50%;
 					background-color: var(--color-white);
+
+					@include transition('color, background-color', $dur--hover);
+					@include taphover {
+						color: var(--color-white);
+						background-color: var(--color-black);
+					}
 				}
 			}
 		}
