@@ -70,7 +70,7 @@
 					<ul class="p-gm__footer__languages" data-stt-langbar>
 						<li><a href="#" data-stt-changelang="zh-CN" data-stt-ignore><span>中文（简体）</span></a></li>
 						<li><a href="#" lang="en" data-stt-changelang="en" data-stt-ignore><span>English</span></a></li>
-						<li><a class="is--active" href="#" data-stt-changelang="ja" data-stt-ignore><span>日本語</span></a></li>
+						<li><a href="#" data-stt-changelang="ja" data-stt-ignore data-stt-active><span>日本語</span></a></li>
 					</ul>
 					<p class="p-gm__footer__copyright" lang="en">©︎ KUME SEKKEI co.ltd.</p>
 				</div>
