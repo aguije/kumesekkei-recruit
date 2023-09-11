@@ -21,6 +21,7 @@
 	.p-hero {
 		position: relative;
 		z-index: var(--zi-5);
+		overflow: hidden;
 		background-color: var(--color-white);
 
 		@include pc () {
@@ -49,6 +50,7 @@
 			.swiper {
 				width: 100%;
 				height: 100%;
+				will-change: transform;
 
 				.swiper-slide {
 					height: 100%;

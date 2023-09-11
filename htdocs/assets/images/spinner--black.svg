@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg class="c-spinner" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+	<style>
+		.c-spinner__container {
+			animation: spinner-rotate 1.5s linear infinite;
+			transform-origin: 50% 50%;
+		}
+
+		.c-spinner__container circle {
+			stroke: #000;
+			animation: spinner-dash 1.5s ease-in-out infinite;
+		}
+
+		@keyframes spinner-rotate {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spinner-dash {
+			0% {
+				stroke-dasharray: 1, 150;
+				stroke-dashoffset: 0;
+			}
+			50% {
+				stroke-dasharray: 90, 150;
+				stroke-dashoffset: -35;
+			}
+			100% {
+				stroke-dasharray: 90, 150;
+				stroke-dashoffset: -124;
+			}
+		}
+	</style>
+	<g class="c-spinner__container">
+		<circle x="0" y="0" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+	</g>
+</svg>

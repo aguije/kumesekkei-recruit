@@ -121,13 +121,13 @@ class MultipleIO {
 						_observerInstance.unobserve(_element.target);
 					}
 					if (that.option.onEnter && typeof that.option.onEnter === 'function') {
-						that.option.onEnter(_element.target);
+						that.option.onEnter(_element.target, _element.intersectionRatio);
 					}
 				}
 				else {
 					if (that.#enterTriggers[_index] === true) {
 						if (that.option.onLeave && typeof that.option.onLeave === 'function') {
-							that.option.onLeave(_element.target);
+							that.option.onLeave(_element.target, _element.intersectionRatio);
 						}
 					}
 				}

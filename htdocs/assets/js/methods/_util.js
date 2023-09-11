@@ -100,7 +100,162 @@ GLOBAL.methods.util.display_modal = (_option) => {
 
 /** =================================================================
  *
- * MODAL VIDEL
+ * LAZY LOADING
  *
  * --------------------------------------------------------------- */
 
+GLOBAL.methods.util.lazy = function (_option) {
+	_option = Object.assign({
+		mode: true,
+		wrapper: null,
+		complete: function () { return true; }
+	}, _option);
+
+	if (_option.mode === true) {
+
+		if ($(_option.wrapper).find('img[data-src]').hasClass('is--loaded')) { return false; }
+
+		let mIO = new MultipleIO($(_option.wrapper).find('img[data-src]'), {
+			onEnter: (_element) => {
+
+				const img = _element;
+
+				if ($(img).hasClass('is--loaded')) { return false; }
+
+				ajaxWorker({
+					url: img.getAttribute('data-src'),
+					dataType: 'image',
+					elementType: 'blob',
+					success: function (_response) {
+						//console.log('success', _response, _status);
+
+						let blobsrc = URL.createObjectURL(_response);
+						img.onload = function () {
+							this.onload = void 0;
+							URL.revokeObjectURL(blobsrc);
+						}
+						img.src = blobsrc;
+
+
+					},
+					error: function () {
+						// console.log('error', _status, _statusText, _message);
+
+
+					},
+					complete: function () {
+						// img.removeAttribute('data-src');
+
+						img.classList.add('is--loaded');
+					}
+				});
+
+			},
+			triggerOnce: true
+		});
+		GLOBAL.observers.push(mIO);
+
+	}
+	else if (_option.mode === false) {
+
+	}
+};
+
+
+GLOBAL.methods.util.lazyall = function (_option) {
+	_option = Object.assign({
+		mode: true,
+		wrapper: null,
+		worker: false,
+		swiper: false,
+		complete: function () { return true; }
+	}, _option);
+
+	if (_option.mode === true) {
+		const $wrapper = $(_option.wrapper);
+		const $images = $wrapper.find('img[data-src]');
+
+		if (_option.swiper) {
+			const $spinner = $('<p class="c-spinner"><img src="/assets/images/spinner--black.svg" alt=""></p>');
+			$wrapper.append($spinner);
+		}
+
+		let promises = [];
+
+		$images.each(function () {
+			const img = $(this)[0];
+
+			const promise = new Promise(function (resolve, reject) {
+
+				if (_option.worker === true) {
+					ajaxWorker({
+						url: img.getAttribute('data-src'),
+						dataType: 'image',
+						elementType: 'blob',
+						success: function (_response) {
+							//console.log('success', _response, _status);
+
+							let blobsrc = URL.createObjectURL(_response);
+							img.onload = function () {
+								this.onload = void 0;
+								URL.revokeObjectURL(blobsrc);
+							}
+							img.src = blobsrc;
+
+							resolve();
+						},
+						error: function () {
+							// console.log('error', _status, _statusText, _message);
+
+							reject();
+						},
+						complete: function () {
+							// img.removeAttribute('data-src');
+
+							img.classList.add('is--loaded');
+						}
+					});
+				}
+				else {
+					img.onload = function () {
+						img.onload = void 0;
+						img.classList.add('is--loaded');
+
+						resolve();
+					};
+
+					img.onerror = function () {
+						img.onerror = void 0;
+
+						reject();
+					};
+
+					img.src = img.getAttribute('data-src');
+				}
+
+			});
+			promises.push(promise);
+
+		});
+
+		Promise.all(promises).then(function () {
+			if (_option.swiper) {
+				gsap.to($wrapper.find('.c-spinner'), {
+					opacity: 0,
+					onComplete: function () {
+						$wrapper.find('.c-spinner').remove();
+
+						_option.complete();
+					}
+				})
+			}
+			else {
+				_option.complete();
+			}
+		});
+	}
+	else if (_option.mode === false) {
+
+	}
+
+};

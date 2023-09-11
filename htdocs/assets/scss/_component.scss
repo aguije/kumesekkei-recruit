@@ -10,6 +10,61 @@
 
 /** =================================================================
  *
+ * LAZY IMG
+ *
+ * --------------------------------------------------------------- */
+
+.c-img-wrapper {
+
+}
+
+.c-img[data-src] {
+	opacity: 0;
+
+	@include transition('opacity', .6s);
+
+	&.is--loaded {
+		opacity: 1;
+	}
+}
+
+
+/** =================================================================
+ *
+ * SPINNER
+ *
+ * --------------------------------------------------------------- */
+
+.c-spinner {
+	position: absolute;
+	z-index: 10000;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+
+	img {
+		display: block;
+		width: 2em;
+		height: 2em;
+		animation-name: spinner;
+		animation-duration: 3s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+
+		@keyframes spinner {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(359deg);
+			}
+		}
+	}
+}
+
+
+/** =================================================================
+ *
  * NEWS TAG
  *
  * --------------------------------------------------------------- */
@@ -335,11 +390,11 @@ a.c-list-link {
 	 * --------------------------------------------------------------- */
 
 	&.c-circle-arrow--page {
-		background-color: var(--color-black);
-		color: var(--color-white);
 		font-size: pc-rem(36);
 		width: 1em;
+		color: var(--color-white);
 		border: 1px solid rgba($color--black, .3);
+		background-color: var(--color-black);
 
 		@include transition('transform, opacity', .3s, $easing--easeInOutBack);
 

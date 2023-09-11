@@ -23,27 +23,85 @@ $(function () {
 		}, _option);
 
 		if (_option.mode === true) {
-			const swiper = new Swiper('.p-hero .swiper', {
-				init: false,
-				autoHeight: 0,
-				loop: 1,
-				autoplay: {
-					delay: 6000
-				},
-				effect: 'fade',
-				fadeEffect: {
-					crossFade: true
-				},
-				pagination: {
-					el: '.p-hero .swiper-pagination'
-				},
-				navigation: 0,
-				scrollbar: 0,
-				allowTouchMove: 0
-			});
+			(function () {
+				let mIO = new MultipleIO('.p-hero .swiper', {
+					config: {
+						threshold: 1
+					},
+					onEnter: () => {
 
-			swiper.init();
-			GLOBAL.swipers.push(swiper);
+						GLOBAL.methods.util.lazyall({
+							mode: true,
+							wrapper: '.p-hero .swiper',
+							worker: false,
+							swiper: true,
+							complete: function () {
+								const swiper = new Swiper('.p-hero .swiper', {
+									init: false,
+									autoHeight: 0,
+									loop: 1,
+									autoplay: {
+										delay: 6000
+									},
+									effect: 'fade',
+									fadeEffect: {
+										crossFade: true
+									},
+									pagination: {
+										el: '.p-hero .swiper-pagination'
+									},
+									navigation: 0,
+									scrollbar: 0,
+									allowTouchMove: 0
+								});
+
+								swiper.init();
+								GLOBAL.swipers.push(swiper);
+							}
+						});
+
+					},
+					onLeave: () => {
+
+					},
+					triggerOnce: true
+				});
+				GLOBAL.observers.push(mIO);
+			})();
+
+			//
+
+			(function () {
+				const $swiper = $('.p-hero .swiper');
+
+				const threshold = [];
+				for (let i = 0; i <= 1.0; i += 0.005) {
+					threshold.push(i);
+				}
+
+				let ticking = false;
+
+				mIO = new MultipleIO('.p-hero', {
+					config: {
+						threshold: threshold
+					},
+					onEnter: (_entry, _ratio) => {
+						if (!ticking) {
+							window.requestAnimationFrame(function () {
+								$swiper.css({ transform: `translateY(${(1 - _ratio) * .3 * 100}%)` });
+								ticking = false;
+							});
+
+							ticking = true;
+						}
+					},
+					onLeave: () => {
+
+					},
+					triggerOnce: false
+				});
+				GLOBAL.observers.push(mIO);
+			})();
 
 			//
 
@@ -73,39 +131,58 @@ $(function () {
 		}, _option);
 
 		if (_option.mode === true) {
-			const swiperUpper = new Swiper('.p-about__item__sub .swiper-parent.is--upper .swiper', {
-				init: 0,
-				autoHeight: 0,
-				autoplay: {
-					delay: 4500
+			let mIO = new MultipleIO('.p-about__item__sub', {
+				onEnter: () => {
+
+					GLOBAL.methods.util.lazyall({
+						mode: true,
+						wrapper: '.p-about__item__sub',
+						worker: false,
+						complete: function () {
+
+							const swiperUpper = new Swiper('.p-about__item__sub .swiper-parent.is--upper .swiper', {
+								init: 0,
+								autoHeight: 0,
+								autoplay: {
+									delay: 4500
+								},
+								loop: 1,
+								pagination: {
+									el: '.p-about__item__sub .swiper-parent.is--upper .swiper-pagination'
+								},
+								navigation: 0,
+								scrollbar: 0,
+								allowTouchMove: 0
+							});
+
+							const swiperLower = new Swiper('.p-about__item__sub .swiper-parent.is--lower .swiper', {
+								init: 0,
+								autoHeight: 0,
+								loop: 1,
+								pagination: 0,
+								navigation: 0,
+								scrollbar: 0,
+								allowTouchMove: 0
+							});
+
+							swiperUpper.init();
+							GLOBAL.swipers.push(swiperUpper);
+
+							swiperLower.init();
+							GLOBAL.swipers.push(swiperLower);
+
+							swiperUpper.controller.control = [swiperLower];
+
+						}
+					});
+
 				},
-				loop: 1,
-				pagination: {
-					el: '.p-about__item__sub .swiper-parent.is--upper .swiper-pagination'
+				onLeave: () => {
+
 				},
-				navigation: 0,
-				scrollbar: 0,
-				allowTouchMove: 0
+				triggerOnce: true
 			});
-
-			const swiperLower = new Swiper('.p-about__item__sub .swiper-parent.is--lower .swiper', {
-				init: 0,
-				autoHeight: 0,
-				loop: 1,
-				pagination: 0,
-				navigation: 0,
-				scrollbar: 0,
-				allowTouchMove: 0
-			});
-
-			swiperUpper.init();
-			GLOBAL.swipers.push(swiperUpper);
-
-			swiperLower.init();
-			GLOBAL.swipers.push(swiperLower);
-
-			swiperUpper.controller.control = [swiperLower];
-			//swiperLower.controller.control = [swiperUpper];
+			GLOBAL.observers.push(mIO);
 		}
 		else {
 
@@ -133,7 +210,7 @@ $(function () {
 
 			let mIO = new MultipleIO('.p-top .p-people', {
 				config: {
-					rootMargin: '-50% 0 -50% 0'
+					rootMargin: '-50% 0%'
 				},
 				onEnter: (_element) => {
 					_element.setAttribute('data-theme', 'dark');
@@ -143,7 +220,6 @@ $(function () {
 				},
 				triggerOnce: false
 			});
-
 			GLOBAL.observers.push(mIO);
 
 
@@ -163,6 +239,13 @@ $(function () {
 				},
 				navigation: 0,
 				scrollbar: 0
+			});
+
+			swiper.on('slideChange', function () {
+				GLOBAL.methods.util.lazy({
+					mode: true,
+					wrapper: swiper.slides[swiper.activeIndex]
+				});
 			});
 
 			swiper.init();
@@ -255,6 +338,13 @@ $(function () {
 				allowTouchMove: 0
 			});
 
+			swiper.on('slideChange', function () {
+				GLOBAL.methods.util.lazy({
+					mode: true,
+					wrapper: swiper.slides[swiper.activeIndex]
+				});
+			});
+
 			swiper.init();
 			GLOBAL.swipers.push(swiper);
 
@@ -284,6 +374,11 @@ $(function () {
 		initAbout({ mode: true });
 		initPeople({ mode: true });
 		initStory({ mode: true });
+
+		GLOBAL.methods.util.lazy({
+			mode: true,
+			wrapper: '.c-img-wrapper'
+		});
 	}
 
 	function unload () {
@@ -294,6 +389,8 @@ $(function () {
 		initAbout({ mode: false });
 		initPeople({ mode: false });
 		initStory({ mode: false });
+
+		GLOBAL.methods.util.lazy({ mode: false });
 	}
 
 
