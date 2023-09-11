@@ -47,6 +47,11 @@
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
 
+		@include sp () {
+			width: 4em;
+			height: 4em;
+		}
+
 		@keyframes spinner {
 			0% {
 				transform: rotate(0deg);
