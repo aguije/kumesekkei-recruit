@@ -117,7 +117,7 @@
 											<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>ＷＥＢセミナー「久米設計社員との交流座談会」を開催します。</a>
 											<span class="c-news-tag">学生対象プログラム</span>
 										</h4>
-										<div class="p-news__item__category"><span class="c-career-tag" data-category="new">新卒採用</span></div>
+										<div class="p-news__item__category"><a href="#" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
 									</article>
 								</li>
 								<li>
@@ -127,7 +127,7 @@
 											<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>第3回 ＷＥＢプロジェクト公演「マリンメッセ福岡 B館」を配信します。</a>
 											<span class="c-news-tag">学生対象プログラム</span>
 										</h4>
-										<div class="p-news__item__category"><span class="c-career-tag" data-category="new">新卒採用</span></div>
+										<div class="p-news__item__category"><a href="#" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
 									</article>
 								</li>
 								<li>
@@ -136,7 +136,7 @@
 										<h4>
 											<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>「意匠設計」部門の再募集を開始しました。</a>
 										</h4>
-										<div class="p-news__item__category"><span class="c-career-tag" data-category="career">キャリア採用</span></div>
+										<div class="p-news__item__category"><a href="#" target="_blank" rel="noopener" class="c-career-tag" data-category="career">キャリア採用</a></div>
 									</article>
 								</li>
 								<li>
@@ -145,7 +145,7 @@
 										<h4>
 											<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>支社訪問会を開催します。マイページよりお申し込みください。</a>
 										</h4>
-										<div class="p-news__item__category"><span class="c-career-tag" data-category="new">新卒採用</span></div>
+										<div class="p-news__item__category"><a href="#" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
 									</article>
 								</li>
 								<li>
@@ -154,7 +154,7 @@
 										<h4>
 											<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>株式会社久米設計　オープンカンパニー2023年のエントリーを開始しました。マイページよりお申し込みください。</a>
 										</h4>
-										<div class="p-news__item__category"><span class="c-career-tag" data-category="new">新卒採用</span></div>
+										<div class="p-news__item__category"><a href="#" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
 									</article>
 								</li>
 							</ul>
@@ -240,14 +240,14 @@
 										</a>
 									</h3>
 									<div class="p-about__csr__tags">
-										<span>#こども未来</span><!--
-										--><span>#安全・安心</span><!--
-										--><span>#カーボンニュートラル</span><br><!--
-										--><span>#ダイバシティ＆インクルージョン</span><!--
-										--><span>#エリアUP</span><br><!--
-										--><span>#ワークスタイル</span><!--
-										--><span>#ストック活用</span><!--
-										--><span>#これからの学校</span>
+										<a href="#">#こども未来</a><!--
+										--><a href="#">#安全・安心</a><!--
+										--><a href="#">#カーボンニュートラル</a><br><!--
+										--><a href="#">#ダイバシティ＆インクルージョン</a><!--
+										--><a href="#">#エリアUP</a><br><!--
+										--><a href="#">#ワークスタイル</a><!--
+										--><a href="#">#ストック活用</a><!--
+										--><a href="#">#これからの学校</a>
 									</div>
 								</div>
 								<div class="p-about__item__sub">
@@ -501,7 +501,7 @@
 								<div class="p-people__employee__main c-pane-scroller">
 									<div class="c-pane-scroller__container">
 										<article class="p-people__employee__article">
-											<a href="#" rel="bookmark">
+											<a class="is--career" href="#" rel="bookmark">
 												<picture class="c-circle-picture c-img-wrapper">
 													<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb1.jpg', true); ?>" alt="">
 												</picture>
@@ -517,7 +517,7 @@
 										</article>
 
 										<article class="p-people__employee__article">
-											<a href="#" rel="bookmark">
+											<a class="is--career" href="#" rel="bookmark">
 												<picture class="c-circle-picture c-img-wrapper">
 													<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb2.jpg', true); ?>" alt="">
 												</picture>

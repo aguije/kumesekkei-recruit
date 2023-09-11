@@ -695,10 +695,18 @@
 						margin-top: sp-rem(88);
 					}
 
+					a {
+						@include taphover {
+							text-decoration: underline;
+						}
+					}
+
+					a,
 					span {
 						display: inline-block;
 					}
 
+					a + a,
 					span + span {
 						margin-left: 1em;
 					}

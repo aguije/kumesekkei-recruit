@@ -173,6 +173,13 @@
 	}
 }
 
+a.c-career-tag {
+	@include transition('opacity', $dur--hover);
+	@include taphover {
+		opacity: .7;
+	}
+}
+
 
 /** =================================================================
  *
