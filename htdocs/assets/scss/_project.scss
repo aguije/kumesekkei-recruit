@@ -107,6 +107,14 @@
 	left: 0;
 	width: 100%;
 
+	&:not(.is--scrolled) {
+		@include taphover {
+			.p-gh__bar {
+				opacity: 1;
+			}
+		}
+	}
+
 	&.is--scrolled {
 		.p-gh__bar {
 			opacity: 1;
