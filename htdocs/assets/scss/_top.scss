@@ -1212,7 +1212,18 @@
 							transform: translateY(-.5em);
 						}
 					}
-					@include transition('background-color', $dur--transition);
+					@include transition('border-top-color, background-color', $dur--transition);
+
+					&.is--new {
+						@include taphover {
+							border-top-color: var(--color-green);
+						}
+					}
+					&.is--career {
+						@include taphover {
+							border-top-color: var(--color-salmon);
+						}
+					}
 
 					&::before {
 						@include pseudo-block((
