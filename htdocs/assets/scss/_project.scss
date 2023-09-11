@@ -210,6 +210,7 @@
 			height: 100vh;
 			height: 100svh;
 			transform: translateX(100%);
+			background-color: var(--color-bluegray);
 
 			overscroll-behavior: none;
 			-ms-overflow-style: none;  // Edge
@@ -222,7 +223,15 @@
 
 			.p-gm__container {
 				@include pc () {
-					filter: drop-shadow(0 0 #{pc-clamp(20)} rgba(0,0,0,.2));
+					height: 100%;
+					// filter: drop-shadow(0 0 #{pc-clamp(20)} rgba(0,0,0,.2));
+				}
+
+				> .l-wrapper {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					min-height: 100%;
 				}
 			}
 		}

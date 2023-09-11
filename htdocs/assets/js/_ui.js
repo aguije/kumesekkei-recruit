@@ -150,6 +150,7 @@ $(function () {
 
 							$gh.addClass('is--opened');
 
+							/*
 							$(document).on('click.menu', function (_event) {
 								if (!$.contains($('#gh .p-gm__container')[0], _event.target)) {
 									_event.preventDefault();
@@ -158,12 +159,13 @@ $(function () {
 									$button.trigger('click');
 								}
 							});
+							*/
 
 						}
 					});
 				}
 				else {
-					$(document).off('click.menu');
+					// $(document).off('click.menu');
 
 					gsap.to($button, {
 						backgroundColor: '#000000',
