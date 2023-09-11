@@ -64,9 +64,12 @@
 					</p>
 				</div>
 
-				<div class="p-hero__arrow c-circle-arrow c-circle-arrow--page"><span class="c-icon c-icon--arrow_d"></span></div>
+				<div class="p-hero__progress">
+					<div class="p-hero__arrow c-circle-arrow c-circle-arrow--page">
+						<span class="c-icon c-icon--arrow_d"></span>
+					</div>
+				</div>
 			</div>
-
 			<?php
 
 				$ch = curl_init();

@@ -36,6 +36,7 @@ $(function () {
 							worker: false,
 							swiper: true,
 							complete: function () {
+
 								const swiper = new Swiper('.p-hero .swiper', {
 									init: false,
 									autoHeight: 0,
@@ -55,8 +56,19 @@ $(function () {
 									allowTouchMove: 0
 								});
 
+								swiper.on('slideChange', function () {
+									$('.p-hero__progress').find('.c-progress').remove();
+
+									$('.p-hero__progress').append(`
+										<svg class="c-progress" viewBox="0 0 63.6619772368 63.6619772368">
+											<circle cx="31.8309886184" cy="31.8309886184" r="15.9154943092" fill="transparent" stroke="#000000" stroke-dashoffset="25" stroke-width="1" stroke-dasharray="0 100"></circle>
+										</svg>
+									`);
+								});
+
 								swiper.init();
 								GLOBAL.swipers.push(swiper);
+
 							}
 						});
 

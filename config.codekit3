@@ -77,6 +77,26 @@
       "oAP" : "\/htdocs\/assets\/fonts\/icomoon\/icomoon.woff",
       "oF" : 0
     },
+    "\/htdocs\/assets\/images\/spinner--black.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/htdocs\/assets\/images\/spinner--black.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/htdocs\/assets\/images\/spinner.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/htdocs\/assets\/images\/spinner.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/htdocs\/assets\/images\/top\/about_csr1_1.jpg" : {
       "ft" : 16384,
       "iS" : 218733,
@@ -2014,7 +2034,7 @@
     "externalServerAddress" : "http:\/\/localhost:8888",
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
-    "jsCheckerReservedNamesString" : "$,Cookies,purl,cssua,gsap,MobileDetect,Swiper,Promise,YT",
+    "jsCheckerReservedNamesString" : "$,Cookies,purl,cssua,gsap,MobileDetect,Swiper,Promise,YT, MultipleIO,ajaxWorker",
     "languageDefaultsCOFFEE" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.js",

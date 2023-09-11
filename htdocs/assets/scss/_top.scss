@@ -52,6 +52,10 @@
 				height: 100%;
 				will-change: transform;
 
+				@include sp () {
+					transform: translateY(0%) !important;
+				}
+
 				.swiper-slide {
 					height: 100%;
 
@@ -104,26 +108,42 @@
 			}
 		}
 
-		.p-hero__arrow {
+		.p-hero__progress {
 			position: absolute;
 			z-index: var(--zi-2);
-			bottom: 100vh * 36/796;
+			bottom: 100vh * 62/796;
 			left: 50%;
-			cursor: pointer;
-			transform: translateX(-50%);
+			width: 0;
+			height: 0;
 
-			@include pc () {
-				font-size: pc-rem(50);
-			}
-			@include sp () {
-				display: none;
-			}
-			@include taphover {
-				transform: translateX(-50%) scale(1.5);
+			.c-progress {
+				position: relative;
+				width: pc-rem(58 * 2);
+				height: pc-rem(58 * 2);
+				transform: translateX(-50%) translateY(-50%);
+				pointer-events: none;
 			}
 
-			.c-icon {
-				font-size: 1em * 26/50;
+			.p-hero__arrow {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				cursor: pointer;
+				transform: translateX(-50%) translateY(-50%);
+
+				@include pc () {
+					font-size: pc-rem(50);
+				}
+				@include sp () {
+					display: none;
+				}
+				@include taphover {
+					transform: translateX(-50%) translateY(-50%) scale(1.5);
+				}
+
+				.c-icon {
+					font-size: 1em * 26/50;
+				}
 			}
 		}
 	}
