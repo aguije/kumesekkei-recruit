@@ -146,11 +146,21 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
-    "\/htdocs\/assets\/images\/top\/hero_subcopy_ja.svg" : {
+    "\/htdocs\/assets\/images\/top\/hero_subcopy1_ja.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
-      "oAP" : "\/htdocs\/assets\/images\/top\/hero_subcopy_ja.svg",
+      "oAP" : "\/htdocs\/assets\/images\/top\/hero_subcopy1_ja.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/htdocs\/assets\/images\/top\/hero_subcopy2_ja.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/htdocs\/assets\/images\/top\/hero_subcopy2_ja.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,

@@ -25,53 +25,68 @@ $(function () {
 		if (_option.mode === true) {
 			(function () {
 				let mIO = new MultipleIO('.p-hero .swiper', {
-					config: {
-						threshold: 1
-					},
 					onEnter: () => {
 
-						GLOBAL.methods.util.lazyall({
-							mode: true,
-							wrapper: '.p-hero .swiper',
-							worker: false,
-							swiper: true,
-							complete: function () {
-
-								const swiper = new Swiper('.p-hero .swiper', {
-									init: false,
-									autoHeight: 0,
-									loop: 1,
-									autoplay: {
-										delay: 6000
-									},
-									effect: 'fade',
-									fadeEffect: {
-										crossFade: true
-									},
-									pagination: {
-										el: '.p-hero .swiper-pagination'
-									},
-									navigation: 0,
-									scrollbar: 0,
-									allowTouchMove: 0
+						const promises = [
+							new Promise(function (resolve) {
+								$('.p-hero .p-hero__body').imagesLoaded(function () {
+									resolve();
 								});
-
-								swiper.on('slideChange', function () {
-									$('.p-hero__progress').find('.c-progress').remove();
-
-									$('.p-hero__progress').append(`
-										<svg class="c-progress" viewBox="0 0 63.6619772368 63.6619772368">
-											<circle cx="31.8309886184" cy="31.8309886184" r="15.9154943092" fill="transparent" stroke="#000000" stroke-dashoffset="25" stroke-width="1" stroke-dasharray="0 100"></circle>
-										</svg>
-									`);
+							}),
+							new Promise(function (resolve) {
+								GLOBAL.methods.util.lazyall({
+									mode: true,
+									wrapper: '.p-hero .swiper',
+									worker: false,
+									swiper: true,
+									complete: function () {
+										resolve();
+									}
 								});
+							})
+						];
 
-								swiper.init();
-								GLOBAL.swipers.push(swiper);
+						Promise.all(promises).then(function () {
+							GLOBAL.methods.util.showInsetMask({
+								mode: true,
+								stagger: .15,
+								target: '.p-hero .p-hero__body .c-inset-mask'
+							});
 
-							}
+							//
+
+							const swiper = new Swiper('.p-hero .swiper', {
+								init: false,
+								autoHeight: 0,
+								loop: 1,
+								autoplay: {
+									delay: 6000
+								},
+								effect: 'fade',
+								fadeEffect: {
+									crossFade: true
+								},
+								pagination: {
+									el: '.p-hero .swiper-pagination'
+								},
+								navigation: 0,
+								scrollbar: 0,
+								allowTouchMove: 0
+							});
+
+							swiper.on('slideChange', function () {
+								$('.p-hero__progress').find('.c-progress').remove();
+
+								$('.p-hero__progress').append(`
+									<svg class="c-progress" viewBox="0 0 63.6619772368 63.6619772368">
+										<circle cx="31.8309886184" cy="31.8309886184" r="15.9154943092" fill="transparent" stroke="#000000" stroke-dashoffset="25" stroke-width="1" stroke-dasharray="0 100"></circle>
+									</svg>
+								`);
+							});
+
+							swiper.init();
+							GLOBAL.swipers.push(swiper);
 						});
-
 					},
 					onLeave: () => {
 
@@ -93,7 +108,7 @@ $(function () {
 
 				let ticking = false;
 
-				mIO = new MultipleIO('.p-hero', {
+				let mIO = new MultipleIO('.p-hero', {
 					config: {
 						threshold: threshold
 					},

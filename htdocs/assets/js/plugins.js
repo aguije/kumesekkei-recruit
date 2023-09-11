@@ -757,6 +757,7 @@ class MultipleIO {
 //@codekit-append "../../../node_modules/gsap/dist/ScrollToPlugin.js"
 //@codekit-append "../../../node_modules/gsap/dist/ScrollTrigger.js"
 //@codekit-append "../../../node_modules/jquery.scrollend/dist/jquery.scrollend.js"
+//@codekit-append "../../../node_modules/imagesloaded/imagesloaded.pkgd.js"
 
 //@codekit-append "../../../node_modules/58d24fc42e0f12614c110c6b854ade48/taphover.js"
 

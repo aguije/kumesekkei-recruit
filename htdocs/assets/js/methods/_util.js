@@ -100,7 +100,7 @@ GLOBAL.methods.util.display_modal = (_option) => {
 
 /** =================================================================
  *
- * LAZY LOADING
+ * LAZY IMAGE LOADING
  *
  * --------------------------------------------------------------- */
 
@@ -161,6 +161,12 @@ GLOBAL.methods.util.lazy = function (_option) {
 	}
 };
 
+
+/** =================================================================
+ *
+ * LAZY IMAGE LOADING (ALL)
+ *
+ * --------------------------------------------------------------- */
 
 GLOBAL.methods.util.lazyall = function (_option) {
 	_option = Object.assign({
@@ -258,4 +264,41 @@ GLOBAL.methods.util.lazyall = function (_option) {
 
 	}
 
+};
+
+
+GLOBAL.methods.util.showInsetMask = function (_option) {
+	_option = Object.assign({
+		mode: true,
+		target: null,
+		stagger: 0,
+		complete: function () { return true; }
+	}, _option);
+
+	if (_option.mode === true) {
+		$(_option.target).each(function (_index) {
+
+			const $this = $(this);
+			let tween = { value: 100 };
+
+			gsap.to(tween, {
+				value: 0,
+				duration: .6,
+				delay: _option.stagger * _index,
+				onUpdate: function () {
+					$this.css({ clipPath: `inset(0% ${tween.value}% 0% 0%)` });
+				},
+				onComplete: function () {
+					gsap.to($this.find('.is--mask'), {
+						translateX: '100%',
+						duration: .3
+					});
+				}
+			})
+
+		});
+	}
+	else if (_option.mode === false) {
+
+	}
 };
