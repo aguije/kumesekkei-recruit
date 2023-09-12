@@ -210,7 +210,7 @@ $(function () {
 			let ticking = false;
 
 			const resize = () => {
-				border = GLOBAL.wH - $gh.find('.p-gh__bar').height();
+				border = GLOBAL.wH - $gh.find('.p-gh__bar').height() - 1;
 			};
 
 			const scroll = () => {
