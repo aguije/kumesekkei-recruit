@@ -187,7 +187,8 @@ $(function () {
 								loop: 1,
 								pagination: 0,
 								navigation: 0,
-								scrollbar: 0
+								scrollbar: 0,
+								allowTouchMove: 0
 							});
 
 							swiperUpper.init();
