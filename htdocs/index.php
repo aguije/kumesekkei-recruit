@@ -11,10 +11,10 @@
 	$root_url = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 
 	$meta = array(
-		'title' => '',
+		'title' => '久米設計 採用サイト',
 		'description' => '',
 		'image' => KUME_Util::image_path('ogp.png', true),
-		'site' => '',
+		'site' => '久米設計 採用サイト',
 		'url' => $root_url,
 	);
 
@@ -117,7 +117,7 @@
 											<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>ＷＥＢセミナー「久米設計社員との交流座談会」を開催します。</a>
 											<span class="c-news-tag">学生対象プログラム</span>
 										</h4>
-										<div class="p-news__item__category"><a href="#" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
+										<div class="p-news__item__category"><a href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
 									</article>
 								</li>
 								<li>
@@ -127,7 +127,7 @@
 											<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>第3回 ＷＥＢプロジェクト公演「マリンメッセ福岡 B館」を配信します。</a>
 											<span class="c-news-tag">学生対象プログラム</span>
 										</h4>
-										<div class="p-news__item__category"><a href="#" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
+										<div class="p-news__item__category"><a href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
 									</article>
 								</li>
 								<li>
@@ -136,7 +136,7 @@
 										<h4>
 											<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>「意匠設計」部門の再募集を開始しました。</a>
 										</h4>
-										<div class="p-news__item__category"><a href="#" target="_blank" rel="noopener" class="c-career-tag" data-category="career">キャリア採用</a></div>
+										<div class="p-news__item__category"><a href="https://www.kumesekkei.co.jp/recruit/entry_career.html" target="_blank" rel="noopener" class="c-career-tag" data-category="career">キャリア採用</a></div>
 									</article>
 								</li>
 								<li>
@@ -145,7 +145,7 @@
 										<h4>
 											<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>支社訪問会を開催します。マイページよりお申し込みください。</a>
 										</h4>
-										<div class="p-news__item__category"><a href="#" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
+										<div class="p-news__item__category"><a href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
 									</article>
 								</li>
 								<li>
@@ -154,7 +154,7 @@
 										<h4>
 											<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>株式会社久米設計　オープンカンパニー2023年のエントリーを開始しました。マイページよりお申し込みください。</a>
 										</h4>
-										<div class="p-news__item__category"><a href="#" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
+										<div class="p-news__item__category"><a href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
 									</article>
 								</li>
 							</ul>
@@ -389,6 +389,105 @@
 														'title' => "<b>100</b><sub>%</sub>",
 													));
 
+													echo get_pie_chart(array(
+														'ratio' => 43.8,
+														'figcaption' => '男性の<br>育休取得率',
+														'title' => "<b>43.8</b><sub>%</sub>",
+														'sub' => '（パパになった人で取得した割合）'
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 100,
+														'figcaption' => '女性の<br>育休取得率',
+														'title' => "<b>100</b><sub>%</sub>",
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 37.0,
+														'figcaption' => '女男比率',
+														'title' => "<sup>女性</sup><b>37.0</b><sub>%</sub>　<sup>男性</sup><b>63.0</b><sub>%</sub>",
+														'sub' => '（新卒 〜 3年目）'
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 27.7,
+														'figcaption' => '働くママ<br>比率',
+														'title' => "<b>27.7</b><sub>%</sub>",
+														'sub' => '（子育てしながら働く女性の割合）'
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 100,
+														'figcaption' => '女性の<br>育休取得率',
+														'title' => "<b>100</b><sub>%</sub>",
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 43.8,
+														'figcaption' => '男性の<br>育休取得率',
+														'title' => "<b>43.8</b><sub>%</sub>",
+														'sub' => '（パパになった人で取得した割合）'
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 100,
+														'figcaption' => '女性の<br>育休取得率',
+														'title' => "<b>100</b><sub>%</sub>",
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 37.0,
+														'figcaption' => '女男比率',
+														'title' => "<sup>女性</sup><b>37.0</b><sub>%</sub>　<sup>男性</sup><b>63.0</b><sub>%</sub>",
+														'sub' => '（新卒 〜 3年目）'
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 27.7,
+														'figcaption' => '働くママ<br>比率',
+														'title' => "<b>27.7</b><sub>%</sub>",
+														'sub' => '（子育てしながら働く女性の割合）'
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 100,
+														'figcaption' => '女性の<br>育休取得率',
+														'title' => "<b>100</b><sub>%</sub>",
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 43.8,
+														'figcaption' => '男性の<br>育休取得率',
+														'title' => "<b>43.8</b><sub>%</sub>",
+														'sub' => '（パパになった人で取得した割合）'
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 100,
+														'figcaption' => '女性の<br>育休取得率',
+														'title' => "<b>100</b><sub>%</sub>",
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 37.0,
+														'figcaption' => '女男比率',
+														'title' => "<sup>女性</sup><b>37.0</b><sub>%</sub>　<sup>男性</sup><b>63.0</b><sub>%</sub>",
+														'sub' => '（新卒 〜 3年目）'
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 27.7,
+														'figcaption' => '働くママ<br>比率',
+														'title' => "<b>27.7</b><sub>%</sub>",
+														'sub' => '（子育てしながら働く女性の割合）'
+													));
+
+													echo get_pie_chart(array(
+														'ratio' => 100,
+														'figcaption' => '女性の<br>育休取得率',
+														'title' => "<b>100</b><sub>%</sub>",
+													));
+
 												?>
 											</div>
 											<?php
@@ -501,7 +600,7 @@
 								<div class="p-people__employee__main c-pane-scroller">
 									<div class="c-pane-scroller__container">
 										<article class="p-people__employee__article">
-											<a class="is--career" href="#" rel="bookmark">
+											<a class="is--new" href="#" rel="bookmark">
 												<picture class="c-circle-picture c-img-wrapper">
 													<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb1.jpg', true); ?>" alt="">
 												</picture>

@@ -182,5 +182,6 @@ $easing: $easing--ease;
 /** --------------------------------
  *   STATISTICS   */
 
-$statistics_w: (213 + 14) * 5;
+$statistics_dur: 90s;
+$statistics_w: (213 + 14) * 20;
 $statistics_ratio_sp: 560 / 400;

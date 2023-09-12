@@ -813,7 +813,7 @@
 					display: flex;
 					box-sizing: border-box;
 					animation-name: belt;
-					animation-duration: 30s;
+					animation-duration: $statistics_dur;
 					animation-timing-function: linear;
 					animation-iteration-count: infinite;
 
