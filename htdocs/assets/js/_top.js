@@ -178,8 +178,7 @@ $(function () {
 									el: '.p-about__item__sub .swiper-parent.is--upper .swiper-pagination'
 								},
 								navigation: 0,
-								scrollbar: 0,
-								allowTouchMove: 0
+								scrollbar: 0
 							});
 
 							const swiperLower = new Swiper('.p-about__item__sub .swiper-parent.is--lower .swiper', {
@@ -188,8 +187,7 @@ $(function () {
 								loop: 1,
 								pagination: 0,
 								navigation: 0,
-								scrollbar: 0,
-								allowTouchMove: 0
+								scrollbar: 0
 							});
 
 							swiperUpper.init();
