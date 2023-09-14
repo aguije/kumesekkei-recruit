@@ -222,8 +222,10 @@
 											<span lang="ja">メッセージ</span>
 											<span lang="en">Top Message</span>
 											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
-											<picture class="c-circle-picture c-img-wrapper">
-												<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_message.jpg', true); ?>" alt="">
+											<picture class="c-circle-picture">
+												<div class="c-img-wrapper">
+													<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_message.jpg', true); ?>" alt="">
+												</div>
 											</picture>
 										</a>
 									</h3>

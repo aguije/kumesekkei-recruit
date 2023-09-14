@@ -673,13 +673,8 @@
 					z-index: var(--zi-1);
 
 					@include taphover {
-						picture {
-							@include pc () {
-								transform: translateX(calc(100% + #{pc-rem(20)})) translateY(-50%) scale($scale--hover);
-							}
-							@include sp () {
-								transform: translateX(calc(100% + #{sp-rem(40)})) translateY(-50%) scale($scale--hover);
-							}
+						picture .c-img-wrapper {
+							transform: scale($scale--hover);
 						}
 					}
 				}
@@ -695,6 +690,7 @@
 					z-index: var(--zi-0);
 					top: 50%;
 					right: 0;
+					overflow: hidden;
 					width: pc-rem(280);
 					height: pc-rem(280);
 
@@ -706,7 +702,13 @@
 						height: sp-rem(280);
 						transform: translateX(calc(100% + #{sp-rem(40)})) translateY(-50%);
 					}
-					@include transition('transform', $dur--hover);
+
+					.c-img-wrapper {
+						width: 100%;
+						height: 100%;
+
+						@include transition('transform', $dur--hover);
+					}
 				}
 			}
 
