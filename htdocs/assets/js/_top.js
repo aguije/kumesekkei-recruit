@@ -193,58 +193,60 @@ $(function () {
 		}, _option);
 
 		if (_option.mode === true) {
-			let mIO = new MultipleIO('.p-about__item__sub', {
-				onEnter: () => {
+			(function () {
+				let mIO = new MultipleIO('.p-about__item__sub', {
+					onEnter: () => {
 
-					GLOBAL.methods.util.lazyall({
-						mode: true,
-						wrapper: '.p-about__item__sub',
-						worker: false,
-						complete: function () {
+						GLOBAL.methods.util.lazyall({
+							mode: true,
+							wrapper: '.p-about__item__sub',
+							worker: false,
+							complete: function () {
 
-							const swiperUpper = new Swiper('.p-about__item__sub .swiper-parent.is--upper .swiper', {
-								init: 0,
-								autoHeight: 0,
-								autoplay: {
-									delay: 4500
-								},
-								loop: 1,
-								pagination: {
-									el: '.p-about__item__sub .swiper-parent.is--upper .swiper-pagination',
-									clickable: 1
-								},
-								navigation: 0,
-								scrollbar: 0
-							});
+								const swiperUpper = new Swiper('.p-about__item__sub .swiper-parent.is--upper .swiper', {
+									init: 0,
+									autoHeight: 0,
+									autoplay: {
+										delay: 4500
+									},
+									loop: 1,
+									pagination: {
+										el: '.p-about__item__sub .swiper-parent.is--upper .swiper-pagination',
+										clickable: 1
+									},
+									navigation: 0,
+									scrollbar: 0
+								});
 
-							const swiperLower = new Swiper('.p-about__item__sub .swiper-parent.is--lower .swiper', {
-								init: 0,
-								autoHeight: 0,
-								loop: 1,
-								pagination: 0,
-								navigation: 0,
-								scrollbar: 0,
-								allowTouchMove: 0
-							});
+								const swiperLower = new Swiper('.p-about__item__sub .swiper-parent.is--lower .swiper', {
+									init: 0,
+									autoHeight: 0,
+									loop: 1,
+									pagination: 0,
+									navigation: 0,
+									scrollbar: 0,
+									allowTouchMove: 0
+								});
 
-							swiperUpper.init();
-							GLOBAL.swipers.push(swiperUpper);
+								swiperUpper.init();
+								GLOBAL.swipers.push(swiperUpper);
 
-							swiperLower.init();
-							GLOBAL.swipers.push(swiperLower);
+								swiperLower.init();
+								GLOBAL.swipers.push(swiperLower);
 
-							swiperUpper.controller.control = [swiperLower];
+								swiperUpper.controller.control = [swiperLower];
 
-						}
-					});
+							}
+						});
 
-				},
-				onLeave: () => {
+					},
+					onLeave: () => {
 
-				},
-				triggerOnce: true
-			});
-			GLOBAL.observers.push(mIO);
+					},
+					triggerOnce: true
+				});
+				GLOBAL.observers.push(mIO);
+			})();
 		}
 		else {
 

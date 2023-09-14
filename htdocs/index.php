@@ -219,7 +219,7 @@
 								<div class="p-about__item__main">
 									<h3>
 										<a class="c-list-link" href="#">
-											<span lang="ja">メッセージ</span>
+											<span class="c-animate-underline" lang="ja">メッセージ</span>
 											<span lang="en">Top Message</span>
 											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 											<picture class="c-circle-picture">
@@ -237,7 +237,7 @@
 								<div class="p-about__item__main">
 									<h3>
 										<a class="c-list-link" href="#">
-											<span lang="ja">社会課題への取組み</span>
+											<span class="c-animate-underline" lang="ja">社会課題への取組み</span>
 											<span lang="en">Corporate Social Resposibility</span>
 											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										</a>
@@ -292,7 +292,7 @@
 								<div class="p-about__item__main">
 									<h3>
 										<a class="c-list-link" href="#">
-											<span lang="ja">数字で見る久米設計</span>
+											<span class="c-animate-underline" lang="ja">数字で見る久米設計</span>
 											<span lang="en">Statistics &amp; Facts</span>
 											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										</a>
@@ -300,6 +300,8 @@
 								</div>
 
 								<?php
+
+									$fig_counter = 1;
 
 									function get_pie_chart ($_args) {
 										$_args = array_replace(array(
@@ -309,13 +311,15 @@
 											'sub' => null,
 										), $_args);
 
+										global $fig_counter;
+
 										$pie_r = 31.8309886184;
 										$ratio = $_args['ratio'];
 
 										ob_start();
 
 										?>
-										<div class="p-about__statistics__fig">
+										<div id="<?php echo "aboutStatisticsFig{$fig_counter}"; ?>" class="p-about__statistics__fig">
 											<figure class="c-chart">
 												<div class="c-chart__wrap">
 													<svg class="c-chart__view" viewBox="0 0 <?php echo $pie_r * 2; ?> <?php echo $pie_r * 2; ?>">
@@ -346,6 +350,8 @@
 
 										$output = ob_get_contents();
 										ob_end_clean();
+
+										$fig_counter++;
 
 										return $output;
 									}
@@ -536,14 +542,14 @@
 							<ul class="p-work__list">
 								<li class="is--workplace">
 									<a class="c-list-link" href="#">
-										<span lang="ja">ワークプレイス</span>
+										<span class="c-animate-underline" lang="ja">ワークプレイス</span>
 										<span lang="en">Workplace</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 									</a>
 								</li>
 								<li class="is--welfare">
 									<a class="c-list-link" href="#">
-										<span lang="ja">福利厚生</span>
+										<span class="c-animate-underline" lang="ja">福利厚生</span>
 										<span lang="en">Welfare</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										<picture class="c-circle-picture c-img-wrapper"><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/work_welfare_thumb.jpg', true); ?>" alt=""></picture>
@@ -551,7 +557,7 @@
 								</li>
 								<li class="is--hrd">
 									<a class="c-list-link" href="#">
-										<span lang="ja">人材育成プログラム</span>
+										<span class="c-animate-underline" lang="ja">人材育成プログラム</span>
 										<span lang="en">Human Resource Development</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										<picture class="c-circle-picture c-img-wrapper"><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/work_hrd_thumb.jpg', true); ?>" alt=""></picture>

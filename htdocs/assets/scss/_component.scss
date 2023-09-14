@@ -298,14 +298,12 @@ a.c-list-link {
 		height: sp-rem(40);
 	}
 	@include taphover {
-		span[lang='ja'] {
-			&::after {
-				transform: scaleX(1);
-			}
+		.c-animate-underline::after {
+			transform: scaleX(1);
 		}
 
 		.c-circle-arrow {
-			transform: translateX(.5rem) translateY(-50%);
+			// transform: translateX(.5rem) translateY(-50%);
 			opacity: 1;
 			background-color: var(--color-theme-text);
 
@@ -324,18 +322,6 @@ a.c-list-link {
 		@include sp ((
 			font-size: 40,
 		)) {}
-
-		&::after {
-			@include pseudo-block((
-				bottom: -.2em,
-				left: 0,
-				height: 1px,
-				transform: scaleX(0),
-				transform-origin: 0 0,
-				background-color: var(--color-black),
-			)) {}
-			@include transition('transform', $dur--hover);
-		}
 	}
 
 	span[lang='en'] {
@@ -370,6 +356,29 @@ a.c-list-link {
 
 /** =================================================================
  *
+ * ANIMATE UNDERLINE
+ *
+ * --------------------------------------------------------------- */
+
+.c-animate-underline {
+	position: relative;
+
+	&::after {
+		@include pseudo-block((
+			bottom: -.2em,
+			left: 0,
+			height: 1px,
+			transform: scaleX(0),
+			transform-origin: 0 0,
+			background-color: var(--color-black),
+		)) {}
+		@include transition('transform', $dur--hover);
+	}
+}
+
+
+/** =================================================================
+ *
  * ARROW LINK
  *
  * --------------------------------------------------------------- */
@@ -386,8 +395,12 @@ a.c-list-link {
 		margin-top: sp-rem(-2);
 	}
 	@include taphover {
+		> span {
+			text-decoration: underline;
+		}
+
 		.c-circle-arrow--border {
-			transform: translateX(1rem);
+			// transform: translateX(1rem);
 			color: var(--color-theme-text-invert);
 			background-color: var(--color-theme-bg-invert);
 		}
@@ -395,6 +408,7 @@ a.c-list-link {
 
 	> span {
 		font-size: pc-clamp(12);
+		position: relative;
 
 		@include sp () {
 			font-size: sp-rem(22);
