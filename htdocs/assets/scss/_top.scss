@@ -628,8 +628,6 @@
 	 * --------------------------------------------------------------- */
 
 	.p-about {
-		overflow-x: hidden;
-		width: 100%;
 		margin-top: pc-rem(200);
 
 		@include sp ((
@@ -792,6 +790,11 @@
 							overflow: hidden;
 							width: 100%;
 							height: 100%;
+							border-radius: pc-rem(4);
+
+							@include sp () {
+								border-radius: sp-rem(8);
+							}
 						}
 					}
 				}
@@ -813,8 +816,9 @@
 					}
 
 					.swiper-slide {
-						width: 100%;
-						aspect-ratio: 420 / 280;
+						picture {
+							aspect-ratio: 420 / 280;
+						}
 					}
 				}
 
@@ -835,8 +839,9 @@
 					}
 
 					.swiper-slide {
-						width: 100%;
-						aspect-ratio: 480 / 700;
+						picture {
+							aspect-ratio: 480 / 700;
+						}
 					}
 				}
 			}
@@ -862,6 +867,7 @@
 			.p-about__statistics__figs {
 				position: relative;
 				width: 100vw;
+				overflow-x: hidden;
 				transform: translateX(-50%);
 				background-color: rgba($color--brown, .05);
 

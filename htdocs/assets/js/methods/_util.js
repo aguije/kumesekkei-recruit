@@ -199,7 +199,7 @@ GLOBAL.methods.util.lazyall = function (_option) {
 						dataType: 'image',
 						elementType: 'blob',
 						success: function (_response) {
-							//console.log('success', _response, _status);
+							// console.log('success', _response, _status);
 
 							let blobsrc = URL.createObjectURL(_response);
 							img.onload = function () {
@@ -232,6 +232,8 @@ GLOBAL.methods.util.lazyall = function (_option) {
 
 					img.onerror = function () {
 						img.onerror = void 0;
+
+						console.log('onerror', img);
 
 						reject();
 					};

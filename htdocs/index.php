@@ -261,10 +261,10 @@
 													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr1_1.jpg', true); ?>" alt=""></picture>
 												</div>
 												<div class="swiper-slide">
-													<picture><img class="c-img is--cover" data-src="https://picsum.photos/400/600" alt=""></picture>
+													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr2_1.jpg', true); ?>" alt=""></picture>
 												</div>
 												<div class="swiper-slide">
-													<picture><img class="c-img is--cover" data-src="https://picsum.photos/400/600?v=2" alt=""></picture>
+													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr3_1.jpg', true); ?>" alt=""></picture>
 												</div>
 											</div>
 										</div>
@@ -277,10 +277,10 @@
 													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr1_2.jpg', true); ?>" alt=""></picture>
 												</div>
 												<div class="swiper-slide">
-													<picture><img class="c-img is--cover" data-src="https://picsum.photos/800/600" alt=""></picture>
+													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr2_2.jpg', true); ?>" alt=""></picture>
 												</div>
 												<div class="swiper-slide">
-													<picture><img class="c-img is--cover" data-src="https://picsum.photos/800/600?v=2" alt=""></picture>
+													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr3_2.jpg', true); ?>" alt=""></picture>
 												</div>
 											</div>
 										</div>
@@ -675,7 +675,7 @@
 														<div class="p-people__crosstalk__title">
 															<h4>BIM座談会</h4>
 														</div>
-														<picture>
+														<picture class="c-img-wrapper">
 															<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_crosstalk1.jpg', true); ?>" alt="">
 														</picture>
 														<div class="p-people__crosstalk__description">
@@ -686,26 +686,13 @@
 												<div class="swiper-slide">
 													<a href="#">
 														<div class="p-people__crosstalk__title">
-															<h4>ABC座談会</h4>
+															<h4>新宿TOKYU MILANO再開発プロジェクトチーム</h4>
 														</div>
-														<picture>
-															<img class="c-img is--cover" data-src="https://picsum.photos/600/400" alt="">
+														<picture class="c-img-wrapper">
+															<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_crosstalk2.jpg', true); ?>" alt="">
 														</picture>
 														<div class="p-people__crosstalk__description">
-															<p>ABCを取り入れた設計ワークフローの構築とは？</p>
-														</div>
-													</a>
-												</div>
-												<div class="swiper-slide">
-													<a href="#">
-														<div class="p-people__crosstalk__title">
-															<h4>DEF座談会</h4>
-														</div>
-														<picture>
-															<img class="c-img is--cover" data-src="https://picsum.photos/600/400?v=2" alt="">
-														</picture>
-														<div class="p-people__crosstalk__description">
-															<p>DEFを取り入れた設計ワークフローの構築とは？</p>
+															<p>都市と建築のチャレンジ</p>
 														</div>
 													</a>
 												</div>

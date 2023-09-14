@@ -450,7 +450,7 @@ a.c-list-link {
 		border: 1px solid rgba($color--black, .3);
 
 		@include sp () {
-			font-size: pc-rem(45);
+			font-size: sp-rem(45);
 		}
 
 		.c-icon {

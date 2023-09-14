@@ -166,7 +166,7 @@ html {
 		font-size: $fs
 	)) {}
 	@include sp ((
-		font-size: $fs
+		font-size: $fs--sp
 	)) {}
 }
 
