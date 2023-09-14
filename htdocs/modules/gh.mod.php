@@ -23,14 +23,14 @@
 								<a class="is--new" href="#">
 									<span lang="en">New Graduate</span>
 									<span lang="ja">新卒採用</span>
-									<div class="c-circle-arrow c-circle-arrow--new"><span class="c-icon c-icon--arrow_r"></span></div>
+									<p>募集職種 / 募集概要 / 採用プロセス</p>
 								</a>
 							</li>
 							<li>
 								<a class="is--career" href="#">
 									<span lang="en">Career</span>
 									<span lang="ja">キャリア採用</span>
-									<div class="c-circle-arrow c-circle-arrow--career"><span class="c-icon c-icon--arrow_r"></span></div>
+									<p>募集職種 / 募集概要 / 採用プロセス</p>
 								</a>
 							</li>
 						</ul>

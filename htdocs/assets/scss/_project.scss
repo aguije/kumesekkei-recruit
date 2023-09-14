@@ -423,10 +423,10 @@
 					}
 					@include taphover {
 						&::before {
-							opacity: 1;
+							transform: scaleX(1);
 						}
 
-						.c-circle-arrow {
+						p {
 							opacity: 1;
 						}
 					}
@@ -435,11 +435,12 @@
 						@include pseudo-block((
 							width: 100%,
 							height: 5px,
-							top: 0,
+							bottom: 0,
 							left: 0,
-							opacity: 0,
+							transform: scaleX(0),
+							transform-origin: 0 0
 						)) {}
-						@include transition('opacity', $dur--hover);
+						@include transition('transform', $dur--hover);
 					}
 
 					&.is--new {
@@ -468,11 +469,15 @@
 						}
 					}
 
-					.c-circle-arrow {
-						font-size: pc-clamp(18);
+					p {
+						font-size: pc-rem(18);
+						font-weight: bold;
 						position: absolute;
-						right: pc-clamp(10);
-						bottom: pc-clamp(19);
+						top: pc-clamp(8);
+						left: pc-clamp(20);
+						transform: scale(.5);
+						transform-origin: 0 0;
+						white-space: nowrap;
 						opacity: 0;
 
 						@include transition('opacity', $dur--hover);
