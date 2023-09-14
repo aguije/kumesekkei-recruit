@@ -640,7 +640,7 @@
 				@include transition('border-right-color, background-color', $dur--hover);
 				@include taphover {
 					border-right-color: #515252;
-					background-color: #dfe0e3;
+					background-color: rgba(#ffffff, .4);
 
 					&::before {
 						opacity: 1;
@@ -1005,7 +1005,7 @@
 
 	a.c-circle-arrow {
 		position: absolute;
-		right: pc-rem($size--pad);
+		right: 20px;
 		bottom: 50%;
 		transform: translateY(50%);
 		opacity: 0;
