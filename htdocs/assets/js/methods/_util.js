@@ -112,8 +112,7 @@ GLOBAL.methods.util.lazy = function (_option) {
 	}, _option);
 
 	if (_option.mode === true) {
-
-		if ($(_option.wrapper).find('img[data-src]').hasClass('is--loaded')) { return false; }
+		if ($(_option.wrapper).attr('data-lazy') === 'processed') { return false; }
 
 		let mIO = new MultipleIO($(_option.wrapper).find('img[data-src]'), {
 			onEnter: (_element) => {
@@ -155,6 +154,7 @@ GLOBAL.methods.util.lazy = function (_option) {
 		});
 		GLOBAL.observers.push(mIO);
 
+		$(_option.wrapper).attr('data-lazy', 'processed');
 	}
 	else if (_option.mode === false) {
 
