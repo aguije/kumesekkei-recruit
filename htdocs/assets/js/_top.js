@@ -161,6 +161,31 @@ $(function () {
 	 *
 	 * --------------------------------------------------------------- */
 
+	function initNews (_option) {
+		_option = Object.assign({
+			mode: null,
+			complete: function () { return true; }
+		}, _option);
+
+		if (_option.mode === true) {
+			$('.p-news__item').on('click', function (_event) {
+				_event.preventDefault();
+
+				window.open($(this).find('h4 > a'));
+			});
+		}
+		else {
+			$('.p-news__item').off('click');
+		}
+	}
+
+
+	/** =================================================================
+	 *
+	 * ABOUT
+	 *
+	 * --------------------------------------------------------------- */
+
 	function initAbout (_option) {
 		_option = Object.assign({
 			mode: null,
@@ -409,6 +434,7 @@ $(function () {
 
 	function init () {
 		initHero({ mode: true });
+		initNews({ mode: true });
 		initAbout({ mode: true });
 		initPeople({ mode: true });
 		initStory({ mode: true });
@@ -424,6 +450,7 @@ $(function () {
 		GLOBAL.methods.util.destroySwipers();
 
 		initHero({ mode: false });
+		initNews({ mode: false });
 		initAbout({ mode: false });
 		initPeople({ mode: false });
 		initStory({ mode: false });
