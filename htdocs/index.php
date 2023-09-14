@@ -62,10 +62,11 @@
 					</p>
 				</div>
 
-				<div class="p-hero__progress">
+				<div class="p-hero__lead">
 					<div class="p-hero__arrow c-circle-arrow c-circle-arrow--page">
 						<span class="c-icon c-icon--arrow_d"></span>
 					</div>
+					<p lang="en"><b>RECRUIT NEWS</b></p>
 				</div>
 			</div>
 			<?php

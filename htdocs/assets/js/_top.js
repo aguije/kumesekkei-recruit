@@ -67,22 +67,25 @@ $(function () {
 									crossFade: true
 								},
 								pagination: {
-									el: '.p-hero .swiper-pagination'
+									el: '.p-hero .swiper-pagination',
+									clickable: 1
 								},
 								navigation: 0,
 								scrollbar: 0,
 								allowTouchMove: 0
 							});
 
+							/*
 							swiper.on('slideChange', function () {
-								$('.p-hero__progress').find('.c-progress').remove();
+								$('.p-hero__lead').find('.c-progress').remove();
 
-								$('.p-hero__progress').append(`
+								$('.p-hero__lead').append(`
 									<svg class="c-progress" viewBox="0 0 63.6619772368 63.6619772368">
 										<circle cx="31.8309886184" cy="31.8309886184" r="15.9154943092" fill="transparent" stroke="#000000" stroke-dashoffset="25" stroke-width="1" stroke-dasharray="0 100"></circle>
 									</svg>
 								`);
 							});
+							*/
 
 							swiper.init();
 							GLOBAL.swipers.push(swiper);
@@ -182,7 +185,8 @@ $(function () {
 								},
 								loop: 1,
 								pagination: {
-									el: '.p-about__item__sub .swiper-parent.is--upper .swiper-pagination'
+									el: '.p-about__item__sub .swiper-parent.is--upper .swiper-pagination',
+									clickable: 1
 								},
 								navigation: 0,
 								scrollbar: 0
@@ -268,7 +272,8 @@ $(function () {
 				},
 				loop: 1,
 				pagination: {
-					el: '.p-people__crosstalk .swiper-pagination'
+					el: '.p-people__crosstalk .swiper-pagination',
+					clickable: 1
 				},
 				navigation: 0,
 				scrollbar: 0

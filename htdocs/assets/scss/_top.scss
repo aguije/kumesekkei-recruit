@@ -72,7 +72,11 @@
 
 			.swiper-pagination {
 				@include pc () {
-					display: none;
+					right: pc-rem($size--pad);
+					bottom: pc-clamp(16);
+					left: unset;
+					justify-content: end;
+					mix-blend-mode: multiply;
 				}
 			}
 		}
@@ -153,7 +157,7 @@
 			}
 		}
 
-		.p-hero__progress {
+		.p-hero__lead {
 			position: absolute;
 			z-index: var(--zi-2);
 			bottom: 100vh * 62/796;
@@ -161,24 +165,57 @@
 			width: 0;
 			height: 0;
 
+			@include sp () {
+				display: none;
+			}
+			/*
 			.c-progress {
 				position: relative;
 				width: pc-rem(58 * 2);
 				height: pc-rem(58 * 2);
 				transform: translateX(-50%) translateY(-50%);
 				pointer-events: none;
-
 				@include sp () {
 					display: none;
 				}
 			}
+			*/
+			@include taphover {
+				> p {
+					transform: translateX(-50%) translateY(0em);
+					opacity: 1;
+				}
 
-			.p-hero__arrow {
+				.p-hero__arrow.c-circle-arrow--page {
+					color: var(--color-black);
+
+					&::before {
+						transform: scale(0);
+					}
+				}
+			}
+
+			> p {
+				font-size: pc-clamp(12);
+				line-height: 1;
+				position: absolute;
+				top: 1.8em;
+				transform: translateX(-50%) translateY(-1em);
+				white-space: nowrap;
+				pointer-events: none;
+				opacity: 0;
+
+				@include transition('opacity, transform', $dur--hover);
+			}
+
+			.p-hero__arrow.c-circle-arrow--page {
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				cursor: pointer;
 				transform: translateX(-50%) translateY(-50%);
+				border: none;
+				background-color: transparent;
 
 				@include pc () {
 					font-size: pc-rem(50);
@@ -186,12 +223,19 @@
 				@include sp () {
 					display: none;
 				}
-				@include taphover {
-					transform: translateX(-50%) translateY(-50%) scale(1.5);
-				}
+				@include transition('color', $dur--hover);
 
 				.c-icon {
 					font-size: 1em * 26/50;
+				}
+
+				&::before {
+					@include pseudo-block((
+						background-color: var(--color-black),
+						z-index: -1,
+						border-radius: 50%,
+					)) {}
+					@include transition('transform', $dur--hover);
 				}
 			}
 		}

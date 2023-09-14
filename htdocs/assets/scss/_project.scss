@@ -41,6 +41,24 @@
 			height: sp-rem(13);
 		}
 
+		&::after {
+			box-sizing: border-box;
+			transform: translate(-50%) translateY(-50%);
+			pointer-events: all !important;
+			border: none;
+
+			@include pseudo-block((
+				width: pc-clamp(18),
+				height: pc-clamp(18),
+				top: 50%,
+				left: 50%,
+			)) {}
+			@include sp () {
+				width: sp-rem(28);
+				height: sp-rem(28);
+			}
+		}
+
 		&.swiper-pagination-bullet-active {
 			border: none;
 			background-color: var(--color-black);
