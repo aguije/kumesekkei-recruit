@@ -298,9 +298,10 @@ a.c-list-link {
 		height: sp-rem(40);
 	}
 	@include taphover {
-		span[lang='ja'],
-		span[lang='en'] {
-			opacity: .5;
+		span[lang='ja'] {
+			&::after {
+				transform: scaleX(1);
+			}
 		}
 
 		.c-circle-arrow {
@@ -314,18 +315,27 @@ a.c-list-link {
 		}
 	}
 
-	span[lang='ja'],
-	span[lang='en'] {
-		@include transition('opacity', $dur--hover);
-	}
-
 	span[lang='ja'] {
 		font-size: pc-rem(22);
+		position: relative;
+		display: inline-block;
 		white-space: nowrap;
 
 		@include sp ((
 			font-size: 40,
 		)) {}
+
+		&::after {
+			@include pseudo-block((
+				bottom: -.2em,
+				left: 0,
+				height: 1px,
+				transform: scaleX(0),
+				transform-origin: 0 0,
+				background-color: var(--color-black),
+			)) {}
+			@include transition('transform', $dur--hover);
+		}
 	}
 
 	span[lang='en'] {
