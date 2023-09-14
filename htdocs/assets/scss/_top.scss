@@ -9,6 +9,7 @@
  * --------------------------------------------------------------- */
 
 .p-top {
+
 	width: 100%;
 
 
@@ -443,9 +444,10 @@
 				padding-left: 0,
 				padding-bottom: 24,
 			)) {
-				position:         sticky;
-				position: -webkit-sticky;
+				position: fixed;
+				z-index: var(--zi-news-footer);
 				bottom: 0;
+				width: 100%;
 				border-top: 2px solid var(--color-black);
 				background-color: var(--color-white);
 			}

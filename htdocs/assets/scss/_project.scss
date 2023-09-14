@@ -265,7 +265,7 @@
 
 #gf {
 	position: relative;
-	z-index: $zi--gf;
+	z-index: var(--zi-gf);
 
 	@include sp () {
 		margin-top: sp-rem(400);
@@ -603,6 +603,11 @@
 	position: relative;
 	z-index: var(--zi-0);
 
+	@include sp () {
+		box-sizing: border-box;
+		padding-bottom: sp-rem(140);  // 140 は .p-news__footer の高さ
+	}
+
 	.p-gm__container {
 		background-color: var(--color-bluegray);
 	}
@@ -679,15 +684,6 @@
 
 			h4 {
 				line-height: 1;
-
-				/*
-				@include pc () {
-					height: pc-clamp(276);
-				}
-				@include sp () {
-					height: sp-rem(342);
-				}
-				*/
 
 				a {
 					position: relative;
@@ -902,17 +898,15 @@
 				top: sp-rem(450);
 				right: sp-rem(20);
 				writing-mode: vertical-lr;
-			}
 
-			@include sp () {
 				.is--ja {
-					order: 1
+					order: 1;
 				}
 				.is--en {
-					order: 2
+					order: 2;
 				}
 				.is--cn {
-					order: 3
+					order: 3;
 				}
 			}
 

@@ -108,11 +108,14 @@ $zi--level2: 20;
 $zi--level1: 10;
 $zi--level0: 0;
 
+$zi--news-footer: 1100;
 $zi--gh: 1000;
 $zi--gf: 900;
 
 :root {
+	--zi-news-footer: #{$zi--news-footer};
 	--zi-gh: #{$zi--gh};
+	--zi-gf: #{$zi--gf};
 
 	--zi-5: #{$zi--level5};
 	--zi-4: #{$zi--level4};
