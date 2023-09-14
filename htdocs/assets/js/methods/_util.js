@@ -233,8 +233,6 @@ GLOBAL.methods.util.lazyall = function (_option) {
 					img.onerror = function () {
 						img.onerror = void 0;
 
-						console.log('onerror', img);
-
 						reject();
 					};
 

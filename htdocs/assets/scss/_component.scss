@@ -14,7 +14,7 @@
  *
  * --------------------------------------------------------------- */
 
-.c-img[data-src] {
+.c-lazy[data-src] {
 	opacity: 0;
 
 	@include transition('opacity', .6s);

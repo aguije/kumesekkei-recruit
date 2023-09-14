@@ -42,10 +42,10 @@
 				<div class="swiper-parent">
 					<div class="swiper is--lazy-all">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide"><picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/hero_visual1.jpg', true); ?>" alt=""></picture></div>
-							<div class="swiper-slide"><picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/hero_visual2.jpg', true); ?>" alt=""></picture></div>
-							<div class="swiper-slide"><picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/hero_visual3.jpg', true); ?>" alt=""></picture></div>
-							<div class="swiper-slide"><picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/hero_visual4.jpg', true); ?>" alt=""></picture></div>
+							<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/hero_visual1.jpg', true); ?>" alt=""></picture></div>
+							<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/hero_visual2.jpg', true); ?>" alt=""></picture></div>
+							<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/hero_visual3.jpg', true); ?>" alt=""></picture></div>
+							<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/hero_visual4.jpg', true); ?>" alt=""></picture></div>
 						</div>
 					</div>
 					<div class="swiper-pagination"></div>
@@ -223,8 +223,8 @@
 											<span lang="en">Top Message</span>
 											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 											<picture class="c-circle-picture">
-												<div class="c-img-wrapper">
-													<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_message.jpg', true); ?>" alt="">
+												<div class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/about_message.jpg', true); ?>" alt="">
 												</div>
 											</picture>
 										</a>
@@ -258,13 +258,13 @@
 										<div class="swiper is-lazy">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
-													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr1_1.jpg', true); ?>" alt=""></picture>
+													<picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr1_1.jpg', true); ?>" alt=""></picture>
 												</div>
 												<div class="swiper-slide">
-													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr2_1.jpg', true); ?>" alt=""></picture>
+													<picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr2_1.jpg', true); ?>" alt=""></picture>
 												</div>
 												<div class="swiper-slide">
-													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr3_1.jpg', true); ?>" alt=""></picture>
+													<picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr3_1.jpg', true); ?>" alt=""></picture>
 												</div>
 											</div>
 										</div>
@@ -274,13 +274,13 @@
 										<div class="swiper is-lazy">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
-													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr1_2.jpg', true); ?>" alt=""></picture>
+													<picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr1_2.jpg', true); ?>" alt=""></picture>
 												</div>
 												<div class="swiper-slide">
-													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr2_2.jpg', true); ?>" alt=""></picture>
+													<picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr2_2.jpg', true); ?>" alt=""></picture>
 												</div>
 												<div class="swiper-slide">
-													<picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr3_2.jpg', true); ?>" alt=""></picture>
+													<picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/about_csr3_2.jpg', true); ?>" alt=""></picture>
 												</div>
 											</div>
 										</div>
@@ -531,8 +531,8 @@
 								</div>
 
 								<figure class="p-work__illustration">
-									<div class="c-img-wrapper">
-										<img class="c-img" data-src="<?php echo KUME_Util::image_path('top/work_visual.png', true); ?>" alt="">
+									<div class="c-lazy-trigger">
+										<img class="c-lazy" data-src="<?php echo KUME_Util::image_path('top/work_visual.png', true); ?>" alt="">
 									</div>
 								</figure>
 
@@ -553,8 +553,8 @@
 										<span lang="en">Welfare</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										<picture class="c-circle-picture">
-											<div class="c-img-wrapper">
-												<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/work_welfare_thumb.jpg', true); ?>" alt="">
+											<div class="c-lazy-trigger">
+												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/work_welfare_thumb.jpg', true); ?>" alt="">
 											</div>
 										</picture>
 									</a>
@@ -565,8 +565,8 @@
 										<span lang="en">Human Resource Development</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										<picture class="c-circle-picture">
-											<div class="c-img-wrapper">
-												<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/work_hrd_thumb.jpg', true); ?>" alt="">
+											<div class="c-lazy-trigger">
+												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/work_hrd_thumb.jpg', true); ?>" alt="">
 											</div>
 										</picture>
 									</a>
@@ -619,8 +619,8 @@
 										<article class="p-people__employee__article">
 											<a class="is--new" href="#" rel="bookmark">
 												<picture class="c-circle-picture">
-													<div class="c-img-wrapper">
-														<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb1.jpg', true); ?>" alt="">
+													<div class="c-lazy-trigger">
+														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb1.jpg', true); ?>" alt="">
 													</div>
 												</picture>
 												<header>
@@ -637,8 +637,8 @@
 										<article class="p-people__employee__article">
 											<a class="is--career" href="#" rel="bookmark">
 												<picture class="c-circle-picture">
-													<div class="c-img-wrapper">
-														<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb2.jpg', true); ?>" alt="">
+													<div class="c-lazy-trigger">
+														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb2.jpg', true); ?>" alt="">
 													</div>
 												</picture>
 												<header>
@@ -675,8 +675,8 @@
 														<div class="p-people__crosstalk__title">
 															<h4>BIM座談会</h4>
 														</div>
-														<picture class="c-img-wrapper">
-															<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_crosstalk1.jpg', true); ?>" alt="">
+														<picture class="c-lazy-trigger">
+															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_crosstalk1.jpg', true); ?>" alt="">
 														</picture>
 														<div class="p-people__crosstalk__description">
 															<p>BIMを取り入れた設計ワークフローの構築とは？</p>
@@ -688,8 +688,8 @@
 														<div class="p-people__crosstalk__title">
 															<h4>新宿TOKYU MILANO再開発プロジェクトチーム</h4>
 														</div>
-														<picture class="c-img-wrapper">
-															<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_crosstalk2.jpg', true); ?>" alt="">
+														<picture class="c-lazy-trigger">
+															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_crosstalk2.jpg', true); ?>" alt="">
 														</picture>
 														<div class="p-people__crosstalk__description">
 															<p>都市と建築のチャレンジ</p>
@@ -715,8 +715,8 @@
 									<div class="c-pane-scroller__container">
 										<article class="p-people__interview__article">
 											<a href="#" rel="bookmark" data-video-id="u-8R5n54toE">
-												<picture class="c-img-wrapper">
-													<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_interview1.jpg', true); ?>" alt="">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_interview1.jpg', true); ?>" alt="">
 												</picture>
 												<div>
 													<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
@@ -731,8 +731,8 @@
 
 										<article class="p-people__interview__article">
 											<a href="#" rel="bookmark" data-video-id="0Uhh62MUEic">
-												<picture class="c-img-wrapper">
-													<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_interview2.jpg', true); ?>" alt="">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_interview2.jpg', true); ?>" alt="">
 												</picture>
 												<div>
 													<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
@@ -747,8 +747,8 @@
 
 										<article class="p-people__interview__article">
 											<a href="#" rel="bookmark" data-video-id="VJGCeAWIfEA">
-												<picture class="c-img-wrapper">
-													<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_interview3.jpg', true); ?>" alt="">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_interview3.jpg', true); ?>" alt="">
 												</picture>
 												<div>
 													<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
@@ -791,11 +791,11 @@
 						<div class="p-story__slides">
 							<div class="swiper">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide"><picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual1.jpg', true); ?>" alt=""></picture></div>
-									<div class="swiper-slide"><picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual2.jpg', true); ?>" alt=""></picture></div>
-									<div class="swiper-slide"><picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual3.jpg', true); ?>" alt=""></picture></div>
-									<div class="swiper-slide"><picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual4.jpg', true); ?>" alt=""></picture></div>
-									<div class="swiper-slide"><picture><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual5.jpg', true); ?>" alt=""></picture></div>
+									<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual1.jpg', true); ?>" alt=""></picture></div>
+									<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual2.jpg', true); ?>" alt=""></picture></div>
+									<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual3.jpg', true); ?>" alt=""></picture></div>
+									<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual4.jpg', true); ?>" alt=""></picture></div>
+									<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual5.jpg', true); ?>" alt=""></picture></div>
 								</div>
 							</div>
 						</div>
@@ -807,7 +807,7 @@
 										<h3>始まりの場所<span class="c-icon c-icon--external"></span></h3>
 										<p>ここから<br>アイヌの歴史や文化<br>を伝える</p>
 										<figure>
-											<div class="c-img-wrapper"><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual1.jpg', true); ?>" alt=""></div>
+											<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual1.jpg', true); ?>" alt=""></div>
 											<figcaption>国立アイヌ民族博物館</figcaption>
 										</figure>
 									</a>
@@ -818,7 +818,7 @@
 										<h3>風との共生<span class="c-icon c-icon--external"></span></h3>
 										<p>“環境”を<br>“カタチ”にした<br>環境共生スタジアム</p>
 										<figure>
-											<div class="c-img-wrapper"><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual2.jpg', true); ?>" alt=""></div>
+											<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual2.jpg', true); ?>" alt=""></div>
 											<figcaption>栃木県総合<br>運動公園陸上競技場</figcaption>
 										</figure>
 									</a>
@@ -829,7 +829,7 @@
 										<h3>地域との連携<span class="c-icon c-icon--external"></span></h3>
 										<p>原風景をたどり、<br>建築として<br>かたちにする</p>
 										<figure>
-											<div class="c-img-wrapper"><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual3.jpg', true); ?>" alt=""></div>
+											<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual3.jpg', true); ?>" alt=""></div>
 											<figcaption>瀬戸市立にじの丘学園</figcaption>
 										</figure>
 									</a>
@@ -840,7 +840,7 @@
 										<h3>大規模木造<span class="c-icon c-icon--external"></span></h3>
 										<p>新しく懐かしい<br>木造校舎が<br>出来上がった</p>
 										<figure>
-											<div class="c-img-wrapper"><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual4.jpg', true); ?>" alt=""></div>
+											<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual4.jpg', true); ?>" alt=""></div>
 											<figcaption>牛久市立<br>ひたち野うしく中学校</figcaption>
 										</figure>
 									</a>
@@ -851,7 +851,7 @@
 										<h3>構造への挑戦<span class="c-icon c-icon--external"></span></h3>
 										<p>不安から熱狂へ、<br>そして信頼と協働で<br>作る鉄骨</p>
 										<figure>
-											<div class="c-img-wrapper"><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual5.jpg', true); ?>" alt=""></div>
+											<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual5.jpg', true); ?>" alt=""></div>
 											<figcaption>山梨県立図書館</figcaption>
 										</figure>
 									</a>

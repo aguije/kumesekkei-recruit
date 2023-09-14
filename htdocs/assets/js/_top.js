@@ -443,7 +443,7 @@ $(function () {
 
 		GLOBAL.methods.util.lazy({
 			mode: true,
-			wrapper: '.c-img-wrapper'
+			wrapper: '.c-lazy-trigger'
 		});
 	}
 
