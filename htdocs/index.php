@@ -552,7 +552,11 @@
 										<span class="c-animate-underline" lang="ja">福利厚生</span>
 										<span lang="en">Welfare</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
-										<picture class="c-circle-picture c-img-wrapper"><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/work_welfare_thumb.jpg', true); ?>" alt=""></picture>
+										<picture class="c-circle-picture">
+											<div class="c-img-wrapper">
+												<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/work_welfare_thumb.jpg', true); ?>" alt="">
+											</div>
+										</picture>
 									</a>
 								</li>
 								<li class="is--hrd">
@@ -560,7 +564,11 @@
 										<span class="c-animate-underline" lang="ja">人材育成プログラム</span>
 										<span lang="en">Human Resource Development</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
-										<picture class="c-circle-picture c-img-wrapper"><img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/work_hrd_thumb.jpg', true); ?>" alt=""></picture>
+										<picture class="c-circle-picture">
+											<div class="c-img-wrapper">
+												<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/work_hrd_thumb.jpg', true); ?>" alt="">
+											</div>
+										</picture>
 									</a>
 								</li>
 							</ul>
@@ -610,8 +618,10 @@
 									<div class="c-pane-scroller__container">
 										<article class="p-people__employee__article">
 											<a class="is--new" href="#" rel="bookmark">
-												<picture class="c-circle-picture c-img-wrapper">
-													<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb1.jpg', true); ?>" alt="">
+												<picture class="c-circle-picture">
+													<div class="c-img-wrapper">
+														<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb1.jpg', true); ?>" alt="">
+													</div>
 												</picture>
 												<header>
 													<h4>三浦 淑美</h4>
@@ -626,8 +636,10 @@
 
 										<article class="p-people__employee__article">
 											<a class="is--career" href="#" rel="bookmark">
-												<picture class="c-circle-picture c-img-wrapper">
-													<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb2.jpg', true); ?>" alt="">
+												<picture class="c-circle-picture">
+													<div class="c-img-wrapper">
+														<img class="c-img is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb2.jpg', true); ?>" alt="">
+													</div>
 												</picture>
 												<header>
 													<h4>水谷 絢子</h4>

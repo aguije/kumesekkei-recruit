@@ -1034,8 +1034,8 @@
 
 			.c-list-link {
 				@include taphover {
-					picture {
-						transform: translateX(-100%) translateY(-50%) scale($scale--hover);
+					picture .c-img-wrapper {
+						transform: scale($scale--hover);
 					}
 				}
 
@@ -1047,7 +1047,12 @@
 					height: pc-rem(120);
 					transform: translateX(-100%) translateY(-50%);
 
-					@include transition('transform', $dur--hover);
+					.c-img-wrapper {
+						width: 100%;
+						height: 100%;
+
+						@include transition('transform', $dur--hover);
+					}
 				}
 			}
 		}
@@ -1249,7 +1254,6 @@
 				a {
 					position: relative;
 					display: flex;
-					overflow: hidden;
 					flex-direction: column;
 					box-sizing: border-box;
 					height: 100%;
@@ -1258,45 +1262,45 @@
 					border-bottom-right-radius: pc-rem(16);
 					background-color: var(--color-theme-bg-invert);
 
+					@include transition('background-color', $dur--transition);
 					@include sp () {
 						padding: sp-rem(33 * 2) sp-rem(43 * 2) sp-rem(17 * 2) sp-rem(43 * 2);
 						border-bottom-right-radius: sp-rem(16 * 2);
 					}
 					@include taphover {
-						&::before {
-							opacity: .3;
-						}
-
-						picture {
+						picture .c-img-wrapper {
 							transform: scale($scale--hover);
 						}
 
-						h4 {
-							transform: translateY(-.5em);
-						}
-					}
-					@include transition('border-top-color, background-color', $dur--transition);
-
-					&.is--new {
-						@include taphover {
-							border-top-color: var(--color-green);
-						}
-					}
-					&.is--career {
-						@include taphover {
-							border-top-color: var(--color-salmon);
+						&.is--new,
+						&.is--career {
+							&::before {
+								transform: scaleX(1);
+							}
 						}
 					}
 
 					&::before {
 						@include pseudo-block((
-							top: 0,
+							top: -5px,
 							left: 0,
-							background-color: var(--color-theme-text),
+							height: 5px,
 							z-index: var(--zi-0),
-							opacity: 0,
+							transform: scaleX(0),
+							transform-origin: 0 0,
 						)) {}
-						@include transition('opacity', $dur--hover);
+						@include transition('transform', $dur--hover);
+					}
+
+					&.is--new {
+						&::before {
+							background-color: var(--color-green);
+						}
+					}
+					&.is--career {
+						&::before {
+							background-color: var(--color-salmon);
+						}
 					}
 				}
 
@@ -1308,7 +1312,13 @@
 					@include sp () {
 						width: sp-rem(154 * 2);
 					}
-					@include transition('transform', $dur--hover);
+
+					.c-img-wrapper {
+						width: 100%;
+						height: 100%;
+
+						@include transition('transform', $dur--hover);
+					}
 				}
 
 				header {
@@ -1320,7 +1330,6 @@
 						right: pc-rem(20);
 						writing-mode: vertical-rl;
 
-						@include transition('transform', $dur--hover);
 						@include sp () {
 							font-size: sp-rem(14 * 2);
 							top: sp-rem(24 * 2);
