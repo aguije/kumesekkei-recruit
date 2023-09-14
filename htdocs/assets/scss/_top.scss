@@ -9,7 +9,6 @@
  * --------------------------------------------------------------- */
 
 .p-top {
-
 	width: 100%;
 
 
@@ -866,8 +865,8 @@
 
 			.p-about__statistics__figs {
 				position: relative;
-				width: 100vw;
 				overflow-x: hidden;
+				width: 100vw;
 				transform: translateX(-50%);
 				background-color: rgba($color--brown, .05);
 
@@ -1453,17 +1452,22 @@
 
 					.p-people__crosstalk__title {
 						@include pc () {
-							font-size: pc-rem(18);
 							top: pc-rem(22);
 						}
 						@include sp () {
-							font-size: sp-rem(30);
 							position: relative;
 							z-index: var(--zi-1);
 						}
 
 						h4 {
 							font-weight: bold;
+
+							@include pc () {
+								font-size: pc-rem(18);
+							}
+							@include pc () {
+								font-size: sp-rem(30);
+							}
 						}
 					}
 
