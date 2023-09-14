@@ -2,7 +2,7 @@
 	<div class="p-sh">
 		<div class="l-wrapper">
 			<div class="p-sh__container l-container">
-				<div class="p-sh__title">
+				<div class="p-site-title">
 					<p class="is--body"><span>久米設計</span><span>採用サイト</span></p>
 				</div>
 

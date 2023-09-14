@@ -2,6 +2,10 @@
 	<div class="p-gm__container">
 		<div class="l-wrapper">
 			<div class="p-gm__main l-container">
+				<div class="p-site-title">
+					<p class="is--body"><span>久米設計</span><span>採用サイト</span></p>
+				</div>
+
 				<ul class="p-gm__list is--main">
 					<li>
 						<h4>

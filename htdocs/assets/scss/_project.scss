@@ -138,8 +138,10 @@
 			opacity: 1;
 		}
 
-		.p-sh__title {
-			opacity: 0;
+		.p-sh {
+			.p-site-title {
+				opacity: 0;
+			}
 		}
 	}
 
@@ -154,11 +156,11 @@
 				transform: translateX(0%);
 			}
 		}
-	}
 
-	&.is--scrolled.is--opened {
-		.p-sh__title {
-			opacity: 1;
+		.p-sh {
+			.p-site-title {
+				opacity: 0;
+			}
 		}
 	}
 
@@ -275,6 +277,48 @@
 
 /** =================================================================
  *
+ * SITE TITLE
+ *
+ * --------------------------------------------------------------- */
+
+.p-site-title {
+	position: absolute;
+	right: 0;
+	transform: translateX(50%);
+	white-space: nowrap;
+	writing-mode: vertical-rl;
+	pointer-events: none;
+	opacity: 1;
+
+	@include transition('opacity', $dur--hover);
+	@include pc () {
+		top: pc-clamp(102);
+		right: calc(#{1rem * $size--pad/$fs} + #{pc-clamp(18)});
+	}
+	@include sp ((
+		top: 190,
+		right: 40,
+	)) {}
+
+	.is--body {
+		font-weight: bold;
+
+		@include pc () {
+			font-size: pc-clamp(10);
+		}
+		@include sp ((
+			font-size: 20,
+		)) {}
+
+		span + span {
+			margin-top: 1em;
+		}
+	}
+}
+
+
+/** =================================================================
+ *
  * SITE HEADER
  *
  * --------------------------------------------------------------- */
@@ -298,41 +342,6 @@
 
 		.p-sh__buttons {
 			display: flex;
-		}
-	}
-
-	.p-sh__title {
-		position: absolute;
-		right: 0;
-		transform: translateX(50%);
-		white-space: nowrap;
-		writing-mode: vertical-rl;
-		pointer-events: none;
-		opacity: 1;
-
-		@include transition('opacity', $dur--hover);
-		@include pc () {
-			top: pc-clamp(102);
-			right: calc(#{1rem * $size--pad/$fs} + #{pc-clamp(18)});
-		}
-		@include sp ((
-			top: 190,
-			right: 40,
-		)) {}
-
-		.is--body {
-			font-weight: bold;
-
-			@include pc () {
-				font-size: pc-clamp(10);
-			}
-			@include sp ((
-				font-size: 20,
-			)) {}
-
-			span + span {
-				margin-top: 1em;
-			}
 		}
 	}
 
@@ -613,6 +622,7 @@
 	}
 
 	.p-gm__main {
+		position: relative;
 		box-sizing: border-box;
 
 		@include pc () {
