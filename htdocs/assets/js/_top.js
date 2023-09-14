@@ -107,6 +107,7 @@ $(function () {
 				}
 
 				let ticking = false;
+				const start_ratio = .95;
 
 				let mIO = new MultipleIO('.p-hero', {
 					config: {
@@ -115,7 +116,13 @@ $(function () {
 					onEnter: (_entry, _ratio) => {
 						if (!ticking) {
 							window.requestAnimationFrame(function () {
-								$swiper.css({ transform: `translateY(${(1 - _ratio) * .3 * 100}%)` });
+								if (_ratio < .95) {
+									$swiper.css({ transform: `translateY(${(1 - (_ratio + (1 - start_ratio))) * .3 * 100}%)` });
+								}
+								else {
+									$swiper.css({ transform: `translateY(0%)` });
+								}
+
 								ticking = false;
 							});
 
