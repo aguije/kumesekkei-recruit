@@ -936,6 +936,22 @@
 				}
 				@include transition('background-color', $dur--hover);
 
+				&[data-stt-changelang='zh-CN'] {
+					@include pc ((
+						padding-right: 8,
+					)) {}
+					@include sp ((
+						padding-bottom: 10,
+					)) {}
+
+					> span > span {
+						@include sp () {
+							display: inline-block;
+							transform: translateX(.15em);
+						}
+					}
+				}
+
 				> span {
 					display: inline-block;
 				}
