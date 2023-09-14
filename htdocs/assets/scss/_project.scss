@@ -904,6 +904,18 @@
 				writing-mode: vertical-lr;
 			}
 
+			@include sp () {
+				.is--ja {
+					order: 1
+				}
+				.is--en {
+					order: 2
+				}
+				.is--cn {
+					order: 3
+				}
+			}
+
 			a {
 				display: block;
 				white-space: nowrap;
