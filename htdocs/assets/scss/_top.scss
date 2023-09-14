@@ -1744,20 +1744,13 @@
 					padding: pc-rem(48) 0 0 0;
 					background-color: #ebebeb;
 
-					@include taphover {
-						background-color: lighten(#ebebeb, 5);
-
-						h3 {
-							transform: translateY(-.5rem);
-						}
-					}
-					@include transition('background-color', $dur--hover);
 					@include sp () {
 						padding-top: sp-rem(96);
 					}
 				}
 
 				h3 {
+					position: relative;
 					font-size: pc-rem(18);
 					font-weight: bold;
 					flex-grow: 1;
@@ -1765,7 +1758,6 @@
 					margin-left: auto;
 					writing-mode: vertical-rl;
 
-					@include transition('transform', $dur--hover);
 					@include sp () {
 						font-size: sp-rem(36);
 					}

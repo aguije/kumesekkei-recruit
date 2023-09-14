@@ -413,7 +413,9 @@
 					display: flex;
 					flex-direction: column;
 					box-sizing: border-box;
+					background-color: transparent;
 
+					@include transition('background-color', $dur--hover);
 					@include pc ((
 						width: 189,
 					)) {
@@ -422,6 +424,8 @@
 						padding-left: pc-clamp(20);
 					}
 					@include taphover {
+						background-color: var(--color-white);
+
 						&::before {
 							transform: scaleX(1);
 						}
@@ -438,7 +442,7 @@
 							bottom: 0,
 							left: 0,
 							transform: scaleX(0),
-							transform-origin: 0 0
+							transform-origin: 0 0,
 						)) {}
 						@include transition('transform', $dur--hover);
 					}
