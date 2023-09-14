@@ -612,7 +612,7 @@
 
 		@include pc () {
 			width: 100%;
-			padding-top: pc-clamp(150);
+			padding-top: pc-clamp(100);
 		}
 		@include sp () {
 			padding-top: sp-rem(190);
