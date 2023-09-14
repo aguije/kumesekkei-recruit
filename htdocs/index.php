@@ -319,7 +319,7 @@
 										ob_start();
 
 										?>
-										<div id="<?php echo "aboutStatisticsFig{$fig_counter}"; ?>" class="p-about__statistics__fig">
+										<a id="<?php echo "aboutStatisticsFig{$fig_counter}"; ?>" class="p-about__statistics__fig" href="#">
 											<figure class="c-chart">
 												<div class="c-chart__wrap">
 													<svg class="c-chart__view" viewBox="0 0 <?php echo $pie_r * 2; ?> <?php echo $pie_r * 2; ?>">
@@ -345,7 +345,7 @@
 
 												?>
 											</div>
-										</div>
+										</a>
 										<?php
 
 										$output = ob_get_contents();
@@ -876,7 +876,7 @@
 			</section>
 		</main>
 
-		<div class="p-scroll-to-top l-wrapper">
+		<div class="p-scroll-to-top">
 			<a class="c-circle-arrow c-circle-arrow--page" href="javascript:void(0);"><span class="c-icon c-icon--arrow_u"></span></a>
 		</div>
 

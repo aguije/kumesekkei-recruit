@@ -913,9 +913,14 @@
 			}
 
 			.p-about__statistics__fig {
+				display: block;
 				width: pc-rem(213);
 				padding: 0 pc-rem(7);
 
+				@include taphover {
+					opacity: .5;
+				}
+				@include transition('opacity', $dur--hover);
 				@include sp () {
 					width: sp-rem(213 * $statistics_ratio_sp);
 					padding: 0 sp-rem(7 * $statistics_ratio_sp);
@@ -1750,9 +1755,9 @@
 				}
 
 				h3 {
-					position: relative;
 					font-size: pc-rem(18);
 					font-weight: bold;
+					position: relative;
 					flex-grow: 1;
 					margin-right: auto;
 					margin-left: auto;
