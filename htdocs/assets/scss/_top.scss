@@ -1295,6 +1295,9 @@
 							transform-origin: 0 0,
 						)) {}
 						@include transition('transform', $dur--hover);
+						@include sp () {
+							transform: scaleX(1);
+						}
 					}
 
 					&.is--new {
