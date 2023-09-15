@@ -249,6 +249,24 @@ $(function () {
 				});
 				GLOBAL.observers.push(mIO);
 			})();
+
+			(function () {
+				const $chart = $('.p-about__statistics__figs .c-chart');
+
+				let mIO = new MultipleIO('.p-about__statistics__figs', {
+					config: {
+						threshold: .5
+					},
+					onEnter: (_element) => {
+						$chart.removeClass('is--out');
+					},
+					onLeave: (_element) => {
+						$chart.addClass('is--out');
+					}
+				});
+				GLOBAL.observers.push(mIO);
+
+			})();
 		}
 		else {
 

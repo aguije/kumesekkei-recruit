@@ -589,6 +589,12 @@ $pie_r: 31.8309886184;
 .c-chart {
 	position: relative;
 
+	&.is--out {
+		.c-chart__body {
+			stroke-dasharray: 0 100;
+		}
+	}
+
 	.c-chart__wrap {
 		position: relative;
 		width: pc-rem(213);
@@ -615,6 +621,8 @@ $pie_r: 31.8309886184;
 		stroke-width: $pie_r;
 		stroke-dashoffset: 25;
 		stroke: #dbdcdc;
+
+		@include transition('stroke-dasharray', 3s);
 	}
 
 	.c-chart__base {

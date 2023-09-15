@@ -322,7 +322,7 @@
 
 										?>
 										<a id="<?php echo "aboutStatisticsFig{$fig_counter}"; ?>" class="p-about__statistics__fig" href="#">
-											<figure class="c-chart">
+											<figure class="c-chart is--out">
 												<div class="c-chart__wrap">
 													<svg class="c-chart__view" viewBox="0 0 <?php echo $pie_r * 2; ?> <?php echo $pie_r * 2; ?>">
 														<circle class="c-chart__base" cx="<?php echo $pie_r; ?>" cy="<?php echo $pie_r; ?>" r="<?php echo $pie_r; ?>" />
