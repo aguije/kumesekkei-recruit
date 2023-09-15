@@ -1054,10 +1054,16 @@
 				picture {
 					position: absolute;
 					top: 50%;
-					left: 1rem * -30/$fs;
+					left: pc-rem(-30);
 					width: pc-rem(120);
 					height: pc-rem(120);
 					transform: translateX(-100%) translateY(-50%);
+
+					@include sp () {
+						left: sp-rem(-30);
+						width: sp-rem(120);
+						height: sp-rem(120);
+					}
 
 					.c-lazy-trigger {
 						width: 100%;
