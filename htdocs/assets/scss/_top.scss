@@ -584,9 +584,7 @@
 
 								@include transition('opacity', $dur--hover);
 								@include pc () {
-									right: pc-rem(15);
-									bottom: calc(pc-rem(24) - 5px);
-									opacity: 0;
+									display: none;
 								}
 								@include sp () {
 									top: 50%;
@@ -601,8 +599,10 @@
 							font-weight: bold;
 
 							@include pc ((
-								margin-left: 30,
-							)) {}
+								margin-left: 26,
+							)) {
+								white-space: nowrap;
+							}
 							@include sp () {
 								display: none;
 							}
