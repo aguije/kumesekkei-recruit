@@ -273,6 +273,7 @@ a.c-career-tag {
 		ul {
 			display: flex;
 			column-gap: 2em;
+			white-space: nowrap;
 
 			@include pc () {
 				justify-content: end;
