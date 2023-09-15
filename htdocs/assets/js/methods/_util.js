@@ -267,6 +267,12 @@ GLOBAL.methods.util.lazyall = function (_option) {
 };
 
 
+/* ==================================================================
+ *
+ * INSET MASK
+ *
+ * --------------------------------------------------------------- */
+
 GLOBAL.methods.util.showInsetMask = function (_option) {
 	_option = Object.assign({
 		mode: true,
@@ -302,3 +308,36 @@ GLOBAL.methods.util.showInsetMask = function (_option) {
 
 	}
 };
+
+
+/* ==================================================================
+ *
+ * INVIEW BORDER
+ *
+ * --------------------------------------------------------------- */
+
+GLOBAL.methods.util.initInviewBorder = function (_option) {
+	_option = Object.assign({
+		mode: true,
+		complete: function () { return true; }
+	}, _option);
+
+	if (_option.mode === true) {
+		let mIO = new MultipleIO('.c-inview-border', {
+			config: {
+				rootMargin: '0% 0% -33.33% 0%'
+			},
+			onEnter: (_element) => {
+				_element.classList.add('is--inview');
+			},
+			onLeave: () => {
+
+			},
+			triggerOnce: true
+		});
+		GLOBAL.observers.push(mIO);
+	}
+	else {
+
+	}
+}

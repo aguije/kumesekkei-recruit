@@ -198,6 +198,8 @@
 				<div class="l-wrapper">
 					<div class="p-about__container l-container">
 						<header class="c-header-set">
+							<div class="c-inview-border"></div>
+
 							<div class="c-header-set__title">
 								<h2>
 									<span lang="ja">会社を知る</span>
@@ -515,6 +517,8 @@
 					<div class="p-work__container l-container">
 						<div class="p-work__main">
 							<header class="c-header-set">
+								<div class="c-inview-border"></div>
+
 								<div class="c-header-set__title">
 									<h2>
 										<span lang="ja">働く環境</span>
@@ -581,6 +585,8 @@
 				<div class="l-wrapper">
 					<div class="p-people__container l-container">
 						<header class="c-header-set">
+							<div class="c-inview-border"></div>
+
 							<div class="c-header-set__title">
 								<h2>
 									<span lang="ja">人を知る</span>
@@ -772,6 +778,8 @@
 				<div class="l-wrapper">
 					<div class="p-story__container l-container">
 						<header class="c-header-set">
+							<div class="c-inview-border"></div>
+
 							<div class="c-header-set__title">
 								<h2>
 									<span lang="ja">デザインストーリー</span>

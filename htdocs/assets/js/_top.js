@@ -441,6 +441,7 @@ $(function () {
 		initPeople({ mode: true });
 		initStory({ mode: true });
 
+		GLOBAL.methods.util.initInviewBorder({ mode: true });
 		GLOBAL.methods.util.lazy({
 			mode: true,
 			wrapper: '.c-lazy-trigger'
@@ -457,6 +458,7 @@ $(function () {
 		initPeople({ mode: false });
 		initStory({ mode: false });
 
+		GLOBAL.methods.util.initInviewBorder({ mode: false });
 		GLOBAL.methods.util.lazy({ mode: false });
 	}
 

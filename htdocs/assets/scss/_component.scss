@@ -183,6 +183,30 @@ a.c-career-tag {
 
 /** =================================================================
  *
+ * INVIEW BORDER
+ *
+ * --------------------------------------------------------------- */
+
+.c-inview-border {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	transform: scaleX(0);
+	transform-origin: 0 0;
+	background-color: var(--color-theme-text);
+
+	@include transition('transform, background-color', $dur--transition);
+
+	&.is--inview {
+		transform: scaleX(1);
+	}
+}
+
+
+/** =================================================================
+ *
  * HEADER SET
  *
  * --------------------------------------------------------------- */
@@ -194,19 +218,6 @@ a.c-career-tag {
 	@include sp ((
 		padding-top: 58,
 	)) {}
-
-	&::before {
-		@include pseudo-block((
-			top: 0,
-			left: 0,
-			height: 1px,
-			background-color: var(--color-black),
-		)) {}
-
-		@at-root [data-theme='dark'] & {
-			background-color: var(--color-white);
-		}
-	}
 
 	.c-header-set__title {
 		display: flex;
@@ -220,6 +231,7 @@ a.c-career-tag {
 			[lang='ja'] {
 				font-size: pc-rem(40);
 				font-weight: 500;
+				width: fit-content;
 
 				@include sp ((
 					font-size: 46,
@@ -229,7 +241,13 @@ a.c-career-tag {
 			[lang='en'] {
 				font-size: pc-clamp(12, 10);
 				font-weight: bold;
+				position: relative;
+				z-index: var(--zi-1);
+				width: fit-content;
+				padding-right: 1em;
+				background-color: var(--color-theme-bg);
 
+				@include transition('background-color', $dur--transition);
 				@include pc ((
 					margin-top: 32 - 2,
 				)) {}
