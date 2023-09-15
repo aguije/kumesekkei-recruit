@@ -254,6 +254,12 @@
 					min-height: 100%;
 				}
 			}
+
+			.p-gm__main {
+				@include pc () {
+					padding-top: pc-clamp(150);
+				}
+			}
 		}
 	}
 }
@@ -954,7 +960,7 @@
 
 				&[data-stt-changelang='zh-CN'] {
 					@include pc ((
-						padding-right: 8,
+						padding-right: 10,
 					)) {}
 					@include sp ((
 						padding-bottom: 10,
