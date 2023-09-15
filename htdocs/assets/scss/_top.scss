@@ -1562,6 +1562,9 @@
 						opacity: .2;
 
 						@include transition('opacity', $dur--transition);
+						@include sp () {
+							opacity: .7;
+						}
 					}
 
 					> div {
@@ -1584,6 +1587,7 @@
 							@include transition('color', $dur--transition);
 							@include sp () {
 								font-size: sp-rem(24);
+								top: sp-rem(120);
 							}
 						}
 					}
