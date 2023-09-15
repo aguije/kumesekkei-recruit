@@ -60,7 +60,8 @@ $(function () {
 								autoHeight: 0,
 								loop: 1,
 								autoplay: {
-									delay: 6000
+									delay: 6000,
+									disableOnInteraction: false
 								},
 								effect: 'fade',
 								fadeEffect: {
@@ -207,7 +208,8 @@ $(function () {
 									init: 0,
 									autoHeight: 0,
 									autoplay: {
-										delay: 4500
+										delay: 4500,
+										disableOnInteraction: false
 									},
 									loop: 1,
 									pagination: {
@@ -295,7 +297,8 @@ $(function () {
 				init: 0,
 				autoHeight: 0,
 				autoplay: {
-					delay: 4500
+					delay: 4500,
+					disableOnInteraction: false
 				},
 				loop: 1,
 				pagination: {
@@ -459,7 +462,10 @@ $(function () {
 		initStory({ mode: false });
 
 		GLOBAL.methods.util.initInviewBorder({ mode: false });
-		GLOBAL.methods.util.lazy({ mode: false });
+		GLOBAL.methods.util.lazy({
+			mode: false,
+			wrapper: '.c-lazy-trigger'
+		});
 	}
 
 
