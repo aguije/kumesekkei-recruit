@@ -311,7 +311,7 @@ $(function () {
 			 * CROSSTALK
 			 * --------------------------------------------------------------- */
 
-			const swiper = new Swiper('.p-people__crosstalk .swiper', {
+			const swiper = new Swiper('.p-people__talk .swiper', {
 				init: 0,
 				autoHeight: 0,
 				autoplay: {
@@ -320,7 +320,7 @@ $(function () {
 				},
 				loop: 1,
 				pagination: {
-					el: '.p-people__crosstalk .swiper-pagination',
+					el: '.p-people__talk .swiper-pagination',
 					clickable: 1
 				},
 				navigation: 0,

@@ -347,7 +347,8 @@ let $gh;
  * --------------------------------------------------------------- */
 
 // @codekit-append "methods/_util.js"
-// @codekit-append "_top.js"
 // @codekit-append "_ui.js"
+// @codekit-append "_top.js"
+// @codekit-append "_people.js"
 
 // @codekit-append "_common.js"

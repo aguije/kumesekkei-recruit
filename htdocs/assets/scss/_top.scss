@@ -1174,7 +1174,7 @@
 				}
 			}
 
-			.p-people__crosstalk {
+			.p-people__talk {
 				@include pc () {
 					width: calc(50% - #{pc-rem(40)});
 				}
@@ -1409,11 +1409,11 @@
 		 * Crosstalk
 		 * --------------------------------------------------------------- */
 
-		.p-people__crosstalk {
+		.p-people__talk {
 			display: flex;
 			flex-direction: column;
 
-			.p-people__crosstalk__main {
+			.p-people__talk__main {
 				@include pc () {
 					height: 100%;
 				}
@@ -1440,8 +1440,8 @@
 						}
 					}
 
-					.p-people__crosstalk__title,
-					.p-people__crosstalk__description {
+					.p-people__talk__title,
+					.p-people__talk__description {
 						box-sizing: border-box;
 						color: var(--color-theme-text-invert);
 						background-color: var(--color-theme-bg-invert);
@@ -1460,7 +1460,7 @@
 						}
 					}
 
-					.p-people__crosstalk__title {
+					.p-people__talk__title {
 						@include pc () {
 							top: pc-rem(22);
 						}
@@ -1481,7 +1481,7 @@
 						}
 					}
 
-					.p-people__crosstalk__description {
+					.p-people__talk__description {
 						@include pc () {
 							font-size: pc-rem(15);
 							bottom: pc-rem(62);
