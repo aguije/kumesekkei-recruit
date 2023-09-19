@@ -37,13 +37,9 @@
 
 ?>
 
-	<div class="p-page-box" data-barba="wrapper">
+	<div class="p-page-box">
 
-		<main
-			class="p-people"
-			data-barba="container"
-			data-barba-namespace="people"
-		>
+		<main class="p-people">
 			<header class="c-page-header">
 				<div class="l-wrapper">
 					<div class="c-page-header__container">
@@ -65,9 +61,9 @@
 							<nav class="c-page-nav">
 								<ul>
 									<li>
-										<a href="#employees"><span class="c-button c-button--round">社員紹介</span></a>
-										<a href="#talk"><span class="c-button c-button--round">クロストーク</span></a>
-										<a href="#interview"><span class="c-button c-button--round">インタビュー動画</span></a>
+										<a href="#employees"><span class="c-button c-button--round is--gray">社員紹介</span></a>
+										<a href="#crosstalk"><span class="c-button c-button--round is--gray">クロストーク</span></a>
+										<a href="#interview"><span class="c-button c-button--round is--gray">インタビュー動画</span></a>
 									</li>
 								</ul>
 							</nav>
@@ -191,7 +187,7 @@
 				</div>
 			</section>
 
-			<section id="talk" class="p-talk">
+			<section id="crosstalk" class="p-crosstalk">
 				<div class="l-wrapper">
 					<div class="l-container">
 						<header class="c-section-header">
@@ -201,14 +197,14 @@
 							</h2>
 						</header>
 
-						<div class="p-talk__body">
-							<article class="p-talk__article">
-								<a href="/people/talk/milano/">
-									<p class="p-talk__article_index">Crosstalk <b>02</b></p>
+						<div class="p-crosstalk__body">
+							<article class="p-crosstalk__article">
+								<a href="/people/crosstalk/milano/">
+									<p class="p-crosstalk__article_index">Crosstalk <b>02</b></p>
 									<picture class="c-lazy-trigger">
-										<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/talk_thumb_milano.jpg', true); ?>" alt="">
+										<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk_thumb_milano.jpg', true); ?>" alt="">
 									</picture>
-									<div class="p-talk__article__body">
+									<div class="p-crosstalk__article__body">
 										<div>
 											<header>
 												<h3>新宿TOKYU MILANO再開発プロジェクトチーム</h3>
@@ -219,13 +215,13 @@
 								</a>
 							</article>
 
-							<article class="p-talk__article">
-								<a href="/people/talk/bim/">
-									<p class="p-talk__article_index">Crosstalk <b>01</b></p>
+							<article class="p-crosstalk__article">
+								<a href="/people/crosstalk/bim/">
+									<p class="p-crosstalk__article_index">Crosstalk <b>01</b></p>
 									<picture class="c-lazy-trigger">
-										<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/talk_thumb_bim.jpg.jpg', true); ?>" alt="">
+										<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk_thumb_bim.jpg', true); ?>" alt="">
 									</picture>
-									<div class="p-talk__article__body">
+									<div class="p-crosstalk__article__body">
 										<div>
 											<header>
 												<h3>BIM座談会</h3>
