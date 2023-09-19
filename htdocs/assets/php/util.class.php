@@ -20,9 +20,15 @@ class KUME_Util {
 		$url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . '/assets/' . $_filename;
 
 		if ($_timestamp) {
-			$timestamp = filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/' . $_filename);
+			$path = $_SERVER['DOCUMENT_ROOT'] . '/assets/' . $_filename;
 
-			return "{$url}?timestamp={$timestamp}";
+			if (file_exists($path)) {
+				$timestamp = filemtime($path);
+				return "{$url}?timestamp={$timestamp}";
+			}
+			else {
+				return $url;
+			}
 		}
 		else {
 			return $url;
@@ -51,6 +57,46 @@ class KUME_Util {
 
 	public static function image_path ($_filename, $_timestamp = false) {
 		return self::asset_path('images/' . $_filename, $_timestamp);
+	}
+
+	public static function get_meta ($_args) {
+		$_args = array_replace(array(
+			'bc' => null,
+			'title' => '',
+			'description' => '',
+			'image' => KUME_Util::image_path('ogp.png', true),
+			'site' => '久米設計 採用サイト',
+			'url' => '/',
+			'type' => 'article'
+		), $_args);
+
+		$root_url = 'https://' . $_SERVER['HTTP_HOST'];
+
+		//
+
+		$titles = array();
+
+		if ($_args['bc']) {
+			foreach ($_args['bc'] as $layer) {
+				if ($layer['title'] !== '') {
+					array_push($titles, $layer['title']);
+				}
+			}
+		}
+
+		array_push($titles, $_args['site']);
+
+		$meta['title'] = implode(' | ', $titles);
+
+		//
+
+		$meta['description'] = $_args['description'];
+		$meta['image'] = $_args['image'];
+		$meta['site'] = $_args['site'];
+		$meta['url'] = $root_url . $_args['url'];
+		$meta['type'] = $_args['type'];
+
+		return $meta;
 	}
 
 }

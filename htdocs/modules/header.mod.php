@@ -17,7 +17,7 @@
 	<meta name="description" content="<?php echo $meta['description']; ?>">
 
 	<meta property="og:title" content="<?php echo $meta['title']; ?>">
-	<meta property="og:type" content="website">
+	<meta property="og:type" content="<?php echo $meta['type']; ?>">
 	<meta property="og:url" content="<?php echo $meta['url']; ?>">
 	<meta property="og:image" content="<?php echo $meta['image']; ?>">
 	<meta property="og:description" content="<?php echo $meta['description']; ?>">

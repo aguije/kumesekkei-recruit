@@ -1352,6 +1352,22 @@
       "oAP" : "\/htdocs\/modules\/header.mod.php",
       "oF" : 0
     },
+    "\/htdocs\/modules\/ui.mod.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/modules\/ui.mod.php",
+      "oF" : 0
+    },
+    "\/htdocs\/people\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/people\/index.php",
+      "oF" : 0
+    },
     "\/Icon\r" : {
       "cB" : 0,
       "ft" : 8192,

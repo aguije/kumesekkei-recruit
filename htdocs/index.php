@@ -8,15 +8,17 @@
 ?>
 <?php
 
-	$root_url = 'https://' . $_SERVER['HTTP_HOST'] . '/';
-
-	$meta = array(
-		'title' => '久米設計 採用サイト',
-		'description' => '',
-		'image' => KUME_Util::image_path('ogp.png', true),
-		'site' => '久米設計 採用サイト',
-		'url' => $root_url,
+	$bc = array(
+		array(
+			'title' => '',
+			'url' => '/',
+			'type' => 'website'
+		)
 	);
+
+	$meta = KUME_Util::get_meta(array(
+		'bc' => $bc
+	));
 
 ?>
 <?php
@@ -24,12 +26,11 @@
 	include($_SERVER['DOCUMENT_ROOT'] . '/modules/header.mod.php');
 
 ?>
+<?php
 
-	<?php
+	include($_SERVER['DOCUMENT_ROOT'] . '/modules/gh.mod.php');
 
-		include($_SERVER['DOCUMENT_ROOT'] . '/modules/gh.mod.php');
-
-	?>
+?>
 
 	<div class="p-page-box" data-barba="wrapper">
 
@@ -871,32 +872,19 @@
 			</section>
 		</main>
 
-		<div class="p-scroll-to-top">
-			<a class="c-circle-arrow c-circle-arrow--page" href="javascript:void(0);"><span class="c-icon c-icon--arrow_u"></span></a>
-		</div>
+		<?php
 
-		<div class="p-modal">
-			<div class="p-modal__wrapper">
-				<div class="p-modal__content">
-					<div class="p-modal__video">
-						<div id="player"></div>
-						<div class="p-modal__close">
-							<a href="javascript:void(0);"><span class="c-icon c-icon--close"></span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="p-modal__veil"></div>
-		</div>
+			include($_SERVER['DOCUMENT_ROOT'] . '/modules/ui.mod.php');
+
+		?>
 
 	</div>
 
-	<?php
+<?php
 
-		include($_SERVER['DOCUMENT_ROOT'] . '/modules/gf.mod.php');
+	include($_SERVER['DOCUMENT_ROOT'] . '/modules/gf.mod.php');
 
-	?>
-
+?>
 <?php
 
 	include($_SERVER['DOCUMENT_ROOT'] . '/modules/footer.mod.php');
