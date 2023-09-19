@@ -257,10 +257,10 @@ $(function () {
 					config: {
 						threshold: .5
 					},
-					onEnter: (_element) => {
+					onEnter: () => {
 						$chart.removeClass('is--out');
 					},
-					onLeave: (_element) => {
+					onLeave: () => {
 						$chart.addClass('is--out');
 					}
 				});
