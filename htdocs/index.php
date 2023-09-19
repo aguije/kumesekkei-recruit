@@ -34,13 +34,9 @@
 
 ?>
 
-	<div class="p-page-box" data-barba="wrapper">
+	<div class="p-page-box">
 
-		<main
-			class="p-top"
-			data-barba="container"
-			data-barba-namespace="top"
-		>
+		<main class="p-top">
 			<div class="p-hero">
 				<div class="swiper-parent">
 					<div class="swiper is--lazy-all">
@@ -223,7 +219,7 @@
 							<li class="p-about__item p-about__message">
 								<div class="p-about__item__main">
 									<h3>
-										<a class="c-list-link" href="#">
+										<a class="c-list-link" href="/about/">
 											<span class="c-animate-underline" lang="ja">メッセージ</span>
 											<span lang="en">Top Message</span>
 											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
@@ -241,21 +237,21 @@
 							<li class="p-about__item p-about__csr">
 								<div class="p-about__item__main">
 									<h3>
-										<a class="c-list-link" href="#">
+										<a class="c-list-link" href="/about/csr/">
 											<span class="c-animate-underline" lang="ja">社会課題への取組み</span>
 											<span lang="en">Corporate Social Resposibility</span>
 											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 										</a>
 									</h3>
 									<div class="p-about__csr__tags">
-										<a href="#">#こども未来</a><!--
-										--><a href="#">#安全・安心</a><!--
-										--><a href="#">#カーボンニュートラル</a><br><!--
-										--><a href="#">#ダイバシティ＆インクルージョン</a><!--
-										--><a href="#">#エリアUP</a><br><!--
-										--><a href="#">#ワークスタイル</a><!--
-										--><a href="#">#ストック活用</a><!--
-										--><a href="#">#これからの学校</a>
+										<a href="/about/csr/#">#こども未来</a><!--
+										--><a href="/about/csr/#">#安全・安心</a><!--
+										--><a href="/about/csr/#">#カーボンニュートラル</a><br><!--
+										--><a href="/about/csr/#">#ダイバシティ＆インクルージョン</a><!--
+										--><a href="/about/csr/#">#エリアUP</a><br><!--
+										--><a href="/about/csr/#">#ワークスタイル</a><!--
+										--><a href="/about/csr/#">#ストック活用</a><!--
+										--><a href="/about/csr/#">#これからの学校</a>
 									</div>
 								</div>
 								<div class="p-about__item__sub">
@@ -293,10 +289,10 @@
 								</div>
 							</li>
 
-							<li class="p-about__item p-about__statistics">
+							<li class="p-about__item p-about__stats">
 								<div class="p-about__item__main">
 									<h3>
-										<a class="c-list-link" href="#">
+										<a class="c-list-link" href="/about/stats/">
 											<span class="c-animate-underline" lang="ja">数字で見る久米設計</span>
 											<span lang="en">Statistics &amp; Facts</span>
 											<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
@@ -324,7 +320,7 @@
 										ob_start();
 
 										?>
-										<a id="<?php echo "aboutStatisticsFig{$fig_counter}"; ?>" class="p-about__statistics__fig" href="#">
+										<a id="<?php echo "aboutStatsFig{$fig_counter}"; ?>" class="p-about__stats__fig" href="/about/stats/#<?php echo "fig{$fig_counter}"; ?>">
 											<figure class="c-chart is--out">
 												<div class="c-chart__wrap">
 													<svg class="c-chart__view" viewBox="0 0 <?php echo $pie_r * 2; ?> <?php echo $pie_r * 2; ?>">
@@ -338,7 +334,7 @@
 													<?php echo $_args['figcaption']; ?>
 												</figcaption>
 											</figure>
-											<div class="p-about__statistics__description">
+											<div class="p-about__stats__description">
 												<p class="is--title"><?php echo $_args['title']; ?></p>
 												<?php
 
@@ -362,12 +358,12 @@
 									}
 
 								?>
-								<div class="p-about__statistics__figs">
+								<div class="p-about__stats__figs">
 									<?php
 
 										for ($i = 0; $i < 2; $i++) {
 											?>
-											<div class="p-about__statistics__figs__wrap">
+											<div class="p-about__stats__figs__wrap">
 												<?php
 
 													echo get_pie_chart(array(
@@ -548,14 +544,14 @@
 
 							<ul class="p-work__list">
 								<li class="is--workplace">
-									<a class="c-list-link" href="#">
+									<a class="c-list-link" href="/work/">
 										<span class="c-animate-underline" lang="ja">ワークプレイス</span>
 										<span lang="en">Workplace</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 									</a>
 								</li>
 								<li class="is--welfare">
-									<a class="c-list-link" href="#">
+									<a class="c-list-link" href="/work/welfare/">
 										<span class="c-animate-underline" lang="ja">福利厚生</span>
 										<span lang="en">Welfare</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
@@ -567,7 +563,7 @@
 									</a>
 								</li>
 								<li class="is--hrd">
-									<a class="c-list-link" href="#">
+									<a class="c-list-link" href="/work/hrd/">
 										<span class="c-animate-underline" lang="ja">人材育成プログラム</span>
 										<span lang="en">Human Resource Development</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
@@ -626,7 +622,7 @@
 								<div class="p-people__employee__main c-pane-scroller">
 									<div class="c-pane-scroller__container">
 										<article class="p-people__employee__article">
-											<a class="is--new" href="#" rel="bookmark">
+											<a class="is--new" href="/people/employees/miura/" rel="bookmark">
 												<picture class="c-circle-picture">
 													<div class="c-lazy-trigger">
 														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb1.jpg', true); ?>" alt="">
@@ -644,7 +640,7 @@
 										</article>
 
 										<article class="p-people__employee__article">
-											<a class="is--career" href="#" rel="bookmark">
+											<a class="is--career" href="/people/employees/mizutani/" rel="bookmark">
 												<picture class="c-circle-picture">
 													<div class="c-lazy-trigger">
 														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb2.jpg', true); ?>" alt="">
@@ -664,43 +660,43 @@
 								</div>
 							</section>
 
-							<section class="p-people__talk">
+							<section class="p-people__crosstalk">
 								<header>
 									<h3>
 										<span lang="ja">クロストーク</span>
 										<span lang="en">Crosstalk</span>
 									</h3>
-									<a class="c-arrow-link" href="/people/#talk">
+									<a class="c-arrow-link" href="/people/#crosstalk">
 										<span>一覧へ</span>
 										<div class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></div>
 									</a>
 								</header>
-								<div class="p-people__talk__main">
+								<div class="p-people__crosstalk__main">
 									<div class="swiper-parent">
 										<div class="swiper is-lazy">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
-													<a href="/people/talk/bim">
-														<div class="p-people__talk__title">
+													<a href="/people/crosstalk/bim/">
+														<div class="p-people__crosstalk__title">
 															<h4>BIM座談会</h4>
 														</div>
 														<picture class="c-lazy-trigger">
-															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/talk_thumb_bim.jpg', true); ?>" alt="">
+															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_crosstalk1.jpg', true); ?>" alt="">
 														</picture>
-														<div class="p-people__talk__description">
+														<div class="p-people__crosstalk__description">
 															<p>BIMを取り入れた設計ワークフローの構築とは？</p>
 														</div>
 													</a>
 												</div>
 												<div class="swiper-slide">
-													<a href="/people/talk/milano">
-														<div class="p-people__talk__title">
+													<a href="/people/crosstalk/milano/">
+														<div class="p-people__crosstalk__title">
 															<h4>新宿TOKYU MILANO再開発プロジェクトチーム</h4>
 														</div>
 														<picture class="c-lazy-trigger">
-															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/talk_thumb_milano.jpg', true); ?>" alt="">
+															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_crosstalk2.jpg', true); ?>" alt="">
 														</picture>
-														<div class="p-people__talk__description">
+														<div class="p-people__crosstalk__description">
 															<p>都市と建築のチャレンジ</p>
 														</div>
 													</a>
@@ -792,7 +788,7 @@
 
 							<div class="c-header-set__nav">
 								<ul>
-									<li><a class="c-link-external" href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span><span>一覧へ</span></a></li>
+									<li><a class="c-link-external" href="https://www.kumesekkei.co.jp/designstory/" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span><span>一覧へ</span></a></li>
 								</ul>
 							</div>
 
@@ -814,7 +810,7 @@
 						<div class="p-story__main c-pane-scroller">
 							<div class="c-pane-scroller__container">
 								<article>
-									<a href="#" target="_blank" rel="bookmark noopener">
+									<a href="https://www.kumesekkei.co.jp/designstory/national_ainu_museum.html" target="_blank" rel="bookmark noopener">
 										<h3>始まりの場所<span class="c-icon c-icon--external"></span></h3>
 										<p>ここから<br>アイヌの歴史や文化<br>を伝える</p>
 										<figure>
@@ -825,7 +821,7 @@
 								</article>
 
 								<article>
-									<a href="#" target="_blank" rel="bookmark noopener">
+									<a href="https://www.kumesekkei.co.jp/designstory/tochigi_athleticpark_stadium.html" target="_blank" rel="bookmark noopener">
 										<h3>風との共生<span class="c-icon c-icon--external"></span></h3>
 										<p>“環境”を<br>“カタチ”にした<br>環境共生スタジアム</p>
 										<figure>
@@ -836,7 +832,7 @@
 								</article>
 
 								<article>
-									<a href="#" target="_blank" rel="bookmark noopener">
+									<a href="https://www.kumesekkei.co.jp/designstory/nijinooka_gakuen.html" target="_blank" rel="bookmark noopener">
 										<h3>地域との連携<span class="c-icon c-icon--external"></span></h3>
 										<p>原風景をたどり、<br>建築として<br>かたちにする</p>
 										<figure>
@@ -847,7 +843,7 @@
 								</article>
 
 								<article>
-									<a href="#" target="_blank" rel="bookmark noopener">
+									<a href="https://www.kumesekkei.co.jp/designstory/hitachinoushiku_jhs.html" target="_blank" rel="bookmark noopener">
 										<h3>大規模木造<span class="c-icon c-icon--external"></span></h3>
 										<p>新しく懐かしい<br>木造校舎が<br>出来上がった</p>
 										<figure>
@@ -858,7 +854,7 @@
 								</article>
 
 								<article>
-									<a href="#" target="_blank" rel="bookmark noopener">
+									<a href="https://www.kumesekkei.co.jp/designstory/yamanashi_prefectural_library.html" target="_blank" rel="bookmark noopener">
 										<h3>構造への挑戦<span class="c-icon c-icon--external"></span></h3>
 										<p>不安から熱狂へ、<br>そして信頼と協働で<br>作る鉄骨</p>
 										<figure>
