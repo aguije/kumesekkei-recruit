@@ -20,14 +20,14 @@
 					<nav class="p-sh__nav">
 						<ul>
 							<li>
-								<a class="is--new" href="#">
+								<a class="is--new" href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener">
 									<span lang="en">New Graduate</span>
 									<span lang="ja">新卒採用</span>
 									<p>募集職種 / 募集概要 / 採用プロセス</p>
 								</a>
 							</li>
 							<li>
-								<a class="is--career" href="#">
+								<a class="is--career" href="https://www.kumesekkei.co.jp/recruit/entry_career.html" target="_blank" rel="noopener">
 									<span lang="en">Career</span>
 									<span lang="ja">キャリア採用</span>
 									<p>募集職種 / 募集概要 / 採用プロセス</p>
