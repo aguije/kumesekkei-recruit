@@ -109,34 +109,50 @@ class KUME_Util {
 
 		ob_start();
 
-		?>
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "BreadcrumbList",
-				"itemListElement": [
-					<?php
+		if ($_args['type'] === 'bc') {
+			?>
+			<script type="application/ld+json">
+				{
+					"@context": "https://schema.org",
+					"@type": "BreadcrumbList",
+					"itemListElement": [
+						<?php
 
-						foreach ($_args['data'] as $layer_key => $layer) {
-							if ($layer_key !== 0) {
-								echo ',';
+							foreach ($_args['data'] as $layer_key => $layer) {
+								if ($layer_key !== 0) {
+									echo ',';
+								}
+
+								?>
+								{
+									"@type": "ListItem",
+									"position": <?php echo $layer_key + 1; ?>,
+									"name": "<?php echo $layer['title']; ?>",
+									"item": "<?php echo $root_url . $layer['url']; ?>"
+								}
+								<?php
 							}
 
-							?>
-							{
-								"@type": "ListItem",
-								"position": <?php echo $layer_key + 1; ?>,
-								"name": "<?php echo $layer['title']; ?>",
-								"item": "<?php echo $root_url . $layer['url']; ?>"
-							}
-							<?php
-						}
+						?>
+					]
+				}
+			</script>
+			<?php
+		}
+		else if ($_args['type'] === 'line') {
+			echo '<nav class="c-breadcrumb"><ul>';
 
-					?>
-				]
+			foreach ($_args['data'] as $layer_key => $layer) {
+				if ($layer_key === count($_args['data']) - 1) {
+					echo "<li><span class=\"is--item is--active\">{$layer['title']}<span></li>";
+				}
+				else {
+					echo "<li><a class=\"is--item\" href=\"{$root_url}{$layer['url']}\">{$layer['title']}<a></li>";
+				}
 			}
-		</script>
-		<?php
+
+			echo '</ul></nav>';
+		}
 
 		$output = ob_get_contents();
 		ob_end_clean();
