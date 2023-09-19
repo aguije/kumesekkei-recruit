@@ -627,12 +627,8 @@
 	 * --------------------------------------------------------------- */
 
 	.p-about {
-		margin-top: pc-rem(200 - 60);
+		margin-top: pc-rem(200);
 
-		@include pc () {
-			padding-top: 60;
-			overflow-x: hidden;
-		}
 		@include sp ((
 			margin-top: 400,
 		)) {}
@@ -855,7 +851,7 @@
 		 * STATISTICS
 		 * --------------------------------------------------------------- */
 
-		.p-about__statistics {
+		.p-about__stats {
 			@include pc () {
 				margin-top: pc-rem(60 * 2);
 			}
@@ -867,7 +863,7 @@
 				text-align: right;
 			}
 
-			.p-about__statistics__figs {
+			.p-about__stats__figs {
 				position: relative;
 				overflow-x: hidden;
 				width: 100vw;
@@ -883,32 +879,32 @@
 					margin-top: sp-rem(16);
 				}
 
-				.p-about__statistics__figs__wrap {
+				.p-about__stats__figs__wrap {
 					display: flex;
 					box-sizing: border-box;
 					animation-name: belt;
-					animation-duration: $statistics_dur;
+					animation-duration: $stats_dur;
 					animation-timing-function: linear;
 					animation-iteration-count: infinite;
 
 					@include pc () {
-						width: pc-rem($statistics_w);
+						width: pc-rem($stats_w);
 						padding-top: pc-rem(60);
 						padding-bottom: pc-rem(60);
 					}
 					@include sp () {
-						width: sp-rem($statistics_w * $statistics_ratio_sp);
-						padding-top: sp-rem(60 * $statistics_ratio_sp);
-						padding-bottom: sp-rem(60 * $statistics_ratio_sp);
+						width: sp-rem($stats_w * $stats_ratio_sp);
+						padding-top: sp-rem(60 * $stats_ratio_sp);
+						padding-bottom: sp-rem(60 * $stats_ratio_sp);
 					}
 
 					&:nth-child(2) {
 						position: absolute;
 						top: 0;
-						left: pc-rem($statistics_w);
+						left: pc-rem($stats_w);
 
 						@include sp () {
-							left: sp-rem($statistics_w * $statistics_ratio_sp);
+							left: sp-rem($stats_w * $stats_ratio_sp);
 						}
 					}
 
@@ -923,7 +919,7 @@
 				}
 			}
 
-			.p-about__statistics__fig {
+			.p-about__stats__fig {
 				display: block;
 				width: pc-rem(213);
 				padding: 0 pc-rem(7);
@@ -933,17 +929,17 @@
 				}
 				@include transition('opacity', $dur--hover);
 				@include sp () {
-					width: sp-rem(213 * $statistics_ratio_sp);
-					padding: 0 sp-rem(7 * $statistics_ratio_sp);
+					width: sp-rem(213 * $stats_ratio_sp);
+					padding: 0 sp-rem(7 * $stats_ratio_sp);
 				}
 
-				.p-about__statistics__description {
+				.p-about__stats__description {
 					line-height: 1;
 					margin-top: pc-rem(30);
 					text-align: center;
 
 					@include sp () {
-						margin-top: sp-rem(30 * $statistics_ratio_sp);
+						margin-top: sp-rem(30 * $stats_ratio_sp);
 					}
 
 					sup,
@@ -951,7 +947,7 @@
 						font-size: pc-rem(11);
 
 						@include sp () {
-							font-size: sp-rem(11 * $statistics_ratio_sp);
+							font-size: sp-rem(11 * $stats_ratio_sp);
 						}
 					}
 
@@ -966,7 +962,7 @@
 
 						@extend %ff--sen;
 						@include sp () {
-							font-size: sp-rem(32 * $statistics_ratio_sp);
+							font-size: sp-rem(32 * $stats_ratio_sp);
 						}
 					}
 
@@ -976,7 +972,7 @@
 						white-space: nowrap;
 
 						@include sp () {
-							font-size: sp-rem(11 * $statistics_ratio_sp);
+							font-size: sp-rem(11 * $stats_ratio_sp);
 						}
 					}
 
@@ -984,7 +980,7 @@
 						font-size: pc-rem(11);
 
 						@include sp () {
-							font-size: sp-rem(11 * $statistics_ratio_sp);
+							font-size: sp-rem(11 * $stats_ratio_sp);
 						}
 					}
 				}
@@ -1174,7 +1170,7 @@
 				}
 			}
 
-			.p-people__talk {
+			.p-people__crosstalk {
 				@include pc () {
 					width: calc(50% - #{pc-rem(40)});
 				}
@@ -1409,11 +1405,11 @@
 		 * Crosstalk
 		 * --------------------------------------------------------------- */
 
-		.p-people__talk {
+		.p-people__crosstalk {
 			display: flex;
 			flex-direction: column;
 
-			.p-people__talk__main {
+			.p-people__crosstalk__main {
 				@include pc () {
 					height: 100%;
 				}
@@ -1440,8 +1436,8 @@
 						}
 					}
 
-					.p-people__talk__title,
-					.p-people__talk__description {
+					.p-people__crosstalk__title,
+					.p-people__crosstalk__description {
 						box-sizing: border-box;
 						color: var(--color-theme-text-invert);
 						background-color: var(--color-theme-bg-invert);
@@ -1460,7 +1456,7 @@
 						}
 					}
 
-					.p-people__talk__title {
+					.p-people__crosstalk__title {
 						@include pc () {
 							top: pc-rem(22);
 						}
@@ -1481,7 +1477,7 @@
 						}
 					}
 
-					.p-people__talk__description {
+					.p-people__crosstalk__description {
 						@include pc () {
 							font-size: pc-rem(15);
 							bottom: pc-rem(62);

@@ -604,7 +604,7 @@ $pie_r: 31.8309886184;
 		background-color: var(--color-white);
 
 		@include sp () {
-			width: sp-rem(213 * $statistics_ratio_sp);
+			width: sp-rem(213 * $stats_ratio_sp);
 		}
 	}
 
@@ -649,7 +649,7 @@ $pie_r: 31.8309886184;
 		text-align: center;
 
 		@include sp () {
-			font-size: sp-rem(16 * $statistics_ratio_sp);
+			font-size: sp-rem(16 * $stats_ratio_sp);
 		}
 	}
 }

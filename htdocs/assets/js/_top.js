@@ -251,9 +251,9 @@ $(function () {
 			})();
 
 			(function () {
-				const $chart = $('.p-about__statistics__figs .c-chart');
+				const $chart = $('.p-about__stats__figs .c-chart');
 
-				let mIO = new MultipleIO('.p-about__statistics__figs', {
+				let mIO = new MultipleIO('.p-about__stats__figs', {
 					config: {
 						threshold: .5
 					},
@@ -311,7 +311,7 @@ $(function () {
 			 * CROSSTALK
 			 * --------------------------------------------------------------- */
 
-			const swiper = new Swiper('.p-people__talk .swiper', {
+			const swiper = new Swiper('.p-people__crosstalk .swiper', {
 				init: 0,
 				autoHeight: 0,
 				autoplay: {
@@ -320,7 +320,7 @@ $(function () {
 				},
 				loop: 1,
 				pagination: {
-					el: '.p-people__talk .swiper-pagination',
+					el: '.p-people__crosstalk .swiper-pagination',
 					clickable: 1
 				},
 				navigation: 0,
