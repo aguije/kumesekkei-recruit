@@ -350,9 +350,13 @@ $(function () {
 				GLOBAL.is_process = true;
 
 				const video_id = $(this).attr('data-video-id');
+				const video_start = ($(this).attr('data-video-start')) ? parseInt($(this).attr('data-video-start')) : 0;
 
 				const player = new YT.Player('player', {
-					videoId: video_id
+					videoId: video_id,
+					playerVars: {
+						start: video_start
+					}
 				});
 
 				GLOBAL.methods.util.display_modal({

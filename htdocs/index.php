@@ -720,7 +720,7 @@
 								<div class="p-people__interview__main c-pane-scroller">
 									<div class="c-pane-scroller__container">
 										<article class="p-people__interview__article">
-											<a href="#" rel="bookmark" data-video-id="u-8R5n54toE">
+											<a href="#" rel="bookmark" data-video-id="xV3KkfYQomI" data-video-start="472">
 												<picture class="c-lazy-trigger">
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_interview1.jpg', true); ?>" alt="">
 												</picture>
@@ -736,7 +736,7 @@
 										</article>
 
 										<article class="p-people__interview__article">
-											<a href="#" rel="bookmark" data-video-id="0Uhh62MUEic">
+											<a href="#" rel="bookmark" data-video-id="NPLFk1un62c" data-video-start="340">
 												<picture class="c-lazy-trigger">
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_interview2.jpg', true); ?>" alt="">
 												</picture>
@@ -752,7 +752,7 @@
 										</article>
 
 										<article class="p-people__interview__article">
-											<a href="#" rel="bookmark" data-video-id="VJGCeAWIfEA">
+											<a href="#" rel="bookmark" data-video-id="psmwLZXixNA" data-video-start="78">
 												<picture class="c-lazy-trigger">
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_interview3.jpg', true); ?>" alt="">
 												</picture>
