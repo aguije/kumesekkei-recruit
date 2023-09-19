@@ -627,8 +627,12 @@
 	 * --------------------------------------------------------------- */
 
 	.p-about {
-		margin-top: pc-rem(200);
+		margin-top: pc-rem(200 - 60);
 
+		@include pc () {
+			padding-top: 60;
+			overflow-x: hidden;
+		}
 		@include sp ((
 			margin-top: 400,
 		)) {}
