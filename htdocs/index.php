@@ -8,9 +8,11 @@
 ?>
 <?php
 
+	global $bc;
+
 	$bc = array(
 		array(
-			'title' => '',
+			'title' => '久米設計 採用サイト',
 			'url' => '/',
 			'type' => 'website'
 		)

@@ -78,7 +78,7 @@ class KUME_Util {
 
 		if ($_args['bc']) {
 			foreach ($_args['bc'] as $layer) {
-				if ($layer['title'] !== '') {
+				if ($layer['title'] !== $_args['site']) {
 					array_push($titles, $layer['title']);
 				}
 			}
@@ -97,6 +97,51 @@ class KUME_Util {
 		$meta['type'] = $_args['type'];
 
 		return $meta;
+	}
+
+	public static function get_snippet ($_args) {
+		$_args = array_replace(array(
+			'type' => 'bc',
+			'data' => null
+		), $_args);
+
+		$root_url = 'https://' . $_SERVER['HTTP_HOST'];
+
+		ob_start();
+
+		?>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					<?php
+
+						foreach ($_args['data'] as $layer_key => $layer) {
+							if ($layer_key !== 0) {
+								echo ',';
+							}
+
+							?>
+							{
+								"@type": "ListItem",
+								"position": <?php echo $layer_key + 1; ?>,
+								"name": "<?php echo $layer['title']; ?>",
+								"item": "<?php echo $root_url . $layer['url']; ?>"
+							}
+							<?php
+						}
+
+					?>
+				]
+			}
+		</script>
+		<?php
+
+		$output = ob_get_contents();
+		ob_end_clean();
+
+		return $output;
 	}
 
 }

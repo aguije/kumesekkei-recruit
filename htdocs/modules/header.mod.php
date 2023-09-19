@@ -69,4 +69,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 
+<?php
+
+	echo KUME_Util::get_snippet(array(
+		'type' => 'bc',
+		'data' => $bc
+	));
+
+?>
+
 <body>
