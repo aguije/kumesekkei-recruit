@@ -1,0 +1,387 @@
+/** =================================================================
+ *
+ * PROJECT - PEOPLE
+ *
+ * ------------------------------------------------------------------
+ *
+ *
+ *
+ * --------------------------------------------------------------- */
+
+main.p-people {
+	padding-top: pc-rem(145);
+
+
+	/** =================================================================
+	 *
+	 * 社員紹介
+	 *
+	 * --------------------------------------------------------------- */
+
+	.p-employees {
+		margin-top: pc-rem(100);
+
+		.p-employees__container {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			padding-top: pc-rem(80);
+			border-top: 1px solid #d9d9d9;
+
+			.c-section-header {
+				padding-right: pc-rem(45);
+			}
+
+			.p-employees__body {
+				display: flex;
+				flex-wrap: wrap;
+				width: pc-rem(750);
+				column-gap: 3px;
+				row-gap: pc-rem(30);
+			}
+
+			.p-employees__article {
+				box-sizing: border-box;
+				width: calc((100% - 3px * 2) / 3);
+				border-bottom-right-radius: pc-rem(32);
+				background-color: #f7f7f7;
+
+				a {
+					position: relative;
+					display: block;
+					box-sizing: border-box;
+					height: 100%;
+					padding: pc-rem(20) pc-rem(45) pc-rem(20) pc-rem(25);
+
+					&::after {
+						@include pseudo-block((
+							top: 0,
+							left: 0,
+							width: 5px,
+							transform-origin: 0 0,
+							transform: scaleY(0),
+						)) {}
+						@include transition('transform', $dur--hover);
+					}
+
+					picture {
+						overflow: hidden;
+
+						.c-lazy-trigger {
+							@include transition('transform', $dur--hover);
+						}
+					}
+				}
+
+				&[data-category='new'] {
+					a::after {
+						background-color: var(--color-green);
+					}
+				}
+				&[data-category='career'] {
+					a::after {
+						background-color: var(--color-salmon);
+					}
+				}
+
+				a {
+					@include taphover {
+						&::after {
+							transform: scaleY(1);
+						}
+
+						picture .c-lazy-trigger {
+							transform: scale($scale--hover);
+						}
+					}
+				}
+
+				header {
+					h3 {
+						font-size: pc-clamp(14);
+						font-weight: bold;
+						position: absolute;
+						top: pc-rem(78);
+						right: pc-rem(45 * .5);
+						transform: translateX(50%);
+						writing-mode: vertical-rl;
+					}
+
+					p {
+						line-height: 1;
+					}
+				}
+
+				picture {
+					margin-top: pc-rem(20);
+
+					> .c-lazy-trigger {
+						width: 100%;
+						aspect-ratio: 356 / 600;
+					}
+				}
+
+				.p-employees__article__role {
+					font-size: pc-clamp(12);
+					line-height: 1;
+					margin-top: pc-rem(20);
+				}
+
+				.p-employees__article__description {
+					font-size: pc-clamp(12);
+					font-weight: bold;
+					line-height: 1 * 33/22;
+					margin-top: pc-rem(18);
+				}
+			}
+		}
+	}
+
+
+	/** =================================================================
+	 *
+	 * クロストーク
+	 *
+	 * --------------------------------------------------------------- */
+
+	.p-crosstalk {
+		margin-top: pc-rem(100);
+		padding-top: pc-rem(80);
+		padding-bottom: pc-rem(80);
+		background-color: var(--color-theme-bg);
+
+		@include transition('background-color', $dur--transition);
+
+		.c-section-header {
+			color: var(--color-theme-bg-invert);
+
+			@include transition('color', $dur--transition);
+		}
+
+		.p-crosstalk__body {
+			display: flex;
+			overflow: hidden;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width: pc-rem(840);
+			margin-top: pc-rem(80);
+			margin-left: auto;
+			row-gap: pc-rem($size--pad);
+
+
+			.p-crosstalk__article {
+				width: pc-rem(390);
+				min-height: pc-rem(390);
+				border-radius: pc-rem(4);
+				background-color: var(--color-theme-bg-invert);
+
+				@include transition('background-color', $dur--transition);
+
+				a {
+					position: relative;
+					display: block;
+					height: 100%;
+
+					@include taphover {
+						picture .c-lazy-trigger {
+							transform: scale($scale--hover);
+						}
+					}
+				}
+
+				.p-crosstalk__article_index {
+					font-size: pc-rem(13);
+					font-weight: bold;
+					line-height: 1;
+					position: absolute;
+					z-index: var(--zi-1);
+					top: 0;
+					left: 0;
+					width: fit-content;
+					margin-top: pc-rem(10);
+					padding: (1em * 10/13) (1em * 20/13);
+					color: var(--color-theme-bg);
+					background-color: var(--color-theme-bg-invert);
+
+					@include transition('color, background-color', $dur--transition);
+
+					b {
+						font-size: pc-rem(20);
+						font-weight: bold;
+					}
+				}
+
+				picture {
+					overflow: hidden;
+					border-top-left-radius: pc-rem(4);
+					border-top-right-radius: pc-rem(4);
+
+					.c-lazy-trigger {
+						width: 100%;
+						aspect-ratio: 780 / 570;
+
+						@include transition('transform', $dur--hover);
+					}
+				}
+
+				.p-crosstalk__article__body {
+					position: relative;
+					display: flex;
+					align-items: start;
+					column-gap: pc-rem(20);
+
+					> div:nth-child(1) {
+						flex-grow: 1;
+						padding: pc-rem(20);
+						color: var(--color-theme-bg);
+
+						@include transition('color', $dur--transition);
+					}
+
+					> div:nth-child(2) {
+						position: relative;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						min-width: pc-rem(80);
+						aspect-ratio: 1 / 1;
+						color: var(--color-theme-text);
+
+						@include transition('color', $dur--transition);
+
+						&::before {
+							@include pseudo-block((
+								top: 0,
+								left: 0,
+								border-bottom-left-radius: pc-rem(20),
+								background-color: var(--color-theme-bg),
+								opacity: .7,
+								z-index: var(--zi-0),
+							)) {}
+							@include transition('background-color', $dur--transition);
+						}
+
+						p {
+							font-size: pc-rem(11);
+							line-height: 1;
+							position: relative;
+							z-index: var(--zi-1);
+							margin-top: 0;
+							text-align: center;
+
+							> span {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: pc-rem(25);
+								aspect-ratio: 1 / 1;
+								margin: 0 auto;
+								margin-bottom: pc-rem(8);
+								border-radius: 50%;
+								background-color: var(--color-theme-bg-invert);
+
+								@include transition('background-color', $dur--transition);
+
+								.c-icon {
+									font-size: pc-rem(8);
+									color: var(--color-theme-text-invert);
+								}
+							}
+						}
+					}
+
+					header h3 {
+						font-size: pc-clamp(14, 14 * $fs--min-ratio);
+						font-weight: bold;
+					}
+
+					p {
+						font-size: pc-clamp(14, 14 * $fs--min-ratio);
+						line-height: $lh--huge;
+						margin-top: pc-rem(10);
+					}
+
+
+				}
+			}
+		}
+	}
+
+
+	/** =================================================================
+	 *
+	 * インタビュー動画
+	 *
+	 * --------------------------------------------------------------- */
+
+	.p-interview {
+		margin-top: pc-rem(100);
+
+		.p-interview__container {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+
+			.p-interview__body {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				width: pc-rem(840);
+				row-gap: pc-rem(60);
+			}
+		}
+
+		.p-people__interview__article {
+			width: pc-rem(390);
+			aspect-ratio: 16 / 9;
+
+			/*
+			.c-movie-thumb {
+				> div p {
+					color: var(--color-theme-text-invert);
+				}
+			}
+
+			.c-movie-thumb__button {
+				background-color: var(--color-theme-bg);
+
+				.c-icon {
+					color: var(--color-theme-text);
+				}
+			}
+			*/
+
+			header {
+				margin-top: pc-rem(20);
+
+				@include sp () {
+					margin-top: sp-rem(28);
+				}
+
+				h4 {
+					font-size: pc-rem(18);
+
+					@include pc () {
+						font-weight: bold;
+					}
+					@include sp () {
+						font-size: sp-rem(36);
+						line-height: 1 * 44/36;
+					}
+				}
+			}
+
+			header + p {
+				font-size: pc-clamp(14, 10);
+				line-height: 1 * 22/13.2;
+				margin-top: pc-rem(20);
+
+				@include sp () {
+					font-size: sp-rem(24);
+					margin-top: sp-rem(20);
+				}
+			}
+		}
+	}
+
+}

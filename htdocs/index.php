@@ -681,7 +681,7 @@
 															<h4>BIM座談会</h4>
 														</div>
 														<picture class="c-lazy-trigger">
-															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_crosstalk1.jpg', true); ?>" alt="">
+															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk_thumb_bim.jpg', true); ?>" alt="">
 														</picture>
 														<div class="p-people__crosstalk__description">
 															<p>BIMを取り入れた設計ワークフローの構築とは？</p>
@@ -694,7 +694,7 @@
 															<h4>新宿TOKYU MILANO再開発プロジェクトチーム</h4>
 														</div>
 														<picture class="c-lazy-trigger">
-															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_crosstalk2.jpg', true); ?>" alt="">
+															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk_thumb_milano.jpg', true); ?>" alt="">
 														</picture>
 														<div class="p-people__crosstalk__description">
 															<p>都市と建築のチャレンジ</p>
@@ -719,12 +719,12 @@
 								<div class="p-people__interview__main c-pane-scroller">
 									<div class="c-pane-scroller__container">
 										<article class="p-people__interview__article">
-											<a href="javascript:void(0);" data-video-id="xV3KkfYQomI" data-video-start="472">
+											<a class="c-movie-thumb" href="javascript:void(0);" data-video-id="xV3KkfYQomI" data-video-start="472">
 												<picture class="c-lazy-trigger">
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/interview_thumb1.jpg', true); ?>" alt="">
 												</picture>
 												<div>
-													<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
+													<div class="c-movie-thumb__button"><span class="c-icon c-icon--play"></span></div>
 													<p lang="en">10:32</p>
 												</div>
 											</a>
@@ -735,12 +735,12 @@
 										</article>
 
 										<article class="p-people__interview__article">
-											<a href="javascript:void(0);" data-video-id="NPLFk1un62c" data-video-start="340">
+											<a class="c-movie-thumb" href="javascript:void(0);" data-video-id="NPLFk1un62c" data-video-start="340">
 												<picture class="c-lazy-trigger">
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/interview_thumb2.jpg', true); ?>" alt="">
 												</picture>
 												<div>
-													<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
+													<div class="c-movie-thumb__button"><span class="c-icon c-icon--play"></span></div>
 													<p lang="en">7:41</p>
 												</div>
 											</a>
@@ -751,12 +751,12 @@
 										</article>
 
 										<article class="p-people__interview__article">
-											<a href="javascript:void(0);" data-video-id="psmwLZXixNA" data-video-start="78">
+											<a class="c-movie-thumb" href="javascript:void(0);" data-video-id="psmwLZXixNA" data-video-start="78">
 												<picture class="c-lazy-trigger">
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/interview_thumb3.jpg', true); ?>" alt="">
 												</picture>
 												<div>
-													<div class="p-people__interview__article__button"><span class="c-icon c-icon--play"></span></div>
+													<div class="c-movie-thumb__button"><span class="c-icon c-icon--play"></span></div>
 													<p lang="en">13:16</p>
 												</div>
 											</a>

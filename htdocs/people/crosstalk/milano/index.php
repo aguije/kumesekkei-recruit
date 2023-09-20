@@ -73,10 +73,12 @@
 				<div class="l-wrapper">
 					<div class="c-page-header__container">
 						<div class="c-page-header__main">
-							<h2>
+							<h2 class="is--title">
 								<span lang="en">People</span>
 								<span lang="ja">人を知る</span>
 							</h2>
+						</div>
+						<div class="c-page-header__sub">
 							<?php
 
 								echo KUME_Util::get_snippet(array(
@@ -457,7 +459,7 @@
 									<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/milano/story_thumb1.jpg', true); ?>" alt="">
 								</picture>
 								<div>
-									<p class="p-crosstalk-article__link__tag"><div class="c-button c-button--round is--black">デザインストーリー</div></p>
+									<p class="p-crosstalk-article__link__tag"><div class="c-button c-button--round is--black"><span>デザインストーリー</span></div></p>
 									<h4><span class="c-icon c-icon--external"></span>魅力ある都市の未来像を描く</h4>
 									<p class="p-crosstalk-article__link__description">新宿TOKYU MILANO再開発</p>
 								</div>
@@ -511,11 +513,9 @@
 						<div class="c-page-footer__sub">
 							<nav class="c-page-nav">
 								<ul>
-									<li>
-										<a href="#employees"><span class="c-button c-button--round is--gray">社員紹介</span></a>
-										<a class="is--acitive" href="#crosstalk"><span class="c-button c-button--round is--gray">クロストーク</span></a>
-										<a href="#interview"><span class="c-button c-button--round is--gray">インタビュー動画</span></a>
-									</li>
+									<li><a class="c-button c-button--round is--gray" href="#employees"><span>社員紹介</span></a></li>
+									<li><a class="c-button c-button--round is--gray is--acitive" href="#crosstalk"><span>クロストーク</span></a></li>
+									<li><a class="c-button c-button--round is--gray" href="#interview"><span>インタビュー動画</span></a></li>
 								</ul>
 							</nav>
 						</div>

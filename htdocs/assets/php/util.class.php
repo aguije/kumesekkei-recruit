@@ -147,7 +147,7 @@ class KUME_Util {
 					echo "<li><span class=\"is--item is--active\">{$layer['title']}<span></li>";
 				}
 				else {
-					echo "<li><a class=\"is--item\" href=\"{$root_url}{$layer['url']}\">{$layer['title']}<a></li>";
+					echo "<li><a class=\"is--item\" href=\"{$root_url}{$layer['url']}\">{$layer['title']}</a></li>";
 				}
 			}
 

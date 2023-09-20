@@ -27,92 +27,6 @@
 
 /** =================================================================
  *
- * SPINNER
- *
- * --------------------------------------------------------------- */
-
-.c-spinner {
-	position: absolute;
-	z-index: 10000;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
-
-	img {
-		display: block;
-		width: 2em;
-		height: 2em;
-		animation-name: spinner;
-		animation-duration: 3s;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-
-		@include sp () {
-			width: 4em;
-			height: 4em;
-		}
-
-		@keyframes spinner {
-			0% {
-				transform: rotate(0deg);
-			}
-			100% {
-				transform: rotate(359deg);
-			}
-		}
-	}
-}
-
-
-/** =================================================================
- *
- * INSET MASK
- *
- * --------------------------------------------------------------- */
-
-.c-inset-mask {
-	clip-path: inset(0% 100% 0% 0%);
-
-	.is--mask {
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: block;
-		width: 100%;
-		height: 100%;
-		background-color: var(--color-black);
-	}
-}
-
-
-/** =================================================================
- *
- * PROGRESS
- *
- * --------------------------------------------------------------- */
-
-.c-progress {
-	circle {
-		animation-name: progress;
-		animation-duration: 6s;
-		animation-timing-function: linear;
-		animation-iteration-count: 1;
-		animation-fill-mode: forwards;
-
-		@keyframes progress {
-			0% {
-				stroke-dasharray: 0 100;
-			}
-			100% {
-				stroke-dasharray: 100 0;
-			}
-		}
-	}
-}
-
-
-/** =================================================================
- *
  * NEWS TAG
  *
  * --------------------------------------------------------------- */
@@ -177,30 +91,6 @@ a.c-career-tag {
 	@include transition('opacity', $dur--hover);
 	@include taphover {
 		opacity: .7;
-	}
-}
-
-
-/** =================================================================
- *
- * INVIEW BORDER
- *
- * --------------------------------------------------------------- */
-
-.c-inview-border {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 1px;
-	transform: scaleX(0);
-	transform-origin: 0 0;
-	background-color: var(--color-theme-text);
-
-	@include transition('transform, background-color', $dur--transition);
-
-	&.is--inview {
-		transform: scaleX(1);
 	}
 }
 
@@ -375,173 +265,6 @@ a.c-list-link {
 
 /** =================================================================
  *
- * ANIMATE UNDERLINE
- *
- * --------------------------------------------------------------- */
-
-.c-animate-underline {
-	position: relative;
-
-	&::after {
-		@include pseudo-block((
-			bottom: -.2em,
-			left: 0,
-			height: 1px,
-			transform: scaleX(0),
-			transform-origin: 0 0,
-			background-color: var(--color-black),
-		)) {}
-		@include transition('transform', $dur--hover);
-	}
-}
-
-
-/** =================================================================
- *
- * ARROW LINK
- *
- * --------------------------------------------------------------- */
-
-.c-arrow-link {
-	display: flex;
-	align-items: center;
-	column-gap: 1em;
-
-	@include pc () {
-		margin-top: pc-rem(2);
-	}
-	@include sp () {
-		margin-top: sp-rem(-2);
-	}
-	@include taphover {
-		> span {
-			text-decoration: underline;
-		}
-
-		.c-circle-arrow--border {
-			// transform: translateX(1rem);
-			color: var(--color-theme-text-invert);
-			background-color: var(--color-theme-bg-invert);
-		}
-	}
-
-	> span {
-		font-size: pc-clamp(12);
-		position: relative;
-
-		@include sp () {
-			font-size: sp-rem(22);
-		}
-	}
-
-	.c-circle-arrow--border {
-		color: var(--color-theme-text);
-		background-color: var(--color-theme-bg);
-
-		@include transition('color, background-color, transform, border-color', $dur--hover);
-	}
-}
-
-
-/** =================================================================
- *
- * CIRCLE ARROW
- *
- * --------------------------------------------------------------- */
-
-.c-circle-arrow {
-	line-height: 1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-sizing: border-box;
-	aspect-ratio: 1 / 1;
-	border-radius: 50%;
-
-
-	/** =================================================================
-	 * BORDER
-	 * --------------------------------------------------------------- */
-
-	&.c-circle-arrow--border {
-		font-size: pc-rem(36);
-		width: 1em;
-		border: 1px solid rgba($color--black, .3);
-
-		@include sp () {
-			font-size: sp-rem(45);
-		}
-
-		.c-icon {
-			font-size: 1em * 11/36;
-
-			@include sp () {
-				font-size: 1em * 28/45;
-				transform: scale(.5);
-			}
-		}
-	}
-
-
-	/** =================================================================
-	 * PAGE
-	 * --------------------------------------------------------------- */
-
-	&.c-circle-arrow--page {
-		font-size: pc-rem(36);
-		width: 1em;
-		color: var(--color-white);
-		border: 1px solid rgba($color--black, .3);
-		background-color: var(--color-black);
-
-		@include transition('transform, opacity', .3s, $easing--easeInOutBack);
-
-		.c-icon {
-			font-size: 1em * 11/36;
-
-			@include sp () {
-				font-size: 1em * 28/45;
-				transform: scale(.5);
-			}
-		}
-	}
-
-
-	/** =================================================================
-	 * NEW and CAREER
-	 * --------------------------------------------------------------- */
-
-	&.c-circle-arrow--new,
-	&.c-circle-arrow--career {
-		font-size: pc-rem(18);
-		width: 1em;
-
-		@include sp ((
-			font-size: 45,
-		)) {}
-
-		.c-icon {
-			font-size: 1em * 5.5/18;
-
-			@include sp () {
-				font-size: 1em * 28/45;
-				transform: scale(.5);
-			}
-		}
-	}
-
-	&.c-circle-arrow--new {
-		background-color: var(--color-green);
-	}
-
-	&.c-circle-arrow--career {
-		background-color: var(--color-salmon);
-	}
-}
-
-
-/** =================================================================
- *
  * LINK EXTERNAL
  *
  * --------------------------------------------------------------- */
@@ -574,17 +297,11 @@ a.c-link-external {
 
 /** =================================================================
  *
- * CIRCLE PICTUE
+ * CHART
  *
  * --------------------------------------------------------------- */
 
 $pie_r: 31.8309886184;
-
-.c-circle-picture {
-	overflow: hidden;
-	aspect-ratio: 1 / 1;
-	border-radius: 50%;
-}
 
 .c-chart {
 	position: relative;
@@ -621,7 +338,6 @@ $pie_r: 31.8309886184;
 		stroke-width: $pie_r;
 		stroke-dashoffset: 25;
 		stroke: #dbdcdc;
-
 		@include transition('stroke-dasharray', 3s);
 	}
 
@@ -696,3 +412,143 @@ $pie_r: 31.8309886184;
 		}
 	}
 }
+
+
+/** =================================================================
+ *
+ * PAGE HEADER
+ *
+ * --------------------------------------------------------------- */
+
+.c-page-header {
+	.c-page-header__container {
+		padding-right: pc-rem(160);
+		padding-left: pc-rem(160);
+
+		.c-page-header__main {
+			flex-grow: 1;
+		}
+
+		.c-page-header__sub {
+			display: flex;
+			margin-top: pc-rem(40);
+
+			.c-breadcrumb {
+				flex-grow: 1;
+			}
+
+			.c-page-nav {
+				position: relative;
+				top: pc-clamp(-6);
+				width: pc-rem(160);
+			}
+		}
+	}
+
+	.c-page-header__main {
+		.is--title {
+			display: flex;
+			flex-direction: column;
+			row-gap: pc-rem(24);
+
+			span[lang='en'] {
+				font-size: pc-clamp(12, 12 * $fs--min-ratio);
+				font-weight: bold;
+				line-height: 1;
+			}
+
+			span[lang='ja'] {
+				font-size: pc-rem(40);
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+
+/** =================================================================
+ *
+ * SECTION HEADER
+ *
+ * --------------------------------------------------------------- */
+
+.c-section-header {
+	&.is--vertical {
+		writing-mode: vertical-rl;
+	}
+
+	.is--title {
+		display: flex;
+		flex-direction: column;
+		row-gap: pc-rem(17);
+
+		span[lang='en'] {
+			font-size: pc-clamp(13, 13 * $fs--min-ratio);
+			line-height: 1;
+		}
+
+		span[lang='ja'] {
+			font-size: pc-rem(34);
+		}
+	}
+
+	.is--description {
+		font-size: pc-rem(18);
+		line-height: 1em * 64/36;
+
+		margin-block-start: pc-rem(27);
+	}
+}
+
+
+/** =================================================================
+ *
+ * BREADCRUMB
+ *
+ * --------------------------------------------------------------- */
+
+.c-breadcrumb {
+	font-size: pc-clamp(12, 10);
+	line-height: 1;
+
+	ul {
+		display: flex;
+
+		a {
+			text-decoration: underline;
+
+			text-decoration-color: #d4d4d4;
+
+			@include taphover {
+				text-decoration-color: var(--color-theme-bg-invert);
+			}
+		}
+
+		li + li {
+			&::before {
+				line-height: 1em;
+				display: inline-block;
+				width: fit-content;
+				padding: 0 1em;
+				content: '>';
+			}
+		}
+	}
+}
+
+
+/** =================================================================
+ *
+ * PAGE NAV
+ *
+ * --------------------------------------------------------------- */
+
+.c-page-nav {
+	ul {
+		display: flex;
+		flex-direction: column;
+		row-gap: pc-rem(12);
+	}
+}
+
+

@@ -289,25 +289,6 @@ $(function () {
 		if (_option.mode === true) {
 
 			/** =================================================================
-			 * THEME COLOR
-			 * --------------------------------------------------------------- */
-
-			let mIO = new MultipleIO('.p-top .p-people', {
-				config: {
-					rootMargin: '-50% 0%'
-				},
-				onEnter: (_element) => {
-					_element.setAttribute('data-theme', 'dark');
-				},
-				onLeave: (_element) => {
-					_element.setAttribute('data-theme', 'light');
-				},
-				triggerOnce: false
-			});
-			GLOBAL.observers.push(mIO);
-
-
-			/** =================================================================
 			 * CROSSTALK
 			 * --------------------------------------------------------------- */
 
@@ -342,64 +323,11 @@ $(function () {
 			 * INTERVIEW
 			 * --------------------------------------------------------------- */
 
-			$('.p-people__interview__article a').on('click', function (_event) {
-				_event.preventDefault();
-				_event.stopPropagation();
 
-				if (GLOBAL.is_process === true) { return false; }
-				GLOBAL.is_process = true;
-
-				const video_id = $(this).attr('data-video-id');
-				const video_start = ($(this).attr('data-video-start')) ? parseInt($(this).attr('data-video-start')) : 0;
-
-				const player = new YT.Player('player', {
-					videoId: video_id,
-					playerVars: {
-						start: video_start
-					}
-				});
-
-				GLOBAL.methods.util.display_modal({
-					mode : true,
-					complete: function () {
-
-						GLOBAL.is_process = false;
-
-					}
-				});
-
-				$('.p-modal .p-modal__close').on('click.modal', function (_event) {
-					_event.preventDefault();
-					_event.stopPropagation();
-
-					$('.p-modal .p-modal__close').off('click.modal');
-					$(document).off('click.modal');
-
-					player.stopVideo();
-
-					GLOBAL.methods.util.display_modal({
-						mode : false,
-						complete: function () {
-
-							player.destroy();
-
-						}
-					});
-				});
-
-				$(document).on('click.modal', function (_event) {
-					if (!$.contains($('.p-modal__wrapper')[0], _event.target)) {
-						_event.preventDefault();
-						_event.stopPropagation();
-
-						$('.p-modal .p-modal__close').trigger('click.modal');
-					}
-				});
-			});
 
 		}
 		else {
-			$('.p-people__interview__article a').off('click');
+			$('.a.c-movie-thumb').off('click');
 		}
 	}
 
@@ -446,7 +374,7 @@ $(function () {
 			});
 		}
 		else {
-			$('.p-story article').off('mouseenter');
+
 		}
 	}
 
@@ -466,6 +394,7 @@ $(function () {
 		initPeople({ mode: true });
 		initStory({ mode: true });
 
+		GLOBAL.methods.util.initMovieThumb({ mode: true });
 		GLOBAL.methods.util.initInviewBorder({ mode: true });
 		GLOBAL.methods.util.lazy({
 			mode: true,
@@ -483,6 +412,7 @@ $(function () {
 		initPeople({ mode: false });
 		initStory({ mode: false });
 
+		GLOBAL.methods.util.initMovieThumb({ mode: false });
 		GLOBAL.methods.util.initInviewBorder({ mode: false });
 		GLOBAL.methods.util.lazy({
 			mode: false,

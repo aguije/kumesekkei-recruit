@@ -8,7 +8,8 @@
  *
  * --------------------------------------------------------------- */
 
-.p-top {
+main.p-top {
+
 	width: 100%;
 
 
@@ -1542,83 +1543,6 @@
 						display: block;
 						margin-bottom: 2em;
 						content: counter(number) ' / 3';
-					}
-				}
-
-				a {
-					position: relative;
-					display: block;
-
-					@include taphover {
-						picture {
-							opacity: 1;
-						}
-					}
-
-					picture {
-						position: relative;
-						width: 100%;
-						aspect-ratio: 16 / 9;
-						opacity: .2;
-
-						@include transition('opacity', $dur--transition);
-						@include sp () {
-							opacity: .7;
-						}
-					}
-
-					> div {
-						position: absolute;
-						z-index: var(--zi-1);
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-
-						p {
-							font-size: pc-clamp(12);
-							font-weight: 800;
-							position: absolute;
-							top: pc-rem(120);
-							left: 50%;
-							transform: translateX(-50%);
-							color: var(--color-theme-text);
-
-							@include transition('color', $dur--transition);
-							@include sp () {
-								font-size: sp-rem(24);
-								top: sp-rem(120);
-							}
-						}
-					}
-
-					.p-people__interview__article__button {
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						display: inline-flex;
-						align-items: center;
-						justify-content: center;
-						width: pc-rem(50);
-						aspect-ratio: 1 / 1;
-						transform: translateX(-50%) translateY(-50%);
-						border-radius: 50%;
-						background-color: var(--color-theme-bg-invert);
-
-						@include transition('background-color', $dur--transition);
-						@include sp () {
-							width: sp-rem(50);
-						}
-
-						.c-icon {
-							font-size: pc-rem(16);
-							color: var(--color-theme-text-invert);
-
-							@include transition('color', $dur--transition);
-							@include sp () {
-								font-size: sp-rem(16);
-							}
-						}
 					}
 				}
 

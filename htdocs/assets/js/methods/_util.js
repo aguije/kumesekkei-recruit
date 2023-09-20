@@ -341,3 +341,77 @@ GLOBAL.methods.util.initInviewBorder = function (_option) {
 
 	}
 }
+
+
+/* ==================================================================
+ *
+ * MOVIE THUMB
+ *
+ * --------------------------------------------------------------- */
+
+GLOBAL.methods.util.initMovieThumb = function (_option) {
+	_option = Object.assign({
+		mode: true,
+		complete: function () { return true; }
+	}, _option);
+
+	if (_option.mode === true) {
+		$('a.c-movie-thumb').on('click', function (_event) {
+			_event.preventDefault();
+			_event.stopPropagation();
+
+			if (GLOBAL.is_process === true) { return false; }
+			GLOBAL.is_process = true;
+
+			const video_id = $(this).attr('data-video-id');
+			const video_start = ($(this).attr('data-video-start')) ? parseInt($(this).attr('data-video-start')) : 0;
+
+			const player = new YT.Player('player', {
+				videoId: video_id,
+				playerVars: {
+					start: video_start
+				}
+			});
+
+			GLOBAL.methods.util.display_modal({
+				mode : true,
+				complete: function () {
+
+					GLOBAL.is_process = false;
+
+				}
+			});
+
+			$('.p-modal .p-modal__close').on('click.modal', function (_event) {
+				_event.preventDefault();
+				_event.stopPropagation();
+
+				$('.p-modal .p-modal__close').off('click.modal');
+				$(document).off('click.modal');
+
+				player.stopVideo();
+
+				GLOBAL.methods.util.display_modal({
+					mode : false,
+					complete: function () {
+
+						player.destroy();
+
+					}
+				});
+			});
+
+			$(document).on('click.modal', function (_event) {
+				if (!$.contains($('.p-modal__wrapper')[0], _event.target)) {
+					_event.preventDefault();
+					_event.stopPropagation();
+
+					$('.p-modal .p-modal__close').trigger('click.modal');
+				}
+			});
+		});
+	}
+	else {
+		$('.p-story article').off('mouseenter');
+	}
+}

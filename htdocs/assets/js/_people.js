@@ -19,6 +19,7 @@ $(function () {
 	 * --------------------------------------------------------------- */
 
 	function init () {
+		GLOBAL.methods.util.initMovieThumb({ mode: true });
 		GLOBAL.methods.util.lazy({
 			mode: true,
 			wrapper: '.c-lazy-trigger'
@@ -29,6 +30,7 @@ $(function () {
 		GLOBAL.methods.util.destroyObservers();
 		GLOBAL.methods.util.destroySwipers();
 
+		GLOBAL.methods.util.initMovieThumb({ mode: false });
 		GLOBAL.methods.util.lazy({
 			mode: false,
 			wrapper: '.c-lazy-trigger'

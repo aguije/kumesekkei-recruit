@@ -150,17 +150,6 @@ $(function () {
 
 							$gh.addClass('is--opened');
 
-							/*
-							$(document).on('click.menu', function (_event) {
-								if (!$.contains($('#gh .p-gm__container')[0], _event.target)) {
-									_event.preventDefault();
-									_event.stopPropagation();
-
-									$button.trigger('click');
-								}
-							});
-							*/
-
 						}
 					});
 				}
@@ -301,6 +290,71 @@ $(function () {
 	}
 
 
+	/** =================================================================
+	 *
+	 * THEME COLOR
+	 *
+	 * --------------------------------------------------------------- */
+
+	const initThemeColorTransition = (_option) => {
+		_option = Object.assign({
+			mode: null,
+			complete: function () { return true; }
+		}, _option);
+
+		if (_option.mode === true) {
+			let mIO = new MultipleIO('[data-theme]', {
+				config: {
+					rootMargin: '-50% 0%'
+				},
+				onEnter: (_element) => {
+					_element.setAttribute('data-theme', 'dark');
+				},
+				onLeave: (_element) => {
+					_element.setAttribute('data-theme', 'light');
+				},
+				triggerOnce: false
+			});
+			GLOBAL.observers.push(mIO);
+		}
+		else {
+
+		}
+	};
+
+
+	/** =================================================================
+	 *
+	 * PAGE NAVIGATION
+	 *
+	 * --------------------------------------------------------------- */
+
+	const initPageNav = (_option) => {
+		_option = Object.assign({
+			mode: null,
+			complete: function () { return true; }
+		}, _option);
+
+		if (_option.mode === true) {
+			$('.c-page-nav a').on('click', function (_event) {
+				const id = $(this).attr('href');
+
+				if (id.charAt(0) === '#') {
+					_event.preventDefault();
+
+					gsap.to(window, {
+						duration: .6,
+						scrollTo: { y: id, offsetY: $('#gh .p-gh__bar').height() }
+					});
+				}
+			});
+		}
+		else {
+			$('.c-page-nav a').off();
+		}
+	};
+
+
 	/* ==================================================================
 	 *
 	 *
@@ -312,6 +366,13 @@ $(function () {
 	function init () {
 		initMenu();
 		initScrollToTop();
+		initThemeColorTransition({ mode: true });
+		initPageNav({ mode: true });
+	}
+
+	function unload () {
+		initThemeColorTransition({ mode: false });
+		initPageNav({ mode: false });
 	}
 
 
@@ -334,6 +395,7 @@ $(function () {
 		console.log(' ');
 		console.log('EVENT: unloadUI');
 
+		unload();
 	});
 
 });

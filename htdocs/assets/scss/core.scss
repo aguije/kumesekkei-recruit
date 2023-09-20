@@ -5,10 +5,14 @@
 
 @import 'typography';
 @import 'basic';
+
 @import 'component';
+	@import 'component/ui';
+
 @import 'utility';
 @import 'layout';
 @import 'plugins';
 
 @import 'project';
-@import 'top';
+	@import 'project/top';
+	@import 'project/people';
