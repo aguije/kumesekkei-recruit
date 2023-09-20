@@ -33,8 +33,18 @@ $(function () {
 		let eventObj = new $.Event('initUI');
 		$(window).trigger(eventObj);
 
-		if ($('main.p-top')) {
+		if ($('main.p-top').length > 0) {
 			eventObj = new $.Event('initTop');
+			$(window).trigger(eventObj);
+		}
+
+		else if ($('main.p-people.is--index').length > 0) {
+			eventObj = new $.Event('initPeople');
+			$(window).trigger(eventObj);
+		}
+
+		else if ($('main.p-crosstalk.is--single').length > 0) {
+			eventObj = new $.Event('initCrosstalkSingle');
 			$(window).trigger(eventObj);
 		}
 

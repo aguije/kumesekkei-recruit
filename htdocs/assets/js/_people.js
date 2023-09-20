@@ -18,7 +18,7 @@ $(function () {
 	 *
 	 * --------------------------------------------------------------- */
 
-	function init () {
+	function initPeople () {
 		GLOBAL.methods.util.initMovieThumb({ mode: true });
 		GLOBAL.methods.util.lazy({
 			mode: true,
@@ -26,15 +26,40 @@ $(function () {
 		});
 	}
 
-	function unload () {
-		GLOBAL.methods.util.destroyObservers();
-		GLOBAL.methods.util.destroySwipers();
+	function unloadPeople () {
 
-		GLOBAL.methods.util.initMovieThumb({ mode: false });
+	}
+
+	function initCrosstalkSingle () {
+		$('.p-crosstalk-article__more a').on('click', function (_event) {
+			_event.preventDefault();
+
+			const $chapters = $(this).closest('.p-crosstalk-article__chapters');
+
+			if (!$chapters.hasClass('is--opened')) {
+				$chapters.addClass('is--opened');
+
+				gsap.to($chapters, {
+					duration: .6,
+					height: $chapters.find('.p-crosstalk-article__chapters__container').height(),
+					onComplete: () => {
+						$chapters.find('.p-crosstalk-article__more').remove();
+					}
+				});
+			}
+			else {
+				$chapters.removeClass('is--opened');
+			}
+		});
+
 		GLOBAL.methods.util.lazy({
-			mode: false,
+			mode: true,
 			wrapper: '.c-lazy-trigger'
 		});
+	}
+
+	function unloadCrosstalkSingle () {
+
 	}
 
 
@@ -50,14 +75,28 @@ $(function () {
 		console.log(' ');
 		console.log('EVENT: initPeople');
 
-		init();
+		initPeople();
 	});
 
 	$(window).on('unloadPeople', function () {
 		console.log(' ');
 		console.log('EVENT: unloadPeople');
 
-		unload();
+		unloadPeople();
+	});
+
+	$(window).on('initCrosstalkSingle', function () {
+		console.log(' ');
+		console.log('EVENT: initCrosstalkSingle');
+
+		initCrosstalkSingle();
+	});
+
+	$(window).on('unloadCrosstalkSingle', function () {
+		console.log(' ');
+		console.log('EVENT: unloadCrosstalkSingle');
+
+		unloadCrosstalkSingle();
 	});
 
 });

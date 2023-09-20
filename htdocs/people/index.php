@@ -17,7 +17,7 @@
 		),
 		array(
 			'title' => '人を知る',
-			'url' => '/people'
+			'url' => '/people/'
 		)
 	);
 
@@ -39,7 +39,7 @@
 
 	<div class="p-page-box">
 
-		<main class="p-people">
+		<main class="p-people is--index">
 			<header class="c-page-header">
 				<div class="l-wrapper">
 					<div class="c-page-header__container">

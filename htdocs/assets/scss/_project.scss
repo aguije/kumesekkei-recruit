@@ -685,6 +685,10 @@
 					column-gap: sp-rem(120);
 				}
 
+				&.is--active {
+					background-color: rgba(#ffffff, .4);
+				}
+
 				&::before {
 					@include pseudo-block((
 						top: 0,
@@ -1016,7 +1020,7 @@
 .p-scroll-to-top {
 	position:         sticky;
 	position: -webkit-sticky;
-	z-index: var(--zi-1);
+	z-index: $zi--sst;
 	bottom: 0;
 	height: pc-rem(200);
 	pointer-events: none;

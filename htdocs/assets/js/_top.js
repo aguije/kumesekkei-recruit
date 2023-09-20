@@ -403,21 +403,7 @@ $(function () {
 	}
 
 	function unload () {
-		GLOBAL.methods.util.destroyObservers();
-		GLOBAL.methods.util.destroySwipers();
 
-		initHero({ mode: false });
-		initNews({ mode: false });
-		initAbout({ mode: false });
-		initPeople({ mode: false });
-		initStory({ mode: false });
-
-		GLOBAL.methods.util.initMovieThumb({ mode: false });
-		GLOBAL.methods.util.initInviewBorder({ mode: false });
-		GLOBAL.methods.util.lazy({
-			mode: false,
-			wrapper: '.c-lazy-trigger'
-		});
 	}
 
 

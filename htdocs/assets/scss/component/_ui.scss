@@ -16,6 +16,10 @@
 
 .c-button {
 
+	/** =================================================================
+	 * ROUND
+	 * --------------------------------------------------------------- */
+
 	&.c-button--round {
 		font-size: pc-clamp(12, 10);
 		display: flex;
@@ -29,9 +33,28 @@
 		border-radius: pc-rem(12);
 
 		&.is--gray {
+			border: 1px solid #f7f7f7;
 			background-color: #f7f7f7;
 
+			@include transition('color, background-color, border-color', $dur--hover);
+		}
+
+		&.is--black {
+			color: var(--color-theme-text-invert);
+			background-color: var(--color-theme-text);
+
 			@include transition('color, background-color', $dur--hover);
+		}
+
+		&.is--white {
+			background-color: var(--color-white);
+
+			@include transition('color, background-color', $dur--hover);
+		}
+
+		&.is--fit {
+			width: fit-content;
+			padding: 0 1em * 24/12;
 		}
 	}
 
@@ -39,8 +62,46 @@
 		&.is--gray {
 			@include taphover {
 				color: var(--color-white);
+				border-color: var(--color-theme-bg-invert);
 				background-color: var(--color-theme-bg-invert);
 			}
+
+			&.is--active {
+				border-color: #b1b1b1;
+				background-color: var(--color-white);
+			}
+		}
+
+		&.is--white {
+			@include taphover {
+				color: var(--color-white);
+				background-color: var(--color-black);
+			}
+		}
+	}
+
+
+	/** =================================================================
+	 * MORE
+	 * --------------------------------------------------------------- */
+
+	&.c-button--more {
+		font-size: pc-rem(20);
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: pc-rem(60);
+		color: var(--color-white);
+		border-radius: pc-rem(30);
+		background-color: #7f7f7f;
+
+		@include transition('background-color', $dur--hover);
+	}
+
+	@at-root a.c-button--more {
+		@include taphover {
+			background-color: var(--color-theme-bg-invert);
 		}
 	}
 

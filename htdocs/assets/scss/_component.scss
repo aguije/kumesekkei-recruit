@@ -441,6 +441,7 @@ $pie_r: 31.8309886184;
 				position: relative;
 				top: pc-clamp(-6);
 				width: pc-rem(160);
+				min-width: pc-rem(160);
 			}
 		}
 	}
@@ -461,6 +462,42 @@ $pie_r: 31.8309886184;
 				font-size: pc-rem(40);
 				font-weight: 500;
 			}
+		}
+	}
+}
+
+
+/** =================================================================
+ *
+ * PAGE FOOTER
+ *
+ * --------------------------------------------------------------- */
+
+.c-page-footer {
+	.c-page-footer__container {
+		margin-top: pc-rem(100);
+		margin-right: pc-rem($size--pad);
+		margin-left: pc-rem($size--pad);
+		padding-top: pc-rem(60);
+		padding-bottom: pc-rem(60);
+		border-top: 1px solid rgba(0,0,0,.5);
+		border-bottom: 1px solid rgba(0,0,0,.5);
+
+		.c-page-footer__sub {
+			display: flex;
+			padding-right: pc-rem(160);
+			padding-left: pc-rem(160);
+		}
+
+		.c-breadcrumb {
+			flex-grow: 1;
+		}
+
+		.c-page-nav {
+			position: relative;
+			top: pc-clamp(-6);
+			width: pc-rem(160);
+			min-width: pc-rem(160);
 		}
 	}
 }
@@ -513,12 +550,17 @@ $pie_r: 31.8309886184;
 
 	ul {
 		display: flex;
+		flex-wrap: wrap;
+		row-gap: 1em;
+
+		li {
+			padding-right: 1em;
+		}
 
 		a {
 			text-decoration: underline;
 
 			text-decoration-color: #d4d4d4;
-
 			@include taphover {
 				text-decoration-color: var(--color-theme-bg-invert);
 			}
@@ -529,7 +571,7 @@ $pie_r: 31.8309886184;
 				line-height: 1em;
 				display: inline-block;
 				width: fit-content;
-				padding: 0 1em;
+				padding-right: 1em;
 				content: '>';
 			}
 		}

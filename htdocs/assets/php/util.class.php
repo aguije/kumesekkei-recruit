@@ -59,6 +59,13 @@ class KUME_Util {
 		return self::asset_path('images/' . $_filename, $_timestamp);
 	}
 
+
+	/** =================================================================
+	 *
+	 * GET META
+	 *
+	 * --------------------------------------------------------------- */
+
 	public static function get_meta ($_args) {
 		$_args = array_replace(array(
 			'bc' => null,
@@ -78,11 +85,16 @@ class KUME_Util {
 
 		if ($_args['bc']) {
 			foreach ($_args['bc'] as $layer) {
-				if ($layer['title'] !== $_args['site']) {
+				if (
+					$layer['title'] !== $_args['site'] &&
+					$layer['title'] !== '採用トップ'
+				) {
 					array_push($titles, $layer['title']);
 				}
 			}
 		}
+
+		$titles = array_reverse($titles);
 
 		array_push($titles, $_args['site']);
 
@@ -98,6 +110,13 @@ class KUME_Util {
 
 		return $meta;
 	}
+
+
+	/** =================================================================
+	 *
+	 * GET SNIPPET
+	 *
+	 * --------------------------------------------------------------- */
 
 	public static function get_snippet ($_args) {
 		$_args = array_replace(array(
@@ -146,6 +165,9 @@ class KUME_Util {
 				if ($layer_key === count($_args['data']) - 1) {
 					echo "<li><span class=\"is--item is--active\">{$layer['title']}<span></li>";
 				}
+				else if ($layer['url'] === null) {
+					echo "<li><span class=\"is--item\">{$layer['title']}<span></li>";
+				}
 				else {
 					echo "<li><a class=\"is--item\" href=\"{$root_url}{$layer['url']}\">{$layer['title']}</a></li>";
 				}
@@ -160,6 +182,30 @@ class KUME_Util {
 		return $output;
 	}
 
+
+	/** =================================================================
+	 *
+	 * GET CROSSTALK FACE
+	 *
+	 * --------------------------------------------------------------- */
+
+	public static function get_crosstalk_face ($_name, $_slug) {
+		ob_start();
+
+		?>
+		<figure class="p-crosstalk-article__face">
+			<div class="c-circle-picture c-lazy-trigger">
+				<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path("people/crosstalk/milano/member_{$_slug}.jpg", true); ?>" alt="">
+			</div>
+			<figcaption><p><?php echo $_name; ?></p></figcaption>
+		</figure>
+		<?php
+
+		$output = ob_get_contents();
+		ob_end_clean();
+
+		return $output;
+	}
 }
 
 ?>

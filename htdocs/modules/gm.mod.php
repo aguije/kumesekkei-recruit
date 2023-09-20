@@ -1,3 +1,8 @@
+<?php
+
+	$active = (array_key_exists('gm_active', $_GET)) ? $_GET['gm_active'] : '';
+
+?>
 <div class="p-gm">
 	<div class="p-gm__container">
 		<div class="l-wrapper">
@@ -15,7 +20,7 @@
 							</a>
 						</h4>
 					</li>
-					<li>
+					<li class="<?php if ($active === 'about') { echo 'is--active'; } ?>">
 						<h4>
 							<a href="/about/">
 								<span lang="en">About KUME SEKKEI</span>
@@ -28,7 +33,7 @@
 							<li><a href="/about/stats/">数字で見る久米設計</a></li>
 						</ul>
 					</li>
-					<li>
+					<li class="<?php if ($active === 'work') { echo 'is--active'; } ?>">
 						<h4>
 							<a href="#">
 								<span lang="en">Work at KUME SEKKEI</span>
@@ -41,7 +46,7 @@
 							<li><a href="/work/hrd/">人材育成プログラム</a></li>
 						</ul>
 					</li>
-					<li>
+					<li class="<?php if ($active === 'people') { echo 'is--active'; } ?>">
 						<h4>
 							<a href="/people/">
 								<span lang="en">People</span>

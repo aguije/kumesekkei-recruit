@@ -371,8 +371,7 @@ $(function () {
 	}
 
 	function unload () {
-		initThemeColorTransition({ mode: false });
-		initPageNav({ mode: false });
+
 	}
 
 
