@@ -197,9 +197,20 @@ $(function () {
 		(function () {
 			let border = 0;
 			let ticking = false;
+			const is_top = ($('main.p-top').length > 0) ? true : false;
 
 			const resize = () => {
-				border = GLOBAL.wH - $gh.find('.p-gh__bar').height() - 1;
+				if (is_top) {
+					border = GLOBAL.wH - $gh.find('.p-gh__bar').height() - 1;
+				}
+				else {
+					let h = 600;
+					if (GLOBAL.wW < 1120) {
+						h = 600 * GLOBAL.wW / 1120;
+					}
+
+					border = h;
+				}
 			};
 
 			const scroll = () => {
