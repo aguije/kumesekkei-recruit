@@ -93,7 +93,7 @@
       "oAP" : "\/htdocs\/assets\/images\/people\/crosstalk_thumb_bim.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -366,7 +366,7 @@
       "oAP" : "\/htdocs\/assets\/images\/people\/crosstalk\/milano\/employees_thumb_nohara.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -379,7 +379,7 @@
       "oAP" : "\/htdocs\/assets\/images\/people\/crosstalk\/milano\/member_heller.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -418,7 +418,7 @@
       "oAP" : "\/htdocs\/assets\/images\/people\/crosstalk\/milano\/member_iwakura.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -561,7 +561,7 @@
       "oAP" : "\/htdocs\/assets\/images\/people\/employees_thumb_nohara.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -659,7 +659,7 @@
       "oAP" : "\/htdocs\/assets\/images\/top\/about_csr1_1.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -672,7 +672,7 @@
       "oAP" : "\/htdocs\/assets\/images\/top\/about_csr1_2.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -731,7 +731,7 @@
     },
     "\/htdocs\/assets\/images\/top\/about_message.jpg" : {
       "ft" : 16384,
-      "iS" : 56788,
+      "iS" : 51244,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/top\/about_message.jpg",
@@ -832,7 +832,7 @@
       "oAP" : "\/htdocs\/assets\/images\/top\/people_employees_thumb1.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -845,7 +845,7 @@
       "oAP" : "\/htdocs\/assets\/images\/top\/people_employees_thumb2.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -917,13 +917,13 @@
     },
     "\/htdocs\/assets\/images\/top\/work_hrd_thumb.jpg" : {
       "ft" : 16384,
-      "iS" : 28736,
+      "iS" : 21407,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/top\/work_hrd_thumb.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -943,13 +943,13 @@
     },
     "\/htdocs\/assets\/images\/top\/work_welfare_thumb.jpg" : {
       "ft" : 16384,
-      "iS" : 26600,
+      "iS" : 17682,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/top\/work_welfare_thumb.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1360,6 +1360,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/modules\/ui.mod.php",
+      "oF" : 0
+    },
+    "\/htdocs\/people\/crosstalk\/bim\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/people\/crosstalk\/bim\/index.php",
       "oF" : 0
     },
     "\/htdocs\/people\/crosstalk\/milano\/index.php" : {

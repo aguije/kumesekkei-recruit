@@ -228,16 +228,16 @@
 							<div class="l-wrapper">
 								<div class="p-crosstalk-article__chapter__container">
 									<header>
-										<p lang="en">CHAPTER <b>01</b></p>
+										<p lang="en">CHAPTER <b></b></p>
 										<h2>新しい街の<br>核を創るプロジェクト</h2>
 									</header>
 
 									<div class="p-crosstalk-article__chapter__body">
 										<div class="p-crosstalk-article__chapter__inserts is--wide is--flex">
-											<picture class="c-lazy-trigger">
+											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/milano/chapter1_insert1.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/milano/chapter1_insert1.jpg', true); ?>" alt="">
 											</picture>
-											<picture class="c-lazy-trigger">
+											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/milano/chapter1_insert2.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/milano/chapter1_insert2.jpg', true); ?>" alt="">
 											</picture>
 										</div>
@@ -245,22 +245,22 @@
 										<div class="p-crosstalk-article__chapter__talk">
 											<h3 class="p-crosstalk-article__chapter__q"><span>Q. どのようなプロジェクトなのですか？</span></h3>
 											<dl>
-												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('横山', 'yokoyama', 'milano'); ?></dt>
 												<dd>
 													<p>このプロジェクトは新宿歌舞伎町でエンターテイメントをリードしてきた「ミラノ座」の跡地に、新しい街の核を創るプロジェクトです。建物の高さは約225mで、ライブホール、劇場、映画館などのさまざまなエンターテインメント機能とホテル機能、商業機能が複合したものになります。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('片山', 'katayama'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('片山', 'katayama', 'milano'); ?></dt>
 												<dd>
 													<p>新宿歌舞伎町という非常にポテンシャルの高い立地になります。これまでに歩んできた深い歴史があり、醸成されてきた文化があり、さまざまな資源や発信力もあり、多様性や寛容性もあり、数多くの外国人が訪れる街です。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('小池', 'koike'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('小池', 'koike', 'milano'); ?></dt>
 												<dd>
 													<p>そういう強い魅力のある街のポテンシャルを更に強めるにはどうすればよいか、どう未来に向けられるか、それを考えることがこのチームの大事な役割のひとつでした。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('岩倉', 'iwakura'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('岩倉', 'iwakura', 'milano'); ?></dt>
 												<dd>
 													<p>通常の大きな開発プロジェクトは、オフィスや住宅といった用途がベースとして最初に決まっていて、そこに＋αの用途を足していくことが多いのですが、このプロジェクトはそういうプロセスではなく、この街をより魅力的にするために、東京という都市を強くするために何を作ったらよいか、クライアントと一緒に考えるところから始めてきました。</p>
 												</dd>
@@ -276,16 +276,16 @@
 							<div class="l-wrapper">
 								<div class="p-crosstalk-article__chapter__container">
 									<header>
-										<p lang="en">CHAPTER <b>02</b></p>
+										<p lang="en">CHAPTER <b></b></p>
 										<h2>クライアントと一緒に<br>プログラム企画を行う醍醐味</h2>
 									</header>
 
 									<div class="p-crosstalk-article__chapter__body">
 										<div class="p-crosstalk-article__chapter__inserts is--wide is--flex">
-											<picture class="c-lazy-trigger">
+											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/milano/chapter2_insert1.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/milano/chapter2_insert1.jpg', true); ?>" alt="">
 											</picture>
-											<picture class="c-lazy-trigger">
+											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/milano/chapter2_insert2.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/milano/chapter2_insert2.jpg', true); ?>" alt="">
 											</picture>
 										</div>
@@ -293,22 +293,22 @@
 										<div class="p-crosstalk-article__chapter__talk">
 											<h3 class="p-crosstalk-article__chapter__q"><span>Q. このチームはどのようにプロジェクトに関わったのですか？</span></h3>
 											<dl>
-												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue', 'milano'); ?></dt>
 												<dd>
 													<p>まず、この建物を「都市観光拠点」と位置づけ、未来のあり方についてクライアントと一緒に考え始めるところからスタートしました。時代も社会もすごいスピードで進化しています。建物に今までのプログラムをそのまま持ってくるのではなく、社会の変化を分析・予測しながら、プログラムを考えました。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('小池', 'koike'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('小池', 'koike', 'milano'); ?></dt>
 												<dd>
 													<p>クライアントと一緒に企画をして、すぐにラフプランや空間スケッチを描き、事業性と合わせて引き出せる効果を検証しました。これを何度も重ねていきます。いままでにないプログラムは、相乗的に出せる周辺機能もイメージしながら、研究とスケッチを続けました。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('冨岡', 'koike'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('冨岡', 'tomioka', 'milano'); ?></dt>
 												<dd>
 													<p>クライアントから綿密な設計条件をもらってから設計を進めるというプロセスではありませんでした。常に将来をにらみながら輪郭決めと設計を繰り返すという進め方は、非常にやりがいのあるものでした。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('星川', 'hoshikawa'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('星川', 'hoshikawa', 'milano'); ?></dt>
 												<dd>
 													<p>クライアントと一緒に、新しい種になりそうな「もの」「こと」を見たり、体験したりしながら、その先の空間のあり方を考えてきました。</p>
 												</dd>
@@ -324,7 +324,7 @@
 							<div class="l-wrapper">
 								<div class="p-crosstalk-article__chapter__container">
 									<header>
-										<p lang="en">CHAPTER <b>03</b></p>
+										<p lang="en">CHAPTER <b></b></p>
 										<h2>行政との協働</h2>
 									</header>
 
@@ -333,18 +333,18 @@
 									<div class="p-crosstalk-article__chapter__body is--flex is--wide">
 										<div class="p-crosstalk-article__chapter__talk">
 											<dl>
-												<dt><?php echo KUME_Util::get_crosstalk_face('岩倉', 'iwakura'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('岩倉', 'iwakura', 'milano'); ?></dt>
 												<dd>
 													<p>このプロジェクトでは、都市再生特区という制度を使って容積の割増しを受けています。</p>
 													<p>通常の大規模開発はオフィスが多いので、そこに付帯させる用途がどれくらい都市に貢献するか、また同時に整備する周辺道路等の都市基盤整備の貢献度で評価されます。このプロジェクトは少しちがって、建物のプログラム自体が大きく評価されています。そういう評価を引き出すために、強いシナリオを一生懸命考えました。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('小尾口', 'koguchi'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('小尾口', 'koguchi', 'milano'); ?></dt>
 												<dd>
 													<p>行政はどうやって強い都市をつくるか、都市間競争にどう勝ち抜いていけるか、ということを真剣に考えています。私たちとクライアントも、都市の魅力をどう高めるかを考えてきました。行政は、決して事業者の提案にジャッジを下すだけの立場ではありません。ともに都市のあるべき姿を考える大切な関係だと感じています。行政とも強いシンパシーを感じながら、ときに一緒に苦労しながら進んできました。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('岩倉', 'iwakura'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('岩倉', 'iwakura', 'milano'); ?></dt>
 												<dd>
 													<p>都市再生特区手続きの他にも、さまざまな特例についてもチャレンジをしています。新しいことを成し遂げていくことに大きなやりがいを感じています。基本的なスタンスは「行政と一緒にチャレンジ」で進めてきています。</p>
 												</dd>
@@ -352,10 +352,10 @@
 										</div>
 
 										<div class="p-crosstalk-article__chapter__inserts">
-											<picture class="c-lazy-trigger">
+											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/milano/chapter3_insert1.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/milano/chapter3_insert1.jpg', true); ?>" alt="">
 											</picture>
-											<picture class="c-lazy-trigger">
+											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/milano/chapter3_insert2.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/milano/chapter3_insert2.jpg', true); ?>" alt="">
 											</picture>
 										</div>
@@ -369,15 +369,15 @@
 							<div class="l-wrapper">
 								<div class="p-crosstalk-article__chapter__container">
 									<header>
-										<p lang="en">CHAPTER <b>04</b></p>
+										<p lang="en">CHAPTER <b></b></p>
 										<h2>建築と都市を<br>同時に考えるプロセス</h2>
 									</header>
 
 									<div class="p-crosstalk-article__chapter__body">
 										<div class="p-crosstalk-article__chapter__talk">
-											<h3 class="p-crosstalk-article__chapter__q"><span>Q. 都市計画も関わるプロジェクトですね？</span></h3>
+											<h3 class="p-crosstalk-article__chapter__q"><span>Q. 都市と建築は別々ではないのですか？</span></h3>
 											<dl>
-												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue', 'milano'); ?></dt>
 												<dd>
 													<p>久米設計の建築チームと都市チームが一体となって、クリエイティビティを発揮し進めてきました。</p>
 													<p>都市の上位計画を分析し、そこに適した都市開発手法を選び、都市計画を決めて、建築をつくる、というそれぞれの専門チームがリレー式に仕事をするのではなく、街のあり方から場・空間、そこで生まれる体験、という都市・建築・コンテンツをチーム一体で考えてきました。分業では成し遂げられない、重層的な思考によって、より確度の高い「未来のシナリオ」を事業者とともに描くことができました。</p>
@@ -394,7 +394,7 @@
 							<div class="l-wrapper">
 								<div class="p-crosstalk-article__chapter__container">
 									<header>
-										<p lang="en">CHAPTER <b>05</b></p>
+										<p lang="en">CHAPTER <b></b></p>
 										<h2>数多くのプレーヤーとの対話</h2>
 									</header>
 
@@ -402,12 +402,12 @@
 										<div class="p-crosstalk-article__chapter__talk">
 											<h3 class="p-crosstalk-article__chapter__q"><span>Q. 大規模プロジェクトならではの進め方はありますか？</span></h3>
 											<dl>
-												<dt><?php echo KUME_Util::get_crosstalk_face('小池', 'koike'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('小池', 'koike', 'milano'); ?></dt>
 												<dd>
 													<p>まず大きなプロジェクトになるほど社会との関わりが強くなります。そのため広い視点や分析力、発想力が求められます。さらにこのプロジェクトではこれまでにないことに挑んでいるので、関係するプレーヤーが非常に多くなります。数々の運営関係者、コンテンツの関係者、細部にわたる専門家、デザイナーなど。私たちは全体の統合役としてできるだけプレーヤーと対話をすることを心掛けて進めてきました。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('星川', 'hoshikawa'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('星川', 'hoshikawa', 'milano'); ?></dt>
 												<dd>
 													<p>新しいチャレンジを多く含むプロジェクトなので、今までの経験や知見だけで進められるものではありません。プレーヤーが集まって繰り返し議論を重ね、時に悩みながら進めています。</p>
 												</dd>
@@ -423,7 +423,7 @@
 							<div class="l-wrapper">
 								<div class="p-crosstalk-article__chapter__container">
 									<header>
-										<p lang="en">CHAPTER <b>06</b></p>
+										<p lang="en">CHAPTER <b></b></p>
 										<h2>領域を広げた仕事のしかた</h2>
 									</header>
 
@@ -431,27 +431,27 @@
 										<div class="p-crosstalk-article__chapter__talk">
 											<h3 class="p-crosstalk-article__chapter__q"><span>Q. チームとして心掛けていることはありますか？</span></h3>
 											<dl>
-												<dt><?php echo KUME_Util::get_crosstalk_face('横山', 'yokoyama'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('横山', 'yokoyama', 'milano'); ?></dt>
 												<dd>
 													<p>都市計画、建築設計、エンジニアリングなど、それぞれの専門性を発揮しながらプロジェクトは進んでいきます。プロジェクトの大小に関わらず、それらの専門性はお互いの境界を拡げながら、広い思考で進められるべきだと思います。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue', 'milano'); ?></dt>
 												<dd>
 													<p>街のポテンシャル、都市の課題、それらをしっかりと整理した上で、そのために必要な場・空間・機能、さらには体験のためのコンテンツ、そして将来性およびリアリティのある事業性など、広く統合的に考え、未来の社会を実現していく。そういう基本姿勢を共有しながら、私たちチームは、様々な場面で、領域にとらわれないアイデアを出し合い、それを昇華させてきました。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('ヘラー', 'heller'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('ヘラー', 'heller', 'milano'); ?></dt>
 												<dd>
 													<p>デザインのことだけでなく、モノ・コトなんでも見聞きした新しい情報をメンバー内でシェアし合って雑談し合いながら進めてます。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('片山', 'katayama'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('片山', 'katayama', 'milano'); ?></dt>
 												<dd>
 													<p>設計の経験や技術だけではなくて、柔軟な発想が求められます。新しいチャレンジの連続なので、若手にもチャンスが多いです。</p>
 												</dd>
 
-												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue'); ?></dt>
+												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue', 'milano'); ?></dt>
 												<dd>
 													<p>これからも社会好き、未来好きのチームとして、クライアントのサポートを続けていきます。</p>
 												</dd>

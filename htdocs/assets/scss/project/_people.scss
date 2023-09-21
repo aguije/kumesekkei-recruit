@@ -583,6 +583,7 @@ main.p-crosstalk.is--single {
 			overflow: hidden;
 			height: pc-rem(3000);
 			margin-top: pc-rem(100);
+			counter-reset: chapter;
 
 			&.is--opened {
 				.p-crosstalk-article__more {
@@ -597,6 +598,8 @@ main.p-crosstalk.is--single {
 		}
 
 		.p-crosstalk-article__chapter {
+			counter-increment: chapter;
+
 			.p-crosstalk-article__chapter__container {
 				margin-right: pc-rem(60);
 				margin-left: pc-rem(60);
@@ -613,6 +616,10 @@ main.p-crosstalk.is--single {
 
 						b {
 							font-size: pc-rem(20);
+
+							&::before {
+								content: '0' counter(chapter);
+							}
 						}
 					}
 
@@ -628,8 +635,13 @@ main.p-crosstalk.is--single {
 				}
 			}
 
+			.p-crosstalk-article__chapter__talk {
+				margin-top: pc-rem(40);
+			}
+
 			.p-crosstalk-article__chapter__inserts {
 				overflow: hidden;
+				margin-top: pc-rem(40);
 				border-radius: pc-rem(4);
 
 				&.is--wide {
@@ -642,7 +654,6 @@ main.p-crosstalk.is--single {
 
 					picture {
 						width: 50%;
-						height: pc-rem(300);
 					}
 				}
 			}
@@ -671,7 +682,6 @@ main.p-crosstalk.is--single {
 				justify-content: center;
 				width: 100%;
 				margin-top: pc-rem(40);
-				margin-bottom: pc-rem(40);
 
 				&::before {
 					@include pseudo-block((
@@ -685,10 +695,12 @@ main.p-crosstalk.is--single {
 				> span {
 					font-size: pc-clamp(18, 18 * $fs--min-ratio);
 					font-weight: bold;
+					line-height: 1em * 20/18;
 					position: relative;
 					z-index: var(--zi-1);
 					width: fit-content;
 					padding: 0 1em;
+					text-align: center;
 					background-color: var(--color-white);
 				}
 			}
@@ -711,6 +723,7 @@ main.p-crosstalk.is--single {
 			dl {
 				display: flex;
 				flex-wrap: wrap;
+				margin-top: pc-rem(40);
 				column-gap: pc-rem(20);
 				row-gap: pc-rem(80);
 
@@ -850,7 +863,7 @@ main.p-crosstalk.is--single {
 					a {
 						display: flex;
 						padding: pc-rem(25) pc-rem(30) pc-rem(30) pc-rem(30);
-						column-gap: pc-rem(30);
+						column-gap: pc-rem(10);
 
 						@include taphover {
 							background-color: darken(#f7f7f7, 5);
@@ -878,11 +891,12 @@ main.p-crosstalk.is--single {
 						}
 
 						.is--title {
-							width: calc(100% - #{pc-rem(100 + 30)});
+							width: calc(100% - #{pc-rem(100 + 10)});
 
 							h4 {
 								font-size: pc-rem(14);
 								font-weight: bold;
+								line-height: 1em * 17.5/14;
 							}
 
 							p {
@@ -901,6 +915,18 @@ main.p-crosstalk.is--single {
 				&.is--next {
 					order: 3;
 					border-bottom-right-radius: pc-rem(16);
+
+					a {
+						display: flex;
+						flex-direction: row-reverse;
+
+						.is--thumb {
+							.c-circle-arrow {
+								right: pc-rem(-10);
+								left: unset;
+							}
+						}
+					}
 				}
 			}
 		}

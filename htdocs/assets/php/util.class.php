@@ -59,6 +59,10 @@ class KUME_Util {
 		return self::asset_path('images/' . $_filename, $_timestamp);
 	}
 
+	public static function image_full_path ($_filename, $_timestamp = false) {
+		return self::asset_full_path('images/' . $_filename, $_timestamp);
+	}
+
 
 	/** =================================================================
 	 *
@@ -185,17 +189,71 @@ class KUME_Util {
 
 	/** =================================================================
 	 *
+	 * GET IMAGE ASPECT STYLE
+	 *
+	 * --------------------------------------------------------------- */
+
+	public static function get_image_aspect_style ($_path) {
+		$full_path = KUME_Util::image_full_path('people/crosstalk/bim/chapter3_insert1.jpg');
+
+		if (file_exists($full_path)) {
+			$size = getimagesize($full_path);
+
+			if ($size) {
+				return "style=\"aspect-ratio: {$size[0]} / {$size[1]};\"";
+			}
+		}
+	}
+
+
+	/** =================================================================
+	 *
+	 * fastgetimagesize
+	 * FYI) https://stackoverflow.com/questions/4635936/super-fast-getimagesize-in-php
+	 *
+	 * --------------------------------------------------------------- */
+
+	public static function fastgetimagesize ($_url) {
+		function ranger ($url) {
+			$headers = array(
+				"Range: bytes=0-32768"
+			);
+
+			$curl = curl_init($url);
+			curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+			$data = curl_exec($curl);
+			curl_close($curl);
+
+			return $data;
+		}
+
+		$raw = ranger($_url);
+		$im = imagecreatefromstring($raw);
+
+		$width = imagesx($im);
+		$height = imagesy($im);
+
+		return array(
+			'width' => $width,
+			'height' => $height,
+		);
+	}
+
+
+	/** =================================================================
+	 *
 	 * GET CROSSTALK FACE
 	 *
 	 * --------------------------------------------------------------- */
 
-	public static function get_crosstalk_face ($_name, $_slug) {
+	public static function get_crosstalk_face ($_name, $_slug, $_dir) {
 		ob_start();
 
 		?>
 		<figure class="p-crosstalk-article__face">
 			<div class="c-circle-picture c-lazy-trigger">
-				<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path("people/crosstalk/milano/member_{$_slug}.jpg", true); ?>" alt="">
+				<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path("people/crosstalk/{$_dir}/member_{$_slug}.jpg", true); ?>" alt="">
 			</div>
 			<figcaption><p><?php echo $_name; ?></p></figcaption>
 		</figure>
