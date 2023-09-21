@@ -40,10 +40,11 @@ $(function () {
 				$chapters.addClass('is--opened');
 
 				gsap.to($chapters, {
-					duration: .6,
+					duration: .9,
 					height: $chapters.find('.p-crosstalk-article__chapters__container').height(),
 					onComplete: () => {
 						$chapters.find('.p-crosstalk-article__more').remove();
+						$chapters.css({ height: 'auto' });
 					}
 				});
 			}
