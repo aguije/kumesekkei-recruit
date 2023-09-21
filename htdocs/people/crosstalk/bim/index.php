@@ -28,7 +28,7 @@
 			'url' => '/people/#crosstalk'
 		),
 		array(
-			'title' => 'BIM・デジタルデザインを取り入れた“新たな設計ワークフロー”の構築',
+			'title' => 'BIM座談会',
 			'url' => '/people/bim/'
 		),
 	);
@@ -39,7 +39,24 @@
 	 * --------------------------------------------------------------- */
 
 	$meta = KUME_Util::get_meta(array(
-		'bc' => $bc
+		'bc' => array(
+			array(
+				'title' => '採用トップ',
+				'url' => '/'
+			),
+			array(
+				'title' => '人を知る',
+				'url' => '/people/'
+			),
+			array(
+				'title' => 'クロストーク',
+				'url' => '/people/#crosstalk'
+			),
+			array(
+				'title' => 'BIM・デジタルデザインを取り入れた“新たな設計ワークフロー”の構築',
+				'url' => '/people/bim/'
+			),
+		)
 	));
 
 
