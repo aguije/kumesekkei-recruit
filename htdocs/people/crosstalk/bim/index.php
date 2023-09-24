@@ -327,14 +327,6 @@
 									<div class="p-crosstalk-article__chapter__body">
 										<div class="p-crosstalk-article__chapter__talk">
 											<h3 class="p-crosstalk-article__chapter__q"><span>Q. BIMと言えば3Dプレゼンなどのイメージがありますが、<br>どのような取り組みをしましたか？</span></h3>
-											<div class="p-crosstalk-article__chapter__inserts is--wide is--flex">
-												<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/bim/chapter3_insert1.jpg'); ?>>
-													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/bim/chapter3_insert1.jpg', true); ?>" alt="">
-												</picture>
-												<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/bim/chapter3_insert2.jpg'); ?>>
-													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/bim/chapter3_insert2.jpg', true); ?>" alt="">
-												</picture>
-											</div>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('古川', 'furukawa', 'bim'); ?></dt>
 												<dd>
