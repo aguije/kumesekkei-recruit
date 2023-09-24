@@ -211,7 +211,7 @@ $(function () {
 										delay: 4500,
 										disableOnInteraction: false
 									},
-									loop: 1,
+									loop: 0,
 									pagination: {
 										el: '.p-about__item__sub .swiper-parent.is--upper .swiper-pagination',
 										clickable: 1
@@ -223,7 +223,7 @@ $(function () {
 								const swiperLower = new Swiper('.p-about__item__sub .swiper-parent.is--lower .swiper', {
 									init: 0,
 									autoHeight: 0,
-									loop: 1,
+									loop: 0,
 									pagination: 0,
 									navigation: 0,
 									scrollbar: 0,
