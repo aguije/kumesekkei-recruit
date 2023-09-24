@@ -49,8 +49,14 @@ $(function () {
 						Promise.all(promises).then(function () {
 							GLOBAL.methods.util.showInsetMask({
 								mode: true,
-								stagger: .15,
-								target: '.p-hero .p-hero__body .c-inset-mask'
+								delay: 0,
+								target: '.p-hero .p-hero__body h2.c-inset-mask'
+							});
+
+							GLOBAL.methods.util.showInsetMask({
+								mode: true,
+								delay: .15,
+								target: '.p-hero .p-hero__body p > .c-inset-mask'
 							});
 
 							//
@@ -75,18 +81,6 @@ $(function () {
 								scrollbar: 0,
 								allowTouchMove: 0
 							});
-
-							/*
-							swiper.on('slideChange', function () {
-								$('.p-hero__lead').find('.c-progress').remove();
-
-								$('.p-hero__lead').append(`
-									<svg class="c-progress" viewBox="0 0 63.6619772368 63.6619772368">
-										<circle cx="31.8309886184" cy="31.8309886184" r="15.9154943092" fill="transparent" stroke="#000000" stroke-dashoffset="25" stroke-width="1" stroke-dasharray="0 100"></circle>
-									</svg>
-								`);
-							});
-							*/
 
 							swiper.init();
 							GLOBAL.swipers.push(swiper);

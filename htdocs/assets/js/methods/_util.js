@@ -277,6 +277,7 @@ GLOBAL.methods.util.showInsetMask = function (_option) {
 	_option = Object.assign({
 		mode: true,
 		target: null,
+		delay: 0,
 		stagger: 0,
 		complete: function () { return true; }
 	}, _option);
@@ -290,13 +291,14 @@ GLOBAL.methods.util.showInsetMask = function (_option) {
 			gsap.to(tween, {
 				value: 0,
 				duration: .6,
-				delay: _option.stagger * _index,
+				delay: _option.delay,
+				// stagger: : _option.stagger,
 				onUpdate: function () {
-					$this.css({ clipPath: `inset(0% ${tween.value}% 0% 0%)` });
+					$this.css({ clipPath: `inset(${tween.value}% 0% 0% 0%)` });
 				},
 				onComplete: function () {
 					gsap.to($this.find('.is--mask'), {
-						translateX: '100%',
+						translateY: '-100%',
 						duration: .3
 					});
 				}
