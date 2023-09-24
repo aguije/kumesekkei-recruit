@@ -384,26 +384,6 @@
 				}
 			}
 		}
-
-		.p-sh__logoset__text {
-			@include pc () {
-				font-size: pc-clamp(12);
-				margin-top: pc-clamp(24 - 1.5);
-			}
-			@include sp ((
-				font-size: 20,
-				margin-top: 46
-			)) {}
-
-			p + p {
-				margin-top: 1em * 12/16;
-				text-transform: uppercase;
-
-				@include sp () {
-					margin-top: sp-rem(19);
-				}
-			}
-		}
 	}
 
 	.p-sh__nav {

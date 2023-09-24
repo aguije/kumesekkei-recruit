@@ -10,10 +10,6 @@
 
 				<div class="p-sh__logoset">
 					<p class="p-sh__logo"><a href="/"><span class="c-icon">KUME SEKKEI</span></a></p>
-					<div class="p-sh__logoset__text">
-						<p lang="en"><strong>Recruitment 2024</strong></p>
-						<p lang="en">Yutakasa Wo Hiraku</p>
-					</div>
 				</div>
 
 				<div class="p-sh__buttons">
