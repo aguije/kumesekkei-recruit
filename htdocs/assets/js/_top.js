@@ -98,41 +98,54 @@ $(function () {
 
 			(function () {
 				const $swiper = $('.p-hero .swiper');
-
-				const threshold = [];
-				for (let i = 0; i <= 1.0; i += 0.005) {
-					threshold.push(i);
-				}
+				let border_y;
 
 				let ticking = false;
-				const start_ratio = .95;
 
-				let mIO = new MultipleIO('.p-hero', {
-					config: {
-						threshold: threshold
-					},
-					onEnter: (_entry, _ratio) => {
-						if (!ticking) {
-							window.requestAnimationFrame(function () {
-								if (_ratio < .95) {
-									$swiper.css({ transform: `translateY(${(1 - (_ratio + (1 - start_ratio))) * .3 * 100}%)` });
-								}
-								else {
-									$swiper.css({ transform: `translateY(0%)` });
-								}
+				const resize = () => {
+					border_y = $('.p-hero').height();
+					scroll();
+				};
 
-								ticking = false;
-							});
+				$(window).on('resize.parallax', function () {
+					if (!ticking) {
+						window.requestAnimationFrame(function () {
+							resize();
+							ticking = false;
+						});
 
-							ticking = true;
-						}
-					},
-					onLeave: () => {
-
-					},
-					triggerOnce: false
+						ticking = true;
+					}
 				});
-				GLOBAL.observers.push(mIO);
+
+				const scroll = () => {
+					if (window.scrollY < border_y) {
+
+						const start_ratio = .98;
+						const ratio = 1 - window.scrollY / border_y;
+
+						if (ratio < .98) {
+							$swiper.css({ transform: `translateY(${(1 - (ratio + (1 - start_ratio))) * .333 * 100}%) translateZ(0)` });
+						}
+						else {
+							$swiper.css({ transform: `translateY(0%) translateZ(0)` });
+						}
+
+					}
+				};
+
+				$(window).on('scroll.parallax touchmove.parallax', function () {
+					if (!ticking) {
+						window.requestAnimationFrame(function () {
+							scroll();
+							ticking = false;
+						});
+
+						ticking = true;
+					}
+				});
+
+				resize();
 			})();
 
 			//
