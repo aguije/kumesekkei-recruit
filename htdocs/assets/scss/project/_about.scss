@@ -1,0 +1,104 @@
+/** =================================================================
+ *
+ * ABOUT
+ *
+ * ------------------------------------------------------------------
+ *
+ *
+ *
+ * --------------------------------------------------------------- */
+
+.p-about__message {
+
+	.p-about__message__header {
+		.c-article-header {
+			.is--title [lang='ja'] i {
+				font-family: 'ヒラギノ明朝 ProN W6', 'HiraMinProN-W6', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
+				font-size: pc-rem(44);
+				font-style: normal;
+				display: inline-block;
+				height: 1em * 34/44;
+				transform: translateY(-80%);
+				vertical-align: bottom;
+			}
+		}
+	}
+
+	.p-about__message__sec {
+		margin-top: pc-rem(60 - 10);
+
+		header {
+			padding-top: pc-rem(80 - 10);
+			border-top: 1px solid var(--color-border);
+
+			h3 {
+				font-size: pc-rem(30);
+				font-weight: 700;
+				line-height: 1 * 84/60;
+				color: #333333;
+			}
+		}
+
+		picture {
+			overflow: hidden;
+			border-radius: pc-rem(4);
+		}
+
+		.p-about__message__sec__body {
+			font-size: pc-clamp(16, 16 * $fs--min-ratio);
+			line-height: 1 * 1.75;
+			padding-top: pc-rem(40 - 12);
+
+			p {
+				text-indent: 1em;
+			}
+		}
+	}
+
+	.p-about__message__sec1 {
+		figure {
+			figcaption {
+				font-size: pc-clamp(14, 14 * $fs--min-ratio);
+				line-height: 1;
+				margin-top: 1em;
+			}
+		}
+	}
+
+	.p-about__message__sec2 {
+		picture {
+			margin-top: pc-rem(40);
+			margin-bottom: pc-rem(40 - 28);
+		}
+	}
+
+	.p-about__message__sec3 {
+		.l-container {
+			> div {
+				position: relative;
+			}
+		}
+
+		.p-about__message__sec3__picture {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50vw;
+
+			picture {
+				width: pc-rem(480);
+				margin-left: auto;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		.p-about__message__sec__body {
+			p.u-align--right {
+				font-size: pc-clamp(14, 14 * $fs--min-ratio);
+				line-height: 1;
+			}
+		}
+	}
+
+}

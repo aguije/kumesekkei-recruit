@@ -241,10 +241,10 @@ GLOBAL.util = {
 
 	const set_debug_cookie = function (_mode) {
 		if (_mode === true) {
-			Cookies.set('onotakehiko_debug', '1', { path: '/' });
+			Cookies.set('kume_debug', '1', { path: '/' });
 		}
 		else {
-			Cookies.remove('onotakehiko_debug', { path: '/' });
+			Cookies.remove('kume_debug', { path: '/' });
 		}
 	};
 
@@ -258,7 +258,7 @@ GLOBAL.util = {
 		}
 	}
 
-	if (Cookies.get('onotakehiko_debug') && parseInt(Cookies.get('onotakehiko_debug')) === 1) {
+	if (Cookies.get('kume_debug') && parseInt(Cookies.get('kume_debug')) === 1) {
 		GLOBAL.debug = true;
 	}
 	else {
@@ -348,6 +348,7 @@ let $gh;
 
 // @codekit-append "methods/_util.js"
 // @codekit-append "_top.js"
+// @codekit-append "_about.js"
 // @codekit-append "_people.js"
 // @codekit-append "_ui.js"
 

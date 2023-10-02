@@ -33,10 +33,30 @@ $(function () {
 		let eventObj = new $.Event('initUI');
 		$(window).trigger(eventObj);
 
+
+		/** =================================================================
+		 * TOP
+		 * --------------------------------------------------------------- */
+
 		if ($('main.p-top').length > 0) {
 			eventObj = new $.Event('initTop');
 			$(window).trigger(eventObj);
 		}
+
+
+		/** =================================================================
+		 * ABOUT
+		 * --------------------------------------------------------------- */
+
+		else if ($('main.p-about.is--index').length > 0) {
+			eventObj = new $.Event('initMessage');
+			$(window).trigger(eventObj);
+		}
+
+
+		/** =================================================================
+		 * PEOPLE
+		 * --------------------------------------------------------------- */
 
 		else if ($('main.p-people.is--index').length > 0) {
 			eventObj = new $.Event('initPeople');
