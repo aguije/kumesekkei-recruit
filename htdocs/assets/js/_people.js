@@ -26,10 +26,6 @@ $(function () {
 		});
 	}
 
-	function unloadPeople () {
-
-	}
-
 	function initCrosstalkSingle () {
 		$('.p-crosstalk-article__more a').on('click', function (_event) {
 			_event.preventDefault();
@@ -59,10 +55,6 @@ $(function () {
 		});
 	}
 
-	function unloadCrosstalkSingle () {
-
-	}
-
 
 	/* ==================================================================
 	 *
@@ -79,25 +71,11 @@ $(function () {
 		initPeople();
 	});
 
-	$(window).on('unloadPeople', function () {
-		console.log(' ');
-		console.log('EVENT: unloadPeople');
-
-		unloadPeople();
-	});
-
 	$(window).on('initCrosstalkSingle', function () {
 		console.log(' ');
 		console.log('EVENT: initCrosstalkSingle');
 
 		initCrosstalkSingle();
-	});
-
-	$(window).on('unloadCrosstalkSingle', function () {
-		console.log(' ');
-		console.log('EVENT: unloadCrosstalkSingle');
-
-		unloadCrosstalkSingle();
 	});
 
 });

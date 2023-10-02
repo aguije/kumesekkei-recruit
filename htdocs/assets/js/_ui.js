@@ -381,10 +381,6 @@ $(function () {
 		initPageNav({ mode: true });
 	}
 
-	function unload () {
-
-	}
-
 
 	/* ==================================================================
 	 *
@@ -399,13 +395,6 @@ $(function () {
 		console.log('EVENT: initUI');
 
 		init();
-	});
-
-	$(window).on('unloadUI', function () {
-		console.log(' ');
-		console.log('EVENT: unloadUI');
-
-		unload();
 	});
 
 });

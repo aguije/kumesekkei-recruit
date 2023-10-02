@@ -53,6 +53,11 @@ $(function () {
 			$(window).trigger(eventObj);
 		}
 
+		else if ($('main.p-about.is--csr').length > 0) {
+			eventObj = new $.Event('initCsr');
+			$(window).trigger(eventObj);
+		}
+
 
 		/** =================================================================
 		 * PEOPLE
@@ -70,10 +75,6 @@ $(function () {
 
 	}
 
-	function unload () {
-
-	}
-
 
 	/* ==================================================================
 	 *
@@ -86,13 +87,6 @@ $(function () {
 		console.log('EVENT: initCommon');
 
 		init();
-	});
-
-	$(window).on('unloadCommon', function () {
-		console.log(' ');
-		console.log('EVENT: unloadCommon');
-
-		unload();
 	});
 
 

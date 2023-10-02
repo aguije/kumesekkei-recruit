@@ -409,10 +409,6 @@ $(function () {
 		});
 	}
 
-	function unload () {
-
-	}
-
 
 	/* ==================================================================
 	 *
@@ -427,13 +423,6 @@ $(function () {
 		console.log('EVENT: initTop');
 
 		init();
-	});
-
-	$(window).on('unloadTop', function () {
-		console.log(' ');
-		console.log('EVENT: unloadTop');
-
-		unload();
 	});
 
 });
