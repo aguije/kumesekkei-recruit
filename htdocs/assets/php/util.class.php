@@ -146,14 +146,25 @@ class KUME_Util {
 									echo ',';
 								}
 
-								?>
-								{
-									"@type": "ListItem",
-									"position": <?php echo $layer_key + 1; ?>,
-									"name": "<?php echo $layer['title']; ?>",
-									"item": "<?php echo $root_url . $layer['url']; ?>"
+								if (!empty($layer['url'])) {
+									?>
+									{
+										"@type": "ListItem",
+										"position": <?php echo $layer_key + 1; ?>,
+										"name": "<?php echo $layer['title']; ?>",
+										"item": "<?php echo $root_url . $layer['url']; ?>"
+									}
+									<?php
 								}
-								<?php
+								else {
+									?>
+									{
+										"@type": "ListItem",
+										"position": <?php echo $layer_key + 1; ?>,
+										"name": "<?php echo $layer['title']; ?>"
+									}
+									<?php
+								}
 							}
 
 						?>
@@ -194,7 +205,7 @@ class KUME_Util {
 	 * --------------------------------------------------------------- */
 
 	public static function get_image_aspect_style ($_path) {
-		$full_path = KUME_Util::image_full_path('people/crosstalk/bim/chapter3_insert1.jpg');
+		$full_path = KUME_Util::image_full_path($_path);
 
 		if (file_exists($full_path)) {
 			$size = getimagesize($full_path);
