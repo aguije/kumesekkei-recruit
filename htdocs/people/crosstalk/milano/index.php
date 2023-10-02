@@ -226,7 +226,7 @@
 						<!-- Chapter 1 -->
 						<section class="p-crosstalk-article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container">
+								<div class="p-crosstalk-article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>新しい街の<br>核を創るプロジェクト</h2>
@@ -274,7 +274,7 @@
 						<!-- Chapter 2 -->
 						<section class="p-crosstalk-article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container">
+								<div class="p-crosstalk-article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>クライアントと一緒に<br>プログラム企画を行う醍醐味</h2>
@@ -322,7 +322,7 @@
 						<!-- Chapter 3 -->
 						<section class="p-crosstalk-article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container">
+								<div class="p-crosstalk-article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>行政との協働</h2>
@@ -367,7 +367,7 @@
 						<!-- Chapter 4 -->
 						<section class="p-crosstalk-article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container">
+								<div class="p-crosstalk-article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>建築と都市を<br>同時に考えるプロセス</h2>
@@ -392,7 +392,7 @@
 						<!-- Chapter 5 -->
 						<section class="p-crosstalk-article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container">
+								<div class="p-crosstalk-article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>数多くのプレーヤーとの対話</h2>
@@ -421,7 +421,7 @@
 						<!-- Chapter 6 -->
 						<section class="p-crosstalk-article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container">
+								<div class="p-crosstalk-article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>領域を広げた仕事のしかた</h2>
@@ -470,17 +470,17 @@
 					</div>
 				</div>
 
-				<aside class="p-crosstalk-article__link">
-					<div class="l-wraller">
-						<div class="p-crosstalk-article__link__container">
+				<aside class="c-banner">
+					<div class="l-wrapper">
+						<div class="c-banner__container">
 							<a href="https://www.kumesekkei.co.jp/designstory/shinjuku_tokyu_milano_development.html" target="_blank" rel="noopener">
-								<picture class="c-lazy-trigger">
+								<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/milano/story_thumb1.jpg'); ?>>
 									<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/milano/story_thumb1.jpg', true); ?>" alt="">
 								</picture>
 								<div>
-									<p class="p-crosstalk-article__link__tag"><div class="c-button c-button--round is--black is--fit"><b>デザインストーリー</b></div></p>
+									<p class="c-banner__tag"><div class="c-button c-button--round is--black is--fit"><b>デザインストーリー</b></div></p>
 									<h4><span class="c-icon c-icon--external"></span>魅力ある都市の未来像を描く</h4>
-									<p class="p-crosstalk-article__link__description">新宿TOKYU MILANO再開発</p>
+									<p class="c-banner__description">新宿TOKYU MILANO再開発</p>
 								</div>
 							</a>
 						</div>

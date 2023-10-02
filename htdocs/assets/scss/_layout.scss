@@ -26,4 +26,34 @@
 		padding-right: $size--pad--sp,
 		padding-left: $size--pad--sp,
 	)) {}
+
+	&.is--2col {
+		display: flex;
+		column-gap: pc-rem(80);
+
+		> div {
+			width: calc(50% - #{pc-rem(80 * .5)})
+		}
+
+		&.without--gap {
+			column-gap: 0;
+
+			> div {
+				width: 50%;
+			}
+		}
+	}
+}
+
+.l-container--narrow {
+	@include pc ((
+		margin-right: $size--pad,
+		margin-left: $size--pad,
+		padding-right: 160,
+		padding-left: 160,
+	)) {}
+	@include sp ((
+		padding-right: $size--pad--sp,
+		padding-left: $size--pad--sp,
+	)) {}
 }

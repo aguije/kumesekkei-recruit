@@ -178,7 +178,7 @@
 						<!-- Chapter 1 -->
 						<section class="p-crosstalk-article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container">
+								<div class="p-crosstalk-article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>BIMについて</h2>
@@ -212,7 +212,7 @@
 						<!-- Chapter 2 -->
 						<section class="p-crosstalk-article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container">
+								<div class="p-crosstalk-article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>設計概要とBIMワークフロー</h2>
@@ -318,7 +318,7 @@
 						<!-- Chapter 3 -->
 						<section class="p-crosstalk-article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container">
+								<div class="p-crosstalk-article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>BIMによるプレゼンテーションと業務効率化</h2>
@@ -363,7 +363,7 @@
 						<!-- Chapter 4 -->
 						<section class="p-crosstalk-article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container">
+								<div class="p-crosstalk-article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>今後の展望</h2>
