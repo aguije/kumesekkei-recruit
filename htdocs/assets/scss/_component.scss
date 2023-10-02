@@ -514,7 +514,7 @@ $pie_r: 31.8309886184;
 .c-article-header {
 	margin-top: pc-rem(100 - 3);
 
-	.is--title {
+	.c-article-header__title {
 		display: flex;
 		flex-direction: column;
 		row-gap: pc-rem(20 - 10);
