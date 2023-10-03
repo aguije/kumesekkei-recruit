@@ -26,6 +26,16 @@ $(function () {
 	}
 
 	function initCsr () {
+		const $nav_links = $('.p-about__csr__nav a');
+
+		const set_active = (_hash) => {
+			const $active = $nav_links.filter(`[href="${_hash}"]`);
+			const $siblings = $active.closest('li').siblings().find('a');
+
+			$active.addClass('is--active');
+			$siblings.removeClass('is--active');
+		};
+
 		GLOBAL.methods.util.lazy({
 			mode: true,
 			wrapper: '.c-lazy-trigger'
@@ -40,11 +50,11 @@ $(function () {
 				duration: .6,
 				scrollTo: { y: hash },
 				onComplete: () => {
+					set_active(hash);
 					window.location.hash = hash;
 				}
 			});
 		});
-
 
 		$(function(){
 			var hash = window.location.hash;
@@ -53,6 +63,8 @@ $(function () {
 				duration: .6,
 				scrollTo: { y: hash }
 			});
+
+			set_active(hash);
 		});
 	}
 

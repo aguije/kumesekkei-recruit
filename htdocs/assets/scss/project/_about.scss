@@ -141,6 +141,13 @@
 							transform: scaleX(1);
 						}
 					}
+
+					&.is--active {
+						.c-animate-underline::after {
+							transform: scaleX(1);
+						}
+					}
+
 					.c-animate-underline::after {
 						bottom: 0;
 					}
