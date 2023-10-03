@@ -244,14 +244,14 @@
 										</a>
 									</h3>
 									<div class="p-about__csr__tags">
-										<a href="/about/csr/#">#こども未来</a><!--
-										--><a href="/about/csr/#">#安全・安心</a><!--
-										--><a href="/about/csr/#">#カーボンニュートラル</a><br><!--
-										--><a href="/about/csr/#">#ダイバシティ＆インクルージョン</a><!--
-										--><a href="/about/csr/#">#エリアUP</a><br><!--
-										--><a href="/about/csr/#">#ワークスタイル</a><!--
-										--><a href="/about/csr/#">#ストック活用</a><!--
-										--><a href="/about/csr/#">#これからの学校</a>
+										<a href="/about/csr/#kodomo">#こども未来</a><!--
+										--><a href="/about/csr/#carbon">#カーボンニュートラル</a><br><!--
+										--><a href="/about/csr/#diversity">#ダイバーシティ＆インクルージョン</a><!--
+										--><a href="/about/csr/#community">#地域づくり</a><br><!--
+										--><a href="/about/csr/#study">#これからの学び</a><!--
+										--><a href="/about/csr/#workstyle">#ワークスタイル</a><br><!--
+										--><a href="/about/csr/#safety">#安全・安心</a><!--
+										--><a href="/about/csr/#stock">#ストック活用</a>
 									</div>
 								</div>
 								<div class="p-about__item__sub">

@@ -25,16 +25,35 @@ $(function () {
 		});
 	}
 
-	function unloadMessage () {
+	function initCsr () {
+		GLOBAL.methods.util.lazy({
+			mode: true,
+			wrapper: '.c-lazy-trigger'
+		});
 
-	}
+		$('.p-about__csr__nav').find('a').on('click', function (_event) {
+			_event.preventDefault();
 
-	function initCrosstalkSingle () {
+			const hash = $(this).attr('href');
 
-	}
+			gsap.to(window, {
+				duration: .6,
+				scrollTo: { y: hash },
+				onComplete: () => {
+					window.location.hash = hash;
+				}
+			});
+		});
 
-	function unloadCrosstalkSingle () {
 
+		$(function(){
+			var hash = window.location.hash;
+
+			gsap.to(window, {
+				duration: .6,
+				scrollTo: { y: hash }
+			});
+		});
 	}
 
 
@@ -53,25 +72,11 @@ $(function () {
 		initMessage();
 	});
 
-	$(window).on('unloadMessage', function () {
+	$(window).on('initCsr', function () {
 		console.log(' ');
-		console.log('EVENT: unloadMessage');
+		console.log('EVENT: initCsr');
 
-		unloadMessage();
-	});
-
-	$(window).on('initCrosstalkSingle', function () {
-		console.log(' ');
-		console.log('EVENT: initCrosstalkSingle');
-
-		initCrosstalkSingle();
-	});
-
-	$(window).on('unloadCrosstalkSingle', function () {
-		console.log(' ');
-		console.log('EVENT: unloadCrosstalkSingle');
-
-		unloadCrosstalkSingle();
+		initCsr();
 	});
 
 });

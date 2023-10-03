@@ -449,7 +449,6 @@ main.p-crosstalk.is--single {
 				}
 
 				> div {
-					font-size: pc-clamp(16, 16 * $fs--min-ratio);
 					line-height: $lh--huge;
 					margin-top: pc-rem(20);
 				}
@@ -469,7 +468,7 @@ main.p-crosstalk.is--single {
 			background-color: var(--color-theme-bg-invert);
 
 			h3 {
-				font-size: pc-clamp(16);
+				font-size: pc-clamp(16, 16 * $fs--min-ratio);
 				line-height: 1;
 				text-align: center;
 			}
@@ -746,6 +745,8 @@ main.p-crosstalk.is--single {
 				margin: 0 auto;
 			}
 		}
+
+
 
 
 		/** =================================================================

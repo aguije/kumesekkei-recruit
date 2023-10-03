@@ -283,7 +283,7 @@ GLOBAL.methods.util.showInsetMask = function (_option) {
 	}, _option);
 
 	if (_option.mode === true) {
-		$(_option.target).each(function (_index) {
+		$(_option.target).each(function () {
 
 			const $this = $(this);
 			let tween = { value: 100 };

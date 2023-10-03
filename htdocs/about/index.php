@@ -64,7 +64,7 @@
 				<div class="l-wrapper">
 					<div class="c-page-header__container">
 						<div class="c-page-header__main">
-							<h1 class="c-article-header__title">
+							<h1 class="is--title">
 								<span lang="en">About KUME SEKKEI</span>
 								<span lang="ja">会社を知る</span>
 							</h1>
@@ -96,7 +96,7 @@
 						<div class="l-container--narrow">
 
 							<div class="c-article-header">
-								<h2 class="is--title">
+								<h2 class="c-article-header__title">
 									<span lang="en">Top Message</span>
 									<span lang="ja">心地よいチームワークで、<br>
 									プラス<i>α</i>の価値を生み出していく</span>

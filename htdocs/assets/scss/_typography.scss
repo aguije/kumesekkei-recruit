@@ -162,9 +162,9 @@ $ff--gothic: $ff--default;
  * --------------------------------------------------------------- */
 
 html {
-	@include pc ((
-		font-size: $fs
-	)) {}
+	@include pc () {
+		font-size: pc-clamp($fs, $fs * $fs--min-ratio);
+	}
 	@include sp ((
 		font-size: $fs--sp
 	)) {}

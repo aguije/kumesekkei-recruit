@@ -8,11 +8,17 @@
  *
  * --------------------------------------------------------------- */
 
+/** =================================================================
+ *
+ * MESSAGE
+ *
+ * --------------------------------------------------------------- */
+
 .p-about__message {
 
 	.p-about__message__header {
 		.c-article-header {
-			.is--title [lang='ja'] i {
+			.c-article-header__title [lang='ja'] i {
 				font-family: 'ヒラギノ明朝 ProN W6', 'HiraMinProN-W6', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
 				font-size: pc-rem(44);
 				font-style: normal;
@@ -45,7 +51,6 @@
 		}
 
 		.p-about__message__sec__body {
-			font-size: pc-clamp(16, 16 * $fs--min-ratio);
 			line-height: 1 * 1.75;
 			padding-top: pc-rem(40 - 12);
 
@@ -99,6 +104,124 @@
 				line-height: 1;
 			}
 		}
+	}
+
+}
+
+
+/** =================================================================
+ *
+ * CSR
+ *
+ * --------------------------------------------------------------- */
+
+.p-about__csr {
+
+	.p-about__csr__nav {
+		margin-top: pc-rem(80);
+		margin-bottom: calc(#{pc-rem(80)} - 76px);
+
+		ul {
+			font-size: pc-rem(19);
+			font-style: italic;
+			line-height: 1;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: pc-rem(36);
+			column-gap: 2em;
+			row-gap: pc-rem(30);
+			border-radius: pc-rem(5);
+			background-color: #f1f1f1;
+
+			li {
+				a {
+					@include taphover {
+						.c-animate-underline::after {
+							transform: scaleX(1);
+						}
+					}
+					.c-animate-underline::after {
+						bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.p-about__csr__sec {
+		padding-top: 76px;
+
+		header {
+			width: 50%;
+			padding-top: pc-rem(15);
+			padding-right: pc-rem(10);
+			padding-left: pc-rem(10);
+			border-top: 1px solid var(--color-border);
+
+			h3 {
+				font-size: pc-rem(22);
+			}
+		}
+
+		a.p-about__csr__link {
+			display: flex;
+			flex-direction: column;
+			row-gap: pc-rem(30);
+			pointer-events: none;
+
+			@include taphover {
+				.p-about__csr__link__thumb {
+					picture {
+						transform: scale($scale--hover);
+					}
+				}
+			}
+
+			.p-about__csr__link__thumb {
+				overflow: hidden;
+				aspect-ratio: 16 / 9;
+				pointer-events: all;
+
+				picture {
+					width: 100%;
+					height: 100%;
+
+					@include transition('transform', $dur--hover);
+				}
+			}
+
+			p {
+				font-size: pc-clamp(15, 15 * $fs--min-ratio);
+				position: relative;
+				padding-left: pc-clamp(11 + 10);
+				text-indent: pc-clamp(-11);
+				pointer-events: all;
+
+				.c-icon {
+					font-size: pc-clamp(11);
+					padding-right: 1em * 10/11;
+				}
+
+				.is--text {
+					font-weight: bold;
+				}
+			}
+		}
+
+		ul {
+			display: flex;
+			margin-top: pc-rem(40);
+			column-gap: pc-rem(40);
+
+			li {
+				width: calc((100% - #{pc-rem(40 * 2)}) / 3);
+			}
+		}
+	}
+
+	.p-about__csr__sec + .p-about__csr__sec {
+
 	}
 
 }
