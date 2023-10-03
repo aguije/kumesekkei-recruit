@@ -134,7 +134,7 @@
 							</header>
 							<ul>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/ai_workshop.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/kodomo_pic1.jpg', true); ?>" alt="">
@@ -144,7 +144,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="#" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/kodomo_pic2.jpg', true); ?>" alt="">
@@ -154,7 +154,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/work_experience.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/kodomo_pic3.jpg', true); ?>" alt="">
@@ -176,7 +176,7 @@
 							</header>
 							<ul>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/kama_city_hall_me.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/carbon_pic1.jpg', true); ?>" alt="">
@@ -186,7 +186,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/eco_friendly02.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/carbon_pic2.jpg', true); ?>" alt="">
@@ -196,7 +196,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/eco_friendly01.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/carbon_pic3.jpg', true); ?>" alt="">
@@ -218,7 +218,7 @@
 							</header>
 							<ul>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="#" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic1.jpg', true); ?>" alt="">
@@ -228,7 +228,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/barrier_free.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic2.jpg', true); ?>" alt="">
@@ -238,7 +238,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="#" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic3.jpg', true); ?>" alt="">
@@ -260,7 +260,7 @@
 							</header>
 							<ul>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/corporate_and_community.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/community_pic1.jpg', true); ?>" alt="">
@@ -270,23 +270,23 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/yebisu_garden_place.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/community_pic2.jpg', true); ?>" alt="">
 											</picture>
 										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">都市の豊かさ（恵比寿）</span></p>
+										<p><span class="c-icon c-icon--external"></span><span class="is--text">都市の豊かさ<br>（恵比寿ガーデンプレイス）</span></p>
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/akasaka_sacas.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/community_pic3.jpg', true); ?>" alt="">
 											</picture>
 										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">土地と街の記憶を継承し再構築する<br>（サカス）</span></p>
+										<p><span class="c-icon c-icon--external"></span><span class="is--text">土地と街の記憶を継承し再構築する<br>（赤坂サカス）</span></p>
 									</a>
 								</li>
 							</ul>
@@ -302,7 +302,7 @@
 							</header>
 							<ul>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/nijinooka_gakuen.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/study_pic1.jpg', true); ?>" alt="">
@@ -312,7 +312,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/omiya_ward_office.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/study_pic2.jpg', true); ?>" alt="">
@@ -322,7 +322,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/nagoya_gakuin_university.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/study_pic3.jpg', true); ?>" alt="">
@@ -344,7 +344,7 @@
 							</header>
 							<ul>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/k-lounge.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/workstyle_pic1.jpg', true); ?>" alt="">
@@ -354,7 +354,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="#" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/workstyle_pic2.jpg', true); ?>" alt="">
@@ -376,7 +376,7 @@
 							</header>
 							<ul>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/intro_quake-resist.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/safety_pic1.jpg', true); ?>" alt="">
@@ -386,7 +386,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/rapid_rescue.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/safety_pic2.jpg', true); ?>" alt="">
@@ -396,7 +396,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/chutoen_general_medical_center.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/safety_pic3.jpg', true); ?>" alt="">
@@ -418,7 +418,7 @@
 							</header>
 							<ul>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/chiba_univ_sumida.html" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/stock_pic1.jpg', true); ?>" alt="">
@@ -428,7 +428,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="#" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/stock_pic2.jpg', true); ?>" alt="">
@@ -438,7 +438,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="p-about__csr__link" href="" target="__blank">
+									<a class="p-about__csr__link" href="#" target="_blank">
 										<div class="p-about__csr__link__thumb">
 											<picture class="c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/stock_pic3.jpg', true); ?>" alt="">
