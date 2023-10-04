@@ -79,7 +79,7 @@
 
 	<div class="p-page-box">
 
-		<main class="p-about is--index">
+		<main class="p-about is--index" data-init-event="initAbout">
 			<header class="c-page-header">
 				<div class="l-wrapper">
 					<div class="c-page-header__container">

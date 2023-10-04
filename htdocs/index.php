@@ -36,7 +36,7 @@
 
 	<div class="p-page-box">
 
-		<main class="p-top">
+		<main class="p-top" data-init-event="initTop">
 			<div class="p-hero">
 				<div class="swiper-parent">
 					<div class="swiper is--lazy-all">

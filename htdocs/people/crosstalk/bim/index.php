@@ -100,7 +100,7 @@
 
 	<div class="p-page-box">
 
-		<main class="p-crosstalk is--single">
+		<main class="p-crosstalk is--single" data-init-event="initPeopleCrosstalk">
 			<header class="c-page-header">
 				<div class="l-wrapper">
 					<div class="c-page-header__container">

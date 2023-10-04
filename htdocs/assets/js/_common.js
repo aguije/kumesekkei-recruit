@@ -33,43 +33,9 @@ $(function () {
 		let eventObj = new $.Event('initUI');
 		$(window).trigger(eventObj);
 
-
-		/** =================================================================
-		 * TOP
-		 * --------------------------------------------------------------- */
-
-		if ($('main.p-top').length > 0) {
-			eventObj = new $.Event('initTop');
-			$(window).trigger(eventObj);
-		}
-
-
-		/** =================================================================
-		 * ABOUT
-		 * --------------------------------------------------------------- */
-
-		else if ($('main.p-about.is--index').length > 0) {
-			eventObj = new $.Event('initAbout');
-			$(window).trigger(eventObj);
-		}
-
-		else if ($('main.p-about.is--csr').length > 0) {
-			eventObj = new $.Event('initAboutCsr');
-			$(window).trigger(eventObj);
-		}
-
-
-		/** =================================================================
-		 * PEOPLE
-		 * --------------------------------------------------------------- */
-
-		else if ($('main.p-people.is--index').length > 0) {
-			eventObj = new $.Event('initPeople');
-			$(window).trigger(eventObj);
-		}
-
-		else if ($('main.p-crosstalk.is--single').length > 0) {
-			eventObj = new $.Event('initPeopleCrosstalk');
+		const initEventName = $('main').attr('data-init-event');
+		if (initEventName !== '') {
+			eventObj = new $.Event(initEventName);
 			$(window).trigger(eventObj);
 		}
 

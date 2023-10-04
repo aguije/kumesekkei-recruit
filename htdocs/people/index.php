@@ -75,7 +75,7 @@
 
 	<div class="p-page-box">
 
-		<main class="p-people is--index">
+		<main class="p-people is--index" data-init-event="initPeople">
 			<header class="c-page-header">
 				<div class="l-wrapper">
 					<div class="c-page-header__container">
