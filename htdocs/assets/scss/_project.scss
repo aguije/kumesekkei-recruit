@@ -414,6 +414,7 @@
 					@include pc ((
 						width: 189,
 					)) {
+						min-width: 140px;
 						height: pc-clamp($size--gh);
 						padding-top: pc-clamp(24 - 1.5);
 						padding-left: pc-clamp(20);
