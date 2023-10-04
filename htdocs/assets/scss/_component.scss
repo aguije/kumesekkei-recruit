@@ -565,12 +565,12 @@ $pie_r: 31.8309886184;
 		}
 
 		picture {
-			width: pc-rem(320);
+			width: 50%;
 		}
 
 		> div {
 			box-sizing: border-box;
-			width: calc(100 - #{pc-rem(320)});
+			width: 50%;
 			padding: pc-rem(24) pc-rem(30);
 		}
 	}
