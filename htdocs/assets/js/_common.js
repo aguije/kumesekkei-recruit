@@ -49,12 +49,12 @@ $(function () {
 		 * --------------------------------------------------------------- */
 
 		else if ($('main.p-about.is--index').length > 0) {
-			eventObj = new $.Event('initMessage');
+			eventObj = new $.Event('initAbout');
 			$(window).trigger(eventObj);
 		}
 
 		else if ($('main.p-about.is--csr').length > 0) {
-			eventObj = new $.Event('initCsr');
+			eventObj = new $.Event('initAboutCsr');
 			$(window).trigger(eventObj);
 		}
 
@@ -69,7 +69,7 @@ $(function () {
 		}
 
 		else if ($('main.p-crosstalk.is--single').length > 0) {
-			eventObj = new $.Event('initCrosstalkSingle');
+			eventObj = new $.Event('initPeopleCrosstalk');
 			$(window).trigger(eventObj);
 		}
 

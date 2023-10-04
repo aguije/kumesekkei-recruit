@@ -26,7 +26,7 @@ $(function () {
 		});
 	}
 
-	function initCrosstalkSingle () {
+	function initPeopleCrosstalk () {
 		$('.p-crosstalk-article__more a').on('click', function (_event) {
 			_event.preventDefault();
 
@@ -71,11 +71,11 @@ $(function () {
 		initPeople();
 	});
 
-	$(window).on('initCrosstalkSingle', function () {
+	$(window).on('initPeopleCrosstalk', function () {
 		console.log(' ');
-		console.log('EVENT: initCrosstalkSingle');
+		console.log('EVENT: initPeopleCrosstalk');
 
-		initCrosstalkSingle();
+		initPeopleCrosstalk();
 	});
 
 });

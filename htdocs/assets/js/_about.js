@@ -18,14 +18,14 @@ $(function () {
 	 *
 	 * --------------------------------------------------------------- */
 
-	function initMessage () {
+	function initAbout () {
 		GLOBAL.methods.util.lazy({
 			mode: true,
 			wrapper: '.c-lazy-trigger'
 		});
 	}
 
-	function initCsr () {
+	function initAboutCsr () {
 		const $nav_links = $('.p-about__csr__nav a');
 
 		const set_active = (_hash) => {
@@ -77,18 +77,18 @@ $(function () {
 	 *
 	 * --------------------------------------------------------------- */
 
-	$(window).on('initMessage', function () {
+	$(window).on('initAbout', function () {
 		console.log(' ');
-		console.log('EVENT: initMessage');
+		console.log('EVENT: initAbout');
 
-		initMessage();
+		initAbout();
 	});
 
-	$(window).on('initCsr', function () {
+	$(window).on('initAboutCsr', function () {
 		console.log(' ');
-		console.log('EVENT: initCsr');
+		console.log('EVENT: initAboutCsr');
 
-		initCsr();
+		initAboutCsr();
 	});
 
 });
