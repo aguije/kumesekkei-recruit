@@ -74,9 +74,9 @@ class KUME_Util {
 		$_args = array_replace(array(
 			'bc' => null,
 			'title' => '',
-			'description' => '',
+			'description' => '久米設計の新卒・キャリア採用のエントリーページです。在籍スタッフによるチームインタビューや職場環境、人材育成プログラムもご紹介しています。',
 			'image' => KUME_Util::image_path('ogp.png', true),
-			'site' => '久米設計 採用サイト',
+			'site' => '採用サイト | 株式会社 久米設計',
 			'url' => '/',
 			'type' => 'article'
 		), $_args);

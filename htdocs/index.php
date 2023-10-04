@@ -12,7 +12,7 @@
 
 	$bc = array(
 		array(
-			'title' => '久米設計 採用サイト',
+			'title' => '採用サイト | 株式会社 久米設計',
 			'url' => '/',
 			'type' => 'website'
 		)
