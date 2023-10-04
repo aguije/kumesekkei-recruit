@@ -45,6 +45,26 @@
 
 	$_GET['gm_active'] = 'about';
 
+
+	/** =================================================================
+	 * ページナビゲーション
+	 * --------------------------------------------------------------- */
+
+	ob_start();
+
+	?>
+	<nav class="c-page-nav">
+		<ul>
+			<li><a class="c-button c-button--round is--gray" href="/about/"><span>メッセージ</span></a></li>
+			<li><a class="c-button c-button--round is--gray is--active" href="/about/csr/"><span>社会課題への取組み</span></a></li>
+			<li><a class="c-button c-button--round is--gray" href="/about/stats/"><span>数字で見る久米設計</span></a></li>
+		</ul>
+	</nav>
+	<?php
+
+	$page_nav = ob_get_contents();
+	ob_end_clean();
+
 ?>
 <?php
 
@@ -78,13 +98,11 @@
 								));
 
 							?>
-							<nav class="c-page-nav">
-								<ul>
-									<li><a class="c-button c-button--round is--gray" href="/about/"><span>メッセージ</span></a></li>
-									<li><a class="c-button c-button--round is--gray is--active" href="/about/csr/"><span>社会課題への取組み</span></a></li>
-									<li><a class="c-button c-button--round is--gray" href="/about/stats/"><span>数字で見る久米設計</span></a></li>
-								</ul>
-							</nav>
+							<?php
+
+								echo $page_nav;
+
+							?>
 						</div>
 					</div>
 				</div>
@@ -482,13 +500,11 @@
 								));
 
 							?>
-							<nav class="c-page-nav">
-								<ul>
-									<li><a class="c-button c-button--round is--gray" href="/about/"><span>メッセージ</span></a></li>
-									<li><a class="c-button c-button--round is--gray is--active" href="/about/csr/"><span>社会課題への取組み</span></a></li>
-									<li><a class="c-button c-button--round is--gray" href="/about/stats/"><span>数字で見る久米設計</span></a></li>
-								</ul>
-							</nav>
+							<?php
+
+								echo $page_nav;
+
+							?>
 						</div>
 					</div>
 				</div>

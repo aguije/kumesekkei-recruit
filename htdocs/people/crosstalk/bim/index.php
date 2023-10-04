@@ -66,6 +66,26 @@
 
 	$_GET['gm_active'] = 'people';
 
+
+	/** =================================================================
+	 * ページナビゲーション
+	 * --------------------------------------------------------------- */
+
+	ob_start();
+
+	?>
+	<nav class="c-page-nav">
+		<ul>
+			<li><a class="c-button c-button--round is--gray" href="/people/#employees"><span>社員紹介</span></a></li>
+			<li><a class="c-button c-button--round is--gray is--active" href="/people/#crosstalk"><span>クロストーク</span></a></li>
+			<li><a class="c-button c-button--round is--gray" href="/people/#interview"><span>インタビュー動画</span></a></li>
+		</ul>
+	</nav>
+	<?php
+
+	$page_nav = ob_get_contents();
+	ob_end_clean();
+
 ?>
 <?php
 
@@ -443,13 +463,11 @@
 								));
 
 							?>
-							<nav class="c-page-nav">
-								<ul>
-									<li><a class="c-button c-button--round is--gray" href="/people/#employees"><span>社員紹介</span></a></li>
-									<li><a class="c-button c-button--round is--gray is--active" href="/people/#crosstalk"><span>クロストーク</span></a></li>
-									<li><a class="c-button c-button--round is--gray" href="/people/#interview"><span>インタビュー動画</span></a></li>
-								</ul>
-							</nav>
+							<?php
+
+								echo $page_nav;
+
+							?>
 						</div>
 					</div>
 				</div>
