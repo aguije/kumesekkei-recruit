@@ -18,10 +18,10 @@
 }
 
 .l-container {
-	@include pc ((
-		padding-right: $size--pad,
-		padding-left: $size--pad,
-	)) {}
+	@include pc () {
+		padding-right: pc-rem($size--pad);
+		padding-left: pc-rem($size--pad);
+	}
 	@include sp ((
 		padding-right: $size--pad--sp,
 		padding-left: $size--pad--sp,
@@ -32,7 +32,7 @@
 		column-gap: pc-rem(80);
 
 		> div {
-			width: calc(50% - #{pc-rem(80 * .5)})
+			width: calc(50% - #{pc-rem(80 * .5)});
 		}
 
 		&.without--gap {
@@ -47,10 +47,8 @@
 
 .l-container--narrow {
 	@include pc ((
-		margin-right: $size--pad,
-		margin-left: $size--pad,
-		padding-right: 160,
-		padding-left: 160,
+		padding-right: 160 + $size--pad,
+		padding-left: 160 + $size--pad,
 	)) {}
 	@include sp ((
 		padding-right: $size--pad--sp,
