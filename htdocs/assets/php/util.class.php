@@ -102,7 +102,7 @@ class KUME_Util {
 
 		array_push($titles, $_args['site']);
 
-		$meta['title'] = implode(' | ', $titles);
+		$meta['title'] = implode(' – ', $titles);
 
 		//
 
