@@ -162,9 +162,9 @@ $ff--gothic: $ff--default;
  * --------------------------------------------------------------- */
 
 html {
-	@include pc () {
-		font-size: pc-clamp($fs, $fs * $fs--min-ratio);
-	}
+	@include pc ((
+		font-size: $fs
+	)) {}
 	@include sp ((
 		font-size: $fs--sp
 	)) {}
@@ -176,6 +176,9 @@ body {
 	color: var(--color-textblack);
 	background-color: var(--color-base);
 
+	@include pc () {
+		font-size: pc-clamp($fs, $fs * $fs--min-ratio);
+	}
 	@extend %ff--gothic;
 	text-rendering: optimizeLegibility;
 	@include font-smoothing();
