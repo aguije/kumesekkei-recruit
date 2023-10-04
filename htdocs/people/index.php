@@ -78,7 +78,7 @@
 		<main class="p-people is--index" data-init-event="initPeople">
 			<header class="c-page-header">
 				<div class="l-wrapper">
-					<div class="c-page-header__container">
+					<div class="l-container--narrow">
 						<div class="c-page-header__main">
 							<h1 class="is--title">
 								<span lang="en">People</span>

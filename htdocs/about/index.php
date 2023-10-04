@@ -83,7 +83,7 @@
 		<main class="p-about is--index" data-init-event="initAbout">
 			<header class="c-page-header">
 				<div class="l-wrapper">
-					<div class="c-page-header__container">
+					<div class="l-container--narrow">
 						<div class="c-page-header__main">
 							<h1 class="is--title">
 								<span lang="en">About KUME SEKKEI</span>
@@ -178,7 +178,7 @@
 						<div class="l-container is--2col without--gap">
 							<div>
 								<header>
-									<h3>過去を敬い、未来に思いを馳せ、<span class="u-inline-box">新たな挑戦を</span></h3>
+									<h3>過去を敬い、未来に思いを馳せ、<span class="u-inline-block">新たな挑戦を</span></h3>
 								</header>
 
 								<div class="p-about__message__sec__body">

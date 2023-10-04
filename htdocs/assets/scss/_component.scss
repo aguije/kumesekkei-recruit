@@ -423,28 +423,24 @@ $pie_r: 31.8309886184;
 .c-page-header {
 	padding-top: pc-rem(145);
 
-	.c-page-header__container {
-		padding-right: pc-rem(160);
-		padding-left: pc-rem(160);
 
-		.c-page-header__main {
+	.c-page-header__main {
+		flex-grow: 1;
+	}
+
+	.c-page-header__sub {
+		display: flex;
+		margin-top: pc-rem(40);
+
+		.c-breadcrumb {
 			flex-grow: 1;
 		}
 
-		.c-page-header__sub {
-			display: flex;
-			margin-top: pc-rem(40);
-
-			.c-breadcrumb {
-				flex-grow: 1;
-			}
-
-			.c-page-nav {
-				position: relative;
-				top: pc-clamp(-6);
-				width: pc-rem(160);
-				min-width: pc-rem(160);
-			}
+		.c-page-nav {
+			position: relative;
+			top: pc-clamp(-6);
+			width: pc-rem(160);
+			min-width: pc-rem(160);
 		}
 	}
 

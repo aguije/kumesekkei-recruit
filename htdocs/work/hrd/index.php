@@ -83,7 +83,7 @@
 		<main class="p-work is--hrd" data-init-event="initWorkHrd">
 			<header class="c-page-header">
 				<div class="l-wrapper">
-					<div class="c-page-header__container">
+					<div class="l-container--narrow">
 						<div class="c-page-header__main">
 							<h2 class="is--title">
 								<span lang="en">Work @ KUME SEKKEI</span>
