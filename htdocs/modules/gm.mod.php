@@ -55,7 +55,7 @@
 							</a>
 						</h4>
 						<ul class="p-gm__list is--sub">
-							<li><a class="<?php if ($sub_active === 'people_employees') { echo 'is--active'; } ?>" href="/people/#employees">社員インタビュー</a></li>
+							<li><a class="<?php if ($sub_active === 'people_employees') { echo 'is--active'; } ?>" href="/people/#employees">社員紹介</a></li>
 							<li><a class="<?php if ($sub_active === 'people_crosstalk') { echo 'is--active'; } ?>" href="/people/#crosstalk">クロストーク</a></li>
 							<li><a class="<?php if ($sub_active === 'people_interview') { echo 'is--active'; } ?>" href="/people/#interview">インタビュー動画</a></li>
 						</ul>
