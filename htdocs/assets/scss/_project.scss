@@ -798,6 +798,10 @@
 				}
 				@extend %c-icon;
 			}
+
+			&.is--active {
+				text-decoration: underline;
+			}
 		}
 
 		li + li {

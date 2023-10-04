@@ -1,6 +1,7 @@
 <?php
 
 	$active = (array_key_exists('gm_active', $_GET)) ? $_GET['gm_active'] : '';
+	$sub_active = (array_key_exists('gm_sub_active', $_GET)) ? $_GET['gm_sub_active'] : '';
 
 ?>
 <div class="p-gm">
@@ -28,9 +29,9 @@
 							</a>
 						</h4>
 						<ul class="p-gm__list is--sub">
-							<li><a href="/about/">メッセージ</a></li>
-							<li><a href="/about/csr/">社会課題への取組み</a></li>
-							<li><a href="/about/stats/">数字で見る久米設計</a></li>
+							<li><a class="<?php if ($sub_active === 'about_message') { echo 'is--active'; } ?>" href="/about/">メッセージ</a></li>
+							<li><a class="<?php if ($sub_active === 'about_csr') { echo 'is--active'; } ?>" href="/about/csr/">社会課題への取組み</a></li>
+							<li><a class="<?php if ($sub_active === 'about_stats') { echo 'is--active'; } ?>" href="/about/stats/">数字で見る久米設計</a></li>
 						</ul>
 					</li>
 					<li class="<?php if ($active === 'work') { echo 'is--active'; } ?>">
@@ -41,9 +42,9 @@
 							</a>
 						</h4>
 						<ul class="p-gm__list is--sub">
-							<li><a href="/work/">ワークプレイス</a></li>
-							<li><a href="/work/welfare/">福利厚生</a></li>
-							<li><a href="/work/hrd/">人材育成プログラム</a></li>
+							<li><a class="<?php if ($sub_active === 'work_workplace') { echo 'is--active'; } ?>" href="/work/">ワークプレイス</a></li>
+							<li><a class="<?php if ($sub_active === 'work_welfare') { echo 'is--active'; } ?>" href="/work/welfare/">福利厚生</a></li>
+							<li><a class="<?php if ($sub_active === 'work_hrd') { echo 'is--active'; } ?>" href="/work/hrd/">人材育成プログラム</a></li>
 						</ul>
 					</li>
 					<li class="<?php if ($active === 'people') { echo 'is--active'; } ?>">
@@ -54,9 +55,9 @@
 							</a>
 						</h4>
 						<ul class="p-gm__list is--sub">
-							<li><a href="/people/#employees">社員インタビュー</a></li>
-							<li><a href="/people/#crosstalk">クロストーク</a></li>
-							<li><a href="/people/#interview">インタビュー動画</a></li>
+							<li><a class="<?php if ($sub_active === 'people_employees') { echo 'is--active'; } ?>" href="/people/#employees">社員インタビュー</a></li>
+							<li><a class="<?php if ($sub_active === 'people_crosstalk') { echo 'is--active'; } ?>" href="/people/#crosstalk">クロストーク</a></li>
+							<li><a class="<?php if ($sub_active === 'people_interview') { echo 'is--active'; } ?>" href="/people/#interview">インタビュー動画</a></li>
 						</ul>
 					</li>
 					<li>
