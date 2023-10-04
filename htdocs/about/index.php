@@ -178,8 +178,7 @@
 						<div class="l-container is--2col without--gap">
 							<div>
 								<header>
-									<h3>過去を敬い、未来に思いを馳せ、<br>
-									新たな挑戦を</h3>
+									<h3>過去を敬い、未来に思いを馳せ、<span class="u-inline-box">新たな挑戦を</span></h3>
 								</header>
 
 								<div class="p-about__message__sec__body">
