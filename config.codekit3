@@ -1295,6 +1295,58 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/htdocs\/assets\/images\/work\/hrd\/skillup_pic1.jpg" : {
+      "ft" : 16384,
+      "iS" : 315078,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/work\/hrd\/skillup_pic1.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/htdocs\/assets\/images\/work\/hrd\/skillup_pic2.jpg" : {
+      "ft" : 16384,
+      "iS" : 246866,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/work\/hrd\/skillup_pic2.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/htdocs\/assets\/images\/work\/hrd\/skillup_pic3.jpg" : {
+      "ft" : 16384,
+      "iS" : 233294,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/work\/hrd\/skillup_pic3.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/htdocs\/assets\/images\/work\/hrd\/training_fig1.png" : {
+      "ft" : 32768,
+      "iS" : 66801,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/work\/hrd\/training_fig1.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
     "\/htdocs\/assets\/js\/_about.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1346,6 +1398,17 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/htdocs\/assets\/js\/_ui.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/htdocs\/assets\/js\/_work.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/htdocs\/assets\/js\/_work.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1665,6 +1728,21 @@
       "pg" : 0,
       "sct" : 1
     },
+    "\/htdocs\/assets\/scss\/project\/_work.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/htdocs\/assets\/scss\/project\/_work.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
     "\/htdocs\/index.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1751,6 +1829,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/people\/index.php",
+      "oF" : 0
+    },
+    "\/htdocs\/work\/hrd\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/work\/hrd\/index.php",
       "oF" : 0
     },
     "\/Icon\r" : {

@@ -688,3 +688,19 @@ $pie_r: 31.8309886184;
 }
 
 
+/** =================================================================
+ *
+ * STICKY
+ *
+ * --------------------------------------------------------------- */
+
+.c-sticky {
+	position: relative;
+
+	.c-sticky__container {
+		position: -webkit-sticky;
+		position:         sticky;
+		top: 0;
+		padding-top: pc-clamp($size--gh);
+	}
+}

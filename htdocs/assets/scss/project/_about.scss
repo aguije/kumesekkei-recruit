@@ -119,7 +119,7 @@
 
 	.p-about__csr__nav {
 		margin-top: pc-rem(80);
-		margin-bottom: calc(#{pc-rem(80)} - 76px);
+		margin-bottom: calc(#{pc-rem(80)} - pc-clamp($size--gh));
 
 		ul {
 			font-size: pc-rem(19);
@@ -157,7 +157,7 @@
 	}
 
 	.p-about__csr__sec {
-		padding-top: 76px;
+		padding-top: pc-clamp($size--gh);
 
 		header {
 			width: 50%;

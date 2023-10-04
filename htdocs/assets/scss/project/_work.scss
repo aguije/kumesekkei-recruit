@@ -1,0 +1,92 @@
+/** =================================================================
+ *
+ * PROJECT - WORK
+ *
+ * ------------------------------------------------------------------
+ *
+ *
+ *
+ * --------------------------------------------------------------- */
+
+main.p-work.is--index {
+
+
+
+}
+
+
+/** =================================================================
+ *
+ * HRD
+ *
+ * --------------------------------------------------------------- */
+
+main.p-work.is--hrd {
+
+	.l-container.is--2col {
+		> div:nth-of-type(2) {
+			padding-top: pc-clamp($size--gh);
+		}
+	}
+
+	.p-work__hrd__sec {
+		header {
+			padding-top: pc-rem(30);
+			border-top: 1px solid var(--color-border);
+
+			h2 {
+				font-size: pc-rem(24);
+			}
+		}
+
+		.p-work__hrd__sec__body {
+			line-height: 1 * 52/28;
+			margin-top: pc-rem(40 - 7.5);
+		}
+	}
+
+	#training.p-work__hrd__sec {
+		figure {
+			margin-left: pc-rem(-40);
+		}
+	}
+
+	#skillup.p-work__hrd__sec {
+		picture {
+			overflow: hidden;
+			border-radius: pc-rem(5);
+		}
+
+		picture + picture {
+			margin-top: pc-rem(10);
+		}
+	}
+
+	#skillupStats {
+		display: flex;
+		align-items: center;
+		margin-top: pc-rem(40);
+
+		> div {
+			font-size: pc-rem(14);
+			width: pc-rem(160);
+			padding: 0 .5em;
+
+			strong {
+				font-size: pc-rem(54);
+				font-weight: 400;
+				display: inline-block;
+				margin: 0 (1rem * 7/$fs);
+			}
+		}
+
+		> ul {
+			font-size: pc-rem(14);
+			font-weight: 700;
+			line-height: $lh--huge;
+			padding: pc-rem(20) pc-rem(30);
+			border-left: 1px solid #666666;
+		}
+	}
+
+}
