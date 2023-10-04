@@ -161,15 +161,14 @@ main.p-people.is--index {
 			overflow: hidden;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			width: pc-rem(840);
+			max-width: pc-rem(840);
 			margin-top: pc-rem(80);
 			margin-left: auto;
-			row-gap: pc-rem($size--pad);
-
+			column-gap: pc-rem(60);
+			row-gap: pc-rem(60);
 
 			.p-crosstalk__article {
-				width: pc-rem(390);
-				min-height: pc-rem(390);
+				width: calc((100% - #{pc-rem(60)}) / 2);
 				border-radius: pc-rem(4);
 				background-color: var(--color-theme-bg-invert);
 
@@ -298,8 +297,6 @@ main.p-people.is--index {
 						line-height: $lh--huge;
 						margin-top: pc-rem(10);
 					}
-
-
 				}
 			}
 		}
@@ -325,14 +322,13 @@ main.p-people.is--index {
 				flex-wrap: wrap;
 				justify-content: space-between;
 				width: pc-rem(840);
+				column-gap: cal--pc(60);
 				row-gap: pc-rem(60);
 			}
 		}
 
 		.p-people__interview__article {
-			width: pc-rem(390);
-			aspect-ratio: 16 / 9;
-
+			width: calc((100% - #{cal--pc(60)}) / 2);
 
 			header {
 				margin-top: pc-rem(20);
