@@ -89,9 +89,12 @@
 			top: 0;
 			left: 0;
 			width: 50vw;
+			max-width: calc(50vw - #{pc-rem(40)});
 
 			picture {
+				transform: translateX(#{pc-rem(40)});
 				width: pc-rem(480);
+				max-width: calc(50vw - #{pc-rem(40)});
 				margin-left: auto;
 				border-top-right-radius: 0;
 				border-bottom-right-radius: 0;
