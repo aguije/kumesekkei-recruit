@@ -35,7 +35,7 @@
 					</li>
 					<li class="<?php if ($active === 'work') { echo 'is--active'; } ?>">
 						<h4>
-							<a href="#">
+							<a href="/work/">
 								<span lang="en">Work at KUME SEKKEI</span>
 								<span lang="ja">働く環境</span>
 							</a>
