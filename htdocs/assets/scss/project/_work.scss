@@ -17,6 +17,169 @@ main.p-work.is--index {
 
 /** =================================================================
  *
+ * WELFARE
+ *
+ * --------------------------------------------------------------- */
+
+main.p-work.is--welfare {
+
+	.p-work__welfare__sections {
+		margin-top: pc-rem(60);
+		padding-bottom: pc-rem(100);
+		background-color: #f8f7f7;
+	}
+
+	.p-work__welfare__sec {
+		.l-container {
+			display: flex;
+			column-gap: 8px;
+
+			header {
+				width: calc((100% - 8px * 3) / 4);
+			}
+
+			dl {
+				width: calc(100% - ((100% - 8px * 3) / 4));
+			}
+		}
+
+		header {
+			h2 {
+				font-weight: 700;
+				box-sizing: border-box;
+				padding-top: pc-rem(30);
+				border-top: 1px solid var(--color-border);
+			}
+		}
+
+		dl {
+			.p-work__welfare__item {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				box-sizing: border-box;
+				width: 100%;
+				min-height: pc-rem(160 - 20 * 2);
+				padding: pc-rem(20) 0;
+				border-top: #cccccc solid 4px;
+				background-color: var(--color-white);
+
+				> div {
+					display: flex;
+					flex-direction: column;
+					box-sizing: border-box;
+					width: 100%;
+					padding: 0 pc-rem(10);
+					row-gap: pc-rem(18 - 10);
+				}
+			}
+
+			dt {
+				font-size: pc-clamp(15, 15 * $fs--min-ratio);
+				font-weight: bold;
+				width: 100%;
+				text-align: center;
+			}
+
+			dd {
+				font-size: pc-clamp(14, 14 * $fs--min-ratio);
+				line-height: 1 * 44/28;
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		.p-work__welfare__sec__strong {
+			line-height: 1;
+			display: inline-block;
+
+			b {
+				font-size: pc-clamp(48, 48 * $fs--min-ratio);
+				font-weight: 400;
+			}
+
+			small {
+				font-size: pc-clamp(18, 18 * $fs--min-ratio);
+				font-weight: 700;
+			}
+		}
+	}
+
+	.p-work__welfare__sec + .p-work__welfare__sec {
+		margin-top: pc-rem(60);
+	}
+
+	#workstyle.p-work__welfare__sec {
+		dl {
+			display: grid;
+
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			grid-column-gap: 8px;
+			grid-row-gap: 8px;
+		}
+
+		#workstyleHoliday {
+			.p-work__welfare__sec__strong {
+				b {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+
+				small {
+					font-weight: 400;
+				}
+			}
+		}
+
+		#workstyleStar {
+			picture {
+				width: pc-rem(90);
+				margin: 0 auto;
+			}
+		}
+	}
+
+	#system.p-work__welfare__sec {
+		header {
+			display: grid;
+
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(4, 1fr);
+			grid-column-gap: 8px;
+			grid-row-gap: 8px;
+
+			> figure {
+				display: contents;
+
+				picture {
+					height: 100%;
+				}
+
+				figcaption {
+					font-size: pc-clamp(12);
+					line-height: 1 * 40/24;
+				}
+			}
+		}
+
+		dl {
+			display: grid;
+
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+			grid-column-gap: 8px;
+			grid-row-gap: 8px;
+		}
+	}
+
+}
+
+
+/** =================================================================
+ *
  * HRD
  *
  * --------------------------------------------------------------- */

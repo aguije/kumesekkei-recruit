@@ -32,6 +32,13 @@ $(function () {
 		});
 	}
 
+	function initWorkWelfare () {
+		GLOBAL.methods.util.lazy({
+			mode: true,
+			wrapper: '.c-lazy-trigger'
+		});
+	}
+
 
 	/* ==================================================================
 	 *
@@ -53,6 +60,13 @@ $(function () {
 		console.log('EVENT: initWorkHrd');
 
 		initWorkHrd();
+	});
+
+	$(window).on('initWorkWelfare', function () {
+		console.log(' ');
+		console.log('EVENT: initWorkWelfare');
+
+		initWorkWelfare();
 	});
 
 });

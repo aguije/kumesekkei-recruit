@@ -1347,6 +1347,45 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/htdocs\/assets\/images\/work\/welfare\/system_pic1.jpg" : {
+      "ft" : 16384,
+      "iS" : 106958,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/work\/welfare\/system_pic1.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/htdocs\/assets\/images\/work\/welfare\/system_pic2.jpg" : {
+      "ft" : 16384,
+      "iS" : 61230,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/work\/welfare\/system_pic2.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/htdocs\/assets\/images\/work\/welfare\/workstyle_pic1.png" : {
+      "ft" : 32768,
+      "iS" : 20677,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/work\/welfare\/workstyle_pic1.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
     "\/htdocs\/assets\/js\/_about.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1837,6 +1876,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/work\/hrd\/index.php",
+      "oF" : 0
+    },
+    "\/htdocs\/work\/welfare\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/work\/welfare\/index.php",
       "oF" : 0
     },
     "\/Icon\r" : {
