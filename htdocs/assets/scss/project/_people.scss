@@ -502,9 +502,16 @@ main.p-people__employee.is--single {
 				}
 
 				h2 {
-					font-size: pc-rem(30);
 					font-weight: bold;
 					line-height: 1 * 40/30;
+
+					&:not(.is--small) {
+						font-size: pc-rem(30);
+					}
+
+					&.is--small {
+						font-size: pc-clamp(14);
+					}
 				}
 
 				p + h2 {
@@ -515,6 +522,10 @@ main.p-people__employee.is--single {
 			.p-people__employee__article__chapter__body {
 				line-height: $lh--huge;
 				margin-top: pc-rem(40 - 14);
+
+				p {
+					text-indent: 1em;
+				}
 			}
 
 			.p-people__employee__article__chapter__message {

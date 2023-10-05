@@ -229,15 +229,15 @@
 											<div id="tab1" class="swiper-slide">
 												<table>
 													<tr>
-														<th><spa lang="en"n>8:30</span></th>
+														<th><span lang="en">8:30</span></th>
 														<td>保育園送り</td>
 													</tr>
 													<tr>
-														<th><spa lang="en"n>9:00</span></th>
+														<th><span lang="en">9:00</span></th>
 														<td>東京フォーラムで思考リセット</td>
 													</tr>
 													<tr>
-														<th><spa lang="en"n>9:30</span></th>
+														<th><span lang="en">9:30</span></th>
 														<td>出社<br>
 														メールチェック、電話、<br>
 														協力事務所に送るチェック図まとめ</td>
@@ -286,7 +286,7 @@
 								<div>
 									<header class="p-people__employee__article__chapter__header">
 										<p lang="en">CHAPTER <b></b></p>
-										<h2>学生へのメッセージ</h2>
+										<h2 class="is--small">学生へのメッセージ</h2>
 									</header>
 
 									<p class="p-people__employee__article__chapter__message">
