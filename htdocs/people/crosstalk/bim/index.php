@@ -101,7 +101,7 @@
 
 	<div class="p-page-box">
 
-		<main class="p-crosstalk is--single" data-init-event="initPeopleCrosstalk">
+		<main class="p-people__crosstalk is--single" data-init-event="initPeopleCrosstalk">
 			<header class="c-page-header">
 				<div class="l-wrapper">
 					<div class="l-container--narrow">
@@ -125,19 +125,19 @@
 				</div>
 			</header>
 
-			<article class="p-crosstalk-article">
-				<header class="p-crosstalk-article__header">
+			<article class="p-people__crosstalk__article">
+				<header class="p-people__crosstalk__article__header">
 					<div class="l-wrapper">
 						<div class="l-container">
-							<div class="p-crosstalk-article__header__title">
-								<p class="p-crosstalk-article__header__index" lang="en">Crosstalk #01</p>
+							<div class="p-people__crosstalk__article__header__title">
+								<p class="p-people__crosstalk__article__header__index" lang="en">Crosstalk #01</p>
 								<h1>
 									<span>BIM・デジタルデザインを取り入れた</span>
 									<span>“新たな設計ワークフロー”</span>
 									<span>の構築都市と建築のチャレンジ：</span>
 								</h1>
 							</div>
-							<div class="p-crosstalk-article__header__body">
+							<div class="p-people__crosstalk__article__header__body">
 								<picture class="c-lazy-trigger">
 									<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/bim/mv.jpg', true); ?>" alt="">
 								</picture>
@@ -150,7 +150,7 @@
 				</header>
 
 				<!-- Member -->
-				<aside class="p-crosstalk-article__member">
+				<aside class="p-people__crosstalk__article__member">
 					<div class="l-wrapper">
 						<h3 lang="en">Crosstalk Member</h3>
 						<ul>
@@ -194,20 +194,20 @@
 					</div>
 				</aside>
 
-				<div class="p-crosstalk-article__chapters">
-					<div class="p-crosstalk-article__chapters__container">
+				<div class="p-people__crosstalk__article__chapters">
+					<div class="p-people__crosstalk__article__chapters__container">
 						<!-- Chapter 1 -->
-						<section class="p-crosstalk-article__chapter">
+						<section class="p-people__crosstalk__article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container l-container--narrow">
+								<div class="p-people__crosstalk__article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>BIMについて</h2>
 									</header>
 
-									<div class="p-crosstalk-article__chapter__body">
-										<div class="p-crosstalk-article__chapter__talk">
-											<h3 class="p-crosstalk-article__chapter__q"><span>Q. 今の建築業界のBIMの状況をどう捉えていますか?</span></h3>
+									<div class="p-people__crosstalk__article__chapter__body">
+										<div class="p-people__crosstalk__article__chapter__talk">
+											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. 今の建築業界のBIMの状況をどう捉えていますか?</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('古川', 'furukawa', 'bim'); ?></dt>
 												<dd>
@@ -216,8 +216,8 @@
 											</dl>
 										</div>
 
-										<div class="p-crosstalk-article__chapter__talk">
-											<h3 class="p-crosstalk-article__chapter__q"><span>Q. 久米設計のBIMの状況はどうなっていますか?</span></h3>
+										<div class="p-people__crosstalk__article__chapter__talk">
+											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. 久米設計のBIMの状況はどうなっていますか?</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('原田', 'harada', 'bim'); ?></dt>
 												<dd>
@@ -231,17 +231,17 @@
 						</section>
 
 						<!-- Chapter 2 -->
-						<section class="p-crosstalk-article__chapter">
+						<section class="p-people__crosstalk__article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container l-container--narrow">
+								<div class="p-people__crosstalk__article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>設計概要とBIMワークフロー</h2>
 									</header>
 
-									<div class="p-crosstalk-article__chapter__body">
-										<div class="p-crosstalk-article__chapter__talk">
-											<h3 class="p-crosstalk-article__chapter__q"><span>Q. BIMを実際に設計業務にどう取り入れていますか?</span></h3>
+									<div class="p-people__crosstalk__article__chapter__body">
+										<div class="p-people__crosstalk__article__chapter__talk">
+											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. BIMを実際に設計業務にどう取り入れていますか?</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('古川', 'furukawa', 'bim'); ?></dt>
 												<dd>
@@ -250,8 +250,8 @@
 											</dl>
 										</div>
 
-										<div class="p-crosstalk-article__chapter__talk">
-											<h3 class="p-crosstalk-article__chapter__q"><span>Q. 実践したプロジェクトの概要は?</span></h3>
+										<div class="p-people__crosstalk__article__chapter__talk">
+											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. 実践したプロジェクトの概要は?</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('原田', 'harada', 'bim'); ?></dt>
 												<dd>
@@ -260,7 +260,7 @@
 											</dl>
 										</div>
 
-										<div class="p-crosstalk-article__chapter__inserts is--wide is--flex">
+										<div class="p-people__crosstalk__article__chapter__inserts is--wide is--flex">
 											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/bim/chapter2_insert1.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/bim/chapter2_insert1.jpg', true); ?>" alt="">
 											</picture>
@@ -269,8 +269,8 @@
 											</picture>
 										</div>
 
-										<div class="p-crosstalk-article__chapter__talk">
-											<h3 class="p-crosstalk-article__chapter__q"><span>Q. デジタルデザインについて、<br>具体的にどのような取り組みをしましたか?</span></h3>
+										<div class="p-people__crosstalk__article__chapter__talk">
+											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. デジタルデザインについて、<br>具体的にどのような取り組みをしましたか?</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('伊東', 'ito', 'bim'); ?></dt>
 												<dd>
@@ -279,7 +279,7 @@
 											</dl>
 										</div>
 
-										<div class="p-crosstalk-article__chapter__inserts is--wide is--flex">
+										<div class="p-people__crosstalk__article__chapter__inserts is--wide is--flex">
 											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/bim/chapter2_insert3.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/bim/chapter2_insert3.jpg', true); ?>" alt="">
 											</picture>
@@ -288,7 +288,7 @@
 											</picture>
 										</div>
 
-										<div class="p-crosstalk-article__chapter__talk">
+										<div class="p-people__crosstalk__article__chapter__talk">
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('原田', 'harada', 'bim'); ?></dt>
 												<dd>
@@ -302,8 +302,8 @@
 											</dl>
 										</div>
 
-										<div class="p-crosstalk-article__chapter__talk">
-											<h3 class="p-crosstalk-article__chapter__q"><span>Q. シミュレーションの他には設計にBIMをどう取り入れましたか?</span></h3>
+										<div class="p-people__crosstalk__article__chapter__talk">
+											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. シミュレーションの他には設計にBIMをどう取り入れましたか?</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('伊東', 'ito', 'bim'); ?></dt>
 												<dd>
@@ -312,13 +312,13 @@
 											</dl>
 										</div>
 
-										<div class="p-crosstalk-article__chapter__inserts">
+										<div class="p-people__crosstalk__article__chapter__inserts">
 											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/bim/chapter2_insert5.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/bim/chapter2_insert5.jpg', true); ?>" alt="">
 											</picture>
 										</div>
 
-										<div class="p-crosstalk-article__chapter__talk">
+										<div class="p-people__crosstalk__article__chapter__talk">
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('原田', 'harada', 'bim'); ?></dt>
 												<dd>
@@ -337,17 +337,17 @@
 						</section>
 
 						<!-- Chapter 3 -->
-						<section class="p-crosstalk-article__chapter">
+						<section class="p-people__crosstalk__article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container l-container--narrow">
+								<div class="p-people__crosstalk__article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>BIMによるプレゼンテーションと業務効率化</h2>
 									</header>
 
-									<div class="p-crosstalk-article__chapter__body">
-										<div class="p-crosstalk-article__chapter__talk">
-											<h3 class="p-crosstalk-article__chapter__q"><span>Q. BIMと言えば3Dプレゼンなどのイメージがありますが、<br>どのような取り組みをしましたか？</span></h3>
+									<div class="p-people__crosstalk__article__chapter__body">
+										<div class="p-people__crosstalk__article__chapter__talk">
+											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. BIMと言えば3Dプレゼンなどのイメージがありますが、<br>どのような取り組みをしましたか？</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('古川', 'furukawa', 'bim'); ?></dt>
 												<dd>
@@ -362,8 +362,8 @@
 											</dl>
 										</div>
 
-										<div class="p-crosstalk-article__chapter__talk">
-											<h3 class="p-crosstalk-article__chapter__q"><span>Q. どのように最新の情報をキャッチしていますか？</span></h3>
+										<div class="p-people__crosstalk__article__chapter__talk">
+											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. どのように最新の情報をキャッチしていますか？</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('原田', 'harada', 'bim'); ?></dt>
 												<dd>
@@ -382,17 +382,17 @@
 						</section>
 
 						<!-- Chapter 4 -->
-						<section class="p-crosstalk-article__chapter">
+						<section class="p-people__crosstalk__article__chapter">
 							<div class="l-wrapper">
-								<div class="p-crosstalk-article__chapter__container l-container--narrow">
+								<div class="p-people__crosstalk__article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
 										<h2>今後の展望</h2>
 									</header>
 
-									<div class="p-crosstalk-article__chapter__body">
-										<div class="p-crosstalk-article__chapter__talk">
-											<h3 class="p-crosstalk-article__chapter__q"><span>Q. 今後の久米設計のBIM・デジタルデザインについて<br>どのように考えていますか？</span></h3>
+									<div class="p-people__crosstalk__article__chapter__body">
+										<div class="p-people__crosstalk__article__chapter__talk">
+											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. 今後の久米設計のBIM・デジタルデザインについて<br>どのように考えていますか？</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('原田', 'harada', 'bim'); ?></dt>
 												<dd>
@@ -416,35 +416,35 @@
 						</section>
 					</div>
 
-					<div class="p-crosstalk-article__more">
-						<div class="p-crosstalk-article__more__container">
+					<div class="p-people__crosstalk__article__more">
+						<div class="p-people__crosstalk__article__more__container">
 							<a class="c-button c-button--more" href="javascript:void(0);"><span>つづきを読む</span></a>
 						</div>
 					</div>
 				</div>
 
-				<footer class="p-crosstalk-article__footer">
+				<footer class="p-article__footer">
 					<div class="l-wrapper">
 						<div class="l-container">
-							<ul class="p-crosstalk-article__footer__links">
+							<ul class="p-article__footer__links">
 								<li class="is--center">
 									<a class="c-button c-button--round is--white" href="/people/#crosstalk"><span>BACK TO INDEX</span></a>
 								</li>
 								<li class="is--prev">
-								</li>
-								<li class="is--next">
-									<a href="/people/crosstalk/milano/">
-										<div class="is--thumb">
+									<a class="p-article__footer__link" href="/people/crosstalk/milano/">
+										<div class="p-article__footer__link__thumb">
 											<picture class="c-circle-picture c-lazy-trigger">
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/footer_thumb_milano.jpg', true); ?>" alt="">
 											</picture>
-											<span class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_r"></span></span>
+											<span class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_l"></span></span>
 										</div>
-										<div class="is--title">
+										<div class="p-article__footer__link__title">
 											<h4>新宿TOKYU MILANO<br>再開発プロジェクトチーム</h4>
 											<p>都市と建築のチャレンジ</p>
 										</div>
 									</a>
+								</li>
+								<li class="is--next">
 								</li>
 							</ul>
 						</div>

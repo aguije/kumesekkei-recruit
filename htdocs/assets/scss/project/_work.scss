@@ -45,7 +45,7 @@ main.p-work.is--welfare {
 
 		header {
 			h2 {
-				font-weight: 700;
+				font-weight: bold;
 				box-sizing: border-box;
 				padding-top: pc-rem(30);
 				border-top: 1px solid var(--color-border);
@@ -96,12 +96,12 @@ main.p-work.is--welfare {
 
 			b {
 				font-size: pc-clamp(48, 48 * $fs--min-ratio);
-				font-weight: 400;
+				font-weight: normal;
 			}
 
 			small {
 				font-size: pc-clamp(18, 18 * $fs--min-ratio);
-				font-weight: 700;
+				font-weight: bold;
 			}
 		}
 	}
@@ -129,7 +129,7 @@ main.p-work.is--welfare {
 				}
 
 				small {
-					font-weight: 400;
+					font-weight: normal;
 				}
 			}
 		}
@@ -237,7 +237,7 @@ main.p-work.is--hrd {
 
 			strong {
 				font-size: pc-rem(54);
-				font-weight: 400;
+				font-weight: normal;
 				display: inline-block;
 				margin: 0 (1rem * 7/$fs);
 			}
@@ -245,7 +245,7 @@ main.p-work.is--hrd {
 
 		> ul {
 			font-size: pc-rem(14);
-			font-weight: 700;
+			font-weight: bold;
 			line-height: $lh--huge;
 			padding: pc-rem(20) pc-rem(30);
 			border-left: 1px solid #666666;
