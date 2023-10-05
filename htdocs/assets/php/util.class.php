@@ -262,7 +262,7 @@ class KUME_Util {
 		ob_start();
 
 		?>
-		<figure class="p-crosstalk-article__face">
+		<figure class="p-people__crosstalk__article__face">
 			<div class="c-circle-picture c-lazy-trigger">
 				<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path("people/crosstalk/{$_dir}/member_{$_slug}.jpg", true); ?>" alt="">
 			</div>

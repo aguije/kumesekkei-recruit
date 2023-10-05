@@ -1134,3 +1134,118 @@ $modal-content-aspect: $modal-content-w/$modal-content-h;
 		}
 	}
 }
+
+
+/** =================================================================
+ *
+ * ARTICLE FOOTER
+ *
+ * --------------------------------------------------------------- */
+
+.p-article__footer {
+	margin-top: pc-rem(100);
+}
+
+.p-article__footer__links {
+	display: flex;
+	column-gap: 2px;
+
+	li {
+		overflow: hidden;
+		border-top: 5px solid #cccccc;
+		background-color: #f7f7f7;
+
+		&.is--center {
+			display: flex;
+			align-items: center;
+			order: 2;
+			box-sizing: border-box;
+			width: pc-rem(236);
+			padding: pc-rem(25) pc-rem(38) pc-rem(30) pc-rem(38);
+
+			.c-button {
+				width: 100%;
+			}
+		}
+
+		&.is--prev,
+		&.is--next {
+			width: calc((100% - #{pc-rem(236)} - 2px * 2) * .5);
+		}
+
+		a.p-article__footer__link {
+			display: flex;
+			justify-content: space-between;
+			height: 100%;
+			padding: pc-rem(25) pc-rem(30) pc-rem(30) pc-rem(30);
+			column-gap: pc-rem(10);
+
+			@include taphover {
+				background-color: darken(#f7f7f7, 5);
+
+				.c-circle-arrow {
+					color: var(--color-theme-bg);
+					background-color: var(--color-theme-bg-invert);
+				}
+			}
+			@include transition('background-color', $dur--hover);
+
+			.p-article__footer__link__thumb {
+				position: relative;
+				width: pc-rem(100);
+				height: pc-rem(100);
+
+				.c-circle-arrow {
+					position: absolute;
+					z-index: var(--zi-1);
+					bottom: pc-rem(-10);
+					left: pc-rem(-10);
+					background-color: var(--color-white);
+
+					@include transition('color, background-color', $dur--hover);
+				}
+			}
+
+			.p-article__footer__link__title {
+				width: calc(100% - #{pc-rem(100 + 30)});
+
+				h4 {
+					font-size: pc-clamp(14, 14 * $fs--min-ratio);
+					font-weight: bold;
+					line-height: 1em * 17.5/14;
+				}
+
+				p {
+					font-size: pc-rem(14);
+					margin-top: 1em * 10/14;
+				}
+			}
+		}
+
+		&.is--prev {
+			order: 1;
+			border-bottom-left-radius: pc-rem(16);
+		}
+
+		&.is--next {
+			order: 3;
+			border-bottom-right-radius: pc-rem(16);
+
+			a.p-article__footer__link {
+				display: flex;
+				flex-direction: row-reverse;
+
+				.p-article__footer__link__thumb {
+					.c-circle-arrow {
+						right: pc-rem(-10);
+						left: unset;
+
+						.c-icon {
+							transform: rotate(180deg);
+						}
+					}
+				}
+			}
+		}
+	}
+}

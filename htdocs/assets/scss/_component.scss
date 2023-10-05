@@ -700,3 +700,22 @@ $pie_r: 31.8309886184;
 		padding-top: pc-clamp($size--gh);
 	}
 }
+
+
+/** =================================================================
+ *
+ * PAGE HEADER BG
+ *
+ * --------------------------------------------------------------- */
+
+%-page-header-bg {
+	&::before {
+		@include pseudo-block((
+			height: pc-rem(600),
+			top: 0,
+			left: 0,
+			background-color: #e4e5e5,
+			z-index: -1,
+		)) {}
+	}
+}
