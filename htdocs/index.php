@@ -652,7 +652,7 @@
 												</header>
 												<p class="p-people__employee__article__description">同世代設計者から刺激を受ける機会が多いことは魅力のひとつです。</p>
 												<footer>
-													<span class="c-career-tag" data-category="career">キャリア採用</span>
+													<span class="c-career-tag" data-category="new">新卒採用</span>
 												</footer>
 											</a>
 										</article>
