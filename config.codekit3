@@ -148,7 +148,7 @@
       "oAP" : "\/htdocs\/assets\/images\/about\/csr\/carbon_pic3.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -291,7 +291,7 @@
       "oAP" : "\/htdocs\/assets\/images\/about\/csr\/safety_pic2.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -304,7 +304,7 @@
       "oAP" : "\/htdocs\/assets\/images\/about\/csr\/safety_pic3.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -369,7 +369,7 @@
       "oAP" : "\/htdocs\/assets\/images\/about\/csr\/study_pic2.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1202,7 +1202,7 @@
       "oAP" : "\/htdocs\/assets\/images\/top\/about_message.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1382,7 +1382,7 @@
     },
     "\/htdocs\/assets\/images\/top\/work_hrd_thumb.jpg" : {
       "ft" : 16384,
-      "iS" : 21407,
+      "iS" : 20525,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/top\/work_hrd_thumb.jpg",
@@ -1408,7 +1408,7 @@
     },
     "\/htdocs\/assets\/images\/top\/work_welfare_thumb.jpg" : {
       "ft" : 16384,
-      "iS" : 17682,
+      "iS" : 17095,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/top\/work_welfare_thumb.jpg",
@@ -1648,7 +1648,7 @@
       "oAP" : "\/htdocs\/assets\/images\/work\/head_library_thumb.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1830,7 +1830,7 @@
       "oAP" : "\/htdocs\/assets\/images\/work\/kyushu_thumb.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1895,7 +1895,7 @@
       "oAP" : "\/htdocs\/assets\/images\/work\/welfare\/system_pic1.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1908,7 +1908,7 @@
       "oAP" : "\/htdocs\/assets\/images\/work\/welfare\/system_pic2.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
