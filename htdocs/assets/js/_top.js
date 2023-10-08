@@ -315,10 +315,10 @@ $(function () {
 				scrollbar: 0
 			});
 
-			swiper.on('slideChange', function () {
+			swiper.on('afterInit', function () {
 				GLOBAL.methods.util.lazy({
 					mode: true,
-					wrapper: swiper.slides[swiper.activeIndex]
+					wrapper: '.p-people__crosstalk .swiper'
 				});
 			});
 
@@ -363,10 +363,10 @@ $(function () {
 				allowTouchMove: 0
 			});
 
-			swiper.on('slideChange', function () {
+			swiper.on('afterInit', function () {
 				GLOBAL.methods.util.lazy({
 					mode: true,
-					wrapper: swiper.slides[swiper.activeIndex]
+					wrapper: '.p-story__slides .swiper'
 				});
 			});
 

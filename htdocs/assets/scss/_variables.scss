@@ -34,6 +34,8 @@ $color--bluegray: #b8bdc1;
 $color--lightgray: #ebebeb;
 $color--border: rgba($color--black, .2);
 
+$color--modal: #022120;
+
 $color--facebook: #3a5898;
 $color--twitter: #6caddf;
 $color--instagram: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
@@ -51,6 +53,8 @@ $color--instagram: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc
 	--color-bluegray: #{$color--bluegray};
 	--color-lightgray: #{$color--lightgray};
 	--color-border: #{$color--border};
+
+	--color-modal: #{$color--modal};
 
 	--color-facebook: #{$color--facebook};
 	--color-twitter: #{$color--twitter};
@@ -113,12 +117,14 @@ $zi--level2: 20;
 $zi--level1: 10;
 $zi--level0: 0;
 
+$zi--modal: 1200;
 $zi--news-footer: 1100;
 $zi--gh: 1000;
 $zi--gf: 900;
 $zi--sst: 800;
 
 :root {
+	--zi-modal: #{$zi--modal};
 	--zi-news-footer: #{$zi--news-footer};
 	--zi-gh: #{$zi--gh};
 	--zi-gf: #{$zi--gf};

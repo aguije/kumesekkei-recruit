@@ -578,6 +578,7 @@ main.p-people__employee.is--single {
 						th {
 							font-size: pc-clamp(20, 20 * $fs--min-ratio);
 							font-weight: normal;
+							text-align: right;
 							vertical-align: top;
 						}
 
@@ -677,7 +678,7 @@ main.p-people__employee.is--single {
 			}
 
 			p {
-				font-size: pc-rem(12);
+				font-size: pc-clamp(12, 12 * $fs--min-ratio);
 			}
 
 			p:not(.is--sub) {
