@@ -853,137 +853,21 @@ main.p-top {
 
 		.p-about__stats {
 			@include pc () {
+				width: pc-rem(1000);
 				margin-top: pc-rem(60 * 2);
 			}
 			@include sp () {
 				margin-top: sp-rem(90);
 			}
 
+			.p-about__item__main {
+				@include pc () {
+					width: 50%;
+				}
+			}
+
 			h3 {
 				text-align: right;
-			}
-
-			.p-about__stats__figs {
-				position: relative;
-				overflow-x: hidden;
-				width: 100vw;
-				transform: translateX(-50%);
-				background-color: rgba($color--brown, .05);
-
-				@include pc () {
-					left: pc-rem(500);
-					margin-top: pc-rem(8);
-				}
-				@include sp () {
-					left: sp-rem((750 - $size--pad--sp * 2) * .5);
-					margin-top: sp-rem(16);
-				}
-
-				.p-about__stats__figs__wrap {
-					display: flex;
-					box-sizing: border-box;
-					animation-name: belt;
-					animation-duration: $stats_dur;
-					animation-timing-function: linear;
-					animation-iteration-count: infinite;
-
-					@include pc () {
-						width: pc-rem($stats_w);
-						padding-top: pc-rem(60);
-						padding-bottom: pc-rem(60);
-					}
-					@include sp () {
-						width: sp-rem($stats_w * $stats_ratio_sp);
-						padding-top: sp-rem(60 * $stats_ratio_sp);
-						padding-bottom: sp-rem(60 * $stats_ratio_sp);
-					}
-
-					&:nth-child(2) {
-						position: absolute;
-						top: 0;
-						left: pc-rem($stats_w);
-
-						@include sp () {
-							left: sp-rem($stats_w * $stats_ratio_sp);
-						}
-					}
-
-					@keyframes belt {
-						0% {
-							transform: translateX(0%);
-						}
-						100% {
-							transform: translateX(-100%);
-						}
-					}
-				}
-			}
-
-			.p-about__stats__fig {
-				display: block;
-				width: pc-rem(213);
-				padding: 0 pc-rem(7);
-
-				@include taphover {
-					opacity: .5;
-				}
-				@include transition('opacity', $dur--hover);
-				@include sp () {
-					width: sp-rem(213 * $stats_ratio_sp);
-					padding: 0 sp-rem(7 * $stats_ratio_sp);
-				}
-
-				.p-about__stats__description {
-					line-height: 1;
-					margin-top: pc-rem(30);
-					text-align: center;
-
-					@include sp () {
-						margin-top: sp-rem(30 * $stats_ratio_sp);
-					}
-
-					sup,
-					sub {
-						font-size: pc-rem(11);
-
-						@include sp () {
-							font-size: sp-rem(11 * $stats_ratio_sp);
-						}
-					}
-
-					sup {
-						top: -1.15em;
-						margin-right: .5em;
-					}
-
-					b {
-						font-size: pc-rem(32);
-						font-weight: normal;
-
-						@extend %ff--sen;
-						@include sp () {
-							font-size: sp-rem(32 * $stats_ratio_sp);
-						}
-					}
-
-					.is--title {
-						font-size: pc-rem(11);
-						line-height: 1;
-						white-space: nowrap;
-
-						@include sp () {
-							font-size: sp-rem(11 * $stats_ratio_sp);
-						}
-					}
-
-					.is--sub {
-						font-size: pc-rem(11);
-
-						@include sp () {
-							font-size: sp-rem(11 * $stats_ratio_sp);
-						}
-					}
-				}
 			}
 		}
 	}

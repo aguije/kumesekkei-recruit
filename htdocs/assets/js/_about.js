@@ -68,6 +68,31 @@ $(function () {
 		});
 	}
 
+	function initAboutStats () {
+		GLOBAL.methods.util.lazy({
+			mode: true,
+			wrapper: '.c-lazy-trigger'
+		});
+
+		$('.p-about__stats__article__sections nav a').on('click', function (_event) {
+			_event.preventDefault();
+
+			gsap.to(window, {
+				duration: .6,
+				scrollTo: { y: $(this).attr('href') }
+			});
+		});
+
+		$('.p-about__stats__belt a').on('click', function (_event) {
+			_event.preventDefault();
+
+			gsap.to(window, {
+				duration: .6,
+				scrollTo: { y: $(this).attr('href') }
+			});
+		});
+	}
+
 
 	/* ==================================================================
 	 *
@@ -89,6 +114,13 @@ $(function () {
 		console.log('EVENT: initAboutCsr');
 
 		initAboutCsr();
+	});
+
+	$(window).on('initAboutStats', function () {
+		console.log(' ');
+		console.log('EVENT: initAboutStats');
+
+		initAboutStats();
 	});
 
 });

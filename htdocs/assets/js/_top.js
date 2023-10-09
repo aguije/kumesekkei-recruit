@@ -256,24 +256,6 @@ $(function () {
 				});
 				GLOBAL.observers.push(mIO);
 			})();
-
-			(function () {
-				const $chart = $('.p-about__stats__figs .c-chart');
-
-				let mIO = new MultipleIO('.p-about__stats__figs', {
-					config: {
-						threshold: .5
-					},
-					onEnter: () => {
-						$chart.removeClass('is--out');
-					},
-					onLeave: () => {
-						$chart.addClass('is--out');
-					}
-				});
-				GLOBAL.observers.push(mIO);
-
-			})();
 		}
 		else {
 
