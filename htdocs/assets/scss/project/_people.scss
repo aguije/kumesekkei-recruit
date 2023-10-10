@@ -44,6 +44,13 @@ main.p-people.is--index {
 				border-bottom-right-radius: pc-rem(32);
 				background-color: #f7f7f7;
 
+				&.is--coming {
+					a {
+						opacity: 0.3;
+						pointer-events: none;
+					}
+				}
+
 				a {
 					position: relative;
 					display: block;
