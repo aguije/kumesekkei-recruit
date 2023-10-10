@@ -117,8 +117,8 @@
 							<div class="c-article-header">
 								<h2 class="c-article-header__title">
 									<span lang="en">Top Message</span>
-									<span lang="ja">心地よいチームワークで、<br>
-									プラス<i>α</i>の価値を生み出していく</span>
+									<span lang="ja">心地よい<br class="is--sp">チームワークで、<br>
+									プラス<i>α</i>の価値を<br class="is--sp">生み出していく</span>
 								</h2>
 							</div>
 
@@ -140,7 +140,7 @@
 							<div>
 								<header>
 									<h3>重ねてきた経験を誇りに、<br>
-									誠実で上質な設計を目指して</h3>
+									誠実で上質な設計を<br class="is--sp">目指して</h3>
 								</header>
 
 								<div class="p-about__message__sec__body">
@@ -156,7 +156,7 @@
 					<div class="l-wrapper">
 						<div class="l-container--narrow">
 							<header>
-								<h3>前のめりにチームワークで<br>
+								<h3>前のめりに<br class="is--sp">チームワークで<br>
 								意見を交わし合う</h3>
 							</header>
 

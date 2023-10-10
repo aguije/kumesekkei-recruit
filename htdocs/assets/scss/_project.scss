@@ -276,7 +276,7 @@
 	z-index: var(--zi-gf);
 
 	@include sp () {
-		margin-top: sp-rem(400);
+		margin-top: sp-rem(200);
 	}
 }
 
@@ -599,9 +599,11 @@
 	position: relative;
 	z-index: var(--zi-0);
 
-	@include sp () {
-		box-sizing: border-box;
-		padding-bottom: sp-rem(140);  // 140 は .p-news__footer の高さ
+	&.is--top {
+		@include sp () {
+			box-sizing: border-box;
+			padding-bottom: sp-rem(140);  // 140 は .p-news__footer の高さ
+		}
 	}
 
 	.p-gm__container {

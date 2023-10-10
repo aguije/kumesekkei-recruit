@@ -28,18 +28,29 @@
 	)) {}
 
 	&.is--2col {
-		display: flex;
-		column-gap: pc-rem(80);
+		@include pc () {
+			display: flex;
+			column-gap: pc-rem(80);
+		}
 
 		> div {
-			width: calc(50% - #{pc-rem(80 * .5)});
+			@include pc () {
+				width: calc(50% - #{pc-rem(80 * .5)});
+			}
+		}
+		> div + div {
+			@include sp () {
+				margin-top: sp-rem(80);
+			}
 		}
 
 		&.without--gap {
-			column-gap: 0;
+			@include pc () {
+				column-gap: 0;
 
-			> div {
-				width: 50%;
+				> div {
+					width: 50%;
+				}
 			}
 		}
 	}

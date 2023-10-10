@@ -3,8 +3,13 @@
 	$active = (array_key_exists('gm_active', $_GET)) ? $_GET['gm_active'] : '';
 	$sub_active = (array_key_exists('gm_sub_active', $_GET)) ? $_GET['gm_sub_active'] : '';
 
+	$is_top = false;
+	if (array_key_exists('is_top', $_GET) && $_GET['is_top'] === '1') {
+		$is_top = true;
+	}
+
 ?>
-<div class="p-gm">
+<div class="p-gm<?php echo ($is_top) ? ' is--top' : ''; ?>">
 	<div class="p-gm__container">
 		<div class="l-wrapper">
 			<div class="p-gm__main l-container">
