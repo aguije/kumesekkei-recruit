@@ -68,6 +68,19 @@ main.p-work.is--index {
 
 			ul {
 				li {
+					position: relative;
+					counter-increment: chapter;
+
+					&::before {
+						font-weight: bold;
+						position: absolute;
+						bottom: -.2em;
+						left: -3em;
+						content: '#0' counter(chapter);
+
+						@extend %ff--sen;
+					}
+
 					a {
 						line-height: 1;
 
@@ -82,6 +95,7 @@ main.p-work.is--index {
 							display: block;
 							padding-bottom: .5em;
 							white-space: nowrap;
+							width: 0;
 						}
 
 						[lang='ja'] {
