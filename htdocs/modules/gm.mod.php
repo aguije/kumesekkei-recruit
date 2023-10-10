@@ -79,14 +79,10 @@
 			<div class="p-gm__footer">
 				<div class="p-gm__footer__container l-container">
 					<ul class="p-gm__footer__links">
-						<li><a href="https://www.kumesekkei.co.jp/" target="_blank" rel="noopener">コーポレートトップ</a></li>
-						<li><a href="https://www.kumesekkei.co.jp/privacypolicy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
-						<li><a href="https://www.kumesekkei.co.jp/sitepolicy/" target="_blank" rel="noopener">サイトポリシー</a></li>
-					</ul>
-					<ul class="p-gm__footer__languages" data-stt-langbar>
-						<li class="is--cn"><a href="javascript:void(0);" data-stt-changelang="zh-CN" data-stt-ignore><span>中文（<span>简</span>体）</span></a></li>
-						<li class="is--en"><a href="javascript:void(0);" lang="en" data-stt-changelang="en" data-stt-ignore><span>English</span></a></li>
-						<li class="is--ja"><a href="javascript:void(0);" data-stt-changelang="ja" data-stt-ignore data-stt-active><span>日本語</span></a></li>
+						<li><span class="c-icon c-icon--external"></span> <a href="https://www.kumesekkei.co.jp/" target="_blank" rel="noopener">コーポレートトップ</a></li>
+						<li><span class="c-icon c-icon--external"></span> <a href="https://www.kumesekkei.co.jp/privacypolicy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+						<li><span class="c-icon c-icon--external"></span> <a href="https://www.kumesekkei.co.jp/sitepolicy/" target="_blank" rel="noopener">サイトポリシー</a></li>
+						<li><span class="c-icon c-icon--instagram"></span> <a href="https://www.instagram.com/kumesekkei/" target="_blank" rel="noopener">@kumesekkei</a></li>
 					</ul>
 					<p class="p-gm__footer__copyright" lang="en">©︎ KUME SEKKEI co.ltd.</p>
 				</div>

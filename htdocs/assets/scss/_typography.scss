@@ -71,9 +71,9 @@
 
 	font-display: block;
 	src: local('☺︎'),
-		 url('../fonts/icomoon/icomoon.ttf?rx540h') format('truetype'),
-		 url('../fonts/icomoon/icomoon.woff?rx540h') format('woff'),
-		 url('../fonts/icomoon/icomoon.svg?rx540h#icomoon') format('svg');
+		 url('../fonts/icomoon/icomoon.ttf?7em4n0') format('truetype'),
+		 url('../fonts/icomoon/icomoon.woff?7em4n0') format('woff'),
+		 url('../fonts/icomoon/icomoon.svg?7em4n0#icomoon') format('svg');
 }
 
 %c-icon {
@@ -104,37 +104,40 @@
 	@extend %c-icon;
 }
 
-$icon--content-arrow_d: '\e900';
-$icon--content-arrow_r: '\e902';
-$icon--content-external: '\e906';
-$icon--content-circle: '\e904';
+$icon--content-arrow_d: "\e900";
+$icon--content-arrow_r: "\e902";
+$icon--content-circle: "\e904";
+$icon--content-external: "\e906";
 
+.c-icon--instagram::before {
+	content: "\ea92";
+}
 .c-icon--arrow_d::before {
 	content: $icon--content-arrow_d;
 }
 .c-icon--arrow_l::before {
-	content: '\e901';
+	content: "\e901";
 }
 .c-icon--arrow_r::before {
 	content: $icon--content-arrow_r;
 }
 .c-icon--arrow_u::before {
-	content: '\e903';
+	content: "\e903";
 }
 .c-icon--circle::before {
 	content: $icon--content-circle;
 }
 .c-icon--close::before {
-	content: '\e905';
+	content: "\e905";
 }
 .c-icon--external::before {
 	content: $icon--content-external;
 }
 .c-icon--logo::before {
-	content: '\e907';
+	content: "\e907";
 }
 .c-icon--play::before {
-	content: '\e908';
+	content: "\e908";
 }
 
 

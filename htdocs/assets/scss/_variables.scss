@@ -33,6 +33,7 @@ $color--gray: #a3a3a3;
 $color--bluegray: #b8bdc1;
 $color--lightgray: #ebebeb;
 $color--border: #b2b2b2;
+$color--border-rgba: rgba(0,0,0,.2);
 
 $color--modal: #022120;
 
@@ -53,6 +54,7 @@ $color--instagram: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc
 	--color-bluegray: #{$color--bluegray};
 	--color-lightgray: #{$color--lightgray};
 	--color-border: #{$color--border};
+	--color-border-rgba: #{$color--border-rgba};
 
 	--color-modal: #{$color--modal};
 

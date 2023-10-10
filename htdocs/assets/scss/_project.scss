@@ -395,8 +395,8 @@
 
 		ul {
 			display: flex;
-			border-right: 1px solid var(--color-border);
-			border-left: 1px solid var(--color-border);
+			border-right: 1px solid var(--color-border-rgba);
+			border-left: 1px solid var(--color-border-rgba);
 
 			@include pc () {
 				height: pc-clamp($size--gh - 16);
@@ -486,7 +486,7 @@
 			}
 
 			li + li {
-				border-left: 1px solid var(--color-border);
+				border-left: 1px solid var(--color-border-rgba);
 			}
 		}
 	}
@@ -632,14 +632,14 @@
 
 			@include pc () {
 				padding-right: pc-clamp(100);
-				border-left: 1px solid var(--color-border);
+				border-left: 1px solid var(--color-border-rgba);
 			}
 
 			> li {
 				position: relative;
 				display: flex;
 				cursor: pointer;
-				border-right: 1px solid var(--color-border);
+				border-right: 1px solid var(--color-border-rgba);
 
 				@include transition('border-right-color, background-color', $dur--hover);
 				@include taphover {
@@ -817,21 +817,18 @@
 	.p-gm__footer {
 		@include pc () {
 			margin-top: pc-clamp(30);
-			border-top: 1px solid var(--color-border);
+			border-top: 1px solid var(--color-border-rgba);
 
 			.p-gm__footer__container {
 				display: flex;
 				align-items: center;
+				justify-content: space-between;
 
 				.p-gm__footer__copyright {
 					order: 1;
 				}
 				.p-gm__footer__links {
-					flex-grow: 1;
 					order: 2;
-				}
-				.p-gm__footer__languages {
-					order: 3;
 				}
 			}
 		}
@@ -840,25 +837,18 @@
 			padding-bottom: sp-rem(80);
 		}
 
-		.p-gm__footer__links,
-		.p-gm__footer__languages {
+		.p-gm__footer__links {
 			display: flex;
 
-			@include pc ((
-				padding-top: 20,
-				padding-bottom: 20,
-			)) {
-				align-items: center;
-			}
-		}
-
-		.p-gm__footer__links {
 			@include pc ((
 				column-gap: 20,
 				margin-left: 40,
 				margin-right: 20,
+				padding-top: 20,
+				padding-bottom: 20,
 			)) {
 				font-size: pc-clamp(10);
+				align-items: center;
 			}
 			@include sp () {
 				font-size: sp-rem(20);
@@ -869,15 +859,26 @@
 			li {
 				white-space: nowrap;
 
-				&::before {
+				.c-icon {
 					font-size: pc-clamp(10);
 					margin-right: 1em * 8/10;
-					content: $icon--content-external;
 
 					@include sp () {
 						font-size: sp-rem(20);
 					}
-					@extend %c-icon;
+				}
+
+				.c-icon.c-icon--instagram {
+					position: relative;
+
+					@include pc () {
+						font-size: pc-clamp(12);
+						top: pc-clamp(1);
+					}
+					@include sp () {
+						top: sp-rem(2);
+						font-size: sp-rem(24);
+					}
 				}
 
 				a {
