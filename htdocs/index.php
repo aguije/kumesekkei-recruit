@@ -72,30 +72,104 @@
 			</div>
 			<?php
 
-				$ch = curl_init();
-				curl_setopt($ch, CURLOPT_URL, 'https://www.kumesekkei.co.jp/news/news2.json');
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				function get_results ($_url) {
+					$ch = curl_init();
+					curl_setopt($ch, CURLOPT_URL, $_url);
+					curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-				$results = curl_exec($ch);
-				curl_close($ch);
+					$results = curl_exec($ch);
+					curl_close($ch);
 
-				if ($results) {
-					$results = json_decode($results, true);
+					if ($results) {
+						$results = json_decode($results, true);
 
-					$recruit_news = array();
-					foreach ($results as $result) {
-						if (
-							array_key_exists('categoryID', $result) &&
-							array_key_exists(2, $result['categoryID']) &&
-							$result['categoryID'][2] === 3
-						) {
-							array_push($recruit_news, $result);
+						$recruit_news = array();
+						foreach ($results as $result) {
+							if (array_key_exists('categoryID', $result) && array_key_exists(2, $result['categoryID']) && $result['categoryID'][2] === 3) {
+								array_push($recruit_news, $result);
 
-							if (count($recruit_news) === 5) {
-								break;
+								if (count($recruit_news) === 3) {
+									break;
+								}
+							}
+						}
+
+						$mypage_news = array();
+						foreach ($results as $result) {
+							if (array_key_exists('categoryID', $result) && array_key_exists(3, $result['categoryID']) && $result['categoryID'][3] === 4) {
+								array_push($mypage_news, $result);
+
+								if (count($mypage_news) === 2) {
+									break;
+								}
 							}
 						}
 					}
+
+					return array(
+						'recruit' => $recruit_news,
+						'mypage' => $mypage_news
+					);
+				}
+
+				function get_news_article ($_news) {
+					$name = $_news['name'];
+					$news_tag = '';
+
+					preg_match('/((\s|　|ー)*(学生対象プログラム)(\s|　|ー)*)/', $name, $match);
+					if ($match) {
+						$name = str_replace($match[1], '', $name);
+						$news_tag = $match[3];
+					}
+
+					//
+
+					$url = "https://www.kumesekkei.co.jp{$_news['url']}";
+					if (!empty($_news['topicsurl']) && !empty($_news['topicsurl'][0])) {
+						$url = $_news['topicsurl'][0];
+					}
+
+					//
+
+					$category_type = '';
+					if (!empty($_news['rType']) && !empty($_news['rType'][0]) && $_news['rType'][0] === 1) {
+						$category_type = 'new';
+						$category_name = '新卒採用';
+						$category_url = 'https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html';
+					}
+					else if (!empty($_news['rType']) && !empty($_news['rType'][1]) && $_news['rType'][1] === 2) {
+						$category_type = 'career';
+						$category_name = 'キャリア採用';
+						$category_url = 'https://www.kumesekkei.co.jp/recruit/entry_career.html';
+					}
+
+					ob_start();
+
+					?>
+					<li>
+						<article class="p-news__item">
+							<time datetime="<?php echo str_replace('.', '-', $_news['year']); ?>" lang="en"><span><?php echo $_news['year']; ?></span></time>
+							<h4>
+								<a href="<?php echo $url; ?>" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span><?php echo $name; ?></a>
+								<?php if ($news_tag !== '') { echo "<span class=\"c-news-tag\">{$news_tag}</span>"; }?>
+							</h4>
+							<?php
+
+								if ($category_type !== '') {
+									?>
+									<div class="p-news__item__category"><a href="<?php echo $category_url; ?>" target="_blank" rel="noopener" class="c-career-tag" data-category="<?php echo $category_type; ?>"><?php echo $category_name; ?></a></div>
+									<?php
+								}
+
+							?>
+						</article>
+					</li>
+					<?php
+
+					$output = ob_get_contents();
+					ob_end_clean();
+
+					return $output;
 				}
 
 			?>
@@ -112,6 +186,44 @@
 
 						<div class="p-news__list">
 							<ul>
+								<p style="margin-bottom: 1em; color: red;"><b>↓ 本番用: https://www.kumesekkei.co.jp/news/news.json</b></p>
+
+								<?php
+
+									$results = get_results('https://www.kumesekkei.co.jp/news/news.json');
+
+									foreach ($results['recruit'] as $news) {
+										echo get_news_article($news);
+									}
+
+									foreach ($results['mypage'] as $news) {
+										echo get_news_article($news);
+									}
+
+									unset($results);
+
+								?>
+
+								<p style="margin-bottom: 1em; color: red;"><b>↓ 検証用サンプル: https://www.kumesekkei.co.jp/news/news_recruit_sample.json</b></p>
+
+								<?php
+
+									$results = get_results('https://www.kumesekkei.co.jp/news/news_recruit_sample.json');
+
+									foreach ($results['recruit'] as $news) {
+										echo get_news_article($news);
+									}
+
+									foreach ($results['mypage'] as $news) {
+										echo get_news_article($news);
+									}
+
+									unset($results);
+
+								?>
+
+								<p style="margin-bottom: 1em; color: red;"><b>↓ 静的</b></p>
+
 								<li>
 									<article class="p-news__item">
 										<time datetime="2023-11-08" lang="en"><span>2023.11.08</span></time>

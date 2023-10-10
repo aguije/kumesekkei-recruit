@@ -179,7 +179,7 @@ $(function () {
 			$('.p-news__item').on('click', function (_event) {
 				_event.preventDefault();
 
-				window.open($(this).find('h4 > a'));
+				window.open($(this).find('h4 > a').attr('href'));
 			});
 		}
 		else {

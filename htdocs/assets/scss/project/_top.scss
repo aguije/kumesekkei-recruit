@@ -627,8 +627,11 @@ main.p-top {
 	 * --------------------------------------------------------------- */
 
 	.p-about {
-		margin-top: pc-rem(200);
-
+		@include pc () {
+			overflow-x: hidden;
+			margin-top: pc-rem(200 - 26);
+			padding-top: pc-rem(26);
+		}
 		@include sp ((
 			margin-top: 400,
 		)) {}
