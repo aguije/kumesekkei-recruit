@@ -115,8 +115,8 @@
 							<div class="p-people__employee__article__header__title">
 								<p class="p-people__employee__article__header__index" lang="en">Message</p>
 								<p class="p-people__employee__article__header__message">
-									<span>先輩に育児アドバイスをもらいながら、</span>
-									<span>母になった毎日の経験を発想に変えて。</span>
+									<span>母としての経験も発想に変えて、</span>
+									<span>社会の役に立つような設計に生かしたい。</span>
 								</p>
 							</div>
 							<div class="p-people__employee__article__header__body">
