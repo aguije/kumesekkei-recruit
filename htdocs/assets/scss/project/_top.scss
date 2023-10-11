@@ -865,6 +865,8 @@ main.p-top {
 
 			.p-about__item__main {
 				@include pc () {
+					position: relative;
+					z-index: var(--zi-1);
 					width: 50%;
 				}
 			}
