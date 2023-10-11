@@ -32,6 +32,12 @@
 		text-overflow: ellipsis;
 		border-radius: pc-rem(12);
 
+		@include sp () {
+			font-size: sp-rem(24);
+			height: sp-rem(48);
+			border-radius: sp-rem(24);
+		}
+
 		&.is--gray {
 			border: 1px solid #f7f7f7;
 			background-color: #f7f7f7;

@@ -117,7 +117,7 @@
 							<div class="c-article-header">
 								<h1 class="c-article-header__title">
 									<span lang="en">Corporate Social Responsibility</span>
-									<span lang="ja">社会課題への取り組み</span>
+									<span lang="ja">社会課題への<br class="is--sp">取り組み</span>
 								</h1>
 								<div class="c-article-header__description">
 									<p>久米設計では、持続的な地域社会と建築を通して社会課題解決の実現に向けた取り組みを推進しています。ここでは久米設計が取り組んできた事例をテーマごとにご覧いただけます。</p>
@@ -151,38 +151,40 @@
 							<header>
 								<h3>#こども未来</h3>
 							</header>
-							<ul>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/ai_workshop.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/kodomo_pic1.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">子どもAIデザイン・ワークショップ</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="#" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/kodomo_pic2.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">地域子どもイベントを開催しました。</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/work_experience.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/kodomo_pic3.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">職場体験を通して学んだこと「思い」を「形」に</span></p>
-									</a>
-								</li>
-							</ul>
+							<div class="p-about__csr__items">
+								<ul>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/ai_workshop.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/kodomo_pic1.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">子どもAIデザイン・ワークショップ</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="#" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/kodomo_pic2.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">地域子どもイベントを開催しました。</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/work_experience.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/kodomo_pic3.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">職場体験を通して学んだこと「思い」を「形」に</span></p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -193,38 +195,40 @@
 							<header>
 								<h3>#カーボンニュートラル</h3>
 							</header>
-							<ul>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/kama_city_hall_me.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/carbon_pic1.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">自然と共生し自然を活かす環境建築</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/eco_friendly02.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/carbon_pic2.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">ZEBの実現と災害から人々を守るLCBの融合</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/eco_friendly01.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/carbon_pic3.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">空間性と省エネルギーを両立する設計の考え方</span></p>
-									</a>
-								</li>
-							</ul>
+							<div class="p-about__csr__items">
+								<ul>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/kama_city_hall_me.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/carbon_pic1.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">自然と共生し自然を活かす環境建築</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/eco_friendly02.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/carbon_pic2.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">ZEBの実現と災害から人々を守るLCBの融合</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/eco_friendly01.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/carbon_pic3.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">空間性と省エネルギーを両立する設計の考え方</span></p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -235,38 +239,40 @@
 							<header>
 								<h3>#ダイバーシティ＆インクルージョン</h3>
 							</header>
-							<ul>
-								<li>
-									<a class="p-about__csr__link" href="#" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic1.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">鹿児島県立開陽高等学校にて講演を行いました</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/barrier_free.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic2.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">バリアフリーデザインの実践</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="#" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic3.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">パラアスリートの川嶋悠太選手・坂元智香選手が入社しました！​</span></p>
-									</a>
-								</li>
-							</ul>
+							<div class="p-about__csr__items">
+								<ul>
+									<li>
+										<a class="p-about__csr__link" href="#" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic1.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">鹿児島県立開陽高等学校にて講演を行いました</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/barrier_free.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic2.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">バリアフリーデザインの実践</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="#" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic3.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">パラアスリートの川嶋悠太選手・坂元智香選手が入社しました！​</span></p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -277,38 +283,40 @@
 							<header>
 								<h3>#地域づくり</h3>
 							</header>
-							<ul>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/corporate_and_community.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/community_pic1.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">実践<br>― 企業とまちの新しい関係について ―</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/yebisu_garden_place.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/community_pic2.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">都市の豊かさ<br>（恵比寿ガーデンプレイス）</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/akasaka_sacas.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/community_pic3.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">土地と街の記憶を継承し再構築する<br>（赤坂サカス）</span></p>
-									</a>
-								</li>
-							</ul>
+							<div class="p-about__csr__items">
+								<ul>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/corporate_and_community.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/community_pic1.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">実践<br>― 企業とまちの新しい関係について ―</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/yebisu_garden_place.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/community_pic2.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">都市の豊かさ<br>（恵比寿ガーデンプレイス）</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/akasaka_sacas.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/community_pic3.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">土地と街の記憶を継承し再構築する<br>（赤坂サカス）</span></p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -319,38 +327,40 @@
 							<header>
 								<h3>#これからの学び</h3>
 							</header>
-							<ul>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/nijinooka_gakuen.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/study_pic1.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">原風景をたどり、<br>建築としてかたちにする</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/omiya_ward_office.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/study_pic2.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">街をつなぎ、人をつなぐ<br>「みんなのリビング」</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/nagoya_gakuin_university.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/study_pic3.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">学びの風景をデザインする</span></p>
-									</a>
-								</li>
-							</ul>
+							<div class="p-about__csr__items">
+								<ul>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/nijinooka_gakuen.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/study_pic1.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">原風景をたどり、<br>建築としてかたちにする</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/omiya_ward_office.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/study_pic2.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">街をつなぎ、人をつなぐ<br>「みんなのリビング」</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/nagoya_gakuin_university.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/study_pic3.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">学びの風景をデザインする</span></p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -361,28 +371,30 @@
 							<header>
 								<h3>#ワークスタイル</h3>
 							</header>
-							<ul>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/k-lounge.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/workstyle_pic1.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">働く場のこれからを考える</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="#" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/workstyle_pic2.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">働く場のこれからを考える２</span></p>
-									</a>
-								</li>
-							</ul>
+							<div class="p-about__csr__items">
+								<ul>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/k-lounge.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/workstyle_pic1.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">働く場のこれからを考える</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="#" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/workstyle_pic2.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">働く場のこれからを考える２</span></p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -393,38 +405,40 @@
 							<header>
 								<h3>#安全・安心</h3>
 							</header>
-							<ul>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/intro_quake-resist.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/safety_pic1.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">久米式耐震木構造から継続する安全安心への思い</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/rapid_rescue.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/safety_pic2.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">建築設計の発想から生まれたプロダクトデザイン</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/chutoen_general_medical_center.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/safety_pic3.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">東海地震に対応したLCBホスピタル</span></p>
-									</a>
-								</li>
-							</ul>
+							<div class="p-about__csr__items">
+								<ul>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/intro_quake-resist.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/safety_pic1.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">久米式耐震木構造から継続する安全安心への思い</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/rapid_rescue.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/safety_pic2.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">建築設計の発想から生まれたプロダクトデザイン</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/chutoen_general_medical_center.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/safety_pic3.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">東海地震に対応したLCBホスピタル</span></p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -435,38 +449,40 @@
 							<header>
 								<h3>#ストック活用</h3>
 							</header>
-							<ul>
-								<li>
-									<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/chiba_univ_sumida.html" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/stock_pic1.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">ストックを活かし地域をつなげる</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="#" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/stock_pic2.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">旧本多邸改修計画<br>地域にひらかれた文化財をめざして</span></p>
-									</a>
-								</li>
-								<li>
-									<a class="p-about__csr__link" href="#" target="_blank">
-										<div class="p-about__csr__link__thumb">
-											<picture class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/stock_pic3.jpg', true); ?>" alt="">
-											</picture>
-										</div>
-										<p><span class="c-icon c-icon--external"></span><span class="is--text">三軒茶屋アパートメント計画<br>地に足をつけて、はみ出していく</span></p>
-									</a>
-								</li>
-							</ul>
+							<div class="p-about__csr__items">
+								<ul>
+									<li>
+										<a class="p-about__csr__link" href="https://preview.kumesekkei.co.jp/designstory/chiba_univ_sumida.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/stock_pic1.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">ストックを活かし地域をつなげる</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="#" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/stock_pic2.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">旧本多邸改修計画<br>地域にひらかれた文化財をめざして</span></p>
+										</a>
+									</li>
+									<li>
+										<a class="p-about__csr__link" href="#" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/stock_pic3.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">三軒茶屋アパートメント計画<br>地に足をつけて、はみ出していく</span></p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
