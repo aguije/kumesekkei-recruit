@@ -152,7 +152,8 @@
 				pointer-events: all;
 			}
 
-			&::before {
+			&::before,
+			&::after {
 				transform: translateX(0%);
 			}
 		}
@@ -223,6 +224,22 @@
 			}
 			@include transition('transform', .6s);
 		}
+		&::after {
+			@include pseudo-block((
+				width: 100%,
+				height: pc-clamp(102 - $size--gh),
+				top: calc(#{pc-clamp($size--gh)} - 1px),
+				left: 0,
+				z-index: var(--zi-1),
+				background-image: clothoid-gradient('to bottom', $color--bluegray, 1, 0),
+				transform: translateX(100%),
+			)) {}
+			@include sp () {
+				top: calc(#{sp-rem($size--gh--sp)} - 1px);
+				height: sp-rem(95 - $size--gh--sp);
+			}
+			@include transition('transform', .6s);
+		}
 
 		.p-gm {
 			overflow-y: scroll;
@@ -289,6 +306,7 @@
 
 .p-site-title {
 	position: absolute;
+	z-index: var(--zi-2);
 	right: 0;
 	transform: translateX(50%);
 	white-space: nowrap;
@@ -874,10 +892,13 @@
 					@include pc () {
 						font-size: pc-clamp(12);
 						top: pc-clamp(1);
+						margin-right: calc(#{1em * 8/10} - #{pc-clamp(2)});
 					}
 					@include sp () {
-						top: sp-rem(2);
 						font-size: sp-rem(24);
+						top: sp-rem(2);
+						left: sp-rem(-2);
+						margin-right: calc(#{1em * 8/10} - #{sp-rem(4)});
 					}
 				}
 
