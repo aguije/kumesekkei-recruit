@@ -115,8 +115,7 @@
 							<div class="p-people__employee__article__header__title">
 								<p class="p-people__employee__article__header__index" lang="en">Message</p>
 								<p class="p-people__employee__article__header__message">
-									<span>母としての経験も発想に変えて、</span>
-									<span>社会の役に立つような設計に生かしたい。</span>
+									<span><span class="is--line">母としての経験も発想に変えて、</span><span class="is--line">社会の役に立つような設計に生かしたい。</span>
 								</p>
 							</div>
 							<div class="p-people__employee__article__header__body">
@@ -172,7 +171,7 @@
 						</div>
 					</div>
 
-					<div class="l-wrapper">
+					<div class="p-people__employee__article__insert l-wrapper">
 						<div class="l-container--narrow">
 							<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/employees/mizutani_pic1.jpg'); ?>>
 								<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/mizutani_pic1.jpg', true); ?>" alt="">
@@ -211,7 +210,7 @@
 										<ul>
 											<li class="is--active">
 												<a href="javascript:void(0);" data-index="0">
-													<span lang="en">Daily Schedule</span>
+													<span lang="en">Daily Sched<span class="is--pc">ule</span><span class="is--sp">.</span></span>
 													<span lang="ja">とある1日</span>
 												</a>
 											</li>
@@ -227,6 +226,7 @@
 									<div class="swiper">
 										<div class="swiper-wrapper">
 											<div id="tab1" class="swiper-slide">
+												<header><h3>とある1日</h3></header>
 												<table>
 													<tr>
 														<th><span lang="en">8:30</span></th>
@@ -263,6 +263,7 @@
 											</div>
 
 											<div id="tab2" class="swiper-slide">
+												<header><h3>オフの1日</h3></header>
 												<div class="swiper-slide__container">
 													<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/employees/mizutani_tab2_pic1.jpg'); ?>>
 														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/mizutani_tab2_pic1.jpg', true); ?>" alt="">
@@ -320,31 +321,18 @@
 									<a class="p-article__footer__link" href="/people/employees/uomoto/">
 										<div class="p-article__footer__link__thumb">
 											<picture class="c-circle-picture c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/footer_thumb_uomoto.jpg', true); ?>" alt="">
+												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/uomoto_thumb.jpg', true); ?>" alt="">
 											</picture>
 											<span class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_l"></span></span>
 										</div>
 										<div class="p-article__footer__link__title">
-											<h4>魚本 大地　<span class="c-career-tag" data-category="new">新卒採用</span></h4>
-											<p class="is--sub">2009年入社　意匠設計</p>
-											<p>互いの意思を尊重し、最適な答えを探していくことのできる職場です。</p>
+											<h4>魚本 大地　<br class="is--sp"><span class="c-career-tag" data-category="new">新卒採用</span></h4>
+											<p class="is--sub">2009年入社　<br class="is--sp">意匠設計</p>
+											<p>力を発揮できる環境と働き方を大切に、道なき道を切り開くことすらも楽しむ。</p>
 										</div>
 									</a>
 								</li>
 								<li class="is--next">
-									<a class="p-article__footer__link" href="/people/employees/miura/">
-										<div class="p-article__footer__link__thumb">
-											<picture class="c-circle-picture c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/footer_thumb_miura.jpg', true); ?>" alt="">
-											</picture>
-											<span class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_l"></span></span>
-										</div>
-										<div class="p-article__footer__link__title">
-											<h4>三浦 淑美　<span class="c-career-tag" data-category="new">新卒採用</span></h4>
-											<p class="is--sub">2005年入社　意匠設計</p>
-											<p>互いの意思を尊重しあうことのできる職場です。</p>
-										</div>
-									</a>
 								</li>
 							</ul>
 						</div>

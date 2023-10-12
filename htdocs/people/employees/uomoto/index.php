@@ -115,8 +115,7 @@
 							<div class="p-people__employee__article__header__title">
 								<p class="p-people__employee__article__header__index" lang="en">Message</p>
 								<p class="p-people__employee__article__header__message">
-									<span>力を発揮できる環境と働き方を大切に、</span>
-									<span>道なき道を切り開くことすらも楽しむ。</span>
+									<span><span class="is--line">力を発揮できる環境と働き方を大切に、</span><span class="is--line">道なき道を切り開くことすらも楽しむ。</span></span>
 								</p>
 							</div>
 							<div class="p-people__employee__article__header__body">
@@ -173,7 +172,7 @@
 						</div>
 					</div>
 
-					<div class="l-wrapper">
+					<div class="p-people__employee__article__insert l-wrapper">
 						<div class="l-container--narrow">
 							<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/employees/uomoto_pic1.jpg'); ?>>
 								<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/uomoto_pic1.jpg', true); ?>" alt="">
@@ -225,7 +224,7 @@
 											</li>
 											<li>
 												<a href="javascript:void(0);" data-index="2">
-													<span lang="en">Weekly Schedule</span>
+													<span lang="en">Weekly Sched<span class="is--pc">ule</span><span class="is--sp">.</span></span>
 													<span lang="ja">とある1週間</span>
 												</a>
 											</li>
@@ -410,14 +409,14 @@
 									<a class="p-article__footer__link" href="/people/employees/mizutani/">
 										<div class="p-article__footer__link__thumb">
 											<picture class="c-circle-picture c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/footer_thumb_mizutani.jpg', true); ?>" alt="">
+												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/mizutani_thumb.jpg', true); ?>" alt="">
 											</picture>
 											<span class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_l"></span></span>
 										</div>
 										<div class="p-article__footer__link__title">
-											<h4>水谷 絢子　<span class="c-career-tag" data-category="new">新卒採用</span></h4>
-											<p class="is--sub">2014年入社　意匠設計</p>
-											<p>同世代設計者から受ける機会が多いことは魅力のひとつです。</p>
+											<h4>水谷 絢子　<br class="is--sp"><span class="c-career-tag" data-category="new">新卒採用</span></h4>
+											<p class="is--sub">2014年入社　<br class="is--sp">意匠設計</p>
+											<p>母としての経験も発想に変えて、社会の役に立つような設計に生かしたい。</p>
 										</div>
 									</a>
 								</li>

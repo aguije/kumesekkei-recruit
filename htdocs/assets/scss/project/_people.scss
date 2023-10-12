@@ -46,8 +46,8 @@ main.p-people.is--index {
 
 				&.is--coming {
 					a {
-						opacity: 0.3;
 						pointer-events: none;
+						opacity: .3;
 					}
 				}
 
@@ -385,6 +385,10 @@ main.p-people__employee.is--single {
 	.p-people__employee__article {
 		margin-top: pc-rem(44);
 
+		@include sp () {
+			margin-top: sp-rem(250);
+		}
+
 
 		/** =================================================================
 		 * HEADER
@@ -398,71 +402,151 @@ main.p-people__employee.is--single {
 			}
 
 			.p-people__employee__article__header__title {
-				position: absolute;
 				z-index: var(--zi-1);
-				top: 0;
-				left: pc-rem($size--pad);
+
+				@include pc () {
+					position: absolute;
+					top: 0;
+					left: pc-rem($size--pad);
+				}
+				@include sp () {
+					position: relative;
+				}
 			}
 
 			.p-people__employee__article__header__index {
 				font-size: pc-clamp(13, 13 * $fs--min-ratio);
 				line-height: 1;
 				opacity: .8;
+
+				@include sp () {
+					font-size: sp-rem(26);
+				}
 			}
 
 			.p-people__employee__article__header__message {
-				display: flex;
-				flex-direction: column;
-				margin-top: pc-rem(15);
-				row-gap: pc-rem(3);
+				@include pc () {
+					margin-top: pc-rem(15);
 
-				span {
-					font-size: pc-rem(34);
+					> span {
+						display: flex;
+						flex-direction: column;
+						row-gap: pc-rem(3);
+					}
+
+					span.is--line {
+						@include pc () {
+							font-size: pc-rem(34);
+							line-height: 1;
+							display: block;
+							width: fit-content;
+							padding: (1em * 7.5/34) (1em * 10/34);
+							border-radius: 1em * 4/34;
+							background-color: var(--color-white);
+						}
+					}
+				}
+				@include sp () {
+					font-size: sp-rem(71);
 					line-height: 1;
-					display: block;
-					width: fit-content;
-					padding: (1em * 7.5/34) (1em * 10/34);
-					border-radius: 1em * 4/34;
-					background-color: var(--color-white);
+					margin-top: sp-rem(40);
+					text-align: justify;
+
+					> span {
+						line-height: 1 * 80/71;
+						box-decoration-break: clone;
+						background-image: linear-gradient(to right, var(--color-white) 0%, var(--color-white) 100%);
+						background-repeat: repeat-x;
+						background-position: 0 sp-rem(16);
+						background-size: 100% sp-rem(78);
+
+						-webit-box-decoration-break: clone;
+					}
 				}
 			}
 
 			.p-people__employee__article__header__body {
 				position: relative;
 				z-index: var(--zi-0);
-				padding-top: pc-rem(34 + 30);
-				padding-right: pc-rem(250);
-				padding-left: pc-rem(250);
+
+				@include pc () {
+					padding-top: pc-rem(34 + 30);
+					padding-right: pc-rem(250);
+					padding-left: pc-rem(250);
+				}
+				@include sp () {
+					margin-top: sp-rem(-37);
+				}
 
 				> picture {
 					overflow: hidden;
+					box-sizing: border-box;
 					width: 100%;
 					aspect-ratio: 1000 / 1520;
 					border-radius: pc-rem(4);
+
+					@include sp () {
+						width: sp-rem(500);
+						margin: 0 auto;
+						border-radius: sp-rem(8);
+					}
 				}
 
 				> div {
 					margin-top: pc-rem(40);
 
+					@include sp () {
+						margin-top: sp-rem(60);
+					}
+
 					h1 {
 						display: flex;
-						align-items: end;
-						column-gap: pc-rem(20);
+
+						@include pc () {
+							align-items: end;
+							column-gap: pc-rem(20);
+						}
+						@include sp () {
+							align-items: center;
+							flex-wrap: wrap;
+							justify-content: space-between;
+							row-gap: sp-rem(35);
+						}
 
 						[lang='ja'] {
 							font-size: pc-clamp(18, 18 * $fs--min-ratio);
+
+							@include sp () {
+								font-size: sp-rem(36);
+								font-weight: bold;
+								width: 100%;
+							}
 						}
 
 						[lang='en'] {
-							font-size: pc-clamp(12);
-							flex-grow: 1;
+							@include pc () {
+								font-size: pc-clamp(12);
+								flex-grow: 1;
+							}
+							@include sp () {
+								font-size: sp-rem(24);
+							}
 						}
 					}
 				}
 
 				.p-people__employee__article__header__profile {
-					font-size: pc-clamp(13);
-					margin-top: pc-rem(20);
+					@include pc () {
+						font-size: pc-clamp(13);
+						margin-top: pc-rem(20);
+					}
+					@include sp () {
+						font-size: sp-rem(32);
+						width: 100%;
+						margin-top: sp-rem(40);
+						padding-top: sp-rem(40);
+						border-top: 1px solid var(--color-border);
+					}
 				}
 			}
 		}
@@ -476,15 +560,33 @@ main.p-people__employee.is--single {
 			margin-top: pc-rem(80);
 			counter-reset: chapter;
 
+			@include sp () {
+				margin-top: sp-rem(100);
+			}
+
 			> .l-wrapper + .l-wrapper,
 			> .l-wrapper + .p-people__employee__article__chapter,
 			> .p-people__employee__article__chapter + .p-people__employee__article__chapter {
 				margin-top: pc-rem(80);
+
+				@include sp () {
+					margin-top: sp-rem(100);
+				}
+			}
+
+			.p-people__employee__article__chapter + .p-people__employee__article__chapter {
+				@include sp () {
+					margin-top: sp-rem(100);
+				}
 			}
 
 			picture.c-lazy-trigger {
 				overflow: hidden;
 				border-radius: pc-rem(4);
+
+				@include sp () {
+					border-radius: sp-rem(8);
+				}
 			}
 		}
 
@@ -499,8 +601,18 @@ main.p-people__employee.is--single {
 					padding-bottom: pc-rem(20 - 3);
 					border-bottom: 1px solid var(--color-border);
 
+					@include sp () {
+						font-size: sp-rem(22);
+						width: 50%;
+						padding-bottom: sp-rem(40);
+					}
+
 					b {
 						font-size: pc-rem(20);
+
+						@include sp () {
+							font-size: sp-rem(30);
+						}
 
 						&::before {
 							content: '0' counter(chapter);
@@ -514,15 +626,27 @@ main.p-people__employee.is--single {
 
 					&:not(.is--small) {
 						font-size: pc-rem(30);
+
+						@include sp () {
+							font-size: sp-rem(44);
+						}
 					}
 
 					&.is--small {
 						font-size: pc-clamp(14);
+
+						@include sp () {
+							font-size: sp-rem(32);
+						}
 					}
 				}
 
 				p + h2 {
 					margin-top: pc-rem(40 - 6);
+
+					@include sp () {
+						margin-top: sp-rem(60);
+					}
 				}
 			}
 
@@ -530,18 +654,33 @@ main.p-people__employee.is--single {
 				line-height: $lh--huge;
 				margin-top: pc-rem(40 - 14);
 
+				@include sp () {
+					font-size: sp-rem(30);
+					line-height: 1 * 52.5/30;
+					margin-top: sp-rem(60);
+				}
+
 				p {
 					text-indent: 1em;
 				}
 			}
 
 			.p-people__employee__article__chapter__message {
-				margin-top: pc-rem(40);
-				padding-left: pc-rem(33);
+				@include pc () {
+					margin-top: pc-rem(40);
+					padding-left: pc-rem(33);
+				}
+				@include sp () {
+					margin-top: sp-rem(60);
+				}
 
 				img {
 					width: auto;
 					height: pc-rem(87);
+
+					@include sp () {
+						height: sp-rem(130);
+					}
 				}
 			}
 
@@ -553,6 +692,13 @@ main.p-people__employee.is--single {
 				border: pc-rem(10) solid #e5e5e5;
 				border-radius: pc-rem(16);
 
+				@include sp () {
+					margin-top: sp-rem(-28);
+					border-width: sp-rem(10);
+					border-radius: sp-rem(16);
+					background-color: #e5e5e5;
+				}
+
 				&::before {
 					@include pseudo-block((
 						top: 0,
@@ -563,11 +709,17 @@ main.p-people__employee.is--single {
 						border-radius: pc-rem(6),
 						pointer-events: none,
 					)) {}
+					@include sp () {
+						display: none;
+					}
 				}
 
 				.swiper-wrapper {
 					box-sizing: border-box;
-					background-color: #f8f8f4;
+
+					@include pc () {
+						background-color: #f8f8f4;
+					}
 				}
 
 				.swiper-slide {
@@ -576,28 +728,75 @@ main.p-people__employee.is--single {
 					width: 100%;
 					border-radius: pc-rem(6);
 
+					header {
+						@include pc () {
+							display: none;
+						}
+						@include sp () {
+							padding: sp-rem(20) sp-rem(20) sp-rem(30) sp-rem(20);
+
+							h3 {
+								font-size: sp-rem(30);
+								font-weight: bold;
+							}
+						}
+					}
+
 					table {
+						box-sizing: border-box;
 						width: 100%;
 						border-collapse: collapse;
 						border: 0;
 						background-color: #f8f8f4;
+
+						@include sp () {
+							position: relative;
+							border-radius: sp-rem(10);
+
+							&::before {
+								@include pseudo-block((
+									top: 0,
+									left: 0,
+									border: 1px solid #cccccc,
+									box-sizing: border-box,
+									z-index: var(--zi-1),
+									border-radius: sp-rem(10),
+									pointer-events: none,
+								)) {}
+								@include pc () {
+									display: none;
+								}
+							}
+						}
 
 						th {
 							font-size: pc-clamp(20, 20 * $fs--min-ratio);
 							font-weight: normal;
 							text-align: right;
 							vertical-align: top;
+
+							@include sp () {
+								font-size: sp-rem(32);
+							}
 						}
 
 						td {
 							font-size: pc-clamp(17, 17 * $fs--min-ratio);
 							box-sizing: border-box;
 							width: 100%;
+
+							@include sp () {
+								font-size: sp-rem(30);
+							}
 						}
 
 						th, td {
 							line-height: 1 * 50/32;
 							padding: pc-rem(10) pc-rem(30);
+
+							@include sp () {
+								padding: sp-rem(24) sp-rem(30);
+							}
 						}
 
 						tr + tr {
@@ -614,19 +813,39 @@ main.p-people__employee.is--single {
 				}
 
 				.swiper-slide__container {
-					padding: pc-rem(33) pc-rem(50);
-					background-color: var(--color-white);
+					@include pc () {
+						padding: pc-rem(33) pc-rem(50);
+						background-color: var(--color-white);
+					}
+					@include sp () {
+						padding: sp-rem(20);
+						border: 1px solid #cccccc;
+						border-radius: sp-rem(10);
+						background-color: #f8f8f4;
+					}
 
 					picture {
 						border-radius: pc-rem(16);
+
+						@include sp () {
+							border-radius: sp-rem(6);
+						}
 					}
 
 					.swiper-slide__body {
 						margin-top: pc-rem(33);
+
+						@include sp () {
+							margin-top: sp-rem(20);
+						}
 					}
 
 					p {
 						font-size: pc-clamp(18, 18 * $fs--min-ratio);
+
+						@include sp () {
+							font-size: sp-rem(30);
+						}
 					}
 				}
 			}
@@ -634,9 +853,17 @@ main.p-people__employee.is--single {
 			nav {
 				margin-top: pc-rem(40);
 
+				@include sp () {
+					margin-top: sp-rem(60);
+				}
+
 				ul {
 					display: flex;
 					column-gap: pc-rem(4);
+
+					@include sp () {
+						margin-top: sp-rem(4);
+					}
 
 					li {
 						width: calc((100% - #{pc-rem(4)} * 3) / 4);
@@ -644,6 +871,11 @@ main.p-people__employee.is--single {
 						border-top-right-radius: pc-rem(16);
 						background-color: rgba(#e5e5e5, .5);
 
+						@include sp () {
+							width: calc((100% - #{sp-rem(4)} * 3) / 4);
+							border-top-left-radius: sp-rem(16);
+							border-top-right-radius: sp-rem(16);
+						}
 						@include taphover {
 							transform: translateY(#{pc-rem(-4)});
 						}
@@ -658,34 +890,91 @@ main.p-people__employee.is--single {
 							font-weight: bold;
 							line-height: 1;
 							display: flex;
-							flex-direction: column;
-							padding: pc-rem(16) pc-rem(20) pc-rem(16 + 16) pc-rem(20);
-							row-gap: pc-rem(8);
+
+							@include pc () {
+								flex-direction: column;
+								padding: pc-rem(16) pc-rem(20) pc-rem(16 + 16) pc-rem(20);
+								row-gap: pc-rem(8);
+							}
+							@include sp () {
+								align-items: center;
+								box-sizing: border-box;
+								height: 100%;
+								padding: sp-rem(28) sp-rem(10) sp-rem(28 + 28) sp-rem(20);
+							}
 
 							[lang='en'] {
 								font-size: pc-rem(12);
+
+								@include sp () {
+									font-size: sp-rem(24);
+									width: 100%;
+									hyphens: auto;
+								}
 							};
 
 							[lang='ja'] {
 								font-size: pc-rem(14);
+
+								@include sp () {
+									display: none;
+								}
 							}
 						}
 					}
 				}
 			}
 		}
+
+		.p-people__employee__article__insert {
+			.l-container--narrow {
+				@include sp () {
+					padding-right: 0;
+					padding-left: 0;
+
+					picture {
+						border-radius: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.p-article__footer__links {
+		.c-button.c-button--round {
+			@include sp () {
+				color: var(--color-white);
+				background-color: #7f7f7f;
+
+				@include taphover {
+					background-color: var(--color-theme-text);
+				}
+			}
+		}
 	}
 
 	.p-article__footer__link {
+
 		.p-article__footer__link__title {
 			h4 {
-				overflow: hidden;
-				white-space: nowrap;
-				text-overflow: ellipsis;
+				@include pc () {
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+				@include sp () {
+					.c-career-tag {
+						margin-top: 1em * 10/14;
+					}
+				}
 			}
 
 			p {
 				font-size: pc-clamp(12, 12 * $fs--min-ratio);
+
+				@include sp () {
+					font-size: sp-rem(22);
+				}
 			}
 
 			p:not(.is--sub) {

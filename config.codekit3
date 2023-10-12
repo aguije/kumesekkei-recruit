@@ -1332,6 +1332,32 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/htdocs\/assets\/images\/people\/employees\/kawai_thumb.jpg" : {
+      "ft" : 16384,
+      "iS" : 18409,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/kawai_thumb.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/htdocs\/assets\/images\/people\/employees\/miura_thumb.jpg" : {
+      "ft" : 16384,
+      "iS" : 18309,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/miura_thumb.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/htdocs\/assets\/images\/people\/employees\/mizutani_message.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -1394,6 +1420,32 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/htdocs\/assets\/images\/people\/employees\/mizutani_thumb.jpg" : {
+      "ft" : 16384,
+      "iS" : 14463,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/mizutani_thumb.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/htdocs\/assets\/images\/people\/employees\/nohara_thumb.jpg" : {
+      "ft" : 16384,
+      "iS" : 16906,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/nohara_thumb.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/htdocs\/assets\/images\/people\/employees\/uomoto_message.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -1449,6 +1501,32 @@
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/people\/employees\/uomoto_tab4_pic1.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/htdocs\/assets\/images\/people\/employees\/uomoto_thumb.jpg" : {
+      "ft" : 16384,
+      "iS" : 22377,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/uomoto_thumb.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/htdocs\/assets\/images\/people\/employees\/yokoyama_thumb.jpg" : {
+      "ft" : 16384,
+      "iS" : 23553,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/yokoyama_thumb.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,

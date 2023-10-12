@@ -132,7 +132,7 @@
 											</div>
 										</picture>
 										<p class="p-employees__article__role">2009年入社　意匠設計</p>
-										<p class="p-employees__article__description">互いの意思を尊重し、最適な答えを探していくことのできる職場です。</p>
+										<p class="p-employees__article__description">力を発揮できる環境と働き方を大切に、道なき道を切り開くことすらも楽しむ。</p>
 									</a>
 								</article>
 
@@ -148,7 +148,7 @@
 											</div>
 										</picture>
 										<p class="p-employees__article__role">2014年入社　意匠設計</p>
-										<p class="p-employees__article__description">同世代設計者から受ける機会が多いことは魅力のひとつです。</p>
+										<p class="p-employees__article__description">母としての経験も発想に変えて、社会の役に立つような設計に生かしたい。</p>
 									</a>
 								</article>
 
@@ -164,7 +164,7 @@
 											</div>
 										</picture>
 										<p class="p-employees__article__role">2005年入社　意匠設計</p>
-										<p class="p-employees__article__description">互いの意思を尊重しあうことのできる職場です。</p>
+										<p class="p-employees__article__description">子育てをする中でより強くなった、子どもが主役の学校をつくりたいという想い。</p>
 									</a>
 								</article>
 
@@ -180,7 +180,7 @@
 											</div>
 										</picture>
 										<p class="p-employees__article__role">2017年入社　意匠設計</p>
-										<p class="p-employees__article__description">同世代設計者から刺激を受ける機会が多いことは魅力の刺激を刺激を刺激をひとつです。</p>
+										<p class="p-employees__article__description">こよなく愛する九州という土地で、さまざまな人の〝居場所〟をつくりたい。</p>
 									</a>
 								</article>
 
@@ -196,7 +196,7 @@
 											</div>
 										</picture>
 										<p class="p-employees__article__role">2019年入社　意匠設計</p>
-										<p class="p-employees__article__description">互いの意思を尊重し、最適な答えを探していくことのできる職場です。</p>
+										<p class="p-employees__article__description">これまでの住宅設計の経験を生かし、新たな挑戦をしながら得意分野を広げる。</p>
 									</a>
 								</article>
 
@@ -212,7 +212,7 @@
 											</div>
 										</picture>
 										<p class="p-employees__article__role">2003年入社　構造設計</p>
-										<p class="p-employees__article__description">同世代設計者から刺激を受ける機会が多いことは魅力のひとつです。</p>
+										<p class="p-employees__article__description">安全性はもちろん見た目にも美しい、意匠に寄り添った構造設計を目指して。</p>
 									</a>
 								</article>
 							</div>
