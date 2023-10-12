@@ -1057,6 +1057,12 @@ main.p-people__crosstalk.is--single {
 				> div {
 					line-height: $lh--huge;
 					margin-top: pc-rem(20);
+
+					p.p-people__crosstalk__article__header__annotation {
+						margin-top: 0;
+						text-align: right;
+						color: #707070;
+					}
 				}
 			}
 		}

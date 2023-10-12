@@ -143,6 +143,7 @@
 								</picture>
 								<div>
 									<p>新宿・歌舞伎町で、約60年間エンターテインメントをリードしてきた新宿TOKYU MILANOの跡地開発。これを受け継ぎ、どのような施設にするのか企画段階から参画したプロジェクトチームに話を聞きました。</p>
+									<p class="p-people__crosstalk__article__header__annotation">2019年10月インタビュー実施</p>
 								</div>
 							</div>
 						</div>

@@ -391,6 +391,7 @@ $pie_r: 31.8309886184;
 		scroll-snap-type: x mandatory;
 		-ms-overflow-style: none;  // Edge
 		scrollbar-width: none;  // Firefox
+		-webkit-overflow-scrolling: touch;
 
 		&::-webkit-scrollbar {
 			display: none;  // Safari • Chrome

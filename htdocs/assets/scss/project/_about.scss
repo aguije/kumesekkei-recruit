@@ -374,6 +374,7 @@
 				overscroll-behavior-x: none;
 				-ms-overflow-style: none;  // Edge
 				scrollbar-width: none;  // Firefox
+				-webkit-overflow-scrolling: touch;
 
 				&::-webkit-scrollbar {
 					display: none;  // Safari • Chrome

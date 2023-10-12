@@ -142,7 +142,8 @@
 									<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/bim/mv.jpg', true); ?>" alt="">
 								</picture>
 								<div>
-									<p>新宿・歌舞伎町で、約60年間エンターテインメントをリードしてきた新宿TOKYU MILANOの跡地開発。これを受け継ぎ、どのような施設にするのか企画段階から参画したプロジェクトチームに話を聞きました。</p>
+									<p>BIMは建築業界で重要な役割を果たしており、久米設計では設計者自らがBIMを活用して設計に取り組んでいます。ワークフローの実際と、未来のデジタルデザインについて話を聞きました。</p>
+									<p class="p-people__crosstalk__article__header__annotation">2020年4月インタビュー実施</p>
 								</div>
 							</div>
 						</div>
