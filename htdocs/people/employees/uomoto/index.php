@@ -160,8 +160,7 @@
 							<section class="p-people__employee__article__chapter">
 								<header class="p-people__employee__article__chapter__header">
 									<p lang="en">CHAPTER <b></b></p>
-									<h2>多くの人と関わり<br>
-									信頼し合いながら作り上げる喜び</h2>
+									<h2>多くの人と関わり<br class="is--pc">信頼し合いながら作り上げる喜び</h2>
 								</header>
 
 								<div class="p-people__employee__article__chapter__body">
@@ -186,8 +185,7 @@
 							<div class="l-container--narrow">
 								<header class="p-people__employee__article__chapter__header">
 									<p lang="en">CHAPTER <b></b></p>
-									<h2>心地よい毎日の暮らしと<br>
-									地方で得た新たな視点を強みに</h2>
+									<h2>心地よい毎日の暮らしと<br class="is--pc">地方で得た新たな視点を強みに</h2>
 								</header>
 
 								<div class="p-people__employee__article__chapter__body">
@@ -230,7 +228,7 @@
 											</li>
 											<li>
 												<a href="#tab2" data-index="3">
-													<span lang="en">Candid photography</span>
+													<span lang="en">Candid photog&shy;raphy</span>
 													<span lang="ja">オフの1日</span>
 												</a>
 											</li>
@@ -322,13 +320,11 @@
 													<tr>
 														<th>月</th>
 														<td>早朝に東北の家から出発。<br>
-														試作品確認のために北関東の工場へ<br>
-														移動の合間にメールと図面チェック</td>
+														試作品確認のために北関東の工場へ<br class="is--pc">移動の合間にメールと図面チェック</td>
 													</tr>
 													<tr>
 														<th>火</th>
-														<td>竣工検査のために北海道へ<br>
-														移動の合間にwebMTG、メールと図面チェック</td>
+														<td>竣工検査のために北海道へ<br class="is--pc">移動の合間にwebMTG、メールと図面チェック</td>
 													</tr>
 													<tr>
 														<th>水</th>
@@ -337,14 +333,12 @@
 													</tr>
 													<tr>
 														<th>木</th>
-														<td>本社でAMは社内打合せを数件、<br>
-														PMは発注者とwebMTG、合間に個人作業</td>
+														<td>本社でAMは社内打合せを数件、<br class="is--pc">PMは発注者とwebMTG、合間に個人作業</td>
 													</tr>
 													<tr>
 														<th>金</th>
 														<td>現場で北関東へ<br>
-														発注者・施工者と打ち合わせなど、<br>
-														夜に東北の家へ戻る</td>
+														発注者・施工者と打ち合わせなど、<br class="is--pc">夜に東北の家へ戻る</td>
 													</tr>
 												</table>
 											</div>

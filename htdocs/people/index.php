@@ -51,8 +51,8 @@
 	?>
 	<nav class="c-page-nav">
 		<ul>
-			<li><a class="c-button c-button--round is--gray" href="#employees"><span>社員紹介</span></a></li>
-			<li><a class="c-button c-button--round is--gray" href="#crosstalk"><span>クロストーク</span></a></li>
+			<li><a class="c-button c-button--round is--gray" href="#employees" data-offset="0"><span>社員紹介</span></a></li>
+			<li><a class="c-button c-button--round is--gray" href="#crosstalk" data-offset="0"><span>クロストーク</span></a></li>
 			<li><a class="c-button c-button--round is--gray" href="#interview"><span>インタビュー動画</span></a></li>
 		</ul>
 	</nav>
@@ -108,7 +108,7 @@
 				<div class="l-wrapper">
 					<div class="l-container">
 						<div class="p-employees__container">
-							<header class="c-section-header is--vertical">
+							<header class="p-people-section-header">
 								<h2 class="is--title">
 									<span lang="ja">社員紹介</span>
 									<span lang="en">Employees Introduction</span>
@@ -221,10 +221,10 @@
 				</div>
 			</section>
 
-			<section id="crosstalk" class="p-people__crosstalk" data-theme="light">
-				<div class="l-wrapper">
+			<section id="crosstalk" class="p-people__crosstalk">
+				<div class="l-wrapper" data-theme="light">
 					<div class="l-container">
-						<header class="c-section-header">
+						<header class="p-people-section-header">
 							<h2 class="is--title">
 								<span lang="ja">クロストーク</span>
 								<span lang="en">Crosstalk</span>
@@ -265,7 +265,7 @@
 									<div class="p-people__crosstalk__article__body">
 										<div>
 											<header>
-												<h3>新宿TOKYU MILANO再開発プロジェクトチーム</h3>
+												<h3>新宿TOKYU MILANO<br class="is--sp">再開発プロジェクトチーム</h3>
 											</header>
 											<p>都市と建築のチャレンジ</p>
 										</div>
@@ -300,7 +300,7 @@
 				<div class="l-wrapper">
 					<div class="l-container">
 						<div class="p-interview__container">
-							<header class="c-section-header is--vertical">
+							<header class="p-people-section-header">
 								<h2 class="is--title">
 									<span lang="ja">インタビュー動画</span>
 									<span lang="en">Interview Movie</span>
