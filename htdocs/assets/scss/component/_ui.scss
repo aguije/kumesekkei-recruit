@@ -416,13 +416,21 @@
  * --------------------------------------------------------------- */
 
 :not([data-theme='dark']) .c-movie-thumb {
-	picture {
-		opacity: .7;
+	@include taphover {
+		picture {
+			opacity: .5;
+		}
 	}
 }
 [data-theme='dark'] .c-movie-thumb {
 	picture {
 		opacity: .2;
+	}
+
+	@include taphover {
+		picture {
+			opacity: 1;
+		}
 	}
 }
 
@@ -430,22 +438,12 @@
 	position: relative;
 	display: block;
 
-	@include taphover {
-		picture {
-			opacity: 1;
-		}
-	}
-
 	picture {
 		position: relative;
 		width: 100%;
 		aspect-ratio: 16 / 9;
-		opacity: .2;
 
 		@include transition('opacity', $dur--transition);
-		@include sp () {
-			opacity: .7;
-		}
 	}
 
 	> div {
@@ -462,13 +460,12 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translateX(-50%) translateY(180%);
-			color: var(--color-theme-text);
+			transform: translateX(-50%) translateY(calc(#{pc-rem(50 / 2)} + 1em));
+			color: var(--color-white);
 
-			@include transition('color', $dur--transition);
 			@include sp () {
 				font-size: sp-rem(24);
-				top: sp-rem(54);
+				transform: translateX(-50%) translateY(calc(#{sp-rem(50 / 2)} + .5em));
 			}
 		}
 	}
@@ -484,16 +481,15 @@
 		aspect-ratio: 1 / 1;
 		transform: translateX(-50%) translateY(-50%);
 		border-radius: 50%;
-		background-color: var(--color-theme-bg-invert);
+		background-color: var(--color-white);
 
-		@include transition('background-color', $dur--transition);
 		@include sp () {
 			width: sp-rem(50);
 		}
 
 		.c-icon {
 			font-size: pc-rem(16);
-			color: var(--color-theme-text-invert);
+			color: var(--color-black);
 
 			@include transition('color', $dur--transition);
 			@include sp () {

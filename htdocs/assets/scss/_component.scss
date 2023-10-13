@@ -687,40 +687,6 @@ $pie_r: 31.8309886184;
 	}
 }
 
-/** =================================================================
- *
- * SECTION HEADER
- *
- * --------------------------------------------------------------- */
-
-.c-section-header {
-	&.is--vertical {
-		writing-mode: vertical-rl;
-	}
-
-	.is--title {
-		display: flex;
-		flex-direction: column;
-		row-gap: pc-rem(17);
-
-		span[lang='en'] {
-			font-size: pc-clamp(13, 13 * $fs--min-ratio);
-			line-height: 1;
-		}
-
-		span[lang='ja'] {
-			font-size: pc-rem(34);
-		}
-	}
-
-	.is--description {
-		font-size: pc-rem(18);
-		line-height: 1em * 64/36;
-
-		margin-block-start: pc-rem(27);
-	}
-}
-
 
 /** =================================================================
  *

@@ -348,15 +348,24 @@ $(function () {
 
 		if (_option.mode === true) {
 			$('.c-page-nav a').on('click', function (_event) {
-				const id = $(this).attr('href');
+				const $this = $(this);
+				const id = $this.attr('href');
 
 				if (id.charAt(0) === '#') {
 					_event.preventDefault();
 
-					gsap.to(window, {
-						duration: .6,
-						scrollTo: { y: id, offsetY: $('#gh .p-gh__bar').height() }
-					});
+					if ($this.attr('data-offset') && $this.attr('data-offset') === '0') {
+						gsap.to(window, {
+							duration: .6,
+							scrollTo: { y: id }
+						});
+					}
+					else {
+						gsap.to(window, {
+							duration: .6,
+							scrollTo: { y: id, offsetY: $('#gh .p-gh__bar').height() }
+						});
+					}
 				}
 			});
 		}
