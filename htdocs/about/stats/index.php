@@ -56,6 +56,21 @@
 	?>
 	<nav class="c-page-nav">
 		<ul>
+			<li><a class="c-button c-button--round is--darkgray" href="/about/"><span>メッセージ</span></a></li>
+			<li><a class="c-button c-button--round is--darkgray" href="/about/csr/"><span>社会課題への取組み</span></a></li>
+			<li><a class="c-button c-button--round is--gray is--active" href="/about/stats/"><span>数字で見る久米設計</span></a></li>
+		</ul>
+	</nav>
+	<?php
+
+	$page_nav = ob_get_contents();
+	ob_end_clean();
+
+	ob_start();
+
+	?>
+	<nav class="c-page-nav">
+		<ul>
 			<li><a class="c-button c-button--round is--gray" href="/about/"><span>メッセージ</span></a></li>
 			<li><a class="c-button c-button--round is--gray" href="/about/csr/"><span>社会課題への取組み</span></a></li>
 			<li><a class="c-button c-button--round is--gray is--active" href="/about/stats/"><span>数字で見る久米設計</span></a></li>
@@ -63,7 +78,7 @@
 	</nav>
 	<?php
 
-	$page_nav = ob_get_contents();
+	$page_nav_bottom = ob_get_contents();
 	ob_end_clean();
 
 ?>
@@ -97,6 +112,11 @@
 									'type' => 'line',
 									'data' => $bc
 								));
+
+							?>
+							<?php
+
+								echo $page_nav;
 
 							?>
 						</div>
@@ -526,7 +546,7 @@
 							?>
 							<?php
 
-								echo $page_nav;
+								echo $page_nav_bottom;
 
 							?>
 						</div>
