@@ -52,6 +52,9 @@ $(function () {
 			if (swiper.activeIndex !== slide_index) {
 				swiper.slideTo(slide_index);
 			}
+			else {
+				window.location.hash = `#${_option.slide}`;
+			}
 		}
 		else {
 			$('.p-workplace-modal')
