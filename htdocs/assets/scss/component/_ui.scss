@@ -50,6 +50,13 @@
 			@include transition('color, background-color, border-color', $dur--hover);
 		}
 
+		&.is--darkgray {
+			border: 1px solid #ebeaea;
+			background-color: #ebeaea;
+
+			@include transition('color, background-color, border-color', $dur--hover);
+		}
+
 		&.is--black {
 			color: var(--color-theme-text-invert);
 			background-color: var(--color-theme-text);
@@ -71,6 +78,19 @@
 
 	@at-root a.c-button--round {
 		&.is--gray {
+			@include taphover {
+				color: var(--color-white);
+				border-color: var(--color-theme-bg-invert);
+				background-color: var(--color-theme-bg-invert);
+			}
+
+			&.is--active {
+				border-color: #b1b1b1;
+				background-color: var(--color-white);
+			}
+		}
+
+		&.is--darkgray {
 			@include taphover {
 				color: var(--color-white);
 				border-color: var(--color-theme-bg-invert);
@@ -423,14 +443,13 @@
 	}
 }
 [data-theme='dark'] .c-movie-thumb {
-	picture {
-		opacity: .2;
-	}
-
 	@include taphover {
 		picture {
 			opacity: 1;
 		}
+	}
+	picture {
+		opacity: .2;
 	}
 }
 
