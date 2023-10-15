@@ -1158,19 +1158,6 @@ main.p-people__employee.is--single {
 		}
 	}
 
-	.p-article__footer__links {
-		.c-button.c-button--round {
-			@include sp () {
-				color: var(--color-white);
-				background-color: #7f7f7f;
-
-				@include taphover {
-					background-color: var(--color-theme-text);
-				}
-			}
-		}
-	}
-
 	.p-article__footer__link {
 
 		.p-article__footer__link__title {
@@ -1215,6 +1202,10 @@ main.p-people__crosstalk.is--single {
 	.p-people__crosstalk__article {
 		margin-top: pc-rem(44);
 
+		@include sp () {
+			margin-top: sp-rem(250);
+		}
+
 
 		/** =================================================================
 		 * HEADER
@@ -1231,50 +1222,100 @@ main.p-people__crosstalk.is--single {
 				font-size: pc-clamp(13, 13 * $fs--min-ratio);
 				line-height: 1;
 				opacity: .8;
+
+				@include sp () {
+					font-size: sp-rem(26);
+				}
 			}
 
 			.p-people__crosstalk__article__header__title {
-				position: absolute;
 				z-index: var(--zi-1);
-				top: 0;
-				left: pc-rem($size--pad);
+
+				@include pc () {
+					position: absolute;
+					top: 0;
+					left: pc-rem($size--pad);
+				}
+				@include sp () {
+					position: relative;
+				}
 			}
 
 			h1 {
-				display: flex;
-				flex-direction: column;
-				margin-top: pc-rem(15);
-				row-gap: pc-rem(3);
+				color: var(--color-white);
 
-				span {
-					font-size: pc-rem(34);
+				@include pc () {
+					margin-top: pc-rem(15);
+
+					> span {
+						display: flex;
+						flex-direction: column;
+						row-gap: pc-rem(3);
+					}
+
+					span.is--line {
+						font-size: pc-rem(34);
+						line-height: 1;
+						display: block;
+						width: fit-content;
+						padding: (1em * 7.5/34) (1em * 10/34);
+						border-radius: 1em * 4/34;
+						background-color: var(--color-black);
+					}
+				}
+				@include sp () {
+					font-size: sp-rem(71);
 					line-height: 1;
-					display: block;
-					width: fit-content;
-					padding: (1em * 7.5/34) (1em * 10/34);
-					color: var(--color-white);
-					border-radius: 1em * 4/34;
-					background-color: var(--color-black);
+					margin-top: sp-rem(40);
+
+					> span {
+						line-height: 1 * 80/71;
+						box-decoration-break: clone;
+						background-image: linear-gradient(to right, var(--color-black) 0%, var(--color-black) 100%);
+						background-repeat: repeat-x;
+						background-position: 0 sp-rem(16);
+						background-size: 100% sp-rem(78);
+
+						-webit-box-decoration-break: clone;
+					}
 				}
 			}
 
 			.p-people__crosstalk__article__header__body {
 				position: relative;
 				z-index: var(--zi-0);
-				padding-top: pc-rem(100);
-				padding-right: pc-rem(110);
-				padding-left: pc-rem(110);
+
+				@include pc () {
+					padding-top: pc-rem(100);
+					padding-right: pc-rem(110);
+					padding-left: pc-rem(110);
+				}
+				@include sp () {
+					margin-top: -1.2em;
+					margin-right: sp-rem($size--pad--sp * -1);
+					margin-left: sp-rem($size--pad--sp * -1);
+				}
 
 				> picture {
 					overflow: hidden;
 					width: 100%;
 					aspect-ratio: 1560 / 1000;
-					border-radius: pc-rem(4);
+
+					@include pc () {
+						border-radius: pc-rem(4);
+					}
 				}
 
 				> div {
 					line-height: $lh--huge;
-					margin-top: pc-rem(20);
+					padding-top: pc-rem(20);
+
+					@include sp () {
+						padding-top: sp-rem(80);
+						padding-right: sp-rem($size--pad--sp);
+						padding-left: sp-rem($size--pad--sp);
+						background-color: var(--color-white);
+					}
 
 					p.p-people__crosstalk__article__header__annotation {
 						margin-top: 0;
@@ -1297,48 +1338,81 @@ main.p-people__crosstalk.is--single {
 			color: var(--color-theme-bg);
 			background-color: var(--color-theme-bg-invert);
 
+			@include sp () {
+				margin-top: sp-rem(80);
+				padding-top: sp-rem(80);
+				padding-bottom: sp-rem(80);
+			}
+
 			h3 {
-				font-size: pc-clamp(16, 16 * $fs--min-ratio);
 				line-height: 1;
-				text-align: center;
+
+				@include pc () {
+					font-size: pc-clamp(16, 16 * $fs--min-ratio);
+					text-align: center;
+				}
+				@include sp () {
+					font-size: sp-rem(32);
+					padding-right: sp-rem($size--pad--sp);
+					padding-left: sp-rem($size--pad--sp);
+				}
 			}
 
 			ul {
 				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				width: pc-rem(1020);
 				margin: 0 auto;
-				margin-top: pc-rem(52);
-				row-gap: pc-rem(50);
+
+				@include pc () {
+					font-size: sp-rem(32);
+					flex-wrap: wrap;
+					justify-content: center;
+					width: pc-rem(1020);
+					margin-top: pc-rem(52);
+					row-gap: pc-rem(50);
+				}
+				@include sp () {
+					font-size: sp-rem(32);
+					flex-direction: column;
+					margin-top: sp-rem(66);
+					row-gap: sp-rem(36);
+				}
 
 				li {
 					position: relative;
 					display: flex;
-					flex-wrap: wrap;
 					box-sizing: border-box;
-					width: pc-rem(255);
-					padding-right: pc-rem(25);
-					padding-left: pc-rem(30);
-					row-gap: pc-rem(8);
 
-					&::before {
-						@include pseudo-block((
-							bottom: pc-rem(20),
-							left: 0,
-							width: 1px,
-							height: pc-rem(40),
-							background-color: rgba(0,0,0,.3),
-						)) {}
+					@include pc () {
+						flex-wrap: wrap;
+						width: pc-rem(255);
+						padding-right: pc-rem(25);
+						padding-left: pc-rem(30);
+						row-gap: pc-rem(8);
+
+						&::before {
+							@include pseudo-block((
+								bottom: pc-rem(20),
+								left: 0,
+								width: 1px,
+								height: pc-rem(40),
+								background-color: rgba(0,0,0,.3),
+							)) {}
+						}
+						&::after {
+							@include pseudo-block((
+								bottom: pc-rem(20),
+								right: 0,
+								width: 1px,
+								height: pc-rem(40),
+								background-color: rgba(255,255,255,.3),
+							)) {}
+						}
 					}
-					&::after {
-						@include pseudo-block((
-							bottom: pc-rem(20),
-							right: 0,
-							width: 1px,
-							height: pc-rem(40),
-							background-color: rgba(255,255,255,.3),
-						)) {}
+					@include sp () {
+						flex-direction: column;
+						margin-right: sp-rem($size--pad--sp);
+						margin-left: sp-rem($size--pad--sp);
+						row-gap: sp-rem(16);
 					}
 
 					> p {
@@ -1346,32 +1420,71 @@ main.p-people__crosstalk.is--single {
 						font-weight: bold;
 						width: 100%;
 						white-space: nowrap;
+
+						@include sp () {
+							font-size: sp-rem(24);
+							box-sizing: border-box;
+							margin-top: sp-rem(-8);
+							padding-left: sp-rem(96 + 42);
+						}
 					}
 
 					> div {
 						position: relative;
 						width: pc-rem(255 - 30 - 25 - 80);
 
+						@include sp () {
+							box-sizing: border-box;
+							width: 100%;
+							padding-left: sp-rem(96 + 42);
+						}
+
 						h4 {
-							position: absolute;
 							z-index: var(--zi-1);
-							top: 0;
-							left: 0;
 							display: flex;
 							flex-direction: column;
 							justify-content: space-between;
 							box-sizing: border-box;
 							width: 100%;
 							height: 100%;
-							padding: pc-rem(4) 0;
+
+							@include pc () {
+								position: absolute;
+								top: 0;
+								left: 0;
+								padding: pc-rem(4) 0;
+							}
+							@include sp () {
+								position: relative;
+								padding-left: sp-rem(120);
+								row-gap: sp-rem(16);
+
+								&::before {
+									@include pseudo-block((
+										width: sp-rem(90),
+										height: 1px,
+										top: sp-rem(17),
+										left: 0,
+										background-color: #adadad,
+									)) {}
+								}
+							}
 
 							span[lang='ja'] {
 								font-size: pc-clamp(16, 16 * $fs--min-ratio);
+
+								@include sp () {
+									font-size: sp-rem(32);
+								}
 							}
 							span[lang='en'] {
 								font-size: pc-clamp(11, 11 * $fs--min-ratio);
 								white-space: nowrap;
 								opacity: .6;
+
+								@include sp () {
+									font-size: sp-rem(22);
+								}
 							}
 						}
 					}
@@ -1379,6 +1492,14 @@ main.p-people__crosstalk.is--single {
 					picture {
 						width: pc-rem(80);
 						min-width: pc-rem(80);
+
+						@include sp () {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: sp-rem(96);
+							min-width: sp-rem(96);
+						}
 					}
 				}
 			}
@@ -1396,6 +1517,11 @@ main.p-people__crosstalk.is--single {
 			margin-top: pc-rem(100);
 			counter-reset: chapter;
 
+			@include sp () {
+				height: sp-rem(6000);
+				margin-top: sp-rem(80);
+			}
+
 			&.is--opened {
 				.p-people__crosstalk__article__more {
 					pointer-events: none;
@@ -1406,6 +1532,10 @@ main.p-people__crosstalk.is--single {
 
 		.p-people__crosstalk__article__chapter + .p-people__crosstalk__article__chapter {
 			margin-top: pc-rem(100);
+
+			@include sp () {
+				margin-top: sp-rem(100);
+			}
 		}
 
 		.p-people__crosstalk__article__chapter {
@@ -1415,13 +1545,25 @@ main.p-people__crosstalk.is--single {
 				> header {
 					margin-bottom: pc-rem(40);
 
+					@include sp () {
+						margin-bottom: sp-rem(60);
+					}
+
 					p {
 						font-size: pc-rem(13);
 						font-weight: bold;
 						line-height: 1;
 
+						@include sp () {
+							font-size: sp-rem(22);
+						}
+
 						b {
 							font-size: pc-rem(20);
+
+							@include sp () {
+								font-size: sp-rem(30);
+							}
 
 							&::before {
 								content: '0' counter(chapter);
@@ -1433,16 +1575,36 @@ main.p-people__crosstalk.is--single {
 						font-size: pc-rem(30);
 						font-weight: bold;
 						line-height: 1 * 40/30;
+
+						@include sp () {
+							font-size: sp-rem(50);
+							font-weight: normal;
+						}
 					}
 
 					p + h2 {
 						margin-top: pc-rem(30);
+
+						@include sp () {
+							margin-top: sp-rem(36);
+						}
 					}
 				}
 			}
 
 			.p-people__crosstalk__article__chapter__talk {
 				margin-top: pc-rem(40);
+
+				@include sp () {
+					margin-top: sp-rem(60);
+				}
+			}
+			.p-people__crosstalk__article__chapter__talk + .p-people__crosstalk__article__chapter__talk {
+				margin-top: pc-rem(80);
+
+				@include sp () {
+					margin-top: sp-rem(100);
+				}
 			}
 
 			.p-people__crosstalk__article__chapter__inserts {
@@ -1450,64 +1612,113 @@ main.p-people__crosstalk.is--single {
 				margin-top: pc-rem(40);
 				border-radius: pc-rem(4);
 
-				&.is--wide {
-					margin-right: pc-rem(-160);
-					margin-left: pc-rem(-160);
+				@include sp () {
+					margin-top: sp-rem(60);
+					border-radius: sp-rem(8);
 				}
 
-				&.is--flex {
-					display: flex;
+				&.is--wide--pc {
+					@include pc () {
+						margin-right: pc-rem(-160);
+						margin-left: pc-rem(-160);
+					}
+				}
 
-					picture {
-						width: 50%;
+				&.is--flex--pc {
+					@include pc () {
+						display: flex;
+
+						picture {
+							width: 50%;
+						}
+					}
+				}
+
+				&.is--full--sp {
+					@include sp () {
+						margin-right: sp-rem($size--pad--sp * -1);
+						margin-left: sp-rem($size--pad--sp * -1);
+						border-radius: 0;
 					}
 				}
 			}
 
 			.p-people__crosstalk__article__chapter__body {
-				&.is--wide {
-					margin-right: pc-rem(-160);
-					margin-left: pc-rem(-160);
+				&.is--wide--pc {
+					@include pc () {
+						margin-right: pc-rem(-160);
+						margin-left: pc-rem(-160);
+					}
 				}
 
-				&.is--flex {
-					display: flex;
-					align-items: start;
-					justify-content: space-between;
-					column-gap: pc-rem(50);
+				&.is--flex--pc {
+					@include pc () {
+						display: flex;
+						align-items: start;
+						justify-content: space-between;
+						column-gap: pc-rem(50);
 
-					> div {
-						width: calc(50% - #{pc-rem(25)});
+						> div {
+							width: calc(50% - #{pc-rem(25)});
+						}
 					}
 				}
 			}
 
 			.p-people__crosstalk__article__chapter__q {
 				position: relative;
-				display: flex;
-				justify-content: center;
-				width: 100%;
-				margin-top: pc-rem(40);
+
+				@include pc () {
+					display: flex;
+					justify-content: center;
+					width: 100%;
+					margin-top: pc-rem(40);
+				}
+				@include sp () {
+					margin-top: sp-rem(60);
+				}
 
 				&::before {
-					@include pseudo-block((
-						top: 50%,
-						height: 1px,
-						background-color: var(--color-black),
-						opacity: .3,
-					)) {}
+					@include pc () {
+						@include pseudo-block((
+							top: 50%,
+							height: 1px,
+							background-color: var(--color-black),
+							opacity: .3,
+						)) {}
+					}
 				}
 
 				> span {
-					font-size: pc-clamp(18, 18 * $fs--min-ratio);
 					font-weight: bold;
 					line-height: 1em * 20/18;
 					position: relative;
 					z-index: var(--zi-1);
-					width: fit-content;
-					padding: 0 1em;
-					text-align: center;
-					background-color: var(--color-white);
+
+					@include pc () {
+						font-size: pc-clamp(18, 18 * $fs--min-ratio);
+						width: fit-content;
+						padding: 0 1em;
+						text-align: center;
+						background-color: var(--color-white);
+					}
+					@include sp () {
+						font-size: sp-rem(36);
+						line-height: 1 * 45/36;
+						position: relative;
+						display: inline-block;
+						padding-left: sp-rem(48);
+					}
+
+					i {
+						font-style: normal;
+
+						@include sp () {
+							position: absolute;
+							left: 0;
+							display: inline-block;
+						}
+					}
 				}
 			}
 
@@ -1516,9 +1727,18 @@ main.p-people__crosstalk.is--single {
 				height: pc-rem(80);
 				margin: 0 auto;
 
+				@include sp () {
+					width: sp-rem(80);
+					height: sp-rem(80);
+				}
+
 				figcaption {
 					font-size: pc-clamp(14, 14 * $fs--min-ratio);
 					margin-top: 1em * 10/14;
+
+					@include sp () {
+						font-size: sp-rem(14);
+					}
 
 					p {
 						font-weight: bold;
@@ -1534,16 +1754,32 @@ main.p-people__crosstalk.is--single {
 				column-gap: pc-rem(20);
 				row-gap: pc-rem(80);
 
+				@include sp () {
+					margin-top: sp-rem(60);
+					column-gap: sp-rem(40);
+					row-gap: sp-rem(100);
+				}
+
 				dt {
 					width: pc-rem(100);
 					padding-top: pc-rem(8);
+
+					@include sp () {
+						width: sp-rem(80);
+						padding-top: sp-rem(8 * 100/80);
+					}
 				}
 
 				dd {
 					font-size: pc-clamp(17, 17 * $fs--min-ratio);
 					line-height: 1 * 30.6/17;
 					width: calc(100% - #{pc-rem(100 + 20)});
-					text-align: justify;
+
+					@include sp () {
+						font-size: 30;
+						line-height: 1 * 52.5/30;
+						width: calc(100% - #{sp-rem(80 + 40)});
+					}
 				}
 			}
 		}
@@ -1563,9 +1799,12 @@ main.p-people__crosstalk.is--single {
 					height: pc-rem(400),
 					bottom: 0,
 					left: 0,
-					background-image: clothoid-gradient(to bottom, #ffffff, 0, 1),
+					background-image: clothoid-gradient(to bottom, $color--white, 0, 1),
 					pointer-events: none,
 				)) {}
+				@include sp () {
+					height: sp-rem(280 + 60 + 60);
+				}
 			}
 
 			.p-people__crosstalk__article__more__container {
@@ -1573,6 +1812,10 @@ main.p-people__crosstalk.is--single {
 				z-index: var(--zi-1);
 				width: pc-rem(500);
 				margin: 0 auto;
+
+				@include sp () {
+					width: calc(100vw - #{sp-rem($size--pad--sp * 2)});
+				}
 			}
 		}
 	}

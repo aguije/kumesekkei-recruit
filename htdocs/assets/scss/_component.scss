@@ -519,6 +519,30 @@ $pie_r: 31.8309886184;
 				padding-right: pc-rem(160);
 				padding-left: pc-rem(160);
 			}
+			@include sp () {
+				position: relative;
+
+				&::before {
+					@include pseudo-block((
+						width: sp-rem($size--pad--sp),
+						height: 100%,
+						top: 0,
+						left: sp-rem($size--pad--sp * -1),
+						background: clothoid-gradient('to right', $color--white, 1, 0),
+						z-index: var(--zi-1),
+					)) {}
+				}
+				&::after {
+					@include pseudo-block((
+						width: sp-rem($size--pad--sp),
+						height: 100%,
+						top: 0,
+						right: sp-rem($size--pad--sp * -1),
+						background: clothoid-gradient('to right', $color--white, 0, 1),
+						z-index: var(--zi-1),
+					)) {}
+				}
+			}
 		}
 
 		.c-breadcrumb {
@@ -700,6 +724,7 @@ $pie_r: 31.8309886184;
 
 	@include sp () {
 		font-size: sp-rem(24);
+		position: relative;
 		overflow-x: scroll;
 		box-sizing: border-box;
 		width: 100vw;
@@ -811,7 +836,7 @@ $pie_r: 31.8309886184;
 			z-index: -1,
 		)) {}
 		@include sp () {
-			height: sp-rem(1520),
+			height: sp-rem(1520),;
 		}
 	}
 }

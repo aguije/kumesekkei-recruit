@@ -132,9 +132,7 @@
 							<div class="p-people__crosstalk__article__header__title">
 								<p class="p-people__crosstalk__article__header__index" lang="en">Crosstalk #02</p>
 								<h1>
-									<span>都市と建築のチャレンジ：</span>
-									<span>新宿TOKYU MILANO再開発</span>
-									<span>プロジェクトチーム</span>
+									<span><span class="is--line">都市と建築のチャレンジ：</span><span class="is--line">新宿TOKYU MILANO再開発</span><span class="is--line">プロジェクトチーム</span></span>
 								</h1>
 							</div>
 							<div class="p-people__crosstalk__article__header__body">
@@ -255,7 +253,7 @@
 									</header>
 
 									<div class="p-people__crosstalk__article__chapter__body">
-										<div class="p-people__crosstalk__article__chapter__inserts is--wide is--flex">
+										<div class="p-people__crosstalk__article__chapter__inserts is--wide--pc is--flex--pc">
 											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/milano/chapter1_insert1.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/milano/chapter1_insert1.jpg', true); ?>" alt="">
 											</picture>
@@ -265,7 +263,7 @@
 										</div>
 
 										<div class="p-people__crosstalk__article__chapter__talk">
-											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. どのようなプロジェクトなのですか？</span></h3>
+											<h3 class="p-people__crosstalk__article__chapter__q"><span><i>Q. </i>どのようなプロジェクトなのですか？</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('横山', 'yokoyama', 'milano'); ?></dt>
 												<dd>
@@ -299,11 +297,11 @@
 								<div class="p-people__crosstalk__article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
-										<h2>クライアントと一緒に<br>プログラム企画を行う醍醐味</h2>
+										<h2>クライアントと一緒に<br class="is--pc">プログラム企画を行う醍醐味</h2>
 									</header>
 
 									<div class="p-people__crosstalk__article__chapter__body">
-										<div class="p-people__crosstalk__article__chapter__inserts is--wide is--flex">
+										<div class="p-people__crosstalk__article__chapter__inserts is--wide--pc is--flex--pc">
 											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/crosstalk/milano/chapter2_insert1.jpg'); ?>>
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/crosstalk/milano/chapter2_insert1.jpg', true); ?>" alt="">
 											</picture>
@@ -313,7 +311,7 @@
 										</div>
 
 										<div class="p-people__crosstalk__article__chapter__talk">
-											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. このチームはどのようにプロジェクトに関わったのですか？</span></h3>
+											<h3 class="p-people__crosstalk__article__chapter__q"><span><i>Q. </i>このチームはどのようにプロジェクトに関わったのですか？</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue', 'milano'); ?></dt>
 												<dd>
@@ -350,9 +348,9 @@
 										<h2>行政との協働</h2>
 									</header>
 
-									<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. 都市計画も関わるプロジェクトですね？</span></h3>
+									<h3 class="p-people__crosstalk__article__chapter__q"><span><i>Q. </i>都市計画も関わるプロジェクトですね？</span></h3>
 
-									<div class="p-people__crosstalk__article__chapter__body is--flex is--wide">
+									<div class="p-people__crosstalk__article__chapter__body is--flex--pc is--wide--pc">
 										<div class="p-people__crosstalk__article__chapter__talk">
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('岩倉', 'iwakura', 'milano'); ?></dt>
@@ -397,7 +395,7 @@
 
 									<div class="p-people__crosstalk__article__chapter__body">
 										<div class="p-people__crosstalk__article__chapter__talk">
-											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. 都市と建築は別々ではないのですか？</span></h3>
+											<h3 class="p-people__crosstalk__article__chapter__q"><span><i>Q. </i>都市と建築は別々ではないのですか？</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('井上', 'inoue', 'milano'); ?></dt>
 												<dd>
@@ -417,12 +415,12 @@
 								<div class="p-people__crosstalk__article__chapter__container l-container--narrow">
 									<header>
 										<p lang="en">CHAPTER <b></b></p>
-										<h2>数多くのプレーヤーとの対話</h2>
+										<h2>数多くの<br class="is--sp">プレーヤーとの対話</h2>
 									</header>
 
 									<div class="p-people__crosstalk__article__chapter__body">
 										<div class="p-people__crosstalk__article__chapter__talk">
-											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. 大規模プロジェクトならではの進め方はありますか？</span></h3>
+											<h3 class="p-people__crosstalk__article__chapter__q"><span><i>Q. </i>大規模プロジェクトならではの進め方はありますか？</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('小池', 'koike', 'milano'); ?></dt>
 												<dd>
@@ -451,7 +449,7 @@
 
 									<div class="p-people__crosstalk__article__chapter__body">
 										<div class="p-people__crosstalk__article__chapter__talk">
-											<h3 class="p-people__crosstalk__article__chapter__q"><span>Q. チームとして心掛けていることはありますか？</span></h3>
+											<h3 class="p-people__crosstalk__article__chapter__q"><span><i>Q. </i>チームとして心掛けていることはありますか？</span></h3>
 											<dl>
 												<dt><?php echo KUME_Util::get_crosstalk_face('横山', 'yokoyama', 'milano'); ?></dt>
 												<dd>

@@ -251,7 +251,6 @@
 			overscroll-behavior: none;
 			-ms-overflow-style: none;  // Edge
 			scrollbar-width: none;  // Firefox
-
 			@include sp () {
 				height: 100vh;
 			}
@@ -806,9 +805,13 @@
 			white-space: nowrap;
 
 			text-decoration-color: #686666;
-			text-underline-offset: .3em;
+			text-underline-offset: .2em;
 			@include taphover {
 				text-decoration: underline;
+			}
+
+			@at-root .ua-safari & {
+				text-underline-offset: -1.2em;
 			}
 
 			&::before {
@@ -1215,8 +1218,17 @@ $modal-content-aspect: $modal-content-w/$modal-content-h;
 				border-top: 1px solid var(--color-border);
 			}
 
-			.c-button {
+			.c-button.c-button--round {
 				width: 100%;
+
+				@include sp () {
+					color: var(--color-white);
+					background-color: #7f7f7f;
+
+					@include taphover {
+						background-color: var(--color-theme-text);
+					}
+				}
 			}
 		}
 
