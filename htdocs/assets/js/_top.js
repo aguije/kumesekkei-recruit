@@ -176,6 +176,10 @@ $(function () {
 		}, _option);
 
 		if (_option.mode === true) {
+			$('.p-news__item .p-news__item__category > a').on('click', function (_event) {
+				_event.stopPropagation();
+			});
+
 			$('.p-news__item').on('click', function (_event) {
 				_event.preventDefault();
 
