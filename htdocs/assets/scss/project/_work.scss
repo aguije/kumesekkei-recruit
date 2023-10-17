@@ -93,9 +93,9 @@ main.p-work.is--index {
 						[lang='en'] {
 							font-size: pc-clamp(12);
 							display: block;
+							width: 0;
 							padding-bottom: .5em;
 							white-space: nowrap;
-							width: 0;
 						}
 
 						[lang='ja'] {
@@ -471,28 +471,49 @@ main.p-work.is--welfare {
 		margin-top: pc-rem(60);
 		padding-bottom: pc-rem(100);
 		background-color: #f8f7f7;
+
+		@include sp () {
+			margin-top: sp-rem(100);
+			padding-bottom: sp-rem(80);
+		}
 	}
 
 	.p-work__welfare__sec {
 		.l-container {
-			display: flex;
-			column-gap: 8px;
+			@include pc () {
+				display: flex;
+				column-gap: 8px;
+			}
 
 			header {
-				width: calc((100% - 8px * 3) / 4);
+				@include pc () {
+					width: calc((100% - 8px * 3) / 4);
+				}
 			}
 
 			dl {
-				width: calc(100% - ((100% - 8px * 3) / 4));
+				@include pc () {
+					width: calc(100% - ((100% - 8px * 3) / 4));
+				}
 			}
 		}
 
 		header {
+			position: relative;
+
 			h2 {
+				font-size: pc-rem(24);
 				font-weight: bold;
 				box-sizing: border-box;
 				padding-top: pc-rem(30);
 				border-top: 1px solid var(--color-border);
+
+				@include sp () {
+					font-size: sp-rem(56);
+					font-weight: normal;
+					padding-top: sp-rem(80);
+					padding-bottom: sp-rem(80);
+				}
 			}
 		}
 
@@ -509,6 +530,12 @@ main.p-work.is--welfare {
 				border-top: #cccccc solid 4px;
 				background-color: var(--color-white);
 
+				@include sp () {
+					min-height: sp-rem(192 - 20 * 2);
+					padding: sp-rem(20) 0;
+					border-top-width: sp-rem(4);
+				}
+
 				> div {
 					display: flex;
 					flex-direction: column;
@@ -516,6 +543,11 @@ main.p-work.is--welfare {
 					width: 100%;
 					padding: 0 pc-rem(10);
 					row-gap: pc-rem(18 - 10);
+
+					@include sp () {
+						padding: 0 sp-rem(10);
+						row-gap: sp-rem(10);
+					}
 				}
 			}
 
@@ -524,6 +556,10 @@ main.p-work.is--welfare {
 				font-weight: bold;
 				width: 100%;
 				text-align: center;
+
+				@include sp () {
+					font-size: sp-rem(22);
+				}
 			}
 
 			dd {
@@ -531,6 +567,11 @@ main.p-work.is--welfare {
 				line-height: 1 * 44/28;
 				width: 100%;
 				text-align: center;
+
+				@include sp () {
+					font-size: sp-rem(18);
+					line-height: 1 * 29/18;
+				}
 			}
 		}
 
@@ -541,17 +582,29 @@ main.p-work.is--welfare {
 			b {
 				font-size: pc-clamp(48, 48 * $fs--min-ratio);
 				font-weight: normal;
+
+				@include sp () {
+					font-size: sp-rem(68);
+				}
 			}
 
 			small {
 				font-size: pc-clamp(18, 18 * $fs--min-ratio);
 				font-weight: bold;
+
+				@include sp () {
+					font-size: sp-rem(22);
+				}
 			}
 		}
 	}
 
 	.p-work__welfare__sec + .p-work__welfare__sec {
 		margin-top: pc-rem(60);
+
+		@include sp () {
+			margin-top: sp-rem(100);
+		}
 	}
 
 	#workstyle.p-work__welfare__sec {
@@ -562,6 +615,12 @@ main.p-work.is--welfare {
 			grid-template-rows: repeat(2, 1fr);
 			grid-column-gap: 8px;
 			grid-row-gap: 8px;
+			@include sp () {
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+				grid-column-gap: sp-rem(20);
+				grid-row-gap: sp-rem(80);
+			}
 		}
 
 		#workstyleHoliday {
@@ -582,29 +641,65 @@ main.p-work.is--welfare {
 			picture {
 				width: pc-rem(90);
 				margin: 0 auto;
+
+				@include sp () {
+					width: sp-rem(112);
+				}
 			}
 		}
 	}
 
 	#system.p-work__welfare__sec {
 		header {
-			display: grid;
+			@include pc () {
+				display: grid;
 
-			grid-template-columns: 1fr;
-			grid-template-rows: repeat(4, 1fr);
-			grid-column-gap: 8px;
-			grid-row-gap: 8px;
+				grid-template-columns: 1fr;
+				grid-template-rows: repeat(4, 1fr);
+				grid-column-gap: 8px;
+				grid-row-gap: 8px;
+			}
+			@include sp () {
+				display: flex;
+				margin-bottom: sp-rem(80);
+				column-gap: sp-rem(20);
+			}
+
+			h2 {
+				@include sp () {
+					width: calc((100% - #{sp-rem(20)}) / 2);
+				}
+			}
 
 			> figure {
-				display: contents;
+				@include pc () {
+					display: contents;
 
-				picture {
-					height: 100%;
+					picture {
+						height: 100%;
+					}
+
+					figcaption {
+						font-size: pc-clamp(12);
+						line-height: 1 * 40/24;
+					}
 				}
+				@include sp () {
+					width: calc((100% - #{sp-rem(20)}) / 2);
+					border-top: sp-rem(4) solid var(--color-border);
 
-				figcaption {
-					font-size: pc-clamp(12);
-					line-height: 1 * 40/24;
+					picture {
+						aspect-ratio: 290 / 192;
+					}
+
+					figcaption {
+						font-size: sp-rem(18);
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: calc((100% - #{sp-rem(20)}) / 2);
+						text-align: right;
+					}
 				}
 			}
 		}
@@ -616,6 +711,12 @@ main.p-work.is--welfare {
 			grid-template-rows: repeat(4, 1fr);
 			grid-column-gap: 8px;
 			grid-row-gap: 8px;
+			@include sp () {
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(6, 1fr);
+				grid-column-gap: sp-rem(20);
+				grid-row-gap: sp-rem(80);
+			}
 		}
 	}
 

@@ -509,8 +509,8 @@ $pie_r: 31.8309886184;
 			margin-top: sp-rem(100);
 			margin-right: sp-rem($size--pad--sp);
 			margin-left: sp-rem($size--pad--sp);
-			padding-top: sp-rem(100);
-			padding-bottom: sp-rem(100);
+			padding-top: sp-rem(80);
+			padding-bottom: sp-rem(80);
 		}
 
 		.c-page-footer__sub {
@@ -582,7 +582,7 @@ $pie_r: 31.8309886184;
 		row-gap: pc-rem(20 - 10);
 
 		@include sp () {
-			row-gap: sp-rem(48);
+			row-gap: sp-rem(48 - 22);
 		}
 
 		[lang='en'] {
@@ -729,7 +729,7 @@ $pie_r: 31.8309886184;
 		box-sizing: border-box;
 		width: 100vw;
 		margin: sp-rem(-10) sp-rem($size--pad--sp * -1);
-		padding: sp-rem(20) 0;
+		padding: sp-rem(40) 0;
 
 		overscroll-behavior: none;
 		-ms-overflow-style: none;  // Edge
