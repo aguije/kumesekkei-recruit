@@ -808,14 +808,16 @@ $pie_r: 31.8309886184;
  *
  * --------------------------------------------------------------- */
 
-.c-sticky {
+.c-sticky--pc {
 	position: relative;
 
-	.c-sticky__container {
-		position: -webkit-sticky;
-		position:         sticky;
-		top: 0;
-		padding-top: pc-clamp($size--gh);
+	@include pc () {
+		.c-sticky__container {
+			position: -webkit-sticky;
+			position:         sticky;
+			top: 0;
+			padding-top: pc-clamp($size--gh);
+		}
 	}
 }
 

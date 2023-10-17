@@ -733,40 +733,83 @@ main.p-work.is--hrd {
 
 	.l-container.is--2col {
 		> div:nth-of-type(2) {
-			padding-top: pc-clamp($size--gh);
+			@include pc () {
+				padding-top: pc-clamp($size--gh);
+			}
 		}
 	}
 
 	.p-work__hrd__sec {
+		@include sp () {
+			margin-top: sp-rem(100);
+		}
+
 		header {
-			padding-top: pc-rem(30);
-			border-top: 1px solid var(--color-border);
+			position: relative;
+
+			@include pc () {
+				padding-top: calc(#{pc-rem(30)} + 1px);
+			}
+			@include sp () {
+				padding-top: calc(#{sp-rem(80)} + 1px);
+			}
+
+			&::before {
+				@include pseudo-block((
+					width: 100%,
+					height: 1px,
+					top: 0,
+					left: 0,
+					background-color: var(--color-border),
+				)) {}
+				@include sp () {
+					width: 50%;
+				}
+			}
 
 			h2 {
 				font-size: pc-rem(24);
+
+				@include sp () {
+					font-size: sp-rem(56);
+				}
 			}
 		}
 
 		.p-work__hrd__sec__body {
 			line-height: 1 * 52/28;
 			margin-top: pc-rem(40 - 7.5);
+
+			@include sp () {
+				margin-top: sp-rem(80);
+			}
 		}
 	}
 
 	#training.p-work__hrd__sec {
 		figure {
-			margin-left: pc-rem(-40);
+			@include pc () {
+				margin-left: pc-rem(-40);
+			}
 		}
 	}
 
 	#skillup.p-work__hrd__sec {
 		picture {
 			overflow: hidden;
-			border-radius: pc-rem(5);
+			border-radius: pc-rem(4);
+
+			@include sp () {
+				border-radius: sp-rem(8);
+			}
 		}
 
 		picture + picture {
 			margin-top: pc-rem(10);
+
+			@include sp () {
+				margin-top: sp-rem(12);
+			}
 		}
 	}
 
@@ -775,16 +818,31 @@ main.p-work.is--hrd {
 		align-items: center;
 		margin-top: pc-rem(40);
 
+		@include sp () {
+			margin-top: sp-rem(80);
+		}
+
 		> div {
 			font-size: pc-rem(14);
-			width: pc-rem(160);
 			padding: 0 .5em;
+
+			@include pc () {
+				width: pc-rem(160);
+			}
+			@include sp () {
+				font-size: sp-rem(22);
+				padding-right: sp-rem(40);
+			}
 
 			strong {
 				font-size: pc-rem(54);
 				font-weight: normal;
 				display: inline-block;
 				margin: 0 (1rem * 7/$fs);
+
+				@include sp () {
+					font-size: sp-rem(86);
+				}
 			}
 		}
 
@@ -794,6 +852,12 @@ main.p-work.is--hrd {
 			line-height: $lh--huge;
 			padding: pc-rem(20) pc-rem(30);
 			border-left: 1px solid #666666;
+
+			@include sp () {
+				font-size: sp-rem(22);
+				line-height: 1 * 39/22;
+				padding: sp-rem(30) 0 sp-rem(30) sp-rem(40);
+			}
 		}
 	}
 

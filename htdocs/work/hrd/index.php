@@ -117,7 +117,7 @@
 							<div class="c-article-header">
 								<h1 class="c-article-header__title">
 									<span lang="en">Human Resource Development</span>
-									<span lang="ja">人材育成プログラム</span>
+									<span lang="ja">人材育成<br class="is--sp">プログラム</span>
 								</h1>
 								<div class="c-article-header__description">
 									<p>当社では、社員の成長を促進する「人材開発」を軸に、当社オリジナルの育成プログラムを立案し、人間力と設計力を両輪とした全社横断的な研修を実施しています。さらには、組織力を高めるための各社員の職種や職位に応じた研修や、専門性を高める研修、語学力を向上させる研修など、きめ細かく幅広い分野のプログラムをつくっています。</p>
@@ -132,7 +132,7 @@
 				<section id="training" class="p-work__hrd__sec">
 					<div class="l-wrapper">
 						<div class="l-container is--2col">
-							<div class="c-sticky">
+							<div class="c-sticky--pc">
 								<div class="c-sticky__container">
 									<header>
 										<h2>新入社員研修</h2>
@@ -158,7 +158,7 @@
 				<section id="skillup" class="p-work__hrd__sec">
 					<div class="l-wrapper">
 						<div class="l-container is--2col">
-							<div class="c-sticky">
+							<div class="c-sticky--pc">
 								<div class="c-sticky__container">
 									<header>
 										<h2>スキルアップ研修</h2>
