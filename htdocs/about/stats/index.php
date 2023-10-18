@@ -132,7 +132,7 @@
 							<div class="c-article-header">
 								<h1 class="c-article-header__title">
 									<span lang="en">Statistics &amp; Facts</span>
-									<span lang="ja">数字で見る久米設計</span>
+									<span lang="ja">数字で見る<br class="is--sp">久米設計</span>
 								</h1>
 							</div>
 
@@ -160,9 +160,9 @@
 							<div class="l-wrapper">
 								<div class="l-container--narrow">
 									<ul>
-										<li><a class="is--active" href="#general" lang="en"><span class="c-animate-underline">General Information</span></a></li>
-										<li><a href="#lifestage" lang="en"><span class="c-animate-underline">Life Stage</span></a></li>
-										<li><a href="#workstyle" lang="en"><span class="c-animate-underline">Workstyle</span></a></li>
+										<li><a class="is--active" href="#general" lang="en"><div><span class="c-animate-underline">General Information</span></div></a></li>
+										<li><a href="#lifestage" lang="en"><div><span class="c-animate-underline">Life Stage</span></div></a></li>
+										<li><a href="#workstyle" lang="en"><div><span class="c-animate-underline">Workstyle</span></div></a></li>
 									</ul>
 								</div>
 							</div>
@@ -214,7 +214,7 @@
 								<div class="l-container--narrow">
 									<header class="is--flex">
 										<h2><span>受賞数</span><small>( 2018年から2022年の5年間 )</small></h2>
-										<p class="is--larger"><b lang="en">203</b><span>件の建築関連の賞を獲得しています。</span></p>
+										<p class="is--larger"><b lang="en">203</b><span>件の<br class="is--sp">建築関連の賞を獲得しています。</span></p>
 									</header>
 
 									<figure>
@@ -258,10 +258,10 @@
 
 										<div class="is--fig">
 											<div>
-												<p lang="en"><sup>females</sup> <b>37.0</b>%</p>
+												<p lang="en"><sup>females</sup> <br class="is--sp"><b>37.0</b>%</p>
 											</div>
 											<div>
-												<p lang="en"><sup>males</sup> <b>63.0</b>%</p>
+												<p lang="en"><sup>males</sup> <br class="is--sp"><b>63.0</b>%</p>
 											</div>
 										</div>
 									</section>
@@ -272,7 +272,7 @@
 										</header>
 
 										<div class="is--fig">
-											<p>4.4%</p>
+											<p lang="en">4.4%</p>
 											<div></div>
 											<div></div>
 										</div>
@@ -287,9 +287,9 @@
 							<div class="l-wrapper">
 								<div class="l-container--narrow">
 									<ul>
-										<li><a href="#general" lang="en"><span class="c-animate-underline">General Information</span></a></li>
-										<li><a class="is--active" href="#lifestage" lang="en"><span class="c-animate-underline">Life Stage</span></a></li>
-										<li><a href="#workstyle" lang="en"><span class="c-animate-underline">Workstyle</span></a></li>
+										<li><a href="#general" lang="en"><div><span class="c-animate-underline">General Information</span></div></a></li>
+										<li><a class="is--active" href="#lifestage" lang="en"><div><span class="c-animate-underline">Life Stage</span></div></a></li>
+										<li><a href="#workstyle" lang="en"><div><span class="c-animate-underline">Workstyle</span></div></a></li>
 									</ul>
 								</div>
 							</div>
@@ -399,9 +399,9 @@
 							<div class="l-wrapper">
 								<div class="l-container--narrow">
 									<ul>
-										<li><a href="#general" lang="en"><span class="c-animate-underline">General Information</span></a></li>
-										<li><a href="#lifestage" lang="en"><span class="c-animate-underline">Life Stage</span></a></li>
-										<li><a class="is--active" href="#workstyle" lang="en"><span class="c-animate-underline">Workstyle</span></a></li>
+										<li><a href="#general" lang="en"><div><span class="c-animate-underline">General Information</span></div></a></li>
+										<li><a href="#lifestage" lang="en"><div><span class="c-animate-underline">Life Stage</span></div></a></li>
+										<li><a class="is--active" href="#workstyle" lang="en"><div><span class="c-animate-underline">Workstyle</span></div></a></li>
 									</ul>
 								</div>
 							</div>
