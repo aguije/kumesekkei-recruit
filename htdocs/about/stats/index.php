@@ -173,7 +173,7 @@
 								<div class="l-container is--2col">
 									<div>
 										<header>
-											<h2><span>売上高と建物用途構成比</span><small>（2023年度実績）</small></h2>
+											<h2><span>売上高と建物用途構成比</span><small>(2023年度実績)</small></h2>
 										</header>
 										<figure>
 											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('about/stats/sales_fig.svg'); ?>>
@@ -188,7 +188,7 @@
 									<div>
 										<p>多様な施設をバランスよく設計しているのが久米設計の特色です。</p>
 										<table>
-											<caption>（ プロジェクト件数 ）</caption>
+											<caption>( プロジェクト件数 )</caption>
 											<tbody>
 												<tr><th><span lang="en">A</span>事務所</th><td></td><td><b lang="en">26.5</b> %</td></tr>
 												<tr><th><span lang="en">B</span>医療</th><td></td><td><b lang="en">12.0</b> %</td></tr>
@@ -213,7 +213,7 @@
 							<div class="l-wrapper">
 								<div class="l-container--narrow">
 									<header class="is--flex">
-										<h2><span>受賞数</span><small>（ 2018年から2022年の5年間 ）</small></h2>
+										<h2><span>受賞数</span><small>( 2018年から2022年の5年間 )</small></h2>
 										<p class="is--larger"><b lang="en">203</b><span>件の建築関連の賞を獲得しています。</span></p>
 									</header>
 
@@ -231,7 +231,7 @@
 								<div>
 									<section id="employees" class="p-about__stats__article__sec">
 										<header>
-											<h2><span>社員数と有資格者数</span><small>（ 2023/06/08現在 ）</small></h2>
+											<h2><span>社員数と有資格者数</span><small>( 2023/06/08現在 )</small></h2>
 										</header>
 
 										<div class="is--fig">
@@ -253,7 +253,7 @@
 								<div>
 									<section id="female-male" class="p-about__stats__article__sec">
 										<header>
-											<h2><span>女男比</span><small>（ 新卒 〜 3年目 ）</small></h2>
+											<h2><span>女男比</span><small>( 新卒 〜 3年目 )</small></h2>
 										</header>
 
 										<div class="is--fig">
@@ -268,7 +268,7 @@
 
 									<section id="turnover" class="p-about__stats__article__sec">
 										<header>
-											<h2><span>離職率</span><small>（ 新卒 〜 5年目 ）</small></h2>
+											<h2><span>離職率</span><small>( 新卒 〜 5年目 )</small></h2>
 										</header>
 
 										<div class="is--fig">
@@ -323,7 +323,7 @@
 									<section id="male_childcare" class="p-about__stats__article__sec">
 										<div>
 											<header class="is--line">
-												<h2><span>男性の育休取得率</span><small>（ パパになった人で取得した割合 ）</small></h2>
+												<h2><span>男性の育休取得率</span><small>( パパになった人で取得した割合 )</small></h2>
 											</header>
 
 											<figure class="p-about__stats__circle">
@@ -372,7 +372,7 @@
 									<section id="mama" class="p-about__stats__article__sec">
 										<div>
 											<header class="is--line">
-												<h2><span>働くママ比率</span><small>（ 女性社員全体のうちの<br>子育てしながら働く社員の割合 ）</small></h2>
+												<h2><span>働くママ比率</span><small>( 女性社員全体のうちの<br>子育てしながら働く社員の割合 )</small></h2>
 											</header>
 
 											<figure class="p-about__stats__circle">
@@ -412,7 +412,7 @@
 								<div>
 									<section id="overtime" class="p-about__stats__article__sec">
 										<header class="is--flex is--line">
-											<h2><span>平均残業時間</span><small>（ 新卒1年目実績 ）</small></h2>
+											<h2><span>平均残業時間</span><small>( 新卒1年目実績 )</small></h2>
 											<p><b lang="en">29.6</b> <span lang="en">hours per month</span></p>
 										</header>
 
@@ -452,7 +452,7 @@
 										<section id="sns" class="p-about__stats__article__sec">
 											<div>
 												<header class="is--smaller is--line is--flex">
-													<h3><span>社内SNS<br>年間投稿数</span><small>（2022年9月～2023年8月）</small></h3>
+													<h3><span>社内SNS<br>年間投稿数</span><small>( 2022年9月～2023年8月 )</small></h3>
 													<p><b lang="en">2,127</b> <span lang="en">posts</span></p>
 												</header>
 
@@ -473,7 +473,7 @@
 										<section id="db" class="p-about__stats__article__sec">
 											<div>
 												<header class="is--smaller is--line is--flex">
-													<h3><span>プロジェクトデータベース<br>年間アクセス数</span><small>（2022年9月～2023年8月）</small></h3>
+													<h3><span>プロジェクトデータベース<br>年間アクセス数</span><small>( 2022年9月～2023年8月 )</small></h3>
 													<p><b lang="en">38,116</b> <span lang="en">accesses</span></p>
 												</header>
 
@@ -499,7 +499,7 @@
 								<div>
 									<section id="club" class="p-about__stats__article__sec">
 										<header class="is--line is--flex">
-											<h2><span>クラブ活動</span><small>（ 活動補助あり ）</small></h2>
+											<h2><span>クラブ活動</span><small>( 活動補助あり )</small></h2>
 											<p><b lang="en">18</b> <span lang="en">club activities</span></p>
 										</header>
 
@@ -514,7 +514,7 @@
 									<section id="club_participants" class="p-about__stats__article__sec">
 										<div>
 											<header class="is--line is--flex">
-												<h2><span>クラブ活動参加者</span><small>（ 延べ人数 ）</small></h2>
+												<h2><span>クラブ活動参加者</span><small>( 延べ人数 )</small></h2>
 												<p><b lang="en">308</b> <span lang="en">people</span></p>
 											</header>
 
