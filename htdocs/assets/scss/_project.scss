@@ -244,6 +244,7 @@
 		.p-gm {
 			overflow-y: scroll;
 			width: 100%;
+			height: 100vh;
 			height: 100svh;
 			transform: translateX(100%);
 			background-color: var(--color-bluegray);
@@ -1078,7 +1079,7 @@ $modal-content-aspect: $modal-content-w/$modal-content-h;
 
 .p-modal {
 	position: fixed;
-	z-index: 1000;
+	z-index: var(--zi-modal);
 	top: 0%;
 	left: 0%;
 	display: none;

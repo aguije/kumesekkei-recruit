@@ -72,7 +72,9 @@ $(function () {
 	 * --------------------------------------------------------------- */
 
 	const initWorkplaceModal = () => {
-		$('.p-workplace-modal').each(function () {
+		const $modals = $('.p-workplace-modal');
+
+		$modals.each(function () {
 			const $this = $(this);
 
 			swipers[$this.attr('id')] = new Swiper($this.find('.swiper')[0], {
