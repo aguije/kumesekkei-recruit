@@ -317,22 +317,22 @@
 				<footer class="p-article__footer">
 					<div class="l-wrapper">
 						<div class="l-container">
-							<ul class="p-article__footer__links is--reverse--pc">
+							<ul class="p-article__footer__links">
 								<li class="is--center">
 									<a class="c-button c-button--round is--white" href="/people/#employees"><span>BACK TO INDEX</span></a>
 								</li>
 								<li class="is--prev">
-									<a class="p-article__footer__link" href="/people/employees/mizutani/">
+									<a class="p-article__footer__link" href="/people/employees/yokoyama/">
 										<div class="p-article__footer__link__thumb">
 											<picture class="c-circle-picture c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/mizutani_thumb.jpg', true); ?>" alt="">
+												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/yokoyama_thumb.jpg', true); ?>" alt="">
 											</picture>
 											<span class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_l"></span></span>
 										</div>
 										<div class="p-article__footer__link__title">
-											<h4>水谷 絢子　<br class="is--sp"><span class="c-career-tag" data-category="new">新卒採用</span></h4>
-											<p class="is--sub">2014年入社　<br class="is--sp">意匠設計</p>
-											<p>母としての経験も発想に変えて、社会の役に立つような設計に生かしたい。</p>
+											<h4>横山 真　<br class="is--sp"><span class="c-career-tag" data-category="career">キャリア採用</span></h4>
+											<p class="is--sub">2019年入社　<br class="is--sp">意匠設計</p>
+											<p>これまでの住宅設計の経験を生かし、新たな挑戦をしながら得意分野を広げる。</p>
 										</div>
 									</a>
 								</li>

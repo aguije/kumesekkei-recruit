@@ -524,7 +524,7 @@
     },
     "\/htdocs\/assets\/images\/about\/stats\/illustD.png" : {
       "ft" : 32768,
-      "iS" : 251200,
+      "iS" : 256271,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/about\/stats\/illustD.png",
       "oF" : 0,
@@ -1765,6 +1765,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/htdocs\/assets\/images\/people\/employees\/yokoyama_tab2_pic1.jpg" : {
+      "ft" : 16384,
+      "iS" : 421704,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/yokoyama_tab2_pic1.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -3109,6 +3122,22 @@
       "oAP" : "\/htdocs\/people\/crosstalk\/milano\/index.php",
       "oF" : 0
     },
+    "\/htdocs\/people\/employees\/kawai\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/people\/employees\/kawai\/index.php",
+      "oF" : 0
+    },
+    "\/htdocs\/people\/employees\/miura\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/people\/employees\/miura\/index.php",
+      "oF" : 0
+    },
     "\/htdocs\/people\/employees\/mizutani\/index.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3117,12 +3146,28 @@
       "oAP" : "\/htdocs\/people\/employees\/mizutani\/index.php",
       "oF" : 0
     },
+    "\/htdocs\/people\/employees\/nohara\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/people\/employees\/nohara\/index.php",
+      "oF" : 0
+    },
     "\/htdocs\/people\/employees\/uomoto\/index.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/people\/employees\/uomoto\/index.php",
+      "oF" : 0
+    },
+    "\/htdocs\/people\/employees\/yokoyama\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/people\/employees\/yokoyama\/index.php",
       "oF" : 0
     },
     "\/htdocs\/people\/index.php" : {

@@ -120,7 +120,7 @@
 							</header>
 
 							<div class="p-employees__body">
-								<article class="p-employees__article is--coming" data-category="new">
+								<article class="p-employees__article" data-category="new">
 									<a href="/people/employees/miura/">
 										<header>
 											<h3>三浦 淑美</h3>
@@ -168,7 +168,7 @@
 									</a>
 								</article>
 
-								<article class="p-employees__article is--coming" data-category="new">
+								<article class="p-employees__article" data-category="new">
 									<a href="/people/employees/kawai/">
 										<header>
 											<h3>河合 正理</h3>
@@ -184,7 +184,7 @@
 									</a>
 								</article>
 
-								<article class="p-employees__article is--coming" data-category="career">
+								<article class="p-employees__article" data-category="career">
 									<a href="/people/employees/yokoyama/">
 										<header>
 											<h3>横山 真</h3>
@@ -200,7 +200,7 @@
 									</a>
 								</article>
 
-								<article class="p-employees__article is--coming" data-category="career">
+								<article class="p-employees__article" data-category="career">
 									<a href="/people/employees/nohara/">
 										<header>
 											<h3>野原 春花</h3>

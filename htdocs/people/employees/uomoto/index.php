@@ -397,7 +397,7 @@
 				<footer class="p-article__footer">
 					<div class="l-wrapper">
 						<div class="l-container">
-							<ul class="p-article__footer__links is--reverse--pc">
+							<ul class="p-article__footer__links">
 								<li class="is--center">
 									<a class="c-button c-button--round is--white" href="/people/#employees"><span>BACK TO INDEX</span></a>
 								</li>
@@ -417,6 +417,19 @@
 									</a>
 								</li>
 								<li class="is--next">
+									<a class="p-article__footer__link" href="/people/employees/kawai/">
+										<div class="p-article__footer__link__thumb">
+											<picture class="c-circle-picture c-lazy-trigger">
+												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/kawai_thumb.jpg', true); ?>" alt="">
+											</picture>
+											<span class="c-circle-arrow c-circle-arrow--border"><span class="c-icon c-icon--arrow_l"></span></span>
+										</div>
+										<div class="p-article__footer__link__title">
+											<h4>河合 正理　<br class="is--sp"><span class="c-career-tag" data-category="new">新卒採用</span></h4>
+											<p class="is--sub">2003年入社　<br class="is--sp">構造設計</p>
+											<p>安全性はもちろん見た目にも美しい、意匠に寄り添った構造設計を目指して。</p>
+										</div>
+									</a>
 								</li>
 							</ul>
 						</div>
