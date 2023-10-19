@@ -644,6 +644,8 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="c-page-side"><div><p><span lang="en">Workplace</span><span lang="ja">ワークプレイス</span></p></div></div>
 		</main>
 
 		<?php

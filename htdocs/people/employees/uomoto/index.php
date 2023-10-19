@@ -445,6 +445,8 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="c-page-side"><div><p><span lang="en">Employees Introduction</span><span lang="ja">社員紹介</span></p></div></div>
 		</main>
 
 		<?php

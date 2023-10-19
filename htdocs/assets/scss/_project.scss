@@ -1039,7 +1039,7 @@
 .p-scroll-to-top {
 	position:         sticky;
 	position: -webkit-sticky;
-	z-index: $zi--sst;
+	z-index: var(--zi-sst);
 	bottom: 0;
 	height: pc-rem(200);
 	pointer-events: none;

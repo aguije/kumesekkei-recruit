@@ -842,3 +842,65 @@ $pie_r: 31.8309886184;
 		}
 	}
 }
+
+main {
+	position: relative;
+
+	.c-page-side {
+		line-height: 1;
+		position: absolute;
+		z-index: var(--zi-pageside);
+		top: 0;
+		left: 0;
+		height: 100%;
+		pointer-events: none;
+		color: var(--color-white);
+		mix-blend-mode: difference;
+
+		@include sp () {
+			display: none;
+		}
+
+		> div {
+			position: -webkit-sticky;
+			position:         sticky;
+			top: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+
+			p {
+				overflow: hidden;
+				max-height: 100vh;
+				padding-left: pc-rem(20 - 4);
+				white-space: nowap;
+				writing-mode: vertical-rl;
+				text-overflow: ellipsis;
+
+				[lang='en'] {
+					font-size: 12px;
+					font-weight: bold;
+					position: relative;
+					margin-bottom: 24px;
+					padding-bottom: 24px;
+					text-transform: uppercase;
+
+					&::before {
+						@include pseudo-block((
+							width: 8px,
+							height: 1px,
+							background-color: var(--color-white),
+							bottom: 0,
+							left: 1px,
+						)) {}
+					}
+				}
+
+				[lang='ja'] {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+}

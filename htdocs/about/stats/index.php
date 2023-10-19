@@ -553,6 +553,8 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="c-page-side"><div><p><span lang="en">Statistics &amp; Facts</span><span lang="ja">数字で見る久米設計</span></p></div></div>
 		</main>
 
 		<?php

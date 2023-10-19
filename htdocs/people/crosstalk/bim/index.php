@@ -472,6 +472,8 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="c-page-side"><div><p><span lang="en">Crosstalk</span><span lang="ja">クロストーク</span></p></div></div>
 		</main>
 
 		<?php

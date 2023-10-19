@@ -333,6 +333,8 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="c-page-side"><div><p><span lang="en">Welfare</span><span lang="ja">福利厚生</span></p></div></div>
 		</main>
 
 		<?php

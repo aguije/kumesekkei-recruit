@@ -220,6 +220,8 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="c-page-side"><div><p><span lang="en">Work @ KUME SEKKEI</span><span lang="ja">働く環境</span></p></div></div>
 		</main>
 
 		<?php

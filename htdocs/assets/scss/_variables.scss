@@ -124,12 +124,15 @@ $zi--news-footer: 1100;
 $zi--gh: 1000;
 $zi--gf: 900;
 $zi--sst: 800;
+$zi--pageside: 700;
 
 :root {
 	--zi-modal: #{$zi--modal};
 	--zi-news-footer: #{$zi--news-footer};
 	--zi-gh: #{$zi--gh};
 	--zi-gf: #{$zi--gf};
+	--zi-sst: #{$zi--sst};
+	--zi-pageside: #{$zi--pageside};
 
 	--zi-5: #{$zi--level5};
 	--zi-4: #{$zi--level4};

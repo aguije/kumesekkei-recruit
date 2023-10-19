@@ -222,6 +222,8 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="c-page-side"><div><p><span lang="en">Top Message</span><span lang="ja">メッセージ</span></p></div></div>
 		</main>
 
 		<?php

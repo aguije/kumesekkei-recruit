@@ -526,6 +526,8 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="c-page-side"><div><p><span lang="en">Corporate Social Responsibility</span><span lang="ja">社会課題への取り組み</span></p></div></div>
 		</main>
 
 		<?php

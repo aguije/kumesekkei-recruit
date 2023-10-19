@@ -360,6 +360,8 @@
 					</div>
 				</div>
 			</section>
+
+			<div class="c-page-side"><div><p><span lang="en">People</span><span lang="ja">人を知る</span></p></div></div>
 		</main>
 
 		<?php
