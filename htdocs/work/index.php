@@ -533,7 +533,7 @@
 												<div class="swiper-slide__wrapper">
 													<header>
 														<h4><span>大阪支社</span></h4>
-														<p><span lang="en">OSAKA Branch 02 - 03</span></p>
+														<p><span lang="en">OSAKA Branch 01 - 03</span></p>
 													</header>
 
 													<div class="swiper-slide__body">
@@ -562,7 +562,7 @@
 												<div class="swiper-slide__wrapper">
 													<header>
 														<h4><span>九州支社</span></h4>
-														<p><span lang="en">KYUSHU Branch 01 - 03</span></p>
+														<p><span lang="en">KYUSHU Branch 02 - 03</span></p>
 													</header>
 
 													<div class="swiper-slide__body">
