@@ -55,11 +55,10 @@
 				<div class="p-hero__body">
 					<h2 class="c-inset-mask">
 						<img src="<?php echo KUME_Util::image_path('top/hero_maincopy_ja.svg', true); ?>" alt="「豊かさ」を拓く">
-						<span class="is--mask"></span>
 					</h2>
 					<p>
-						<span class="c-inset-mask"><img src="<?php echo KUME_Util::image_path('top/hero_subcopy1_ja.svg', true); ?>" alt="私たちは「豊かさ」とは何かを真剣に考える多様な個性の集合体です。"><span class="is--mask"></span></span>
-						<span class="c-inset-mask"><img src="<?php echo KUME_Util::image_path('top/hero_subcopy2_ja.svg', true); ?>" alt="地域・人を大切に、未来を見据えた新たな価値を創造していきます。"><span class="is--mask"></span></span>
+						<span class="c-inset-mask"><img src="<?php echo KUME_Util::image_path('top/hero_subcopy1_ja.svg', true); ?>" alt="私たちは「豊かさ」とは何かを真剣に考える多様な個性の集合体です。"></span>
+						<span class="c-inset-mask"><img src="<?php echo KUME_Util::image_path('top/hero_subcopy2_ja.svg', true); ?>" alt="地域・人を大切に、未来を見据えた新たな価値を創造していきます。"></span>
 					</p>
 				</div>
 

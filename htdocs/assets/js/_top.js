@@ -55,7 +55,7 @@ $(function () {
 
 							GLOBAL.methods.util.showInsetMask({
 								mode: true,
-								delay: .15,
+								delay: 0,
 								target: '.p-hero .p-hero__body p > .c-inset-mask'
 							});
 

@@ -292,15 +292,9 @@ GLOBAL.methods.util.showInsetMask = function (_option) {
 				value: 0,
 				duration: .6,
 				delay: _option.delay,
-				// stagger: : _option.stagger,
+				// stagger: _option.stagger,
 				onUpdate: function () {
 					$this.css({ clipPath: `inset(${tween.value}% 0% 0% 0%)` });
-				},
-				onComplete: function () {
-					gsap.to($this.find('.is--mask'), {
-						translateY: '-100%',
-						duration: .3
-					});
 				}
 			})
 
