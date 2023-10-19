@@ -215,7 +215,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="#tab2" data-index="1">
+												<a href="javascript:void(0);" data-index="1">
 													<span lang="en">Daily Sched. @Local</span>
 													<span lang="ja">庄内でのとある1日</span>
 												</a>
@@ -227,7 +227,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="#tab2" data-index="3">
+												<a href="javascript:void(0);" data-index="3">
 													<span lang="en">Candid photog&shy;raphy</span>
 													<span lang="ja">オフの1日</span>
 												</a>

@@ -212,7 +212,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="#tab2" data-index="1">
+												<a href="javascript:void(0);" data-index="1">
 													<span lang="en">Candid photog&shy;raphy</span>
 													<span lang="ja">オフの1日</span>
 												</a>
