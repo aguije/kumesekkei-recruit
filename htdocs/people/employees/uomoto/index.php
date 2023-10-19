@@ -240,11 +240,11 @@
 											<div id="tab1" class="swiper-slide">
 												<table>
 													<tr>
-														<th><span lang="en">8:00</span></th>
+														<th><span lang="en">9:00</span></th>
 														<td>出社</td>
 													</tr>
 													<tr>
-														<th><span lang="en">9:00</span></th>
+														<th><span lang="en">9:10</span></th>
 														<td>メールなど事務作業</td>
 													</tr>
 													<tr>
@@ -269,7 +269,11 @@
 													</tr>
 													<tr>
 														<th><span lang="en">18:00</span></th>
-														<td>メールや図面チェックなど個人作業</td>
+														<td>退社</td>
+													</tr>
+													<tr>
+														<th><span lang="en">19:00</span></th>
+														<td>友人と神楽坂で食事</td>
 													</tr>
 												</table>
 											</div>
