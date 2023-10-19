@@ -1673,7 +1673,7 @@
     },
     "\/htdocs\/assets\/images\/top\/about_message.jpg" : {
       "ft" : 16384,
-      "iS" : 51244,
+      "iS" : 227541,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/top\/about_message.jpg",
@@ -1762,19 +1762,6 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/htdocs\/assets\/images\/top\/people_employees_thumb2.jpg" : {
-      "ft" : 16384,
-      "iS" : 16427,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/top\/people_employees_thumb2.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
