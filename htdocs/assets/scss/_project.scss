@@ -1195,6 +1195,94 @@ $modal-content-aspect: $modal-content-w/$modal-content-h;
 		column-gap: sp-rem(20);
 	}
 
+	%prev_pc {
+		@include pc () {
+			order: 1;
+			border-bottom-left-radius: pc-rem(16);
+		}
+	}
+
+	%prev_sp {
+		@include sp () {
+			border-bottom-left-radius: sp-rem(16);
+		}
+	}
+
+	%next_pc {
+		@include pc () {
+			order: 3;
+			border-bottom-right-radius: pc-rem(16);
+
+			a.p-article__footer__link {
+				flex-direction: row-reverse;
+
+				.p-article__footer__link__thumb {
+					margin-left: 0;
+
+					.c-circle-arrow {
+						right: pc-rem(-10);
+						left: unset;
+
+						.c-icon {
+							transform: rotate(180deg);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	%next_sp {
+		@include sp () {
+			border-bottom-right-radius: sp-rem(16);
+
+			a.p-article__footer__link {
+				.p-article__footer__link__thumb {
+					margin-left: 0;
+
+					.c-circle-arrow {
+						top: 50%;
+						right: sp-rem(-72 + 17);
+						left: unset;
+						transform: translateY(-50%);
+
+						.c-icon {
+							transform: scale(.5) rotate(180deg);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.is--reverse--pc {
+		li {
+			&.is--prev {
+				@extend %next_pc;
+				@extend %prev_sp;
+			}
+
+			&.is--next {
+				@extend %prev_pc;
+				@extend %next_sp;
+			}
+		}
+	}
+
+	&:not(.is--reverse--pc) {
+		li {
+			&.is--prev {
+				@extend %prev_pc;
+				@extend %prev_sp;
+			}
+
+			&.is--next {
+				@extend %next_pc;
+				@extend %next_sp;
+			}
+		}
+	}
+
 	li {
 		overflow: hidden;
 
@@ -1240,55 +1328,6 @@ $modal-content-aspect: $modal-content-w/$modal-content-h;
 
 			@include sp () {
 				width: calc((100% - #{sp-rem(20)}) / 2);
-			}
-		}
-
-		&.is--prev {
-			@include pc () {
-				order: 1;
-				border-bottom-left-radius: pc-rem(16);
-			}
-			@include sp () {
-				border-bottom-left-radius: sp-rem(16);
-			}
-		}
-
-		&.is--next {
-			@include pc () {
-				order: 3;
-				border-bottom-right-radius: pc-rem(16);
-			}
-			@include sp () {
-				border-bottom-right-radius: sp-rem(16);
-			}
-
-			a.p-article__footer__link {
-				@include pc () {
-					flex-direction: row-reverse;
-				}
-
-				.p-article__footer__link__thumb {
-					margin-left: 0;
-
-					.c-circle-arrow {
-						right: pc-rem(-10);
-						left: unset;
-
-						@include sp () {
-							top: 50%;
-							right: sp-rem(-72 + 17);
-							transform: translateY(-50%);
-						}
-
-						.c-icon {
-							transform: rotate(180deg);
-
-							@include sp () {
-								transform: scale(.5) rotate(180deg);
-							}
-						}
-					}
-				}
 			}
 		}
 

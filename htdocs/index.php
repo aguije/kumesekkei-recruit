@@ -532,28 +532,10 @@
 								<div class="p-people__employee__main c-pane-scroller">
 									<div class="c-pane-scroller__container">
 										<article class="p-people__employee__article">
-											<a class="is--new" href="/people/employees/miura/" rel="bookmark">
-												<picture class="c-circle-picture">
-													<div class="c-lazy-trigger">
-														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb1.jpg', true); ?>" alt="">
-													</div>
-												</picture>
-												<header>
-													<h4>三浦 淑美</h4>
-													<p>意匠設計</p>
-												</header>
-												<p class="p-people__employee__article__description">互いの意思を尊重し、最適な答えを探していくことのできる職場です。</p>
-												<footer>
-													<span class="c-career-tag" data-category="new">新卒採用</span>
-												</footer>
-											</a>
-										</article>
-
-										<article class="p-people__employee__article">
 											<a class="is--career" href="/people/employees/mizutani/" rel="bookmark">
 												<picture class="c-circle-picture">
 													<div class="c-lazy-trigger">
-														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/people_employees_thumb2.jpg', true); ?>" alt="">
+														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/mizutani_thumb.jpg', true); ?>" alt="">
 													</div>
 												</picture>
 												<header>
@@ -561,6 +543,24 @@
 													<p>意匠設計</p>
 												</header>
 												<p class="p-people__employee__article__description">同世代設計者から刺激を受ける機会が多いことは魅力のひとつです。</p>
+												<footer>
+													<span class="c-career-tag" data-category="new">新卒採用</span>
+												</footer>
+											</a>
+										</article>
+
+										<article class="p-people__employee__article">
+											<a class="is--new" href="/people/employees/uomoto/" rel="bookmark">
+												<picture class="c-circle-picture">
+													<div class="c-lazy-trigger">
+														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/uomoto_thumb.jpg', true); ?>" alt="">
+													</div>
+												</picture>
+												<header>
+													<h4>魚本 大地</h4>
+													<p>意匠設計</p>
+												</header>
+												<p class="p-people__employee__article__description">力を発揮できる環境と働き方を大切に、道なき道を切り開くことすらも楽しむ。</p>
 												<footer>
 													<span class="c-career-tag" data-category="new">新卒採用</span>
 												</footer>

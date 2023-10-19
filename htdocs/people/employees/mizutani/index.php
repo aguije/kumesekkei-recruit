@@ -313,11 +313,13 @@
 				<footer class="p-article__footer">
 					<div class="l-wrapper">
 						<div class="l-container">
-							<ul class="p-article__footer__links">
+							<ul class="p-article__footer__links is--reverse--pc">
 								<li class="is--center">
 									<a class="c-button c-button--round is--white" href="/people/#employees"><span>BACK TO INDEX</span></a>
 								</li>
 								<li class="is--prev">
+								</li>
+								<li class="is--next">
 									<a class="p-article__footer__link" href="/people/employees/uomoto/">
 										<div class="p-article__footer__link__thumb">
 											<picture class="c-circle-picture c-lazy-trigger">
@@ -331,8 +333,6 @@
 											<p>力を発揮できる環境と働き方を大切に、道なき道を切り開くことすらも楽しむ。</p>
 										</div>
 									</a>
-								</li>
-								<li class="is--next">
 								</li>
 							</ul>
 						</div>

@@ -120,19 +120,19 @@
 							</header>
 
 							<div class="p-employees__body">
-								<article class="p-employees__article" data-category="new">
-									<a href="/people/employees/uomoto/">
+								<article class="p-employees__article is--coming" data-category="new">
+									<a href="/people/employees/miura/">
 										<header>
-											<h3>魚本 大地</h3>
+											<h3>三浦 淑美</h3>
 											<p><span class="c-career-tag" data-category="new">新卒採用</span></p>
 										</header>
 										<picture>
 											<div class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees_thumb_uomoto.jpg', true); ?>" alt="">
+												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees_thumb_miura.jpg', true); ?>" alt="">
 											</div>
 										</picture>
-										<p class="p-employees__article__role">2009年入社　意匠設計</p>
-										<p class="p-employees__article__description">力を発揮できる環境と働き方を大切に、道なき道を切り開くことすらも楽しむ。</p>
+										<p class="p-employees__article__role">2005年入社　意匠設計</p>
+										<p class="p-employees__article__description">子育てをする中でより強くなった、子どもが主役の学校をつくりたいという想い。</p>
 									</a>
 								</article>
 
@@ -152,35 +152,35 @@
 									</a>
 								</article>
 
-								<article class="p-employees__article is--coming" data-category="new">
-									<a href="/people/employees/miura/">
+								<article class="p-employees__article" data-category="new">
+									<a href="/people/employees/uomoto/">
 										<header>
-											<h3>三浦 淑美</h3>
+											<h3>魚本 大地</h3>
 											<p><span class="c-career-tag" data-category="new">新卒採用</span></p>
 										</header>
 										<picture>
 											<div class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees_thumb_miura.jpg', true); ?>" alt="">
+												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees_thumb_uomoto.jpg', true); ?>" alt="">
 											</div>
 										</picture>
-										<p class="p-employees__article__role">2005年入社　意匠設計</p>
-										<p class="p-employees__article__description">子育てをする中でより強くなった、子どもが主役の学校をつくりたいという想い。</p>
+										<p class="p-employees__article__role">2009年入社　意匠設計</p>
+										<p class="p-employees__article__description">力を発揮できる環境と働き方を大切に、道なき道を切り開くことすらも楽しむ。</p>
 									</a>
 								</article>
 
-								<article class="p-employees__article is--coming" data-category="career">
-									<a href="/people/employees/nohara/">
+								<article class="p-employees__article is--coming" data-category="new">
+									<a href="/people/employees/kawai/">
 										<header>
-											<h3>野原 春花</h3>
-											<p><span class="c-career-tag" data-category="career">キャリア採用</span></p>
+											<h3>河合 正理</h3>
+											<p><span class="c-career-tag" data-category="new">新卒採用</span></p>
 										</header>
 										<picture>
 											<div class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees_thumb_nohara.jpg', true); ?>" alt="">
+												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees_thumb_kawai.jpg', true); ?>" alt="">
 											</div>
 										</picture>
-										<p class="p-employees__article__role">2017年入社　意匠設計</p>
-										<p class="p-employees__article__description">こよなく愛する九州という土地で、さまざまな人の〝居場所〟をつくりたい。</p>
+										<p class="p-employees__article__role">2003年入社　構造設計</p>
+										<p class="p-employees__article__description">安全性はもちろん見た目にも美しい、意匠に寄り添った構造設計を目指して。</p>
 									</a>
 								</article>
 
@@ -200,19 +200,19 @@
 									</a>
 								</article>
 
-								<article class="p-employees__article is--coming" data-category="new">
-									<a href="/people/employees/kawai/">
+								<article class="p-employees__article is--coming" data-category="career">
+									<a href="/people/employees/nohara/">
 										<header>
-											<h3>河合 正理</h3>
-											<p><span class="c-career-tag" data-category="new">新卒採用</span></p>
+											<h3>野原 春花</h3>
+											<p><span class="c-career-tag" data-category="career">キャリア採用</span></p>
 										</header>
 										<picture>
 											<div class="c-lazy-trigger">
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees_thumb_kawai.jpg', true); ?>" alt="">
+												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees_thumb_nohara.jpg', true); ?>" alt="">
 											</div>
 										</picture>
-										<p class="p-employees__article__role">2003年入社　構造設計</p>
-										<p class="p-employees__article__description">安全性はもちろん見た目にも美しい、意匠に寄り添った構造設計を目指して。</p>
+										<p class="p-employees__article__role">2017年入社　意匠設計</p>
+										<p class="p-employees__article__description">こよなく愛する九州という土地で、さまざまな人の〝居場所〟をつくりたい。</p>
 									</a>
 								</article>
 							</div>

@@ -103,6 +103,7 @@ main.p-people.is--index {
 				row-gap: pc-rem(30);
 
 				@include pc () {
+					flex-direction: row-reverse;
 					width: pc-rem(750);
 				}
 				@include sp () {
@@ -149,6 +150,9 @@ main.p-people.is--index {
 							transform-origin: 0 0,
 							transform: scaleY(0),
 						)) {}
+						@include sp () {
+							width: sp-rem(10 * 145/258);
+						}
 						@include transition('transform', $dur--hover);
 					}
 
@@ -1158,32 +1162,33 @@ main.p-people__employee.is--single {
 		}
 	}
 
-	.p-article__footer__link {
-
-		.p-article__footer__link__title {
-			h4 {
-				@include pc () {
-					overflow: hidden;
-					white-space: nowrap;
-					text-overflow: ellipsis;
-				}
-				@include sp () {
-					.c-career-tag {
-						margin-top: 1em * 10/14;
+	.p-article__footer__links {
+		.p-article__footer__link {
+			.p-article__footer__link__title {
+				h4 {
+					@include pc () {
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
+					@include sp () {
+						.c-career-tag {
+							margin-top: 1em * 10/14;
+						}
 					}
 				}
-			}
 
-			p {
-				font-size: pc-clamp(12, 12 * $fs--min-ratio);
+				p {
+					font-size: pc-clamp(12, 12 * $fs--min-ratio);
 
-				@include sp () {
-					font-size: sp-rem(22);
+					@include sp () {
+						font-size: sp-rem(22);
+					}
 				}
-			}
 
-			p:not(.is--sub) {
-				font-weight: bold;
+				p:not(.is--sub) {
+					font-weight: bold;
+				}
 			}
 		}
 	}
