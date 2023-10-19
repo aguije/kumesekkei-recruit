@@ -423,7 +423,7 @@
     },
     "\/htdocs\/assets\/images\/about\/message_pic1.jpg" : {
       "ft" : 16384,
-      "iS" : 276669,
+      "iS" : 255472,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/about\/message_pic1.jpg",
@@ -436,7 +436,7 @@
     },
     "\/htdocs\/assets\/images\/about\/message_pic2.jpg" : {
       "ft" : 16384,
-      "iS" : 219219,
+      "iS" : 214662,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/about\/message_pic2.jpg",
@@ -449,7 +449,7 @@
     },
     "\/htdocs\/assets\/images\/about\/message_pic3.jpg" : {
       "ft" : 16384,
-      "iS" : 257963,
+      "iS" : 257417,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/about\/message_pic3.jpg",
@@ -1370,7 +1370,7 @@
     },
     "\/htdocs\/assets\/images\/people\/employees\/mizutani_mv.jpg" : {
       "ft" : 16384,
-      "iS" : 184714,
+      "iS" : 206452,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/people\/employees\/mizutani_mv.jpg",
@@ -1383,7 +1383,7 @@
     },
     "\/htdocs\/assets\/images\/people\/employees\/mizutani_pic1.jpg" : {
       "ft" : 16384,
-      "iS" : 266373,
+      "iS" : 270611,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/people\/employees\/mizutani_pic1.jpg",
@@ -1458,7 +1458,7 @@
     },
     "\/htdocs\/assets\/images\/people\/employees\/uomoto_mv.jpg" : {
       "ft" : 16384,
-      "iS" : 241584,
+      "iS" : 261291,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/people\/employees\/uomoto_mv.jpg",
@@ -1471,7 +1471,7 @@
     },
     "\/htdocs\/assets\/images\/people\/employees\/uomoto_pic1.jpg" : {
       "ft" : 16384,
-      "iS" : 318786,
+      "iS" : 324908,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/people\/employees\/uomoto_pic1.jpg",
