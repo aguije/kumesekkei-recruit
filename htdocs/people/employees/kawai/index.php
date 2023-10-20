@@ -125,7 +125,7 @@
 								<div>
 									<h1>
 										<span lang="ja">河合 正理</span>
-										<span lang="en">KAWAI</span>
+										<span lang="en">KAWAI Masari</span>
 										<span class="c-career-tag" data-category="career">キャリア採用</span>
 									</h1>
 									<div class="p-people__employee__article__header__profile">
