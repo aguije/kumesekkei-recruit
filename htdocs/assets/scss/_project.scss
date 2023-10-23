@@ -245,7 +245,7 @@
 			overflow-y: scroll;
 			width: 100%;
 			height: 100vh;
-			height: 100svh;
+			height: 100dvh;
 			transform: translateX(100%);
 			background-color: var(--color-bluegray);
 
@@ -267,7 +267,7 @@
 					// filter: drop-shadow(0 0 #{pc-clamp(20)} rgba(0,0,0,.2));
 				}
 				@include sp () {
-					padding-bottom: calc(100vh - 100svh);
+					padding-bottom: calc(100vh - 100dvh);
 				}
 
 				> .l-wrapper {
