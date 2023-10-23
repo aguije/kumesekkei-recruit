@@ -335,7 +335,7 @@
 										<div class="p-article__footer__link__title">
 											<h4>水谷 絢子　<br class="is--sp"><span class="c-career-tag" data-category="new">新卒採用</span></h4>
 											<p class="is--sub">2014年入社<br class="is--sp">意匠設計</p>
-											<p>母としての経験も発想に変えて、社会の役に立つような設計に生かしたい。</p>
+											<p>たくさんの人との協働を楽しみながら社会の役に立つような設計を行いたい。</p>
 										</div>
 									</a>
 								</li>

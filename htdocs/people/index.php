@@ -148,7 +148,7 @@
 											</div>
 										</picture>
 										<p class="p-employees__article__role">2014年入社　意匠設計</p>
-										<p class="p-employees__article__description">母としての経験も発想に変えて、社会の役に立つような設計に生かしたい。</p>
+										<p class="p-employees__article__description">たくさんの人との協働を楽しみながら社会の役に立つような設計を行いたい。</p>
 									</a>
 								</article>
 
