@@ -22,8 +22,6 @@
 		'bc' => $bc
 	));
 
-	$_GET['is_top'] = '1';
-
 ?>
 <?php
 
@@ -269,10 +267,10 @@
 						</div>
 					</div>
 
-					<footer class="p-news__footer l-container">
+					<footer class="p-lead l-container">
 						<h5>募集職種 / 募集概要 / 採用プロセス</h5>
 						<ul>
-							<li class="p-news__footer__item is--new">
+							<li class="p-lead__item is--new">
 								<a href="https://www.kumesekkei.co.jp/news/?category=recruit&rtype=new" target="_blank" rel="noopener">
 									<div>
 										<h6>
@@ -280,11 +278,11 @@
 											<span lang="ja">新卒採用</span>
 											<span class="c-circle-arrow c-circle-arrow--new"><span class="c-icon c-icon--arrow_r"></span></span>
 										</h6>
-										<p class="p-news__footer__item__process">募集職種 / 募集概要 / 採用プロセス</p>
+										<p class="p-lead__item__process">募集職種 / 募集概要 / 採用プロセス</p>
 									</div>
 								</a>
 							</li>
-							<li class="p-news__footer__item is--career">
+							<li class="p-lead__item is--career">
 								<a href="https://www.kumesekkei.co.jp/news/?category=recruit&rtype=career" target="_blank" rel="noopener">
 									<div>
 										<h6>
@@ -292,7 +290,7 @@
 											<span lang="ja">キャリア採用</span>
 											<span class="c-circle-arrow c-circle-arrow--career"><span class="c-icon c-icon--arrow_r"></span></span>
 										</h6>
-										<p class="p-news__footer__item__process">募集職種 / 募集概要 / 採用プロセス</p>
+										<p class="p-lead__item__process">募集職種 / 募集概要 / 採用プロセス</p>
 									</div>
 								</a>
 							</li>
@@ -781,6 +779,7 @@
 
 		<?php
 
+			$_GET['is_include_lead'] = '0';
 			include($_SERVER['DOCUMENT_ROOT'] . '/modules/ui.mod.php');
 
 		?>
