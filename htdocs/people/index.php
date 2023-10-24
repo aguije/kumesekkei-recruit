@@ -232,6 +232,7 @@
 						</header>
 
 						<div class="p-people__crosstalk__body">
+							<?php /*
 							<article class="p-people__crosstalk__article">
 								<a href="/people/crosstalk/bim/">
 									<p class="p-people__crosstalk__article_index" lang="en">Crosstalk <b>03</b></p>
@@ -253,6 +254,7 @@
 									</div>
 								</a>
 							</article>
+							*/ ?>
 
 							<article class="p-people__crosstalk__article">
 								<a href="/people/crosstalk/milano/">
