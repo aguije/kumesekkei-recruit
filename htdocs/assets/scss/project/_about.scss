@@ -1670,13 +1670,14 @@ main.p-about__stats {
 		width: sp-rem(213 * $stats_ratio_sp);
 		padding: 0 sp-rem(10 * $stats_ratio_sp);
 	}
-	@include taphover {
-		opacity: .5;
-	}
-	@include transition('opacity', $dur--hover);
 
 	> a {
 		display: block;
+
+		@include taphover {
+			opacity: .5;
+		}
+		@include transition('opacity', $dur--hover);
 	}
 
 	figure {

@@ -693,6 +693,14 @@ main.p-top {
 			h3 {
 				text-align: right;
 			}
+
+			.p-about__stats__belt__fig {
+				a {
+					@include taphover {
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 

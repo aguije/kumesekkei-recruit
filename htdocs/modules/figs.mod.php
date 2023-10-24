@@ -1,8 +1,13 @@
 <?php
 
 	$path = '';
-	if (array_key_exists('path', $_GET)) {
+	if (array_key_exists('path', $_GET) && $_GET['path']) {
 		$path = $_GET['path'];
+	}
+
+	$is_top = false;
+	if (array_key_exists('is_top', $_GET) && $_GET['is_top'] && $_GET['is_top'] === '1') {
+		$is_top = true;
 	}
 
 ?>
@@ -14,7 +19,7 @@
 			<div class="p-about__stats__belt__wrap">
 
 				<div id="sales_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#sales">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#sales'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/sales_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/sales_fig.png', true); ?>" alt="">
@@ -30,7 +35,7 @@
 				</div>
 
 				<div id="awards_2018_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--award">
-					<a href="<?php echo $path; ?>#awards">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#awards'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig_2018.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig_2018.png', true); ?>" alt="">
@@ -43,7 +48,7 @@
 				</div>
 
 				<div id="awards_2019_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--award">
-					<a href="<?php echo $path; ?>#awards">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#awards'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig_2019.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig_2019.png', true); ?>" alt="">
@@ -56,7 +61,7 @@
 				</div>
 
 				<div id="awards_2020_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--award">
-					<a href="<?php echo $path; ?>#awards">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#awards'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig_2020.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig_2020.png', true); ?>" alt="">
@@ -69,7 +74,7 @@
 				</div>
 
 				<div id="awards_2021_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--award">
-					<a href="<?php echo $path; ?>#awards">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#awards'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig_2021.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig_2021.png', true); ?>" alt="">
@@ -82,7 +87,7 @@
 				</div>
 
 				<div id="awards_2022_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--award">
-					<a href="<?php echo $path; ?>#awards">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#awards'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig_2022.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig_2022.png', true); ?>" alt="">
@@ -95,7 +100,7 @@
 				</div>
 
 				<div id="employees_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#employees">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#employees'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/employees_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/employees_fig.png', true); ?>" alt="">
@@ -111,7 +116,7 @@
 				</div>
 
 				<div id="professionals_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#employees">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#employees'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/professionals_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/professionals_fig.png', true); ?>" alt="">
@@ -127,7 +132,7 @@
 				</div>
 
 				<div id="female-male_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#female-male">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#female-male'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/female-male_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/female-male_fig.png', true); ?>" alt="">
@@ -144,7 +149,7 @@
 				</div>
 
 				<div id="turnover_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#turnover">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#turnover'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/turnover_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/turnover_fig.png', true); ?>" alt="">
@@ -161,7 +166,7 @@
 				</div>
 
 				<div id="female_childcare_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#female_childcare">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#female_childcare'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/female_childcare_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/female_childcare_fig.png', true); ?>" alt="">
@@ -177,7 +182,7 @@
 				</div>
 
 				<div id="male_childcare_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#male_childcare">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#male_childcare'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/male_childcare_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/male_childcare_fig.png', true); ?>" alt="">
@@ -194,7 +199,7 @@
 				</div>
 
 				<div id="female_reinstatement_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#female_reinstatement">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#female_reinstatement'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/female_reinstatement_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/female_reinstatement_fig.png', true); ?>" alt="">
@@ -210,7 +215,7 @@
 				</div>
 
 				<div id="mama_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#mama">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#mama'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/mama_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/mama_fig.png', true); ?>" alt="">
@@ -226,7 +231,7 @@
 				</div>
 
 				<div id="overtime_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#overtime">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#overtime'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/overtime_fig.svg'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/overtime_fig.svg', true); ?>" alt="">
@@ -243,7 +248,7 @@
 				</div>
 
 				<div id="leave_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#leave">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#leave'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/leave_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/leave_fig.png', true); ?>" alt="">
@@ -259,7 +264,7 @@
 				</div>
 
 				<div id="sns_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--sum">
-					<a href="<?php echo $path; ?>#sns">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#sns'; ?>">
 						<figure>
 							<div></div>
 							<figcaption>
@@ -275,7 +280,7 @@
 				</div>
 
 				<div id="db_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--sum">
-					<a href="<?php echo $path; ?>#db">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#db'; ?>">
 						<figure>
 							<div></div>
 							<figcaption>
@@ -291,7 +296,7 @@
 				</div>
 
 				<div id="club_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#club">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#club'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/club_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/club_fig.png', true); ?>" alt="">
@@ -307,7 +312,7 @@
 				</div>
 
 				<div id="club_participants_mini" class="p-about__stats__belt__fig">
-					<a href="<?php echo $path; ?>#club_participants">
+					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#club_participants'; ?>">
 						<figure>
 							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/club_participants_fig.png'); ?>>
 								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/club_participants_fig.png', true); ?>" alt="">
