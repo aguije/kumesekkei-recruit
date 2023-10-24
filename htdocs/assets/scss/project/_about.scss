@@ -341,7 +341,6 @@
 				font-size: pc-clamp(15, 15 * $fs--min-ratio);
 				position: relative;
 				padding-left: pc-clamp(11 + 10);
-				text-indent: pc-clamp(-11);
 				pointer-events: all;
 
 				@include sp () {
@@ -351,9 +350,12 @@
 
 				.c-icon {
 					font-size: pc-clamp(11);
-					padding-right: 1em * 10/11;
+					position: absolute;
+					top: .5em;
+					left: 0;
 
 					@include sp () {
+						top: .4em;
 						font-size: sp-rem(21);
 					}
 				}

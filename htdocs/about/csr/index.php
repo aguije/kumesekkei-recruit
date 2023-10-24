@@ -393,6 +393,16 @@
 											<p><span class="c-icon c-icon--external"></span><span class="is--text">アトリウムで広がる<br>ワークスタイルの可能性</span></p>
 										</a>
 									</li>
+									<li>
+										<a class="p-about__csr__link" href="https://www.kumesekkei.co.jp/news/2023_09.html" target="_blank">
+											<div class="p-about__csr__link__thumb">
+												<picture class="c-lazy-trigger">
+													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/workstyle_pic3.jpg', true); ?>" alt="">
+												</picture>
+											</div>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">あなたの理想のオフィスは？<br class="is--pc">社内アイデアソンを行いました</span></p>
+										</a>
+									</li>
 								</ul>
 							</div>
 						</div>
