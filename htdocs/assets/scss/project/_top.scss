@@ -83,11 +83,12 @@ main.p-top {
 
 		.p-hero__body {
 			position: relative;
-			z-index: var(--zi-1);
 
 			@include pc ((
 				width: 680,
-			)) {}
+			)) {
+				z-index: var(--zi-1);
+			}
 			@include sp ((
 				padding-top: 88,
 				padding-right: 40,

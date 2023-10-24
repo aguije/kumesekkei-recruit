@@ -79,7 +79,7 @@ $(function () {
 								},
 								navigation: 0,
 								scrollbar: 0,
-								allowTouchMove: 0
+								allowTouchMove: 1
 							});
 
 							swiper.init();
