@@ -35,7 +35,7 @@
 					</a>
 				</li>
 			</ul>
-		</footer>
+		</nav>
 		<?php
 	}
 
