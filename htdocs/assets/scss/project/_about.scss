@@ -251,16 +251,20 @@
 					color: #666666;
 
 					@include taphover {
+						color: var(--color-black);
+
 						.c-animate-underline::after {
 							transform: scaleX(1);
 						}
 					}
 
 					.c-animate-underline::after {
-						background-color: #666666;
+						background-color: var(--color-black);
 					}
 
 					&.is--active {
+						color: var(--color-black);
+
 						.c-animate-underline::after {
 							transform: scaleX(1);
 						}
