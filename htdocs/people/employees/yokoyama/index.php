@@ -321,7 +321,7 @@
 										<div class="p-article__footer__link__title">
 											<h4>河合 正理　<br class="is--sp"><span class="c-career-tag" data-category="new">新卒採用</span></h4>
 											<p class="is--sub">2003年入社　<br class="is--sp">構造設計</p>
-											<p>安全性はもちろん見た目にも美しい、意匠に寄り添った構造設計を目指して。</p>
+											<p>安全性はもちろん見た目にも美しい、デザインと一体となった構造を目指して。</p>
 										</div>
 									</a>
 								</li>

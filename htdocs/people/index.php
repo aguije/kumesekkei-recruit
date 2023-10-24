@@ -180,7 +180,7 @@
 											</div>
 										</picture>
 										<p class="p-employees__article__role">2003年入社　構造設計</p>
-										<p class="p-employees__article__description">安全性はもちろん見た目にも美しい、意匠に寄り添った構造設計を目指して。</p>
+										<p class="p-employees__article__description">安全性はもちろん見た目にも美しい、デザインと一体となった構造を目指して。</p>
 									</a>
 								</article>
 
