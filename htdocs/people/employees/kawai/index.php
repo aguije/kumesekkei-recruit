@@ -207,7 +207,7 @@
 										<ul>
 											<li class="is--active">
 												<a href="javascript:void(0);" data-index="0">
-													<span lang="en">Daily Sched<span class="is--pc">ule</span><span class="is--sp">.</span></span>
+													<span lang="en">Daily <br class="is--sp">Schedule</span>
 													<span lang="ja">とある1日</span>
 												</a>
 											</li>

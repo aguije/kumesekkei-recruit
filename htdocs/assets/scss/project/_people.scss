@@ -1085,6 +1085,7 @@ main.p-people__employee.is--single {
 
 					@include sp () {
 						margin-top: sp-rem(4);
+						column-gap: sp-rem(3);
 					}
 
 					li {
@@ -1094,7 +1095,7 @@ main.p-people__employee.is--single {
 						background-color: rgba(#e5e5e5, .5);
 
 						@include sp () {
-							width: calc((100% - #{sp-rem(4)} * 2) / 3);
+							width: calc((100% - #{sp-rem(3)} * 2) / 3);
 							border-top-left-radius: sp-rem(16);
 							border-top-right-radius: sp-rem(16);
 						}

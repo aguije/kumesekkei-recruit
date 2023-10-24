@@ -209,13 +209,13 @@
 										<ul>
 											<li class="is--active">
 												<a href="javascript:void(0);" data-index="0">
-													<span lang="en">Daily Sched. @Capital</span>
+													<span lang="en">Daily <br class="is--sp">Schedule</span>
 													<span lang="ja">東京のとある1日</span>
 												</a>
 											</li>
 											<li>
 												<a href="javascript:void(0);" data-index="1">
-													<span lang="en">Weekly Sched<span class="is--pc">ule</span><span class="is--sp">.</span></span>
+													<span lang="en">Weekly <br class="is--sp">Schedule</span>
 													<span lang="ja">とある1週間</span>
 												</a>
 											</li>
