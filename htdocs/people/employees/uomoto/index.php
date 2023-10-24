@@ -215,19 +215,13 @@
 											</li>
 											<li>
 												<a href="javascript:void(0);" data-index="1">
-													<span lang="en">Daily Sched. @Local</span>
-													<span lang="ja">庄内でのとある1日</span>
-												</a>
-											</li>
-											<li>
-												<a href="javascript:void(0);" data-index="2">
 													<span lang="en">Weekly Sched<span class="is--pc">ule</span><span class="is--sp">.</span></span>
 													<span lang="ja">とある1週間</span>
 												</a>
 											</li>
 											<li>
-												<a href="javascript:void(0);" data-index="3">
-													<span lang="en">Candid photog&shy;raphy</span>
+												<a href="javascript:void(0);" data-index="2">
+													<span lang="en">Candid <br class="is--sp">photog&shy;raphy</span>
 													<span lang="ja">オフの1日</span>
 												</a>
 											</li>
@@ -280,47 +274,6 @@
 											<div id="tab2" class="swiper-slide">
 												<table>
 													<tr>
-														<th><span lang="en">8:00</span></th>
-														<td>こどもと妻を送り仕事開始</td>
-													</tr>
-													<tr>
-														<th><span lang="en">8:30</span></th>
-														<td>メールなど事務作業</td>
-													</tr>
-													<tr>
-														<th><span lang="en">9:00</span></th>
-														<td>検討スケッチ、図面チェック</td>
-													</tr>
-													<tr>
-														<th><span lang="en">12:00</span></th>
-														<td>昼食（と夕食の仕込み）</td>
-													</tr>
-													<tr>
-														<th><span lang="en">13:00</span></th>
-														<td>発注者とwebMTG</td>
-													</tr>
-													<tr>
-														<th><span lang="en">15:00</span></th>
-														<td>社内チームwebMTG</td>
-													</tr>
-													<tr>
-														<th><span lang="en">17:00</span></th>
-														<td>夕食準備（またはこどもたちお迎え）</td>
-													</tr>
-													<tr>
-														<th><span lang="en">18:00</span></th>
-														<td>夕食・入浴・寝かしつけ</td>
-													</tr>
-													<tr>
-														<th><span lang="en">21:00</span></th>
-														<td>メールや図面チェックなど個人作業</td>
-													</tr>
-												</table>
-											</div>
-
-											<div id="tab3" class="swiper-slide">
-												<table>
-													<tr>
 														<th>月</th>
 														<td>早朝に東北の家から出発。<br>
 														試作品確認のために北関東の工場へ<br class="is--pc">移動の合間にメールと図面チェック</td>
@@ -346,7 +299,7 @@
 												</table>
 											</div>
 
-											<div id="tab4" class="swiper-slide">
+											<div id="tab3" class="swiper-slide">
 												<div class="swiper-slide__container">
 													<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('people/employees/uomoto_tab4_pic1.jpg'); ?>>
 														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/uomoto_tab4_pic1.jpg', true); ?>" alt="">

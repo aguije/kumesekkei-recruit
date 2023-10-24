@@ -219,7 +219,7 @@
 											</li>
 											<li>
 												<a href="javascript:void(0);" data-index="2">
-													<span lang="en">Candid photog&shy;raphy</span>
+													<span lang="en">Candid <br class="is--sp">photog&shy;raphy</span>
 													<span lang="ja">オフの1日</span>
 												</a>
 											</li>

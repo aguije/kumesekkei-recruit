@@ -1088,13 +1088,13 @@ main.p-people__employee.is--single {
 					}
 
 					li {
-						width: calc((100% - #{pc-rem(4)} * 3) / 4);
+						width: calc((100% - #{pc-rem(4)} * 2) / 3);
 						border-top-left-radius: pc-rem(16);
 						border-top-right-radius: pc-rem(16);
 						background-color: rgba(#e5e5e5, .5);
 
 						@include sp () {
-							width: calc((100% - #{sp-rem(4)} * 3) / 4);
+							width: calc((100% - #{sp-rem(4)} * 2) / 3);
 							border-top-left-radius: sp-rem(16);
 							border-top-right-radius: sp-rem(16);
 						}

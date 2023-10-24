@@ -409,6 +409,7 @@
 								<?php
 
 									$_GET['path'] = '/about/stats/';
+									$_GET['is_top'] = '1';
 									include($_SERVER['DOCUMENT_ROOT'] . '/modules/figs.mod.php');
 
 								?>
