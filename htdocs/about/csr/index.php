@@ -164,7 +164,7 @@
 										</a>
 									</li>
 									<li>
-										<a class="p-about__csr__link" href="#" target="_blank">
+										<a class="p-about__csr__link" href="https://www.kumesekkei.co.jp/news/2022_73.html" target="_blank">
 											<div class="p-about__csr__link__thumb">
 												<picture class="c-lazy-trigger">
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/kodomo_pic2.jpg', true); ?>" alt="">
@@ -242,7 +242,7 @@
 							<div class="p-about__csr__items">
 								<ul>
 									<li>
-										<a class="p-about__csr__link" href="#" target="_blank">
+										<a class="p-about__csr__link" href="https://www.kumesekkei.co.jp/company/athlete/2023/06/2023-02-athlete.html" target="_blank">
 											<div class="p-about__csr__link__thumb">
 												<picture class="c-lazy-trigger">
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic1.jpg', true); ?>" alt="">
@@ -262,7 +262,7 @@
 										</a>
 									</li>
 									<li>
-										<a class="p-about__csr__link" href="#" target="_blank">
+										<a class="p-about__csr__link" href="https://www.kumesekkei.co.jp/company/athlete/2022/07/2022-01-athlete.html" target="_blank">
 											<div class="p-about__csr__link__thumb">
 												<picture class="c-lazy-trigger">
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/diversity_pic3.jpg', true); ?>" alt="">
