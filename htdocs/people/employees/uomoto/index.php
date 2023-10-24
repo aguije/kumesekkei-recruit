@@ -209,14 +209,14 @@
 										<ul>
 											<li class="is--active">
 												<a href="javascript:void(0);" data-index="0">
-													<span lang="en">Daily <br class="is--sp">Schedule</span>
+													<span lang="en">Daily Sched. @Capital</span>
 													<span lang="ja">東京のとある1日</span>
 												</a>
 											</li>
 											<li>
 												<a href="javascript:void(0);" data-index="1">
-													<span lang="en">Weekly <br class="is--sp">Schedule</span>
-													<span lang="ja">とある1週間</span>
+													<span lang="en">Daily Sched. @Local</span>
+													<span lang="ja">庄内でのとある1日</span>
 												</a>
 											</li>
 											<li>
@@ -274,27 +274,40 @@
 											<div id="tab2" class="swiper-slide">
 												<table>
 													<tr>
-														<th>月</th>
-														<td>早朝に東北の家から出発。<br>
-														試作品確認のために北関東の工場へ<br class="is--pc">移動の合間にメールと図面チェック</td>
+														<th><span lang="en">8:00</span></th>
+														<td>こどもと妻を送り仕事開始</td>
 													</tr>
 													<tr>
-														<th>火</th>
-														<td>竣工検査のために北海道へ<br class="is--pc">移動の合間にwebMTG、メールと図面チェック</td>
+														<th><span lang="en">8:30</span></th>
+														<td>メールなど事務作業</td>
 													</tr>
 													<tr>
-														<th>水</th>
-														<td>発注者・施工者と打ち合わせ<br>
-														現場見学者の対応など</td>
+														<th><span lang="en">9:00</span></th>
+														<td>検討スケッチ、図面チェック</td>
 													</tr>
 													<tr>
-														<th>木</th>
-														<td>本社でAMは社内打合せを数件、<br class="is--pc">PMは発注者とwebMTG、合間に個人作業</td>
+														<th><span lang="en">12:00</span></th>
+														<td>昼食（と夕食の仕込み）</td>
 													</tr>
 													<tr>
-														<th>金</th>
-														<td>現場で北関東へ<br>
-														発注者・施工者と打ち合わせなど、<br class="is--pc">夜に東北の家へ戻る</td>
+														<th><span lang="en">13:00</span></th>
+														<td>発注者とwebMTG</td>
+													</tr>
+													<tr>
+														<th><span lang="en">15:00</span></th>
+														<td>社内チームwebMTG</td>
+													</tr>
+													<tr>
+														<th><span lang="en">17:00</span></th>
+														<td>夕食準備（またはこどもたちお迎え）</td>
+													</tr>
+													<tr>
+														<th><span lang="en">18:00</span></th>
+														<td>夕食・入浴・寝かしつけ</td>
+													</tr>
+													<tr>
+														<th><span lang="en">21:00</span></th>
+														<td>メールや図面チェックなど個人作業</td>
 													</tr>
 												</table>
 											</div>
