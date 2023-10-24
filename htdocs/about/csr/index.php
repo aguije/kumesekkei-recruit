@@ -346,7 +346,7 @@
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/study_pic2.jpg', true); ?>" alt="">
 												</picture>
 											</div>
-											<p><span class="c-icon c-icon--external"></span><span class="is--text">街をつなぎ、人をつなぐ<br>「みんなのリビング」</span></p>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">街をつなぎ、人をつなぐ<br class="is--pc">「みんなのリビング」</span></p>
 										</a>
 									</li>
 									<li>
@@ -390,7 +390,7 @@
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/workstyle_pic2.jpg', true); ?>" alt="">
 												</picture>
 											</div>
-											<p><span class="c-icon c-icon--external"></span><span class="is--text">働く場のこれからを考える２</span></p>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">アトリウムで広がる<br>ワークスタイルの可能性</span></p>
 										</a>
 									</li>
 								</ul>
