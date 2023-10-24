@@ -336,7 +336,7 @@
 										<div class="p-article__footer__link__title">
 											<h4>野原 春花　<br class="is--sp"><span class="c-career-tag" data-category="career">キャリア採用</span></h4>
 											<p class="is--sub">2017年入社　<br class="is--sp">意匠設計</p>
-											<p>こよなく愛する九州という土地で、さまざまな人の〝居場所〟をつくりたい。</p>
+											<p>こよなく愛する九州という地で、さまざまな人の〝居場所〟をつくりたい。</p>
 										</div>
 									</a>
 								</li>

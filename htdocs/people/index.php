@@ -212,7 +212,7 @@
 											</div>
 										</picture>
 										<p class="p-employees__article__role">2017年入社　意匠設計</p>
-										<p class="p-employees__article__description">こよなく愛する九州という土地で、さまざまな人の〝居場所〟をつくりたい。</p>
+										<p class="p-employees__article__description">こよなく愛する九州という地で、さまざまな人の〝居場所〟をつくりたい。</p>
 									</a>
 								</article>
 							</div>

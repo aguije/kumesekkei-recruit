@@ -275,7 +275,7 @@
 														<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('people/employees/miura_tab2_pic1.jpg', true); ?>" alt="">
 													</picture>
 													<div class="swiper-slide__body">
-														<p>学校の⻑期休みには家族5人で旅行に出かけて、家族時間を思う存分楽しんでいます。</p>
+														<p>学校の長期休みには家族5人で旅行に出かけて、家族時間を思う存分楽しんでいます。</p>
 													</div>
 												</div>
 											</div>
