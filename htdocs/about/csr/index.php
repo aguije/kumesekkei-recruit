@@ -487,6 +487,7 @@
 					</div>
 				</section>
 
+				<?php /*
 				<aside class="c-banner">
 					<div class="l-wrapper">
 						<div class="c-banner__container">
@@ -503,6 +504,7 @@
 						</div>
 					</div>
 				</aside>
+				*/ ?>
 			</article>
 
 			<footer class="c-page-footer">
