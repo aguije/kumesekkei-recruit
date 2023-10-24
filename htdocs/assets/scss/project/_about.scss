@@ -248,17 +248,16 @@
 
 			li {
 				a {
-					@include sp () {
-						color: #666666;
+					color: #666666;
 
-						.c-animate-underline::after {
-							background-color: #666666;
-						}
-					}
 					@include taphover {
 						.c-animate-underline::after {
 							transform: scaleX(1);
 						}
+					}
+
+					.c-animate-underline::after {
+						background-color: #666666;
 					}
 
 					&.is--active {
