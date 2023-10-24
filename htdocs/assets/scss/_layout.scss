@@ -33,12 +33,15 @@
 			column-gap: pc-rem(80);
 		}
 
-		> div {
+		> div,
+		> section {
 			@include pc () {
 				width: calc(50% - #{pc-rem(80 * .5)});
 			}
 		}
-		> div + div {
+
+		> div + div,
+		> section + section {
 			@include sp () {
 				margin-top: sp-rem(80);
 			}
