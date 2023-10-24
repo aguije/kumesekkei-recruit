@@ -15,7 +15,7 @@
 				<ul class="p-gm__list is--main">
 					<li>
 						<h4>
-							<a href="https://www.kumesekkei.co.jp/news/" target="_blank" rel="noopener">
+							<a href="https://www.kumesekkei.co.jp/news/?category=recruit" target="_blank" rel="noopener">
 								<span lang="en">Recruit News</span>
 								<span lang="ja">新着情報</span>
 							</a>
