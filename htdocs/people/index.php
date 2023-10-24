@@ -132,7 +132,7 @@
 											</div>
 										</picture>
 										<p class="p-employees__article__role">2005年入社　意匠設計</p>
-										<p class="p-employees__article__description">子育てをする中でより強くなった、子どもが主役の学校をつくりたいという想い。</p>
+										<p class="p-employees__article__description">子育てをする中でより強くなった、子どもが主役となる学校をつくりたいという想い。</p>
 									</a>
 								</article>
 

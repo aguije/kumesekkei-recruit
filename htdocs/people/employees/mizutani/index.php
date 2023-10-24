@@ -329,7 +329,7 @@
 										<div class="p-article__footer__link__title">
 											<h4>三浦 淑美　<br class="is--sp"><span class="c-career-tag" data-category="new">新卒採用</span></h4>
 											<p class="is--sub">2005年入社　<br class="is--sp">意匠設計</p>
-											<p>子育てをする中でより強くなった、子どもが主役の学校をつくりたいという想い。</p>
+											<p>子育てをする中でより強くなった、子どもが主役となる学校をつくりたいという想い。</p>
 										</div>
 									</a>
 								</li>

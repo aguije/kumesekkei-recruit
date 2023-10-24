@@ -539,7 +539,7 @@
 													<h4>三浦 淑美</h4>
 													<p>意匠設計</p>
 												</header>
-												<p class="p-people__employee__article__description">子育てをする中でより強くなった、子どもが主役の学校をつくりたいという想い。</p>
+												<p class="p-people__employee__article__description">子育てをする中でより強くなった、子どもが主役となる学校をつくりたいという想い。</p>
 												<footer>
 													<span class="c-career-tag" data-category="new">新卒採用</span>
 												</footer>
