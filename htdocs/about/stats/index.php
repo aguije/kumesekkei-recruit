@@ -303,7 +303,7 @@
 									<section id="female_childcare" class="p-about__stats__article__sec">
 										<div>
 											<header>
-												<h2><span>女性の育休取得率</span></h2>
+												<h2><span>女性の育休取得率</span><small>( 2018年～2022年 )</small></h2>
 											</header>
 
 											<figure class="p-about__stats__circle">
@@ -325,7 +325,7 @@
 									<section id="male_childcare" class="p-about__stats__article__sec">
 										<div>
 											<header class="is--line">
-												<h2><span>男性の育休取得率</span><small>( パパになった人で取得した割合 )</small></h2>
+												<h2><span>男性の育休取得率</span><small>( パパになった人で取得した割合：2022年度 )</small></h2>
 											</header>
 
 											<figure class="p-about__stats__circle">
@@ -351,8 +351,8 @@
 								<div>
 									<section id="female_reinstatement" class="p-about__stats__article__sec">
 										<div>
-											<header>
-												<h2><span>女性の育休復職率</span></h2>
+											<header class="is--line">
+												<h2><span>女性の育休復職率</span><small>( 2022年度 )</small></h2>
 											</header>
 
 											<figure class="p-about__stats__circle">
@@ -374,7 +374,7 @@
 									<section id="mama" class="p-about__stats__article__sec">
 										<div>
 											<header class="is--line">
-												<h2><span>働くママ比率</span><small>( 女性社員全体のうちの<br>子育てしながら働く社員の割合 )</small></h2>
+												<h2><span>働くママ比率</span><small>( 女性社員全体のうちの子育て<br>しながら働く社員の割合：2022年度 )</small></h2>
 											</header>
 
 											<figure class="p-about__stats__circle">
@@ -427,8 +427,8 @@
 								</div>
 								<div>
 									<section id="leave" class="p-about__stats__article__sec">
-										<header class="is--flex">
-											<h2><span>有給休暇平均取得日数</span></h2>
+										<header class="is--flex is--line">
+											<h2><span>有給休暇平均取得日数</span><small>( 2022年度 )</small></h2>
 											<p><b lang="en">10.34</b> <span lang="en">days</span></p>
 										</header>
 
@@ -510,6 +510,8 @@
 												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/stats/club_fig.png', true); ?>" alt="">
 											</picture>
 										</figure>
+
+										<p>野球、サッカー、バスケットボール、テニス、スポーツカイト、登山、陶芸、華道、料理研究　など</p>
 									</section>
 								</div>
 								<div>
