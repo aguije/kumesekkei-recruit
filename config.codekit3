@@ -864,6 +864,19 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/htdocs\/assets\/images\/ogp.png" : {
+      "ft" : 32768,
+      "iS" : 1231445,
+      "oA" : 0,
+      "oAP" : "\/htdocs\/assets\/images\/ogp.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
     "\/htdocs\/assets\/images\/people\/crosstalk_thumb_bim.jpg" : {
       "ft" : 16384,
       "iS" : 103621,
