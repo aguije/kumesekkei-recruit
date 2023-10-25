@@ -541,7 +541,7 @@
 															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('work/osaka_pic1.jpg', true); ?>" alt="">
 														</picture>
 
-														<p>緑と光がとても気持ちのよい空間です。上から見下ろしているだけでも気分転換になります。どこに居てもアトリウム越しに今日は誰が居るか、何をしているかが何となく伝わってきて、あとで声を掛けに行ってみようとコミュニケーションのきっかけにもなります。</p>
+														<p>緑あふれるカフェにいるようなワンフロアのワークスペースです。フリーアドレス制で、気分によって席を選び、個人作業とチームミーティングで使い分けながら働いています。関西ならではのボケとツッコミを交え、笑い声が多く響きます。</p>
 
 														<picture <?php echo KUME_Util::get_image_aspect_style('work/osaka_pic2.jpg'); ?>>
 															<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('work/osaka_pic2.jpg', true); ?>" alt="">
