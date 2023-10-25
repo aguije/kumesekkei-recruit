@@ -355,8 +355,8 @@
 					left: 0;
 
 					@include sp () {
-						top: .4em;
 						font-size: sp-rem(21);
+						top: .4em;
 					}
 				}
 
@@ -1048,6 +1048,18 @@ main.p-about__stats {
 						font-size: sp-rem(72);
 					}
 				}
+			}
+		}
+
+		.is--annotation {
+			font-size: pc-clamp(13, 13 * $fs--min-ratio);
+			margin-top: pc-rem(30);
+			margin-left: 1.3em;
+			text-indent: -1.3em;
+
+			@include sp () {
+				font-size: sp-rem(24);
+				margin-top: sp-rem(40);
 			}
 		}
 	}

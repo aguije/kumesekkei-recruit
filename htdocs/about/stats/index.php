@@ -244,10 +244,12 @@
 											<div>
 												<div>
 													<p><b lang="en">438</b><span>people</span></p>
-													<h3>プロフェッショナル<br>有資格者数</h3>
+													<h3>プロフェッショナル<br>有資格者数 <sup>※</sup></h3>
 												</div>
 											</div>
 										</div>
+
+										<p class="is--annotation">※ 一級建築士、構造設計一級建築士、設備設計一級建築士、技術士、再開発プランナー、建築設備士、インテリアプランナー など</p>
 									</section>
 								</div>
 								<div>

@@ -189,13 +189,13 @@
     },
     "\/htdocs\/assets\/images\/about\/csr\/community_pic3.jpg" : {
       "ft" : 16384,
-      "iS" : 158448,
+      "iS" : 93491,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/about\/csr\/community_pic3.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -403,7 +403,7 @@
       "oAP" : "\/htdocs\/assets\/images\/about\/csr\/workstyle_pic1.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
