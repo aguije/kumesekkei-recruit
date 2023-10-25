@@ -306,13 +306,13 @@
 										</a>
 									</li>
 									<li>
-										<a class="p-about__csr__link" href="https://www.kumesekkei.co.jp/designstory/akasaka_sacas.html" target="_blank">
+										<a class="p-about__csr__link" href="https://www.kumesekkei.co.jp/news/2023_50.html" target="_blank">
 											<div class="p-about__csr__link__thumb">
 												<picture class="c-lazy-trigger">
 													<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('about/csr/community_pic3.jpg', true); ?>" alt="">
 												</picture>
 											</div>
-											<p><span class="c-icon c-icon--external"></span><span class="is--text">土地と街の記憶を継承し再構築する<br>（赤坂サカス）</span></p>
+											<p><span class="c-icon c-icon--external"></span><span class="is--text">にぎわい創出イベント開催<br class="is--pc">ゴタンダデシタンダ!!</span></p>
 										</a>
 									</li>
 								</ul>
