@@ -191,9 +191,11 @@
 										echo get_news_article($news);
 									}
 
+									/*
 									foreach ($results['mypage'] as $news) {
 										echo get_news_article($news);
 									}
+									*/
 
 									unset($results);
 
