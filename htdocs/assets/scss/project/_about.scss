@@ -1726,6 +1726,11 @@ main.p-about__stats {
 		position: relative;
 		display: flex;
 		align-items: center;
+		height: pc-rem(213);
+
+		@include sp () {
+			height: sp-rem(213 * $stats_ratio_sp);
+		}
 
 		figcaption {
 			font-size: pc-rem(16);
@@ -1828,12 +1833,6 @@ main.p-about__stats {
 		}
 
 		figure {
-			height: pc-rem(213);
-
-			@include sp () {
-				height: sp-rem(213 * $stats_ratio_sp);
-			}
-
 			figcaption {
 				top: pc-rem(213);
 
@@ -1853,6 +1852,8 @@ main.p-about__stats {
 		}
 
 		figure {
+			align-items: start;
+
 			figcaption {
 				top: pc-rem(213);
 
