@@ -296,7 +296,7 @@
 									</header>
 
 									<p class="p-people__employee__article__chapter__message">
-										<img src="<?php echo KUME_Util::image_path('people/employees/nohara_message.svg', true); ?>" alt="新卒も中途も関係ないフラットな職場">
+										<img src="<?php echo KUME_Util::image_path('people/employees/nohara_message.svg', true); ?>" alt="新卒もキャリアも関係ないフラットな職場">
 									</p>
 
 									<div class="p-people__employee__article__chapter__body">
