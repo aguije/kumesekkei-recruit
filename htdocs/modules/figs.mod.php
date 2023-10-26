@@ -34,67 +34,15 @@
 					</a>
 				</div>
 
-				<div id="awards_2018_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--award">
+				<div id="awards_mini" class="p-about__stats__belt__fig">
 					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#awards'; ?>">
 						<figure>
-							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig_2018.png'); ?>>
-								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig_2018.png', true); ?>" alt="">
+							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig.png'); ?>>
+								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig.png', true); ?>" alt="">
 							</picture>
 						</figure>
 						<div class="p-about__stats__description">
-							<p class="p-about__stats__belt__fig__num is--lines"><b>43</b><span lang="en">awards</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div id="awards_2019_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--award">
-					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#awards'; ?>">
-						<figure>
-							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig_2019.png'); ?>>
-								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig_2019.png', true); ?>" alt="">
-							</picture>
-						</figure>
-						<div class="p-about__stats__description">
-							<p class="p-about__stats__belt__fig__num is--lines"><b>23</b><span lang="en">awards</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div id="awards_2020_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--award">
-					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#awards'; ?>">
-						<figure>
-							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig_2020.png'); ?>>
-								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig_2020.png', true); ?>" alt="">
-							</picture>
-						</figure>
-						<div class="p-about__stats__description">
-							<p class="p-about__stats__belt__fig__num is--lines"><b>32</b><span lang="en">awards</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div id="awards_2021_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--award">
-					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#awards'; ?>">
-						<figure>
-							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig_2021.png'); ?>>
-								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig_2021.png', true); ?>" alt="">
-							</picture>
-						</figure>
-						<div class="p-about__stats__description">
-							<p class="p-about__stats__belt__fig__num is--lines"><b>46</b><span lang="en">awards</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div id="awards_2022_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--award">
-					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#awards'; ?>">
-						<figure>
-							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/awards_fig_2022.png'); ?>>
-								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/awards_fig_2022.png', true); ?>" alt="">
-							</picture>
-						</figure>
-						<div class="p-about__stats__description">
-							<p class="p-about__stats__belt__fig__num is--lines"><b>59</b><span lang="en">awards</span></p>
+							<p class="p-about__stats__belt__fig__num is--lines"><b>203</b><span lang="en">awards</span></p>
 						</div>
 					</a>
 				</div>
@@ -176,7 +124,7 @@
 							</figcaption>
 						</figure>
 						<div class="p-about__stats__description">
-							<p class="p-about__stats__belt__fig__num"><b>4.4</b>%</p>
+							<p class="p-about__stats__belt__fig__num"><b>100</b>%</p>
 						</div>
 					</a>
 				</div>
@@ -258,39 +206,39 @@
 							</figcaption>
 						</figure>
 						<div class="p-about__stats__description">
-							<p class="p-about__stats__belt__fig__num"><b>10.34</b> <span lang="en">days</span></p>
+							<p class="p-about__stats__belt__fig__num is--lines"><b>10.34</b><span lang="en">days</span></p>
 						</div>
 					</a>
 				</div>
 
-				<div id="sns_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--sum">
+				<div id="sns_mini" class="p-about__stats__belt__fig">
 					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#sns'; ?>">
 						<figure>
-							<div></div>
+							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/sns_fig.png'); ?>>
+								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/sns_fig.png', true); ?>" alt="">
+							</picture>
 							<figcaption>
-								<p>社内SNS投稿数</p>
-								<p class="p-about__stats__belt__fig__num is--lines" lang="en"><b>2,127</b><span>posts</span></p>
-								<p>月平均</p>
+								<p>社内SNS<br>月平均投稿数</p>
 							</figcaption>
 						</figure>
 						<div class="p-about__stats__description">
-							<p class="p-about__stats__belt__fig__num is--lines"><b>177</b><span lang="en">posts</span></p>
+							<p class="p-about__stats__belt__fig__num is--lines"><b>177</b> <span lang="en">posts</span></p>
 						</div>
 					</a>
 				</div>
 
-				<div id="db_mini" class="p-about__stats__belt__fig p-about__stats__belt__fig--sum">
+				<div id="db_mini" class="p-about__stats__belt__fig">
 					<a href="<?php echo $path; ?><?php echo ($is_top) ? '' : '#db'; ?>">
 						<figure>
-							<div></div>
+							<picture <?php echo KUME_Util::get_image_aspect_style('about/stats/mini/db_fig.png'); ?>>
+								<img class="c-lazy is--cover" src="<?php echo KUME_Util::image_path('about/stats/mini/db_fig.png', true); ?>" alt="">
+							</picture>
 							<figcaption>
-								<p>プロジェクトDB<br>アクセス数</p>
-								<p class="p-about__stats__belt__fig__num is--lines" lang="en"><b>38,116</b><span>accesses</span></p>
-								<p>月平均</p>
+								<p>プロジェクトDB<br>月平均アクセス数</p>
 							</figcaption>
 						</figure>
 						<div class="p-about__stats__description">
-							<p class="p-about__stats__belt__fig__num is--lines"><b>3,176</b><span lang="en">accesses</span></p>
+							<p class="p-about__stats__belt__fig__num is--lines"><b>3,176</b> <span lang="en">posts</span></p>
 						</div>
 					</a>
 				</div>

@@ -1664,7 +1664,7 @@ main.p-about__stats {
 
 	.p-about__stats__belt__wrap {
 		display: flex;
-		// flex-wrap: wrap;
+		flex-wrap: wrap;
 		box-sizing: border-box;
 		animation-name: belt;
 		animation-duration: $stats_dur;
@@ -1706,11 +1706,11 @@ main.p-about__stats {
 .p-about__stats__belt__fig {
 	display: block;
 	width: pc-rem(213);
-	padding: 0 pc-rem(10);
+	padding: 0 pc-rem(20);
 
 	@include sp () {
 		width: sp-rem(213 * $stats_ratio_sp);
-		padding: 0 sp-rem(10 * $stats_ratio_sp);
+		padding: 0 sp-rem(20 * $stats_ratio_sp);
 	}
 
 	> a {
@@ -1819,61 +1819,6 @@ main.p-about__stats {
 }
 
 .p-about__stats__belt {
-	.p-about__stats__belt__fig--award {
-		padding-top: pc-rem((213 - 179) / 2);
-
-		@include sp () {
-			padding-top: sp-rem((213 - 179) / 2 * $stats_ratio_sp);
-		}
-
-		figure {
-			height: pc-rem(179);
-
-			@include sp () {
-				height: sp-rem(179 * $stats_ratio_sp);
-			}
-		}
-	}
-
-	#awards_2018_mini.p-about__stats__belt__fig {
-		width: pc-rem(158);
-
-		@include sp () {
-			width: sp-rem(158 * $stats_ratio_sp);
-		}
-	}
-
-	#awards_2019_mini.p-about__stats__belt__fig {
-		width: pc-rem(143);
-
-		@include sp () {
-			width: sp-rem(143 * $stats_ratio_sp);
-		}
-	}
-
-	#awards_2020_mini.p-about__stats__belt__fig {
-		width: pc-rem(152);
-
-		@include sp () {
-			width: sp-rem(152 * $stats_ratio_sp);
-		}
-	}
-
-	#awards_2021_mini.p-about__stats__belt__fig {
-		width: pc-rem(166);
-
-		@include sp () {
-			width: sp-rem(166 * $stats_ratio_sp);
-		}
-	}
-
-	#awards_2022_mini.p-about__stats__belt__fig {
-		width: pc-rem(179);
-
-		@include sp () {
-			width: sp-rem(179 * $stats_ratio_sp);
-		}
-	}
 
 	#overtime_mini.p-about__stats__belt__fig {
 		width: pc-rem(180);
@@ -1883,51 +1828,18 @@ main.p-about__stats {
 		}
 
 		figure {
-			flex-direction: column;
+			height: pc-rem(213);
+
+			@include sp () {
+				height: sp-rem(213 * $stats_ratio_sp);
+			}
 
 			figcaption {
-				position: static;
-				margin-top: .8em;
-				transform: none;
-			}
-		}
-	}
+				top: pc-rem(213);
 
-	.p-about__stats__belt__fig--sum {
-		figure {
-			> div {
-				box-sizing: border-box;
-				width: 100%;
-				aspect-ratio: 1 / 1;
-				border: 1px solid #000000;
-				border-radius: 50%;
-
-				&::before {
-					@include pseudo-block((
-						bottom: 0,
-						left: 50%,
-						width: pc-rem(30.74),
-						height: pc-rem(30.74),
-						transform: translateX(-50%) translateY(50%),
-						border: 1px solid #000000,
-						box-sizing: border-box,
-						border-radius: 50%,
-					)) {}
-					@include sp () {
-						width: sp-rem(30.74 * $stats_ratio_sp);
-						height: sp-rem(30.74 * $stats_ratio_sp);
-					}
+				@include sp () {
+					top: sp-rem(213 * $stats_ratio_sp);
 				}
-			}
-		}
-	}
-
-	#sns_mini.p-about__stats__belt__fig {
-		figcaption {
-			p:nth-child(1) {
-				line-height: 2 * 1.25;
-				display: flex;
-				align-items: center;
 			}
 		}
 	}
@@ -1941,12 +1853,12 @@ main.p-about__stats {
 		}
 
 		figure {
-			flex-direction: column-reverse;
-
 			figcaption {
-				position: static;
-				margin-bottom: .8em;
-				transform: none;
+				top: pc-rem(213);
+
+				@include sp () {
+					top: sp-rem(213 * $stats_ratio_sp);
+				}
 			}
 		}
 
