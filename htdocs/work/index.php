@@ -182,11 +182,9 @@
 									</nav>
 
 									<figure>
-										<div>
-											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('work/head_illustration.png'); ?>>
-												<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('work/head_illustration.png', true); ?>" alt="">
-											</picture>
-										</div>
+										<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('work/head_illustration.png'); ?>>
+											<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('work/head_illustration.png', true); ?>" alt="">
+										</picture>
 									</figure>
 								</div>
 

@@ -157,22 +157,40 @@ main.p-work.is--index {
 
 		figure {
 			position: relative;
-			left: 50%;
 			overflow: hidden;
 			width: 100vw;
-			transform: translateX(-50%);
 
-			@include sp () {
-				transform: translateX(calc(-50% + #{sp-rem(-30)}));
+			@include pc () {
+				left: 50%;
+				transform: translateX(-50%);
 			}
+			@include sp ((
+				margin-right: -1 * $size--pad--sp,
+				margin-left: -1 * $size--pad--sp,
+			)) {}
 
-			> div {
-				width: pc-rem(1440);
-				margin: pc-rem(-67) auto pc-rem(-77) auto;
+			.c-lazy-trigger {
+				position: relative;
 
+				@include pc () {
+					transform: translateX(-50%);
+					left: 50vw;
+					width: pc-rem(1394);
+					margin-top: pc-rem(-90);
+					margin-bottom: pc-rem(-77);
+				}
 				@include sp () {
-					width: sp-rem(864);
-					margin: sp-rem(-67 * 864/1440) auto sp-rem(-77 * 864/1440) auto;
+					width: sp-rem(882);
+					margin-top: sp-rem(-67 * 864/1440);
+					margin-bottom: sp-rem(-77 * 864/1440);
+				}
+
+				img {
+					transform: translateX(#{pc-rem(-74)});
+
+					@include sp () {
+						transform: translateX(#{sp-rem(-110)});
+					}
 				}
 			}
 		}

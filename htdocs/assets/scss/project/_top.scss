@@ -735,6 +735,12 @@ main.p-top {
 				@include sp () {
 					order: 1;
 				}
+
+				.c-header-set__description {
+					@include sp () {
+						margin-top: 0;
+					}
+				}
 			}
 
 			.p-work__list {
@@ -810,25 +816,26 @@ main.p-top {
 				width: 100vw;
 			}
 
-			> div {
+			.c-lazy-trigger {
 				position: relative;
-				left: 50%;
-				aspect-ratio: 1080/594;
-				transform: translateX(-50%);
 
 				@include pc () {
-					top: 1rem * -60/$fs;
-					height: pc-rem(594);
+					top: pc-rem(-32);
+					left: 50%;
+					height: pc-rem(672);
+					transform: translateX(-50%);
 				}
 				@include sp () {
 					top: 0;
-					height: sp-rem(594);
+					height: sp-rem(683);
 				}
 
 				img {
-					width: 100%;
-					height: 100%;
-					object-fit: contain;
+					transform: translateX(#{pc-rem(15)});
+
+					@include sp () {
+						transform: translateX(#{sp-rem(-110)});
+					}
 				}
 			}
 		}
