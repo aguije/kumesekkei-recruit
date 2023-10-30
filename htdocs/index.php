@@ -186,6 +186,7 @@
 								<?php
 
 									$results = get_results('https://www.kumesekkei.co.jp/news/news.json');
+									// $results = get_results('https://www.kumesekkei.co.jp/news/news_recruit_sample.json');
 
 									foreach ($results['recruit'] as $news) {
 										echo get_news_article($news);
@@ -200,71 +201,6 @@
 									unset($results);
 
 								?>
-								<?php /*
-
-									$results = get_results('https://www.kumesekkei.co.jp/news/news_recruit_sample.json');
-
-									foreach ($results['recruit'] as $news) {
-										echo get_news_article($news);
-									}
-
-									foreach ($results['mypage'] as $news) {
-										echo get_news_article($news);
-									}
-
-									unset($results);
-
-								*/ ?>
-								<?php /*
-
-									<li>
-										<article class="p-news__item">
-											<time datetime="2023-11-08" lang="en"><span>2023.11.08</span></time>
-											<h4>
-												<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>ＷＥＢセミナー「久米設計社員との交流座談会」を開催します。</a>
-												<span class="c-news-tag">学生対象プログラム</span>
-											</h4>
-											<div class="p-news__item__category"><a href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
-										</article>
-									</li>
-									<li>
-										<article class="p-news__item">
-											<time datetime="2023-11-01" lang="en"><span>2023.11.01</span></time>
-											<h4>
-												<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>第3回 ＷＥＢプロジェクト公演「マリンメッセ福岡 B館」を配信します。</a>
-												<span class="c-news-tag">学生対象プログラム</span>
-											</h4>
-											<div class="p-news__item__category"><a href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
-										</article>
-									</li>
-									<li>
-										<article class="p-news__item">
-											<time datetime="2023-10-22" lang="en"><span>2023.10.22</span></time>
-											<h4>
-												<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>「意匠設計」部門の再募集を開始しました。</a>
-											</h4>
-											<div class="p-news__item__category"><a href="https://www.kumesekkei.co.jp/recruit/entry_career.html" target="_blank" rel="noopener" class="c-career-tag" data-category="career">キャリア採用</a></div>
-										</article>
-									</li>
-									<li>
-										<article class="p-news__item">
-											<time datetime="2023-10-22" lang="en"><span>2023.10.22</span></time>
-											<h4>
-												<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>支社訪問会を開催します。マイページよりお申し込みください。</a>
-											</h4>
-											<div class="p-news__item__category"><a href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
-										</article>
-									</li>
-									<li>
-										<article class="p-news__item">
-											<time datetime="2023-10-22" lang="en"><span>2023.10.22</span></time>
-											<h4>
-												<a href="#" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span>株式会社久米設計　オープンカンパニー2023年のエントリーを開始しました。マイページよりお申し込みください。</a>
-											</h4>
-											<div class="p-news__item__category"><a href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener" class="c-career-tag" data-category="new">新卒採用</a></div>
-										</article>
-									</li>
-								*/ ?>
 							</ul>
 						</div>
 					</div>
