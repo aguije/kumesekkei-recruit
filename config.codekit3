@@ -1645,15 +1645,15 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/htdocs\/assets\/images\/people\/employees\/nohara_pic1.jpg" : {
+    "\/htdocs\/assets\/images\/people\/employees\/nohara_pic1-1.jpg" : {
       "ft" : 16384,
-      "iS" : 275130,
+      "iS" : 156392,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/nohara_pic1.jpg",
+      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/nohara_pic1-1.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2172,7 +2172,7 @@
     },
     "\/htdocs\/assets\/images\/top\/work_visual.png" : {
       "ft" : 32768,
-      "iS" : 305168,
+      "iS" : 438786,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/top\/work_visual.png",
       "oF" : 0,
@@ -2991,9 +2991,9 @@
     },
     "\/htdocs\/assets\/images\/work\/head_illustration.png" : {
       "ft" : 32768,
-      "iS" : 623916,
+      "iS" : 1042316,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/work\/head_illustration.png",
+      "oAP" : "\/htdocs\/assets\/images\/work\/head_illustration-1.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
