@@ -173,7 +173,7 @@
 								<div class="l-container is--2col">
 									<div>
 										<header>
-											<h2><span>売上高と建物用途構成比</span><small>(2023年度実績)</small></h2>
+											<h2><span>売上高と建物用途構成比</span><small>(2022年度実績)</small></h2>
 										</header>
 										<figure>
 											<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('about/stats/sales_fig.svg'); ?>>
