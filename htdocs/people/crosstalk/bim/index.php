@@ -132,7 +132,7 @@
 							<div class="p-people__crosstalk__article__header__title">
 								<p class="p-people__crosstalk__article__header__index" lang="en">Crosstalk #01</p>
 								<h1>
-									<span><span class="is--line">BIM・デジタルデザインを取り入れた</span><span class="is--line">“新たな設計ワークフロー”</span><span class="is--line">の構築都市と建築のチャレンジ：</span></span>
+									<span><span class="is--line">BIM・デジタルデザインを取り入れた</span><span class="is--line">“新たな設計ワークフロー”</span><span class="is--line">の構築</span></span>
 								</h1>
 							</div>
 							<div class="p-people__crosstalk__article__header__body">
