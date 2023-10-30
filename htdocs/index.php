@@ -132,12 +132,12 @@
 					if (!empty($_news['rType']) && !empty($_news['rType'][0]) && $_news['rType'][0] === 1) {
 						$category_type = 'new';
 						$category_name = '新卒採用';
-						$category_url = 'https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html';
+						$category_url = 'https://www.kumesekkei.co.jp/news/?category=recruit&rtype=new';
 					}
 					else if (!empty($_news['rType']) && !empty($_news['rType'][1]) && $_news['rType'][1] === 2) {
 						$category_type = 'career';
 						$category_name = 'キャリア採用';
-						$category_url = 'https://www.kumesekkei.co.jp/recruit/entry_career.html';
+						$category_url = 'https://www.kumesekkei.co.jp/news/?category=recruit&rtype=career';
 					}
 
 					ob_start();
@@ -273,7 +273,7 @@
 						<h5>募集職種 / 募集概要 / 採用プロセス</h5>
 						<ul>
 							<li class="p-lead__item is--new">
-								<a href="https://www.kumesekkei.co.jp/recruit/entry_newgraduate.html" target="_blank" rel="noopener">
+								<a href="https://www.kumesekkei.co.jp/news/?category=recruit&rtype=new" target="_blank" rel="noopener">
 									<div>
 										<h6>
 											<span lang="en">New Graduate</span>
@@ -285,7 +285,7 @@
 								</a>
 							</li>
 							<li class="p-lead__item is--career">
-								<a href="https://www.kumesekkei.co.jp/recruit/entry_career.html" target="_blank" rel="noopener">
+								<a href="https://www.kumesekkei.co.jp/news/?category=recruit&rtype=career" target="_blank" rel="noopener">
 									<div>
 										<h6>
 											<span lang="en">Career</span>
