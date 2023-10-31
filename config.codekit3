@@ -1645,12 +1645,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/htdocs\/assets\/images\/people\/employees\/nohara_pic1-1.jpg" : {
+    "\/htdocs\/assets\/images\/people\/employees\/nohara_pic1.jpg" : {
       "ft" : 16384,
       "iS" : 156392,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/nohara_pic1-1.jpg",
+      "oAP" : "\/htdocs\/assets\/images\/people\/employees\/nohara_pic1.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -1888,11 +1888,11 @@
     },
     "\/htdocs\/assets\/images\/people\/interview_thumb3.jpg" : {
       "ft" : 16384,
-      "iS" : 144223,
+      "iS" : 174431,
       "jF" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/people\/interview_thumb3.jpg",
-      "oF" : 1,
+      "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
       "ou" : "lpckwebp-none",
@@ -2055,13 +2055,13 @@
     },
     "\/htdocs\/assets\/images\/top\/hero_visual2.jpg" : {
       "ft" : 16384,
-      "iS" : 1174557,
+      "iS" : 1294737,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/top\/hero_visual2.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2172,7 +2172,7 @@
     },
     "\/htdocs\/assets\/images\/top\/work_visual.png" : {
       "ft" : 32768,
-      "iS" : 438786,
+      "iS" : 305168,
       "oA" : 0,
       "oAP" : "\/htdocs\/assets\/images\/top\/work_visual.png",
       "oF" : 0,
@@ -3508,12 +3508,6 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
-    },
-    "\/htdocs\/assets\/php\/cache" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/htdocs\/assets\/php\/cache",
-      "oF" : 0
     },
     "\/htdocs\/assets\/php\/class.php" : {
       "cB" : 0,
