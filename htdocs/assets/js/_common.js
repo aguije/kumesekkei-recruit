@@ -62,21 +62,30 @@ $(function () {
 	 *
 	 * --------------------------------------------------------------- */
 
-	const promises = [
-		new Promise(function (resolve) {
-			GLOBAL.util.load_video_api({
-				complete: function () {
-					resolve();
-				}
-			});
-		})
-	];
+	if ($('a.c-movie-thumb').length > 0) {
+		const promises = [
+			new Promise(function (resolve, reject) {
+				GLOBAL.util.load_video_api({
+					complete: function () {
+						console.log('Promise: GLOBAL.util.load_video_api: resolve');
 
-	Promise.all(promises).then(function () {
+						resolve();
+					},
+					error: function () {
+						console.log('Promise: GLOBAL.util.load_video_api: reject');
 
-		let eventObj = new $.Event('initCommon');
-		$(window).trigger(eventObj);
+						reject();
+					}
+				});
+			})
+		];
 
-	});
+		Promise.all(promises).then(function () {
+
+		});
+	}
+
+	let eventObj = new $.Event('initCommon');
+	$(window).trigger(eventObj);
 
 });

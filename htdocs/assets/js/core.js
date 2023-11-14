@@ -208,6 +208,7 @@ GLOBAL.util = {
 
 	load_video_api: function (_option) {
 		_option = Object.assign({
+			error: function () { return true; },
 			complete: function () { return true; }
 		}, _option);
 
@@ -218,6 +219,8 @@ GLOBAL.util = {
 			var tag = document.createElement('script');
 
 			tag.src = "https://www.youtube.com/iframe_api";
+			tag.onerror = function() { _option.error(); };
+
 			var firstScriptTag = document.getElementsByTagName('script')[0];
 			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
