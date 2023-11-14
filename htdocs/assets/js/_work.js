@@ -72,13 +72,14 @@ $(function () {
 	 * --------------------------------------------------------------- */
 
 	const initIllustration = () => {
+		const $navlinks = $('.p-work__workplace__map').find('a');
 		const $overlays = $('.p-map-overlay');
 
 		const $spinner = $('<p class="c-spinner"><img src="/assets/images/spinner--black.svg" alt=""></p>');
 		$('.p-map-wrapper').append($spinner);
 
 		const initEvent = () => {
-			$('.p-work__workplace__map').find('a')
+			$navlinks
 				.on('mouseenter', function () {
 					if (!GLOBAL.is_spview) {
 						const id = $(this).attr('href').replace('#', '');
@@ -105,13 +106,16 @@ $(function () {
 					if (!GLOBAL.is_spview) {
 						const id = $(this).attr('data-overlay');
 						const $activeOverlay = $overlays.filter('[data-overlay="' + id + '"]');
+						const $activeLink = $navlinks.filter('[href="#' + id + '"]');
 
 						$activeOverlay.css('z-index', '1').addClass('is--active');
+						$activeLink.addClass('is--active');
 					}
 				})
 				.on('mouseleave', function () {
 					if (!GLOBAL.is_spview) {
 						$overlays.css('z-index', '').removeClass('is--active');
+						$navlinks.removeClass('is--active');
 					}
 				})
 			;

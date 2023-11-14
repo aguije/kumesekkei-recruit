@@ -150,6 +150,15 @@ main.p-work.is--index {
 							}
 						}
 
+						&.is--active {
+							border-color: transparent;
+							background-color: transparent;
+
+							[lang='ja']::after {
+								transform: scaleX(1);
+							}
+						}
+
 						&::before {
 							font-size: pc-clamp(14);
 							font-weight: bold;
