@@ -121,68 +121,60 @@ $(function () {
 			;
 		};
 
-		let mIO = new MultipleIO('.p-map-wrapper', {
-			onEnter: () => {
+		const promises = [
+			new Promise(function (resolve, reject) {
+				const img = new Image();
+				const src = $('#illustration > image').attr('data-href');
 
-				const promises = [
-					new Promise(function (resolve, reject) {
-						const img = new Image();
-						const src = $('#illustration > image').attr('data-href');
+				img.onload = function () {
+					img.onload = null;
+					resolve();
 
-						img.onload = function () {
-							img.onload = null;
-							resolve();
+					$('#illustration > image').attr('xlink:href', src);
+				};
 
-							$('#illustration > image').attr('xlink:href', src);
-						};
+				img.error = function () {
+					img.error = null;
+					reject();
+				};
 
-						img.error = function () {
-							img.error = null;
-							reject();
-						};
+				img.src = src;
+			})
+		];
 
-						img.src = src;
-					})
-				];
+		$('.p-map-overlay img').each(function () {
+			const $this = $(this);
 
-				$('.p-map-overlay img').each(function () {
-					const $this = $(this);
+			const promise = new Promise(function (resolve, reject) {
+				$this[0].onload = function () {
+					$this[0].onload = null;
+					resolve();
+				};
 
-					const promise = new Promise(function (resolve, reject) {
-						$this[0].onload = function () {
-							$this[0].onload = null;
-							resolve();
-						};
+				$this[0].error = function () {
+					$this[0].error = null;
+					reject();
+				};
 
-						$this[0].error = function () {
-							$this[0].error = null;
-							reject();
-						};
+				$this[0].src = $this.attr('data-src');
+			});
 
-						$this[0].src = $this.attr('data-src');
-					});
-
-					promises.push(promise);
-				});
-
-				Promise.all(promises).then(function () {
-					gsap.to('.p-map-wrapper .c-spinner', {
-						opacity: 0,
-						duration: 1,
-						onComplete: () => {
-							$('.p-map-wrapper .c-spinner').remove();
-						}
-					});
-
-					$('.p-work__workplace__map').removeClass('is--loading');
-
-					initEvent();
-				});
-
-			},
-			triggerOnce: true
+			promises.push(promise);
 		});
-		GLOBAL.observers.push(mIO);
+
+		Promise.all(promises).then(function () {
+			gsap.to('.p-map-wrapper .c-spinner', {
+				opacity: 0,
+				duration: 1,
+				onComplete: () => {
+					$('.p-map-wrapper .c-spinner').remove();
+				}
+			});
+
+			$('.p-work__workplace__map').removeClass('is--loading');
+
+			initEvent();
+		});
 	};
 
 
