@@ -67,6 +67,123 @@ $(function () {
 
 	/** =================================================================
 	 *
+	 * INITIALIZE ILLUSTRATION
+	 *
+	 * --------------------------------------------------------------- */
+
+	const initIllustration = () => {
+		const $overlays = $('.p-map-overlay');
+
+		const $spinner = $('<p class="c-spinner"><img src="/assets/images/spinner--black.svg" alt=""></p>');
+		$('.p-map-wrapper').append($spinner);
+
+		const initEvent = () => {
+			$('.p-work__workplace__map').find('a')
+				.on('mouseenter', function () {
+					if (!GLOBAL.is_spview) {
+						const id = $(this).attr('href').replace('#', '');
+						const $activeOverlay = $overlays.filter('[data-overlay="' + id + '"]');
+
+						$activeOverlay.css('z-index', '1').addClass('is--active');
+					}
+				})
+				.on('mouseleave', function () {
+					if (!GLOBAL.is_spview) {
+						$overlays.css('z-index', '').removeClass('is--active');
+					}
+				})
+			;
+
+			$('#hotspots .hotspot')
+				.on('click', function () {
+					if (!GLOBAL.is_spview) {
+						const id = $(this).attr('data-overlay');
+						location.hash = '#' + id;
+					}
+				})
+				.on('mouseenter', function () {
+					if (!GLOBAL.is_spview) {
+						const id = $(this).attr('data-overlay');
+						const $activeOverlay = $overlays.filter('[data-overlay="' + id + '"]');
+
+						$activeOverlay.css('z-index', '1').addClass('is--active');
+					}
+				})
+				.on('mouseleave', function () {
+					if (!GLOBAL.is_spview) {
+						$overlays.css('z-index', '').removeClass('is--active');
+					}
+				})
+			;
+		};
+
+		let mIO = new MultipleIO('.p-map-wrapper', {
+			onEnter: () => {
+
+				const promises = [
+					new Promise(function (resolve, reject) {
+						const img = new Image();
+						const src = $('#illustration > image').attr('data-href');
+
+						img.onload = function () {
+							img.onload = null;
+							resolve();
+
+							$('#illustration > image').attr('xlink:href', src);
+						};
+
+						img.error = function () {
+							img.error = null;
+							reject();
+						};
+
+						img.src = src;
+					})
+				];
+
+				$('.p-map-overlay img').each(function () {
+					const $this = $(this);
+
+					const promise = new Promise(function (resolve, reject) {
+						$this[0].onload = function () {
+							$this[0].onload = null;
+							resolve();
+						};
+
+						$this[0].error = function () {
+							$this[0].error = null;
+							reject();
+						};
+
+						$this[0].src = $this.attr('data-src');
+					});
+
+					promises.push(promise);
+				});
+
+				Promise.all(promises).then(function () {
+					gsap.to('.p-map-wrapper .c-spinner', {
+						opacity: 0,
+						duration: 1,
+						onComplete: () => {
+							$('.p-map-wrapper .c-spinner').remove();
+						}
+					});
+
+					$('.p-work__workplace__map').removeClass('is--loading');
+
+					initEvent();
+				});
+
+			},
+			triggerOnce: true
+		});
+		GLOBAL.observers.push(mIO);
+	};
+
+
+	/** =================================================================
+	 *
 	 * INITIALIZE WORKPLACE MODAL
 	 *
 	 * --------------------------------------------------------------- */
@@ -105,6 +222,7 @@ $(function () {
 
 		//
 
+		/*
 		$('.p-work__workplace__map').find('a').on('click', function (_event) {
 			_event.preventDefault();
 
@@ -130,6 +248,7 @@ $(function () {
 				slide: hash.replace('#', '')
 			});
 		});
+		*/
 
 		$('.p-workplace-modal__veil').each(function () {
 			$(this).on('click', function (_event) {
@@ -194,6 +313,7 @@ $(function () {
 			wrapper: '.c-lazy-trigger'
 		});
 
+		initIllustration();
 		initWorkplaceModal();
 	}
 

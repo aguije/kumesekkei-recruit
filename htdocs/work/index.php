@@ -139,7 +139,7 @@
 									</div>
 								</header>
 
-								<div class="p-work__workplace__map">
+								<div class="p-work__workplace__map is--loading">
 									<nav>
 										<ul>
 											<li>
@@ -181,11 +181,40 @@
 										</ul>
 									</nav>
 
-									<figure>
-										<picture class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('work/head_illustration.png'); ?>>
-											<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('work/head_illustration.png', true); ?>" alt="">
-										</picture>
-									</figure>
+									<div class="p-map-wrapper">
+										<div class="p-map-container">
+
+											<svg class="p-map" viewBox="0 0 2689 1855" xml:space="preserve">
+												<g id="illustration">
+													<image
+														width="2689"
+														height="1855"
+														xlink:href=""
+														data-href="<?php echo KUME_Util::image_path('work/head_illustration.jpg', true); ?>"
+													></image>
+												</g>
+												<g id="hotspots">
+													<polygon id="hotspot-atrium" class="hotspot" points="985,509 985,1207 887,1515 1309,1515 1211,1207 1212,509 " data-overlay="atrium" />
+													<rect id="hotspot-healthcareroom" x="344.4" y="1382.7" class="hotspot" width="275.1" height="168.4" data-overlay="healthcareroom" />
+													<polygon id="hotspot-k-lounge" class="hotspot" points="1322.2,1182.8 1322.2,1346.4 1404.9,1594.4 1942.7,1594.4 1942.7,1378.6 1831.3,1182.8" data-overlay="k-lounge" />
+													<rect id="hotspot-buffet1" x="1409.3" y="1606.6" class="hotspot" width="484.1" height="173.2" data-overlay="buffet" />
+													<rect id="hotspot-buffet2" x="1942.7" y="1380.4" class="hotspot" width="400.4" height="172.3" data-overlay="buffet" />
+													<polygon id="hotspot-library" class="hotspot" points="1847.9,1192.4 1847.9,1211.9 1942.7,1378.6 2344.2,1375.4 2344.2,1207.8 2335.2,1192.4" data-overlay="library" />
+													<polygon id="hotspot-terrace" class="hotspot" points="1847.9,1192.4 1851.7,789.9 2277.2,789.9 2277.2,1192.4" data-overlay="terrace" />
+												</g>
+											</svg>
+
+											<div class="p-map-overlays">
+												<div class="p-map-overlay" data-overlay="atrium"><img data-src="<?php echo KUME_Util::image_path('work/head_overlay_atrium.jpg', true); ?>" alt=""></div>
+												<div class="p-map-overlay" data-overlay="k-lounge"><img data-src="<?php echo KUME_Util::image_path('work/head_overlay_k-lounge.jpg', true); ?>" alt=""></div>
+												<div class="p-map-overlay" data-overlay="buffet"><img data-src="<?php echo KUME_Util::image_path('work/head_overlay_buffet1.jpg', true); ?>" alt=""><img data-src="<?php echo KUME_Util::image_path('work/head_overlay_buffet2.jpg', true); ?>" alt=""></div>
+												<div class="p-map-overlay" data-overlay="healthcareroom"><img data-src="<?php echo KUME_Util::image_path('work/head_overlay_healthcareroom.jpg', true); ?>" alt=""></div>
+												<div class="p-map-overlay" data-overlay="terrace"><img data-src="<?php echo KUME_Util::image_path('work/head_overlay_terrace.jpg', true); ?>" alt=""></div>
+												<div class="p-map-overlay" data-overlay="library"><img data-src="<?php echo KUME_Util::image_path('work/head_overlay_library.jpg', true); ?>" alt=""></div>
+											</div>
+
+										</div>
+									</div>
 								</div>
 
 								<div class="p-work__workplace__links">

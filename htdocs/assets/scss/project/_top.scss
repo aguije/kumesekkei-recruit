@@ -820,7 +820,7 @@ main.p-top {
 				position: relative;
 
 				@include pc () {
-					top: pc-rem(-32);
+					top: pc-rem(49);
 					left: 50%;
 					height: pc-rem(672);
 					transform: translateX(-50%);
@@ -831,10 +831,10 @@ main.p-top {
 				}
 
 				img {
-					transform: translateX(#{pc-rem(15)});
+					transform: translateX(#{pc-rem(3)});
 
 					@include sp () {
-						transform: translateX(#{sp-rem(-110)});
+						transform: translateX(#{sp-rem(-69)});
 					}
 				}
 			}

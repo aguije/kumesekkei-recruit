@@ -241,7 +241,6 @@ GLOBAL.methods.util.lazyall = function (_option) {
 
 			});
 			promises.push(promise);
-
 		});
 
 		Promise.all(promises).then(function () {

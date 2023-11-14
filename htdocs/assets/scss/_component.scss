@@ -105,7 +105,7 @@ a.c-career-tag {
 
 .c-header-set {
 	position: relative;
-	padding-top: pc-rem(22);
+	padding-top: pc-rem(22 - 5);
 
 	@include sp ((
 		padding-top: 58,
@@ -175,6 +175,7 @@ a.c-career-tag {
 
 	.c-header-set__description {
 		font-size: pc-rem(17);
+		line-height: 1.6;
 		margin-top: pc-rem(30);
 
 		@include sp () {

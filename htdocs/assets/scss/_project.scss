@@ -387,6 +387,8 @@
 		)) {}
 
 		.p-sh__logo {
+			white-space: nowrap;
+
 			@include pc () {
 				font-size: pc-clamp(35);
 				width: pc-clamp(80);

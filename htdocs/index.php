@@ -380,8 +380,8 @@
 								</div>
 
 								<figure class="p-work__illustration">
-									<div class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('top/work_visual.png'); ?>>
-										<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/work_visual.png', true); ?>" alt="">
+									<div class="c-lazy-trigger" <?php echo KUME_Util::get_image_aspect_style('top/work_visual.jpg'); ?>>
+										<img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/work_visual.jpg', true); ?>" alt="">
 									</div>
 								</figure>
 
