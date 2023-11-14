@@ -200,12 +200,16 @@ main.p-work.is--index {
 
 			@include pc () {
 				left: 50%;
+				margin-top: pc-rem(36);
 				transform: translateX(-50%);
 			}
 			@include sp ((
 				margin-right: -1 * $size--pad--sp,
 				margin-left: -1 * $size--pad--sp,
-			)) {}
+			)) {
+				margin-top: sp-rem(-67 * 864/1440);
+				margin-bottom: sp-rem(-77 * 864/1440);
+			}
 
 			.p-map-container {
 				position: relative;
@@ -214,13 +218,10 @@ main.p-work.is--index {
 				@include pc () {
 					left: 50vw;
 					width: pc-rem(1344);
-					margin-top: pc-rem(36);
 					transform: translateX(-50%);
 				}
 				@include sp () {
 					width: sp-rem(850);
-					margin-top: sp-rem(-67 * 864/1440);
-					margin-bottom: sp-rem(-77 * 864/1440);
 				}
 
 				.p-map {
