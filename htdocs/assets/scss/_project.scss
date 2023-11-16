@@ -636,6 +636,7 @@
 
 	.p-gm__main {
 		position: relative;
+		display: flex;
 		box-sizing: border-box;
 
 		@include pc () {
