@@ -79,8 +79,11 @@ $(function () {
 		$('.p-map-wrapper').append($spinner);
 
 		const initEvent = () => {
+			const in_event = (GLOBAL.is_mobile) ? 'touchstart' : 'mouseenter';
+			const out_event = (GLOBAL.is_mobile) ? 'touchend' : 'mouseleave';
+
 			$navlinks
-				.on('mouseenter', function () {
+				.on(in_event, function () {
 					if (!GLOBAL.is_spview) {
 						const id = $(this).attr('href').replace('#', '');
 						const $activeOverlay = $overlays.filter('[data-overlay="' + id + '"]');
@@ -88,7 +91,7 @@ $(function () {
 						$activeOverlay.css('z-index', '1').addClass('is--active');
 					}
 				})
-				.on('mouseleave', function () {
+				.on(out_event, function () {
 					if (!GLOBAL.is_spview) {
 						$overlays.css('z-index', '').removeClass('is--active');
 					}
@@ -102,7 +105,7 @@ $(function () {
 						location.hash = '#' + id;
 					}
 				})
-				.on('mouseenter', function () {
+				.on(in_event, function () {
 					if (!GLOBAL.is_spview) {
 						const id = $(this).attr('data-overlay');
 						const $activeOverlay = $overlays.filter('[data-overlay="' + id + '"]');
@@ -112,7 +115,7 @@ $(function () {
 						$activeLink.addClass('is--active');
 					}
 				})
-				.on('mouseleave', function () {
+				.on(out_event, function () {
 					if (!GLOBAL.is_spview) {
 						$overlays.css('z-index', '').removeClass('is--active');
 						$navlinks.removeClass('is--active');
@@ -124,13 +127,11 @@ $(function () {
 		const promises = [
 			new Promise(function (resolve, reject) {
 				const img = new Image();
-				const src = $('#illustration > image').attr('data-href');
+				const src = $('#illustration > image').attr('xlink:href');
 
 				img.onload = function () {
 					img.onload = null;
 					resolve();
-
-					$('#illustration > image').attr('xlink:href', src);
 				};
 
 				img.error = function () {

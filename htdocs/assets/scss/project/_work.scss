@@ -316,6 +316,9 @@ main.p-work.is--index {
 			@include pc () {
 				cursor: pointer;
 			}
+			@include sp () {
+				pointer-events: none;
+			}
 		}
 	}
 

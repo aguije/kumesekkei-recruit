@@ -189,8 +189,7 @@
 													<image
 														width="2689"
 														height="1855"
-														xlink:href=""
-														data-href="<?php echo KUME_Util::image_path('work/head_illustration.jpg', true); ?>"
+														xlink:href="<?php echo KUME_Util::image_path('work/head_illustration.jpg', true); ?>"
 													></image>
 												</g>
 												<g id="hotspots">
