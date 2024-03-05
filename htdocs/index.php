@@ -85,12 +85,13 @@
 							if (array_key_exists('categoryID', $result) && array_key_exists(2, $result['categoryID']) && $result['categoryID'][2] === 3) {
 								array_push($recruit_news, $result);
 
-								if (count($recruit_news) === 3) {
+								if (count($recruit_news) === 5) {
 									break;
 								}
 							}
 						}
 
+						/*
 						$mypage_news = array();
 						foreach ($results as $result) {
 							if (array_key_exists('categoryID', $result) && array_key_exists(3, $result['categoryID']) && $result['categoryID'][3] === 4) {
@@ -101,11 +102,12 @@
 								}
 							}
 						}
+						*/
 					}
 
 					return array(
 						'recruit' => $recruit_news,
-						'mypage' => $mypage_news
+						'mypage' => null
 					);
 				}
 
