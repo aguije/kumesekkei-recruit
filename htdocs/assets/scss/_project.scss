@@ -1180,21 +1180,41 @@ $modal-content-aspect: $modal-content-w/$modal-content-h;
 .p-lead {
 	line-height: 1;
 	position: relative;
+	pointer-events: none;
 
 	@include pc () {
 		display: none;
 	}
-	@include sp ((
-		padding-right: 0,
-		padding-left: 0,
-		padding-bottom: 24,
-	)) {
+	@include sp () {
 		position: fixed;
 		z-index: var(--zi-news-footer);
 		bottom: 0;
 		width: 100%;
-		border-top: 2px solid var(--color-black);
-		background-color: var(--color-white);
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	&.ui--hidden {
+		.p-lead__container {
+			@include sp () {
+				transform: translateY(100%);
+			}
+		}
+	}
+
+	.p-lead__container {
+		pointer-events: all;
+
+		@include sp ((
+			padding-right: 0,
+			padding-left: 0,
+			padding-bottom: 24,
+		)) {
+			border-top: 2px solid var(--color-black);
+			background-color: var(--color-white);
+
+			@include transition('transform', .3s);
+		}
 	}
 
 	h5 {

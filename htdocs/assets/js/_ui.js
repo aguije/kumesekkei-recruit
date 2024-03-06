@@ -375,6 +375,143 @@ $(function () {
 	};
 
 
+	/** =================================================================
+	 *
+	 * Run a callback after the user scrolls, calculating the distance and direction scrolled
+	 * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
+	 * @param  {Function} callback The callback function to run
+	 * @param  {Integer}  refresh  How long to wait between scroll events [optional]
+	 *
+	 * FYI: https://codepen.io/cferdinandi/pen/BEOVOa
+	 *
+	 * --------------------------------------------------------------- */
+
+	const get_scroll_distance = (_option) => {
+		_option = Object.assign({
+			callback: function () { return true; },
+			refresh: 90,
+			className: ''
+		}, _option);
+
+		let isScrolling, start, end, distance;
+		const eventName = (_option.className !== '') ? `scroll.${_option.className}` : 'scroll';
+
+		$(window).on(eventName, function () {
+			if (!start) {
+				start = window.pageYOffset;
+			}
+
+			$.clearAnimationFrameTimeout(isScrolling);
+
+			isScrolling = $.setAnimationFrameTimeout(function() {
+				end = window.pageYOffset;
+				distance = end - start;
+
+				_option.callback(distance, start, end);
+
+				start = null;
+				end = null;
+				distance = null;
+
+			}, _option.refresh);
+		});
+	};
+
+
+	/** =================================================================
+	 *
+	 * LEAD
+	 *
+	 * --------------------------------------------------------------- */
+
+	const initLead = (_option) => {
+		_option = Object.assign({
+			mode: null,
+			complete: function () { return true; }
+		}, _option);
+
+		if (_option.mode === true) {
+
+			let scroll_delta = 0;
+			let leadH;
+
+			let ticking = false;
+
+			const $lead = $('.p-lead');
+
+			const resize = () => {
+				leadH = $lead.height();
+			};
+
+			const ui_display = () => {
+				// ページ下方へ移動した場合 UI を隠す
+				if (scroll_delta > leadH) {
+					if (!$lead.hasClass('ui--hidden')) {
+						$lead.addClass('ui--hidden')
+					}
+				}
+
+				// ページ情報へ移動した場合 UI を表示
+				else if (scroll_delta < leadH) {
+					if ($lead.hasClass('ui--hidden')) {
+						$lead.removeClass('ui--hidden')
+					}
+				}
+			};
+
+
+			/** =================================================================
+			 * MAIN
+			 * --------------------------------------------------------------- */
+
+			if ($lead.length > 0) {
+				resize();
+
+				get_scroll_distance({
+					callback: (_distance) => {
+						if (_distance < 0) {
+							if (scroll_delta >= 0) { scroll_delta = 0; }
+						}
+						else {
+							if (scroll_delta < 0) { scroll_delta = 0; }
+						}
+
+						scroll_delta = scroll_delta + _distance;
+
+						ui_display();
+					},
+					interval: 30,
+					className: 'lead'
+				});
+
+
+				/** =================================================================
+				 * EVENTS
+				 * --------------------------------------------------------------- */
+
+				$(window).on('resize.lead', function () {
+					if (!ticking) {
+						window.requestAnimationFrame(function () {
+							resize();
+							ticking = false;
+						});
+
+						ticking = true;
+					}
+				});
+			}
+
+
+		}
+		else {
+
+			$(window).off('scroll.lead');
+			$(window).off('resize.lead');
+
+		}
+	};
+
+
 	/* ==================================================================
 	 *
 	 *
@@ -388,6 +525,7 @@ $(function () {
 		initScrollToTop();
 		initThemeColorTransition({ mode: true });
 		initPageNav({ mode: true });
+		initLead({ mode: true });
 	}
 
 
