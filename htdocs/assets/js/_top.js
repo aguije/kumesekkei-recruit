@@ -260,6 +260,8 @@ $(function () {
 				});
 				GLOBAL.observers.push(mIO);
 			})();
+
+			GLOBAL.methods.util.initStatsSwiper();
 		}
 		else {
 
@@ -310,13 +312,6 @@ $(function () {
 
 			swiper.init();
 			GLOBAL.swipers.push(swiper);
-
-
-			/** =================================================================
-			 * INTERVIEW
-			 * --------------------------------------------------------------- */
-
-
 
 		}
 		else {

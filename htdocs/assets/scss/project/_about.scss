@@ -1662,55 +1662,20 @@ main.p-about__stats {
 	// background-color: rgba($color--brown, .05);
 	background-color: #f8f7f7;
 
-	.p-about__stats__belt__wrap {
-		display: flex;
-		flex-wrap: wrap;
-		box-sizing: border-box;
-		animation-name: belt;
-		animation-duration: $stats_dur;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-
-		@include pc () {
-			width: pc-rem($stats_w);
-			padding-top: pc-rem(60);
-			padding-bottom: pc-rem(60);
-		}
-		@include sp () {
-			width: sp-rem($stats_w * $stats_ratio_sp);
-			padding-top: sp-rem(60 * $stats_ratio_sp);
-			padding-bottom: sp-rem(60 * $stats_ratio_sp);
-		}
-
-		&:nth-child(2) {
-			position: absolute;
-			top: 0;
-			left: pc-rem($stats_w);
-
-			@include sp () {
-				left: sp-rem($stats_w * $stats_ratio_sp);
-			}
-		}
-
-		@keyframes belt {
-			0% {
-				transform: translateX(0%);
-			}
-			100% {
-				transform: translateX(-100%);
-			}
-		}
+	.swiper-wrapper {
+		transition-timing-function: linear;
+		touch-action: pan-x;
 	}
 }
 
 .p-about__stats__belt__fig {
 	display: block;
 	width: pc-rem(213);
-	padding: 0 pc-rem(20);
+	padding: pc-rem(60) pc-rem(20);
 
 	@include sp () {
 		width: sp-rem(213 * $stats_ratio_sp);
-		padding: 0 sp-rem(20 * $stats_ratio_sp);
+		padding: sp-rem(60 * $stats_ratio_sp) sp-rem(20 * $stats_ratio_sp);
 	}
 
 	> a {

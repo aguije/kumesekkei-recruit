@@ -410,3 +410,65 @@ GLOBAL.methods.util.initMovieThumb = function (_option) {
 		$('.p-story article').off('mouseenter');
 	}
 }
+
+
+/** =================================================================
+ *
+ * STATS SWIPER
+ *
+ * --------------------------------------------------------------- */
+
+GLOBAL.methods.util.initStatsSwiper = () => {
+	const swiper = new Swiper('.p-about__stats__belt > .swiper', {
+		init: false,
+		loop: true,
+		loopedSlides: 16,  // 16は図の個数
+		slidesPerView: 'auto',
+		speed: 9000,
+		grabCursor: true,
+		clickable: true,
+
+		freeMode: {
+			enabled: true,
+			momentum: true,
+			momentumRatio: 0.3,
+			momentumVelocityRatio: 0.35,
+			sticky: false
+		},
+
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false
+		}
+	});
+
+	swiper.on('touchStart', function (_event) {
+		console.log(`start`, _event);
+
+		/*
+		if (swiper.autoplay.running === true) {
+			swiper.autoplay.stop();
+		}
+		*/
+	});
+
+	swiper.on('touchEnd', function (_event) {
+		console.log(`end`, _event);
+
+		// タッチ開始から終了までにかかった時間
+		// const touch_dur = new Date().getTime() - _event.touchEventsData.touchStartTime;
+
+		// タッチ開始から終了までに移動した距離（X方向）
+		// const touch_dis = Math.abs(touch_end_x - touch_start_x);
+
+		swiper.slideToClosest(300);
+
+		/*
+		if (swiper.autoplay.running === false) {
+			swiper.autoplay.start();
+		}
+		*/
+	});
+
+	swiper.init();
+};

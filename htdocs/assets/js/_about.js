@@ -83,6 +83,8 @@ $(function () {
 			});
 		});
 
+		GLOBAL.methods.util.initStatsSwiper();
+
 		$('.p-about__stats__belt a').on('click', function (_event) {
 			_event.preventDefault();
 
