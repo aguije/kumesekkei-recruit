@@ -700,8 +700,16 @@
 			<?php
 
 				$projects = KUME_Util::get_json('https://www.kumesekkei.co.jp/project/for_recruit.json');
+				$project_count = count($projects);
 
 			?>
+			<style>
+				@media only screen and (min-device-width: 320px) and (max-width: 767px) {
+					#projectScrollerContainer {
+						width: <?php echo "calc(11.25rem * {$project_count} + 1.25rem * ({$project_count} + 1))"; ?>;
+					}
+				}
+			</style>
 			<section class="p-project">
 				<div class="l-wrapper">
 					<div class="p-project__container l-container">
@@ -724,18 +732,6 @@
 							<p class="c-header-set__description">都市開発からホテルや文化施設、大学施設まで、久米設計のプロジェクトは多岐に渡ります。また日本国内に留まらず、中国やベトナムなど、海外プロジェクトにも広く携わっております。</p>
 						</header>
 						<div class="c-pane-scroller">
-							<?php
-
-								$project_count = count($projects);
-
-							?>
-							<style>
-								@media only screen and (min-device-width: 320px) and (max-width: 767px) {
-									#projectScrollerContainer {
-										width: <?php echo "calc(11.25rem * {$project_count} + 1.25rem * ({$project_count} + 1))"; ?>;
-									}
-								}
-							</style>
 							<ul id="projectScrollerContainer" class="p-project__list c-pane-scroller__container">
 								<?php
 

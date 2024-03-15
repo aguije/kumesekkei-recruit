@@ -68,6 +68,14 @@
 							</a>
 						</h4>
 					</li>
+					<li>
+						<h4>
+							<a href="https://www.kumesekkei.co.jp/project/" target="_blank" rel="noopener">
+								<span lang="en">Project</span>
+								<span lang="ja">プロジェクト紹介</span>
+							</a>
+						</h4>
+					</li>
 				</ul>
 			</div>
 

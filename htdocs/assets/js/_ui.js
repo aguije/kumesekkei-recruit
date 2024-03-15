@@ -394,7 +394,9 @@ $(function () {
 		}, _option);
 
 		let isScrolling, start, end, distance;
-		const eventName = (_option.className !== '') ? `scroll.${_option.className}` : 'scroll';
+
+		let eventName = (GLOBAL.is_spview) ? `touchmove` : 'scroll';
+		eventName = (_option.className !== '') ? `${eventName}.${_option.className}` : eventName;
 
 		$(window).on(eventName, function () {
 			if (!start) {

@@ -383,10 +383,9 @@
 			display: flex;
 			align-items: center;
 
-			@include pc ((
-				column-gap: 50,
-			)) {
+			@include pc () {
 				margin-top: pc-clamp(20);
+				column-gap: pc-clamp(50);
 			}
 			@include sp ((
 				column-gap: 64,
