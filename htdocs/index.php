@@ -173,7 +173,6 @@
 								<span lang="ja">新着情報</span>
 								<span lang="en">Recruit News</span>
 							</h3>
-							<p><a class="c-link-external" href="https://www.kumesekkei.co.jp/news/?category=recruit" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span><span>一覧へ</span></a></p>
 						</header>
 
 						<div class="p-news__list">
@@ -198,6 +197,10 @@
 								?>
 							</ul>
 						</div>
+					</div>
+
+					<div class="p-news__sub">
+						<p><a class="c-button c-button--rect c-link-external is--darkgray" href="https://www.kumesekkei.co.jp/news/?category=recruit" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span><span>一覧へ</span></a></p>
 					</div>
 
 					<footer class="p-lead l-container">

@@ -257,11 +257,9 @@ main.p-top {
 			@include pc () {
 				display: flex;
 				padding-top: pc-rem(40);
-				padding-bottom: pc-rem(40);
 			}
 			@include sp () {
 				padding-top: sp-rem(80);
-				padding-bottom: sp-rem(80);
 			}
 		}
 
@@ -427,6 +425,21 @@ main.p-top {
 						}
 					}
 				}
+			}
+		}
+
+		.p-news__sub {
+			@include pc () {
+				margin-top: pc-rem(40 - 14);
+				padding-bottom: pc-rem(40);
+			}
+			@include sp () {
+				margin-top: sp-rem(80 - 18);
+				padding-bottom: sp-rem(80);
+			}
+
+			> p {
+				text-align: center;
 			}
 		}
 
