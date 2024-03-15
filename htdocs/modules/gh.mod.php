@@ -9,7 +9,10 @@
 				</div>
 
 				<div class="p-sh__logoset">
-					<p class="p-sh__logo"><a href="/"><span class="c-icon">KUME SEKKEI</span></a></p>
+					<a href="/">
+						<span class="p-sh__logo"><span class="c-icon">KUME SEKKEI</span></span>
+						<span class="p-sh__logoset__text" lang="en">RECRUIT</span>
+					</a>
 				</div>
 
 				<div class="p-sh__buttons">

@@ -377,14 +377,44 @@
 
 	.p-sh__logoset {
 		line-height: 1;
-		display: flex;
 
-		@include pc ((
-			column-gap: 80,
-		)) {}
-		@include sp ((
-			column-gap: 40,
-		)) {}
+		a {
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			@include pc ((
+				column-gap: 50,
+			)) {
+				margin-top: pc-clamp(20);
+			}
+			@include sp ((
+				column-gap: 64,
+				margin-top: 35,
+			)) {}
+			@include taphover {
+				.p-sh__logo,
+				.p-sh__logoset__text {
+					opacity: .5;
+				}
+			}
+
+			&::before {
+				@include pseudo-block((
+					top: 50%,
+					left: pc-clamp(110),
+					width: 1px,
+					height: pc-clamp(35),
+					background-color: $color--black,
+					opacity: .1,
+					transform: translateY(-50%),
+				)) {}
+				@include sp ((
+					left: 200,
+					height: 40,
+				)) {}
+			}
+		}
 
 		.p-sh__logo {
 			white-space: nowrap;
@@ -392,23 +422,24 @@
 			@include pc () {
 				font-size: pc-clamp(35);
 				width: pc-clamp(80);
-				margin-top: pc-clamp(20);
 			}
 			@include sp ((
 				font-size: 71,
-				width: 159,
-				margin-top: 35
+				width: 159
 			)) {}
+			@include transition('opacity', $dur--hover);
+		}
 
-			a {
-				display: inline-block;
-				width: 100%;
+		.p-sh__logoset__text {
+			font-weight: bold;
 
-				@include transition('opacity', $dur--hover);
-				@include taphover {
-					opacity: .5;
-				}
+			@include pc () {
+				font-size: pc-clamp(12);
 			}
+			@include sp ((
+				font-size: 24,
+			)) {}
+			@include transition('opacity', $dur--hover);
 		}
 	}
 
