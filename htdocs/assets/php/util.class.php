@@ -275,6 +275,35 @@ class KUME_Util {
 
 		return $output;
 	}
+
+
+	/** =================================================================
+	 *
+	 * GET JSON
+	 *
+	 * --------------------------------------------------------------- */
+
+	public static function get_json ($_url, $_limit = null) {
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $_url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+		$results = curl_exec($ch);
+		curl_close($ch);
+
+		if ($results) {
+			$results = json_decode($results, true);
+
+			if ($_limit !== null && count($results) > $_limit) {
+				$results = array_slice($results, 0, $_limit);
+			}
+		}
+		else {
+			$results = array();
+		}
+
+		return $results;
+	}
 }
 
 ?>

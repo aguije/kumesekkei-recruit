@@ -69,17 +69,10 @@
 			</div>
 			<?php
 
-				function get_results ($_url) {
-					$ch = curl_init();
-					curl_setopt($ch, CURLOPT_URL, $_url);
-					curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				function get_news_data ($_url) {
+					$results = KUME_Util::get_json($_url);
 
-					$results = curl_exec($ch);
-					curl_close($ch);
-
-					if ($results) {
-						$results = json_decode($results, true);
-
+					if (count($results) > 0) {
 						$recruit_news = array();
 						foreach ($results as $result) {
 							if (array_key_exists('categoryID', $result) && array_key_exists(2, $result['categoryID']) && $result['categoryID'][2] === 3) {
@@ -111,7 +104,7 @@
 					);
 				}
 
-				function get_news_article ($_news) {
+				function get_news_source ($_news) {
 					$name = $_news['name'];
 					$news_tag = '';
 
@@ -187,16 +180,16 @@
 							<ul>
 								<?php
 
-									$results = get_results('https://www.kumesekkei.co.jp/news/news.json');
-									// $results = get_results('https://www.kumesekkei.co.jp/news/news_recruit_sample.json');
+									$results = get_news_data('https://www.kumesekkei.co.jp/news/news.json');
+									// $results = get_news_data('https://www.kumesekkei.co.jp/news/news_recruit_sample.json');
 
 									foreach ($results['recruit'] as $news) {
-										echo get_news_article($news);
+										echo get_news_source($news);
 									}
 
 									/*
 									foreach ($results['mypage'] as $news) {
-										echo get_news_article($news);
+										echo get_news_source($news);
 									}
 									*/
 
@@ -623,6 +616,11 @@
 				</div>
 			</section>
 
+			<?php
+
+				$stories = KUME_Util::get_json('https://www.kumesekkei.co.jp/designstory/for_recruit_top.json', 5);
+
+			?>
 			<section class="p-story">
 				<div class="l-wrapper">
 					<div class="p-story__container l-container">
@@ -648,76 +646,91 @@
 						<div class="p-story__slides">
 							<div class="swiper">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual1.jpg', true); ?>" alt=""></picture></div>
-									<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual2.jpg', true); ?>" alt=""></picture></div>
-									<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual3.jpg', true); ?>" alt=""></picture></div>
-									<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual4.jpg', true); ?>" alt=""></picture></div>
-									<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual5.jpg', true); ?>" alt=""></picture></div>
+									<?php
+
+										if (count($stories) > 0) {
+											foreach ($stories as $story) {
+												?>
+												<div class="swiper-slide"><picture><img class="c-lazy is--cover" data-src="<?php echo $story['image']; ?>" alt=""></picture></div>
+												<?php
+											}
+										}
+
+									?>
 								</div>
 							</div>
 						</div>
 
 						<div class="p-story__main c-pane-scroller">
 							<div class="c-pane-scroller__container">
-								<article>
-									<a href="https://www.kumesekkei.co.jp/designstory/national_ainu_museum.html" target="_blank" rel="bookmark noopener">
-										<h3>始まりの場所<span class="c-icon c-icon--external"></span></h3>
-										<p>ここから<br>アイヌの歴史や文化<br>を伝える</p>
-										<figure>
-											<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual1.jpg', true); ?>" alt=""></div>
-											<figcaption>国立アイヌ民族博物館</figcaption>
-										</figure>
-									</a>
-								</article>
+								<?php
 
-								<article>
-									<a href="https://www.kumesekkei.co.jp/designstory/tochigi_athleticpark_stadium.html" target="_blank" rel="bookmark noopener">
-										<h3>風との共生<span class="c-icon c-icon--external"></span></h3>
-										<p>“環境”を<br>“カタチ”にした<br>環境共生スタジアム</p>
-										<figure>
-											<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual2.jpg', true); ?>" alt=""></div>
-											<figcaption>栃木県総合<br>運動公園陸上競技場</figcaption>
-										</figure>
-									</a>
-								</article>
+									if (count($stories) > 0) {
+										foreach ($stories as $story) {
+											?>
+											<article>
+												<a href="<?php echo $story['url']; ?>" target="_blank" rel="bookmark noopener">
+													<h3><?php echo $story['catch']; ?><span class="c-icon c-icon--external"></span></h3>
+													<p><?php echo $story['text']; ?></p>
+													<figure>
+														<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo $story['image']; ?>" alt=""></div>
+														<figcaption><?php echo $story['title']; ?></figcaption>
+													</figure>
+												</a>
+											</article>
+											<?php
+										}
+									}
 
-								<article>
-									<a href="https://www.kumesekkei.co.jp/designstory/nijinooka_gakuen.html" target="_blank" rel="bookmark noopener">
-										<h3>地域との連携<span class="c-icon c-icon--external"></span></h3>
-										<p>原風景をたどり、<br>建築として<br>かたちにする</p>
-										<figure>
-											<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual3.jpg', true); ?>" alt=""></div>
-											<figcaption>瀬戸市立にじの丘学園</figcaption>
-										</figure>
-									</a>
-								</article>
-
-								<article>
-									<a href="https://www.kumesekkei.co.jp/designstory/hitachinoushiku_jhs.html" target="_blank" rel="bookmark noopener">
-										<h3>大規模木造<span class="c-icon c-icon--external"></span></h3>
-										<p>新しく懐かしい<br>木造校舎が<br>出来上がった</p>
-										<figure>
-											<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual4.jpg', true); ?>" alt=""></div>
-											<figcaption>牛久市立<br>ひたち野うしく中学校</figcaption>
-										</figure>
-									</a>
-								</article>
-
-								<article>
-									<a href="https://www.kumesekkei.co.jp/designstory/yamanashi_prefectural_library.html" target="_blank" rel="bookmark noopener">
-										<h3>構造への挑戦<span class="c-icon c-icon--external"></span></h3>
-										<p>不安から熱狂へ、<br>そして信頼と協働で<br>作る鉄骨</p>
-										<figure>
-											<div class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo KUME_Util::image_path('top/story_visual5.jpg', true); ?>" alt=""></div>
-											<figcaption>山梨県立図書館</figcaption>
-										</figure>
-									</a>
-								</article>
+								?>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+			<?php
+
+				unset($stories);
+
+			?>
+
+			<!--
+			<?php
+
+				$projects = KUME_Util::get_json('https://www.kumesekkei.co.jp/project/for_recruit.json');
+
+			?>
+			<section class="p-projects" data-theme="light">
+				<div class="l-wrapper">
+					<header class="c-header-set">
+						<div class="c-inview-border"></div>
+
+						<div class="c-header-set__title">
+							<h2>
+								<span lang="ja">プロジェクト</span>
+								<span lang="en">Projects</span>
+							</h2>
+						</div>
+					</header>
+					<div>
+						<?php
+
+							if (count($projects) > 0) {
+								foreach ($projects as $project) {
+									print_r('<pre>'); print_r($project); print_r('</pre>');
+								}
+							}
+
+						?>
+					</div>
+				</div>
+			</section>
+			<?php
+
+				unset($projects);
+
+			?>
+			-->
 		</main>
 
 		<?php
