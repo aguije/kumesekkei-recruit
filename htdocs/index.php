@@ -697,34 +697,99 @@
 
 			?>
 
-			<!--
 			<?php
 
 				$projects = KUME_Util::get_json('https://www.kumesekkei.co.jp/project/for_recruit.json');
 
 			?>
-			<section class="p-projects" data-theme="light">
+			<section class="p-project">
 				<div class="l-wrapper">
-					<header class="c-header-set">
-						<div class="c-inview-border"></div>
+					<div class="p-project__container l-container">
+						<header class="c-header-set">
+							<div class="c-inview-border"></div>
 
-						<div class="c-header-set__title">
-							<h2>
-								<span lang="ja">プロジェクト</span>
-								<span lang="en">Projects</span>
-							</h2>
-						</div>
-					</header>
-					<div>
-						<?php
+							<div class="c-header-set__title">
+								<h2>
+									<span lang="ja">プロジェクト紹介</span>
+									<span class="no--mask" lang="en">Project</span>
+								</h2>
+							</div>
 
-							if (count($projects) > 0) {
-								foreach ($projects as $project) {
-									print_r('<pre>'); print_r($project); print_r('</pre>');
+							<div class="c-header-set__nav">
+								<ul>
+									<li><a class="c-link-external" href="https://www.kumesekkei.co.jp/project/" target="_blank" rel="noopener"><span class="c-icon c-icon--external"></span><span>一覧へ</span></a></li>
+								</ul>
+							</div>
+
+							<p class="c-header-set__description">都市開発からホテルや文化施設、大学施設まで、久米設計のプロジェクトは多岐に渡ります。また日本国内に留まらず、中国やベトナムなど、海外プロジェクトにも広く携わっております。</p>
+						</header>
+						<div class="c-pane-scroller">
+							<?php
+
+								$project_count = count($projects);
+
+							?>
+							<style>
+								@media only screen and (min-device-width: 320px) and (max-width: 767px) {
+									#projectScrollerContainer {
+										width: <?php echo "calc(11.25rem * {$project_count} + 1.25rem * ({$project_count} + 1))"; ?>;
+									}
 								}
-							}
+							</style>
+							<ul id="projectScrollerContainer" class="p-project__list c-pane-scroller__container">
+								<?php
 
-						?>
+									if (count($projects) > 0) {
+										foreach ($projects as $project) {
+											?>
+											<li class="p-project__item">
+												<a href="<?php echo $project['url']; ?>" target="_blank" rel="noopener">
+													<div class="p-project__item__wrapper">
+														<div class="p-project__item__container">
+															<picture class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo $project['image']; ?>" alt=""></picture>
+															<div class="p-project__item__body">
+																<div class="p-project__item__body__container">
+																	<h3><?php echo $project['name']; ?></h3>
+																	<div><span class="c-icon c-icon--external"></span><?php
+
+																		$chars = mb_str_split($project['catch']);
+
+																		$str_counts = 0;
+																		$line_counts = 1;
+																		$output = '';
+
+																		foreach ($chars as $char) {
+																			$output .= $char;
+
+																			$str_counts = $str_counts + mb_strwidth($char);
+																			if ($str_counts > 40) {
+
+																				$line_counts++;
+
+																				$str_counts = 0;
+																			}
+																		}
+
+																		?>
+																		<p class="is--text" data-lines="<?php echo $line_counts; ?>"><?php echo $output; ?></p>
+																		<?php
+
+																		unset($chars, $str_counts, $line_counts, $output);
+
+																	?></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<?php
+										}
+									}
+
+								?>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -733,7 +798,6 @@
 				unset($projects);
 
 			?>
-			-->
 		</main>
 
 		<?php
