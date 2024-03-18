@@ -6,9 +6,11 @@
 	}
 
 	$is_top = false;
+	/*
 	if (array_key_exists('is_top', $_GET) && $_GET['is_top'] && $_GET['is_top'] === '1') {
 		$is_top = true;
 	}
+	*/
 
 ?>
 <div class="p-about__stats__belt">

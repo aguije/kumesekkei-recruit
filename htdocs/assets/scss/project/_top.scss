@@ -706,14 +706,6 @@ main.p-top {
 			h3 {
 				text-align: right;
 			}
-
-			.p-about__stats__belt__fig {
-				a {
-					@include taphover {
-						opacity: 1;
-					}
-				}
-			}
 		}
 	}
 
@@ -1549,7 +1541,7 @@ main.p-top {
 
 			@include pc () {
 				margin-top: pc-rem(40 - 10);
-				transform: translate3d(0,0,0);
+				transform: translate3d(0, 0, 0);
 			}
 			@include sp () {
 				margin-top: sp-rem(60);
