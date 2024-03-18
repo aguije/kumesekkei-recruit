@@ -706,8 +706,8 @@
 					}
 				}
 				@include pc ((
-					padding-right: 24 - 2,
-					padding-left: 48 - 2,
+					padding-right: 20 - 2,
+					padding-left: 21 - 2,
 				)) {
 					padding-top: pc-clamp(40);
 					padding-bottom: pc-clamp(40);
@@ -715,9 +715,9 @@
 				}
 				@include sp ((
 					padding-top: 120,
-					padding-right: 20,
+					padding-right: 12,
 					padding-bottom: 40,
-					padding-left: 20,
+					padding-left: 14,
 				)) {
 					align-items: end;
 					column-gap: sp-rem(120);
@@ -756,7 +756,7 @@
 
 						@include sp () {
 							top: sp-rem(-34);
-							right: sp-rem(58);
+							right: sp-rem(52);
 						}
 						@extend %c-icon;
 					}
@@ -804,7 +804,7 @@
 						}
 						@include sp () {
 							font-size: sp-rem(38);
-							margin-right: sp-rem(14);
+							margin-right: sp-rem(7);
 						}
 					}
 				}
@@ -826,7 +826,7 @@
 		@include sp () {
 			font-size: sp-rem(26);
 			display: flex;
-			column-gap: sp-rem(120);
+			column-gap: sp-rem(100);
 		}
 
 		a {
@@ -873,9 +873,103 @@
 		}
 	}
 
+	.p-gm__instagram {
+		@include pc ((
+			margin-top: 60,
+		)) {}
+		@include sp () {
+			margin-top: sp-rem(120);
+		}
+
+		.p-gm__instagram__header {
+			@include pc () {
+				font-size: pc-clamp(10);
+				margin-bottom: pc-rem(16);
+				text-align: right;
+			}
+			@include sp () {
+				font-size: sp-rem(20);
+				margin-bottom: sp-rem(32);
+			}
+
+			a {
+				text-decoration: underline;
+			}
+
+			.c-icon.c-icon--instagram {
+				position: relative;
+
+				@include pc () {
+					font-size: pc-clamp(12);
+					top: pc-clamp(2);
+					margin-right: calc(#{1em * 8/10} - #{pc-clamp(2)});
+				}
+				@include sp () {
+					font-size: sp-rem(24);
+					top: sp-rem(4);
+					left: sp-rem(-2);
+					margin-right: calc(#{1em * 8/10} - #{sp-rem(4)});
+				}
+			}
+		}
+
+		.p-gm__instagram__slider {
+			position: relative;
+			left: 50%;
+			overflow: hidden;
+			width: 100vw;
+			transform: translateX(-50%);
+
+			@include pc () {
+				height: 100vw * (140 + 10 * 2)/1120;
+			}
+			@include sp () {
+				height: 100vw * (160 + 30)/750;
+			}
+
+			.p-gm__instagram__slider__container {
+				display: flex;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+
+				@include pc () {
+					width: 200vw * 1.43;
+					animation-name: instagram-belt-pc;
+					animation-duration: 120s;
+				}
+				@include sp () {
+					width: 400vw * 80/62 * 0.985;
+					animation-name: instagram-belt-sp;
+					animation-duration: 60s;
+				}
+
+				@keyframes instagram-belt-pc {
+					0% {
+						transform: translate3d(0vw,0,0);
+					}
+					100% {
+						transform: translate3d(#{200vw * 1.4 * 0.98 * -0.5},0,0);
+					}
+				}
+				@keyframes instagram-belt-sp {
+					0% {
+						transform: translate3d(0vw,0,0);
+					}
+					100% {
+						transform: translate3d(#{400vw * 80/62 * 0.985 * -0.5},0,0);
+					}
+				}
+
+				.p-gm__instagram__slider__child {
+					width: 50%;
+				}
+			}
+		}
+	}
+
 	.p-gm__footer {
 		@include pc () {
-			margin-top: pc-clamp(30);
+			margin-top: pc-clamp(20);
 			border-top: 1px solid var(--color-border-rgba);
 
 			.p-gm__footer__container {
@@ -901,8 +995,6 @@
 
 			@include pc ((
 				column-gap: 20,
-				margin-left: 40,
-				margin-right: 20,
 				padding-top: 20,
 				padding-bottom: 20,
 			)) {

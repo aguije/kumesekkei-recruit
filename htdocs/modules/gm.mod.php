@@ -3,6 +3,16 @@
 	$active = (array_key_exists('gm_active', $_GET)) ? $_GET['gm_active'] : '';
 	$sub_active = (array_key_exists('gm_sub_active', $_GET)) ? $_GET['gm_sub_active'] : '';
 
+	$is_footer = false;
+	if (array_key_exists('is_footer', $_GET) && $_GET['is_footer'] && $_GET['is_footer'] === '1') {
+		$is_footer = true;
+	}
+
+	$instagram_pattern = '1';
+	if (array_key_exists('instagram_pattern', $_GET) && $_GET['instagram_pattern']) {
+		$instagram_pattern = $_GET['instagram_pattern'];
+	}
+
 ?>
 <div class="p-gm">
 	<div class="p-gm__container">
@@ -79,13 +89,37 @@
 				</ul>
 			</div>
 
+			<?php
+
+				if ($is_footer) {
+					?>
+					<div class="p-gm__instagram l-container">
+						<div class="p-gm__instagram__header">
+							<span class="c-icon c-icon--instagram"></span> <a href="https://www.instagram.com/kumesekkei/" lang="en" target="_blank" rel="noopener">@kumesekkei</a>
+						</div>
+						<div class="p-gm__instagram__slider">
+							<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+							<div class="p-gm__instagram__slider__container">
+								<div class="p-gm__instagram__slider__child">
+									<div class="elfsight-app-3f4f9d18-20db-4a7f-ae43-7c885135914b" data-elfsight-app-lazy></div>
+								</div>
+								<div class="p-gm__instagram__slider__child">
+									<div class="elfsight-app-3f4f9d18-20db-4a7f-ae43-7c885135914b" data-elfsight-app-lazy></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+				}
+
+			?>
+
 			<div class="p-gm__footer">
 				<div class="p-gm__footer__container l-container">
 					<ul class="p-gm__footer__links">
 						<li><span class="c-icon c-icon--external"></span> <a href="https://www.kumesekkei.co.jp/" target="_blank" rel="noopener">コーポレートトップ</a></li>
 						<li><span class="c-icon c-icon--external"></span> <a href="https://www.kumesekkei.co.jp/privacypolicy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
 						<li><span class="c-icon c-icon--external"></span> <a href="https://www.kumesekkei.co.jp/sitepolicy/" target="_blank" rel="noopener">サイトポリシー</a></li>
-						<li><span class="c-icon c-icon--instagram"></span> <a href="https://www.instagram.com/kumesekkei/" target="_blank" rel="noopener">@kumesekkei</a></li>
 					</ul>
 					<p class="p-gm__footer__copyright" lang="en">©︎ KUME SEKKEI co.ltd.</p>
 				</div>
@@ -93,3 +127,8 @@
 		</div>
 	</div>
 </div>
+<?php
+
+	unset($_GET['is_footer'], $is_footer);
+
+?>

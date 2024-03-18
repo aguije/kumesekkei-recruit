@@ -41,6 +41,7 @@
 
 	<?php
 
+		$_GET['is_footer'] = '1';
 		include($_SERVER['DOCUMENT_ROOT'] . '/modules/gm.mod.php');
 
 	?>
