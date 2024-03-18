@@ -1658,6 +1658,8 @@ main.p-top {
 					}
 
 					> picture {
+						background-color: #f5f5f5;
+
 						@include pc () {
 							width: 100% * 460/1000;
 							height: pc-rem(70);
