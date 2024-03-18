@@ -300,6 +300,10 @@
 
 	@include sp () {
 		margin-top: sp-rem(200);
+
+		.p-gm {
+			background-color: #b8bdc1;
+		}
 	}
 }
 
@@ -938,7 +942,7 @@
 					animation-duration: 120s;
 				}
 				@include sp () {
-					width: 400vw * 80/62 * 0.985;
+					width: 400vw * 80/62 * .985;
 					animation-name: instagram-belt-sp;
 					animation-duration: 60s;
 				}
@@ -948,7 +952,7 @@
 						transform: translate3d(0vw,0,0);
 					}
 					100% {
-						transform: translate3d(#{200vw * 1.4 * 0.98 * -0.5},0,0);
+						transform: translate3d(#{200vw * 1.4 * .98 * -.5},0,0);
 					}
 				}
 				@keyframes instagram-belt-sp {
@@ -956,7 +960,7 @@
 						transform: translate3d(0vw,0,0);
 					}
 					100% {
-						transform: translate3d(#{400vw * 80/62 * 0.985 * -0.5},0,0);
+						transform: translate3d(#{400vw * 80/62 * .985 * -.5},0,0);
 					}
 				}
 
@@ -1335,7 +1339,7 @@ $modal-content-aspect: $modal-content-w/$modal-content-h;
 			border-top: 2px solid var(--color-black);
 			background-color: var(--color-white);
 
-			@include transition('transform', .3s);
+			@include transition('transform', .1s);
 		}
 	}
 

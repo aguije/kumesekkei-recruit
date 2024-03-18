@@ -395,8 +395,10 @@ $(function () {
 
 		let isScrolling, start, end, distance;
 
-		let eventName = (GLOBAL.is_spview) ? `touchmove` : 'scroll';
-		eventName = (_option.className !== '') ? `${eventName}.${_option.className}` : eventName;
+		let eventName = (GLOBAL.is_mobile) ? `touchmove touchend scroll` : 'scroll';
+		if (_option.className !== '') {
+			eventName = (GLOBAL.is_mobile) ? `touchstart.${_option.className} touchmove.${_option.className} touchend.${_option.className} scroll.${_option.className}` : `scroll.${_option.className}`;
+		}
 
 		$(window).on(eventName, function () {
 			if (!start) {
@@ -433,28 +435,19 @@ $(function () {
 		}, _option);
 
 		if (_option.mode === true) {
-
 			let scroll_delta = 0;
-			let leadH;
-
-			let ticking = false;
-
 			const $lead = $('.p-lead');
-
-			const resize = () => {
-				leadH = $lead.height();
-			};
 
 			const ui_display = () => {
 				// ページ下方へ移動した場合 UI を隠す
-				if (scroll_delta > leadH) {
+				if (scroll_delta > 0) {
 					if (!$lead.hasClass('ui--hidden')) {
 						$lead.addClass('ui--hidden')
 					}
 				}
 
 				// ページ情報へ移動した場合 UI を表示
-				else if (scroll_delta < leadH) {
+				else if (scroll_delta <= 0) {
 					if ($lead.hasClass('ui--hidden')) {
 						$lead.removeClass('ui--hidden')
 					}
@@ -467,8 +460,6 @@ $(function () {
 			 * --------------------------------------------------------------- */
 
 			if ($lead.length > 0) {
-				resize();
-
 				get_scroll_distance({
 					callback: (_distance) => {
 						if (_distance < 0) {
@@ -482,24 +473,8 @@ $(function () {
 
 						ui_display();
 					},
-					interval: 30,
+					interval: 5,
 					className: 'lead'
-				});
-
-
-				/** =================================================================
-				 * EVENTS
-				 * --------------------------------------------------------------- */
-
-				$(window).on('resize.lead', function () {
-					if (!ticking) {
-						window.requestAnimationFrame(function () {
-							resize();
-							ticking = false;
-						});
-
-						ticking = true;
-					}
 				});
 			}
 
@@ -508,6 +483,9 @@ $(function () {
 		else {
 
 			$(window).off('scroll.lead');
+			$(window).off('touchstart.lead');
+			$(window).off('touchmove.lead');
+			$(window).off('touchend.lead');
 			$(window).off('resize.lead');
 
 		}
