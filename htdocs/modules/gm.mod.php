@@ -120,6 +120,15 @@
 						<li><span class="c-icon c-icon--external"></span> <a href="https://www.kumesekkei.co.jp/" target="_blank" rel="noopener">コーポレートトップ</a></li>
 						<li><span class="c-icon c-icon--external"></span> <a href="https://www.kumesekkei.co.jp/privacypolicy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
 						<li><span class="c-icon c-icon--external"></span> <a href="https://www.kumesekkei.co.jp/sitepolicy/" target="_blank" rel="noopener">サイトポリシー</a></li>
+						<?php
+
+							if (!$is_footer) {
+								?>
+								<li><span class="c-icon c-icon--instagram"></span> <a href="https://www.instagram.com/kumesekkei/" target="_blank" rel="noopener">@kumesekkei</a></li>
+								<?php
+							}
+
+						?>
 					</ul>
 					<p class="p-gm__footer__copyright" lang="en">©︎ KUME SEKKEI co.ltd.</p>
 				</div>
