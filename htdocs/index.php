@@ -736,10 +736,10 @@
 								<?php
 
 									if (count($projects) > 0) {
-										foreach ($projects as $project) {
+										foreach ($projects as $project_key => $project) {
 											?>
 											<li class="p-project__item">
-												<a href="<?php echo $project['url']; ?>" target="_blank" rel="noopener">
+												<a class="<?php if ($project_key === 0) { echo 'is--active'; } ?>" href="<?php echo $project['url']; ?>" target="_blank" rel="noopener">
 													<div class="p-project__item__wrapper">
 														<div class="p-project__item__container">
 															<picture class="c-lazy-trigger"><img class="c-lazy is--cover" data-src="<?php echo $project['image']; ?>" alt=""></picture>

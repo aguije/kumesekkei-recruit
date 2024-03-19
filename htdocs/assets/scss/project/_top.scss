@@ -1573,6 +1573,45 @@ main.p-top {
 					@include sp () {
 						height: 100%;
 					}
+
+					&.is--active {
+						@include pc () {
+							height: pc-rem(260);
+
+							.p-project__item__wrapper {
+								&::before {
+									opacity: 1;
+								}
+							}
+
+							.p-project__item__container {
+								> picture {
+									height: pc-rem(260);
+								}
+							}
+
+							.p-project__item__body {
+								.is--text {
+									&[data-lines='2'] {
+										height: 2em * 1.25;
+									}
+									&[data-lines='3'] {
+										height: 3em * 1.25;
+									}
+									&[data-lines='4'] {
+										height: 4em * 1.25;
+									}
+
+									&:not([data-lines='1']) {
+										&::after {
+											opacity: 0;
+										}
+									}
+								}
+							}
+						}
+					}
+
 					@include taphover {
 						@include pc () {
 							height: pc-rem(260);
@@ -1681,7 +1720,7 @@ main.p-top {
 						@include sp () {
 							box-sizing: border-box;
 							height: 100%;
-							padding: sp-rem(30) sp-rem(30) sp-rem(60) sp-rem(30);
+							padding: sp-rem(30);
 							background-color: var(--color-white);
 						}
 					}

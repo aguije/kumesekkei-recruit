@@ -165,7 +165,7 @@ $(function () {
 
 	/** =================================================================
 	 *
-	 * ABOUT
+	 * News
 	 *
 	 * --------------------------------------------------------------- */
 
@@ -367,6 +367,32 @@ $(function () {
 	}
 
 
+	/** =================================================================
+	 *
+	 * PROJECT
+	 *
+	 * --------------------------------------------------------------- */
+
+	function initProject (_option) {
+		_option = Object.assign({
+			mode: null,
+			complete: function () { return true; }
+		}, _option);
+
+		if (_option.mode === true) {
+			$('.p-project__item > a').on('mouseenter', function () {
+				const $this = $(this);
+
+				$this.parent().siblings().find('a').removeClass('is--active');
+				$this.addClass('is--active');
+			});
+		}
+		else {
+			$('.p-project__item > a').off('mouseenter');
+		}
+	}
+
+
 	/* ==================================================================
 	 *
 	 *
@@ -381,6 +407,7 @@ $(function () {
 		initAbout({ mode: true });
 		initPeople({ mode: true });
 		initStory({ mode: true });
+		initProject({ mode: true });
 
 		GLOBAL.methods.util.initMovieThumb({ mode: true });
 		GLOBAL.methods.util.initInviewBorder({ mode: true });
