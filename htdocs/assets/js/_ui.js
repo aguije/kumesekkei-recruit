@@ -142,7 +142,7 @@ $(function () {
 							gsap.to($button, {
 								backgroundColor: '#ffffff',
 								rotate: '180deg',
-								dutation: .3,
+								duration: .3,
 								onComplete: function () {
 									$button.removeClass('is--disabled');
 								}
@@ -159,7 +159,7 @@ $(function () {
 					gsap.to($button, {
 						backgroundColor: '#000000',
 						rotate: '0deg',
-						dutation: .3,
+						duration: .3,
 						onComplete: function () {
 
 							$spans.eq(0).css({
