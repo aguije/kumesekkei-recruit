@@ -699,7 +699,7 @@
 
 			<?php
 
-				$projects = KUME_Util::get_json('https://www.kumesekkei.co.jp/project/for_recruit.json');
+				$projects = KUME_Util::get_json('https://www.kumesekkei.co.jp/project/for_recruit.json', 6);
 				$project_count = count($projects);
 
 			?>
